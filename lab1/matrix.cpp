@@ -41,22 +41,22 @@ Result::~Result() {
 
 NodeLine::~NodeLine() {
     if (next) {
-        next->~NodeLine();
+        delete next;
     }
 }
 
 NodeMatrix::~NodeMatrix() {
     if (data) {
-        data->~NodeLine();
+        delete data;
     }
     if (next) {
-        next->~NodeMatrix();
+        delete next;
     }
 }
 
 Matrix::~Matrix() {
     if (data) {
-        data->~NodeMatrix();
+        delete data;
     }
 }
 
