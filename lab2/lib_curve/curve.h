@@ -36,14 +36,14 @@ public:
     void SetA(double a);
     void SetL(double l);
 
-    double GetA();
-    double GetL();
+    double GetA() const;
+    double GetL() const;
 
-    DoubleOrError GetYbyX(double x);
-    DoubleOrError DistByFi(double fi, bool onLeftPart);//fi from -pi/2 to pi/2
-    double RadiusCurvature(bool onLeftPart);
-    double SquareOfLoop();
-    std::vector<Point> GetInflectionPoints();
+    DoubleOrError GetYbyX(double x) const;
+    DoubleOrError DistByFi(double fi, bool onLeftPart) const;//fi from -pi/2 to pi/2
+    double RadiusCurvature(bool onLeftPart) const;
+    double SquareOfLoop() const;
+    std::vector<Point> GetInflectionPoints() const;
 private:
     double a_;
     double l_;

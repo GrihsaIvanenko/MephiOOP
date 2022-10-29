@@ -36,15 +36,15 @@ void KonhoidNicomed::SetL(double l) {
     l_ = l;
 }
 
-double KonhoidNicomed::GetA() {
+double KonhoidNicomed::GetA() const {
     return a_;
 }
 
-double KonhoidNicomed::GetL() {
+double KonhoidNicomed::GetL() const {
     return l_;
 }
 
-DoubleOrError KonhoidNicomed::GetYbyX(double x) {
+DoubleOrError KonhoidNicomed::GetYbyX(double x)const {
     bool onLeftPart = (x >= 0) ? true : false;
     if (eq(l_, 0.0))
         return eq(x, 0.0)
@@ -59,7 +59,7 @@ DoubleOrError KonhoidNicomed::GetYbyX(double x) {
     return DoubleOrError(r * sinFi, OK);
 }
 
-DoubleOrError KonhoidNicomed::DistByFi(double fi, bool onLeftPart) {
+DoubleOrError KonhoidNicomed::DistByFi(double fi, bool onLeftPart)const {
     double cosFi = cos(fi);
     if (eq(cosFi, 0.0))
         return DoubleOrError(0.0, ERROR_NO_X_BY_FI);
@@ -69,11 +69,11 @@ DoubleOrError KonhoidNicomed::DistByFi(double fi, bool onLeftPart) {
     return DoubleOrError(r * cosFi, OK);
 }
 
-double KonhoidNicomed::RadiusCurvature(bool onLeftPart) {
+double KonhoidNicomed::RadiusCurvature(bool onLeftPart) const {
     return onLeftPart ? (l_ - a_) * (l_ - a_) / l_ : (l_ + a_) * (l_ + a_) / l_;
 }
 
-double KonhoidNicomed::SquareOfLoop() {
+double KonhoidNicomed::SquareOfLoop() const {
     if (l_ <= a_)
         return 0.0;
     return a_ * sqrt(l_ * l_ - a_ * a_)
@@ -81,7 +81,7 @@ double KonhoidNicomed::SquareOfLoop() {
             (l_ + sqrt(l_ * l_ -  a_ * a_)) / a_)
         + l_ * l_ * acos(a_ / l_);
 }
-std::vector<Point> KonhoidNicomed::GetInflectionPoints() {
+std::vector<Point> KonhoidNicomed::GetInflectionPoints()const {
     std::vector<Point> ans;
     double x;
     if (l_ / a_ > 1.0) {
