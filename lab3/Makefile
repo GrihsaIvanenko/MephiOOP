@@ -1,4 +1,4 @@
 all:
 	clear
-	g++ main.cpp lib/sam.cpp
-	./a.out
+	g++ -std=c++2a ./myVector/myVector.cpp main.cpp ./lib/sam.cpp
+	valgrind ./a.out

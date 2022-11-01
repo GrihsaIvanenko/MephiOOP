@@ -1,21 +1,22 @@
 #include "sam.h"
+#include <iostream>
 
 using namespace std;
 
-Sam::Sam() : size_(1) {
+Sam::Sam() : size_(1), numbers_(1) {
     Fill();
 }
 
-Sam::Sam(int size) : size_(size) {
+Sam::Sam(int size) : size_(size), numbers_(size) {
     Fill();
 }
 
-Sam::Sam(const double *numbers, const int n): size_(n) {
+Sam::Sam(const MyVector& numbers): size_(numbers.Size()), numbers_(numbers.Size()) {
     for (int i = 0; i < size_; ++i)
-        numbers_[i] = numbers[i];
+        numbers_[i] = numbers.At(i);
 }
 
-Sam::Sam(Sam& other) : size_(other.size_) {
+Sam::Sam(Sam& other) : size_(other.size_), numbers_(other.size_) {
     for (int i = 0; i < size_; ++i)
         numbers_[i] = other.numbers_[i];
 }
@@ -40,35 +41,27 @@ void Sam::Reset() {
     Fill();
 }
 
-void Sam::Print() {
-    cout << "Set of" << size_ << "elems: {";
-    for (int i = 0; i < size_; ++i)
-        cout << numbers_[i] << ", ";
-    cout << "}";
-}
 
 void Sam::PushBack() {
-    PushBack(GenRand()); 
+     numbers_.PushBack(GenRand()); 
+     ++size_;
 }
 
-void Sam::PushBack(double val) {
-    if (size_ == 100)
-        throw "Error: Out of range";
-    numbers_[size_++] = val; 
+void Sam::PushBack(const double& val) {
+    numbers_.PushBack(val);
+	++size_;
 }
 
-double Sam::GetByIndex(int id) {
-    if (id < 0 || size_ <= id)
-        throw "Error: Out of range";
-    return numbers_[id];
+double Sam::operator [](int id) const {
+    return numbers_.At(id);
 }
 
-double Sam::Mean() {
+double Sam::Mean() const {
     if (size_ == 0)
         throw "Error: Set is empty!";
     double sum = 0;
     for (int i = 0; i < size_; ++i)
-        sum += numbers_[i];
+        sum += numbers_.At(i);
     return sum / size_;
 }
 
@@ -77,21 +70,25 @@ void Sam::IncreaseSizeTo(int size) {
         size_ = size;
         return;
     }
-    if (size > 100)
-        throw "Error: Out of range";
-    while (size_ < size)
-        numbers_[size_++] = GenRand();
+    while (size_++ < size)
+        numbers_.PushBack(GenRand());
 }
 
-Sam Sam::SelectFromTo(double from, double to) {
+Sam Sam::SelectFromTo(double from, double to) const {
     Sam ans;
     for (int i = 0; i < size_; ++i)
-        if (from <= numbers_[i] && numbers_[i] <= to)
-            ans.PushBack(numbers_[i]);
+        if (from <= numbers_.At(i) && numbers_.At(i) <= to)
+            ans.PushBack(numbers_.At(i));
     return ans;
 }
 
-
-int Sam::GetSize() {
+int Sam::Size() const {
     return size_;
+}
+
+ostream& operator <<(ostream& out, const Sam& to_print) {
+    out << "Set of " << to_print.Size() << " elems: {";
+    for (int i = 0; i < to_print.Size(); ++i)
+        out << to_print[i] << ", ";
+    return out << "}";
 }

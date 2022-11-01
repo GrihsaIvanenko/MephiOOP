@@ -2,27 +2,31 @@
 #define SAMH
 
 #include <iostream>
+#include "./../myVector/myVector.h"
+
+using namespace std;
 
 class Sam {
 private:
-    double numbers_[100];
+    MyVector numbers_;
     int size_;
-    double GenRand();
+    static double GenRand();
     void Fill();
 public:
     Sam();
     Sam(int size);
-    Sam(const double *numbers, const int n);
+    Sam(const MyVector& numbers);
     Sam(Sam& other);
     void Reset();
-    void Print();
     void PushBack();
-    void PushBack(double val);
-    double GetByIndex(int id);
-    double Mean();
+    void PushBack(const double& val);
+    double operator [](int id) const;
+	double Mean() const;
     void IncreaseSizeTo(int size);
-    Sam SelectFromTo(double from, double to);
-    int GetSize();
+    Sam SelectFromTo(double from, double to) const;
+    int Size() const;
 };
+
+ostream& operator <<(ostream& out, const Sam& to_print);
 
 #endif //SAMH
