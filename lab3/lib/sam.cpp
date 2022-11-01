@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Sam::Sam() : size_(1), numbers_(1) {
+Sam::Sam() : size_(0), numbers_(0) {
     Fill();
 }
 
@@ -66,12 +66,10 @@ double Sam::Mean() const {
 }
 
 void Sam::IncreaseSizeTo(int size) {
-    if (size <= size_) {
-        size_ = size;
-        return;
-    }
-    while (size_++ < size)
+    while (size_ < size) {
         numbers_.PushBack(GenRand());
+        ++size_;
+    }
 }
 
 Sam Sam::SelectFromTo(double from, double to) const {
@@ -88,7 +86,9 @@ int Sam::Size() const {
 
 ostream& operator <<(ostream& out, const Sam& to_print) {
     out << "Set of " << to_print.Size() << " elems: {";
-    for (int i = 0; i < to_print.Size(); ++i)
+    for (int i = 0; i + 1 < to_print.Size(); ++i)
         out << to_print[i] << ", ";
+    if (to_print.Size() > 0)
+        out << to_print[to_print.Size() - 1];
     return out << "}";
 }
