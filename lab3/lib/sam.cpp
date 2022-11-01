@@ -16,9 +16,9 @@ Sam::Sam(const MyVector& numbers): size_(numbers.Size()), numbers_(numbers.Size(
         numbers_[i] = numbers.At(i);
 }
 
-Sam::Sam(Sam& other) : size_(other.size_), numbers_(other.size_) {
+Sam::Sam(const Sam& other) : size_(other.size_), numbers_(other.size_) {
     for (int i = 0; i < size_; ++i)
-        numbers_[i] = other.numbers_[i];
+        numbers_[i] = other.numbers_.At(i);
 }
 
 double Sam::GenRand() {

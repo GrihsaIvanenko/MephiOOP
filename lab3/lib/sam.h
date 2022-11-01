@@ -16,7 +16,7 @@ public:
     Sam();
     Sam(int size);
     Sam(const MyVector& numbers);
-    Sam(Sam& other);
+    Sam(const Sam& other);
     void Reset();
     void PushBack();
     void PushBack(const double& val);
