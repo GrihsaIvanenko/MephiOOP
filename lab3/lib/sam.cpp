@@ -21,6 +21,19 @@ Sam::Sam(const Sam& other) : size_(other.size_), numbers_(other.size_) {
         numbers_[i] = other.numbers_.At(i);
 }
 
+Sam::Sam(Sam&& other) {
+    swap(other.numbers_, numbers_);
+    swap(other.size_, size_);
+}
+
+Sam& Sam::operator=(Sam&& other) {
+    if (this != &other) {
+        swap(other.numbers_, numbers_);
+        swap(other.size_, size_);
+    }
+    return *this;
+}
+
 double Sam::GenRand() {
     double res = 0;
     double val = 0.5;

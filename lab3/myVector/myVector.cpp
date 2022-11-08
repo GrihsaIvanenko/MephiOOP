@@ -35,6 +35,12 @@ MyVector::MyVector(const MyVector& other) {
         data[i] = 0;
 }
 
+MyVector::MyVector(MyVector&& other) : usedSize_(0), allocatedSize_(1), data(new double[1]) {
+    swap(usedSize_, other.usedSize_);
+    swap(allocatedSize_, other.allocatedSize_);
+    swap(data, other.data);
+}
+
 MyVector::~MyVector() {
     delete[] data;
 }
@@ -64,6 +70,15 @@ void MyVector::PopBack() {
 
 double& MyVector::operator [](int id) {
     return data[id];
+}
+
+MyVector& MyVector::operator =(MyVector&& other) {
+    if (this != &other) {
+        swap(usedSize_, other.usedSize_);
+        swap(allocatedSize_, other.allocatedSize_);
+        swap(data, other.data);
+    }
+    return *this;
 }
 
 double MyVector::At(int id) const {

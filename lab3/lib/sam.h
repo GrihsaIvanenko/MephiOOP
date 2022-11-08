@@ -17,6 +17,7 @@ public:
     Sam(int size);
     Sam(const MyVector& numbers);
     Sam(const Sam& other);
+    Sam(Sam&& other);
     void Reset();
     void PushBack();
     void PushBack(const double& val);
@@ -25,6 +26,7 @@ public:
     void IncreaseSizeTo(int size);
     Sam SelectFromTo(double from, double to) const;
     int Size() const;
+    Sam& operator=(Sam&& other);
 };
 
 ostream& operator <<(ostream& out, const Sam& to_print);

@@ -36,12 +36,12 @@ int main() {
             break;
         } else if (ans == 1) {
             Sam b;
-            a = b;
+            a = move(b);
         } else if (ans == 2) {
             unsigned int size;
             cin >> size;
             Sam b(size);
-            a = b;
+            a = move(b);
         } else if (ans == 3) {
             unsigned int size;
             cin >> size;
@@ -49,10 +49,10 @@ int main() {
             for (int i = 0; i < size; ++i)
                 cin >> v[i];
             Sam b(v);
-            a = b;
+            a = move(b);
         } else if (ans == 4) {
             Sam b(a);
-            a = b;
+            a = move(b);
         } else if (ans == 5) {
             a.Reset();
         } else if (ans == 6) {

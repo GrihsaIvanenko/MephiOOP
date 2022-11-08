@@ -12,6 +12,7 @@ public:
     MyVector();
     MyVector(unsigned int size);
     MyVector(const MyVector& other);
+    MyVector(MyVector&& other);
     ~MyVector();
     unsigned int Size() const;
     void PushBack(const double& item);
@@ -19,6 +20,7 @@ public:
     double& operator [](int id);
     double At(int id) const;
     const MyVector& operator =(const MyVector& other);
+    MyVector& operator =(MyVector&& other);
 };
 
 #endif
