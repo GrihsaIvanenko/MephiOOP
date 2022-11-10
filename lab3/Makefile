@@ -1,7 +1,7 @@
 all:
 	clear
 	g++ -std=c++2a ./myVector/myVector.cpp main.cpp ./lib/sam.cpp
-	./a.out
+	valgrind ./a.out
 
 test:
 	clear

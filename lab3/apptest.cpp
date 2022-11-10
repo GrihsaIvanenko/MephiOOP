@@ -26,6 +26,17 @@ TEST(MyVector, CopyConstructor) {
     ASSERT_EQ(v1[1], v[1]);
 }
 
+TEST(MyVector, MoveConstructor) {
+    MyVector v(2);
+    v[0] = 1.0;
+    v[1] = 0.2;
+    MyVector v1(std::move(v));
+    ASSERT_EQ(v1.Size(), 2);
+    ASSERT_EQ(v.Size(), 0);
+    ASSERT_EQ(v1[0], 1.0);
+    ASSERT_EQ(v1[1], 0.2);
+}
+
 TEST(MyVector, PushBack_PopBack) {
     MyVector v;
     for (int i = 0; i < 10; ++i) {
@@ -77,6 +88,12 @@ TEST(Sam, Constructors) {
     ASSERT_EQ(b.Size(), d.Size());
     ASSERT_EQ(b[0], d[0]);
     ASSERT_EQ(b[1], d[1]);
+
+    Sam e(move(d));
+    ASSERT_EQ(e.Size(), 2);
+    ASSERT_EQ(d.Size(), 0);
+    ASSERT_EQ(e[0], b[0]);
+    ASSERT_EQ(e[1], b[1]);
 }
 
 TEST(Sam, PushBack) {

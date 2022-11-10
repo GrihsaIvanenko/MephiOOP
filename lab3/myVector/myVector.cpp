@@ -5,22 +5,21 @@ using namespace std;
 
 unsigned int MyVector::getPow(unsigned int forWhat) {
     if (forWhat == 0)
-        return 1;
+        return 0;
     unsigned int ans = 1;
     while (ans < forWhat)
         ans += ans;
     return ans;
 }
 
-MyVector::MyVector() : usedSize_(0), allocatedSize_(1) {
-    data = new double[allocatedSize_];
-    for (int i = 0; i < allocatedSize_; ++i)
-        data[i] = 0;
-}
+MyVector::MyVector() : usedSize_(0), allocatedSize_(0), data(nullptr) { }
 
 MyVector::MyVector(unsigned int size) : usedSize_(size) {
     allocatedSize_ = getPow(size);
-    data = new double[allocatedSize_];
+    if (allocatedSize_ != 0)
+        data = new double[allocatedSize_];
+    else
+        data = nullptr;
     for (int i = 0; i < allocatedSize_; ++i)
         data[i] = 0;
 }
@@ -28,21 +27,25 @@ MyVector::MyVector(unsigned int size) : usedSize_(size) {
 MyVector::MyVector(const MyVector& other) {
     usedSize_ = other.usedSize_;
     allocatedSize_ = allocatedSize_;
-    data = new double[allocatedSize_];
+    if (allocatedSize_ > 0)
+        data = new double[allocatedSize_];
+    else
+        data = nullptr;
     for (int i = 0; i < other.usedSize_; ++i)
         data[i] = other.At(i);
     for (int i = other.Size(); i < allocatedSize_; ++i)
         data[i] = 0;
 }
 
-MyVector::MyVector(MyVector&& other) : usedSize_(0), allocatedSize_(1), data(new double[1]) {
+MyVector::MyVector(MyVector&& other) : usedSize_(0), allocatedSize_(0), data(nullptr) {
     swap(usedSize_, other.usedSize_);
     swap(allocatedSize_, other.allocatedSize_);
     swap(data, other.data);
 }
 
 MyVector::~MyVector() {
-    delete[] data;
+    if (allocatedSize_ != 0)
+        delete[] data;
 }
 
 unsigned int MyVector::Size() const {
@@ -51,13 +54,16 @@ unsigned int MyVector::Size() const {
 
 void MyVector::PushBack(const double& val) {
     if (usedSize_ == allocatedSize_) {
-        double* ndata = new double[allocatedSize_ << 1];
+        int newAllocatedSize_ = (allocatedSize_ == 0) ? 1 : (allocatedSize_ << 1);
+        double* ndata = new double[newAllocatedSize_];
         for (int i = 0; i < allocatedSize_; ++i) {
             ndata[i] = data[i];
-            ndata[i + allocatedSize_] = 0;
         }
-        delete[] data;
-        allocatedSize_ += allocatedSize_;
+        for (int i = allocatedSize_; i < newAllocatedSize_; ++i)
+            ndata[i] = 0;
+        if (allocatedSize_ != 0)
+            delete[] data;
+        allocatedSize_ = newAllocatedSize_;
         data = ndata;
     }
     data[usedSize_++] = val;
@@ -86,10 +92,14 @@ double MyVector::At(int id) const {
 }
 
 const MyVector& MyVector::operator =(const MyVector& other) {
-    delete[] data;
+    if (allocatedSize_ != 0)
+        delete[] data;
     usedSize_ = other.usedSize_;
     allocatedSize_ = MyVector::getPow(usedSize_);
-    data = new double[allocatedSize_];
+    if (allocatedSize_ != 0)
+        data = new double[allocatedSize_];
+    else
+        data = nullptr;
     for (int i = 0; i < other.usedSize_; ++i)
         data[i] = other.At(i);
     for (int i = other.Size(); i < allocatedSize_; ++i)

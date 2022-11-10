@@ -21,7 +21,7 @@ Sam::Sam(const Sam& other) : size_(other.size_), numbers_(other.size_) {
         numbers_[i] = other.numbers_.At(i);
 }
 
-Sam::Sam(Sam&& other) {
+Sam::Sam(Sam&& other) : size_(0), numbers_(0) {
     swap(other.numbers_, numbers_);
     swap(other.size_, size_);
 }
