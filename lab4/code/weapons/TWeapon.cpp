@@ -14,6 +14,16 @@ TWeapon::TWeapon(int WeaponType, int Damage, int CallDown, int Range, int ShotsT
     , Cost_(Cost)
 { }
 
+TWeapon::TWeapon(const TWeapon &other)
+    : WeaponType_(other.WeaponType_)
+    , Damage_(other.Damage_)
+    , CallDown_(other.CallDown_)
+    , Range_(other.Range_)
+    , ShotsTotal_(other.ShotsTotal_)
+    , ShotsNow_(other.ShotsNow_)
+    , Cost_(other.Cost_)
+{ }
+
 TWeapon& TWeapon::operator =(const TWeapon& other) {
     WeaponType_ = other.WeaponType_;
     Damage_ = other.Damage_;
@@ -88,3 +98,4 @@ int TWeapon::MakeShot() {
     }
     return 0;
 }
+

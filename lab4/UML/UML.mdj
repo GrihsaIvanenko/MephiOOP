@@ -507,40 +507,6 @@
 									"subViews": [
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAGEv3zTXjxzP6s=",
-											"_parent": {
-												"$ref": "AAAAAAGEv3uHzjwxPLg="
-											},
-											"model": {
-												"$ref": "AAAAAAGEv3zTWDxwe+4="
-											},
-											"font": "Arial;13;0",
-											"left": 765,
-											"top": 1717,
-											"width": 123.1953125,
-											"height": 13,
-											"text": "+Getters()",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAGEv3z7Wzx6X4g=",
-											"_parent": {
-												"$ref": "AAAAAAGEv3uHzjwxPLg="
-											},
-											"model": {
-												"$ref": "AAAAAAGEv3z7Vjx3X94="
-											},
-											"font": "Arial;13;0",
-											"left": 765,
-											"top": 1732,
-											"width": 123.1953125,
-											"height": 13,
-											"text": "+Setters()",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAGEv6axxLGCcDo=",
 											"_parent": {
 												"$ref": "AAAAAAGEv3uHzjwxPLg="
@@ -550,10 +516,27 @@
 											},
 											"font": "Arial;13;0",
 											"left": 765,
-											"top": 1747,
+											"top": 1717,
 											"width": 123.1953125,
 											"height": 13,
-											"text": "+GetGunByPosition()",
+											"text": "+GetGunByPlace()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGEwu9JqXLE4M8=",
+											"_parent": {
+												"$ref": "AAAAAAGEv3uHzjwxPLg="
+											},
+											"model": {
+												"$ref": "AAAAAAGEwu9JpHLBnr8="
+											},
+											"font": "Arial;13;0",
+											"left": 765,
+											"top": 1732,
+											"width": 123.1953125,
+											"height": 13,
+											"text": "+SetGunByPlace()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -561,7 +544,7 @@
 									"left": 760,
 									"top": 1712,
 									"width": 133.1953125,
-									"height": 53
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -6852,7 +6835,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv0g9OzuucS4="
 							},
-							"name": "WeaponType"
+							"name": "WeaponType",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7133,33 +7117,26 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv3uHzTwogJ4="
 							},
-							"name": "WeaponsVector"
+							"name": "WeaponsVector",
+							"type": ""
 						}
 					],
 					"operations": [
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAGEv3zTWDxwe+4=",
-							"_parent": {
-								"$ref": "AAAAAAGEv3uHzTwogJ4="
-							},
-							"name": "Getters"
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAGEv3z7Vjx3X94=",
-							"_parent": {
-								"$ref": "AAAAAAGEv3uHzTwogJ4="
-							},
-							"name": "Setters"
-						},
 						{
 							"_type": "UMLOperation",
 							"_id": "AAAAAAGEv6axvrF/L9Y=",
 							"_parent": {
 								"$ref": "AAAAAAGEv3uHzTwogJ4="
 							},
-							"name": "GetGunByPosition"
+							"name": "GetGunByPlace"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGEwu9JpHLBnr8=",
+							"_parent": {
+								"$ref": "AAAAAAGEv3uHzTwogJ4="
+							},
+							"name": "SetGunByPlace"
 						}
 					]
 				},
@@ -7567,7 +7544,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv5WJyoDg0w4="
 							},
-							"name": "WeaponHolder"
+							"name": "WeaponHolder",
+							"type": ""
 						}
 					],
 					"operations": [
