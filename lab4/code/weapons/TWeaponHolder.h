@@ -17,7 +17,7 @@ private:
     std::unique_ptr<TWeapon> createUniquePtrByGunPrt(TWeapon* gun);
 public:
     TWeaponHolder();
-    TWeaponHolder(TWeapon* GunFront, TWeapon* GunBack, TWeapon* GunLeftSide, TWeapon* GunRightSide);
+    TWeaponHolder(TWeapon* gunFront, TWeapon* gunBack, TWeapon* gunLeftSide, TWeapon* gunRightSide);
 
     TWeapon* GetGunByPlace(EPlaceOnShip place);
 

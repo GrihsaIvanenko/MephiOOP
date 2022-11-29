@@ -16,17 +16,17 @@ private:
     int Cost_;
 
 public:
-    TWeapon(int WeaponType, int Damage, int CallDown, int Range, int ShotsTotal, int ShotsNow, int Cost);
+    TWeapon(int weaponType, int damage, int callDown, int range, int shotsTotal, int shotsNow, int cost);
     TWeapon(const TWeapon& other);
     TWeapon& operator =(const TWeapon& other);
 
-    void SetWeaponType(int WeaponType);
-    void SetDamage(int Damage);
-    void SetCallDown(int CallDown);
-    void SetRange(int Range);
-    void SetShotsTotal(int ShotsTotal);
-    void SetShotsNow(int ShotsNow);
-    void SetCost(int Cost);
+    void SetWeaponType(int weaponType);
+    void SetDamage(int damage);
+    void SetCallDown(int callDown);
+    void SetRange(int range);
+    void SetShotsTotal(int shotsTotal);
+    void SetShotsNow(int shotsNow);
+    void SetCost(int cost);
 
     int GetWeaponType() const;
     int GetDamage() const;

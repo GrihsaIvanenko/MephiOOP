@@ -4,14 +4,14 @@
 
 #include "TWeapon.h"
 
-TWeapon::TWeapon(int WeaponType, int Damage, int CallDown, int Range, int ShotsTotal, int ShotsNow, int Cost)
-    : WeaponType_(WeaponType)
-    , Damage_(Damage)
-    , CallDown_(CallDown)
-    , Range_(Range)
-    , ShotsTotal_(ShotsTotal)
-    , ShotsNow_(ShotsNow)
-    , Cost_(Cost)
+TWeapon::TWeapon(int weaponType, int damage, int callDown, int range, int shotsTotal, int shotsNow, int cost)
+    : WeaponType_(weaponType)
+    , Damage_(damage)
+    , CallDown_(callDown)
+    , Range_(range)
+    , ShotsTotal_(shotsTotal)
+    , ShotsNow_(shotsNow)
+    , Cost_(cost)
 { }
 
 TWeapon::TWeapon(const TWeapon &other)
@@ -35,32 +35,32 @@ TWeapon& TWeapon::operator =(const TWeapon& other) {
     return *this;
 }
 
-void TWeapon::SetWeaponType(int WeaponType) {
-    WeaponType_ = WeaponType;
+void TWeapon::SetWeaponType(int weaponType) {
+    WeaponType_ = weaponType;
 }
 
-void TWeapon::SetDamage(int Damage) {
-    Damage_ = Damage;
+void TWeapon::SetDamage(int damage) {
+    Damage_ = damage;
 }
 
-void TWeapon::SetCallDown(int CallDown) {
-    CallDown_ = CallDown;
+void TWeapon::SetCallDown(int callDown) {
+    CallDown_ = callDown;
 }
 
-void TWeapon::SetRange(int Range) {
-    Range_ = Range;
+void TWeapon::SetRange(int range) {
+    Range_ = range;
 }
 
-void TWeapon::SetShotsTotal(int ShotsTotal) {
-    ShotsTotal_ = ShotsTotal;
+void TWeapon::SetShotsTotal(int shotsTotal) {
+    ShotsTotal_ = shotsTotal;
 }
 
-void TWeapon::SetShotsNow(int ShotsNow) {
-    ShotsNow_ = ShotsNow;
+void TWeapon::SetShotsNow(int shotsNow) {
+    ShotsNow_ = shotsNow;
 }
 
-void TWeapon::SetCost(int Cost) {
-    Cost_ = Cost;
+void TWeapon::SetCost(int cost) {
+    Cost_ = cost;
 }
 
 int TWeapon::GetWeaponType() const {

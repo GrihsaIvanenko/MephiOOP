@@ -18,13 +18,13 @@ TWeaponHolder::TWeaponHolder() {
     Weapons_.emplace_back(ShipRightSide, nullptr);
 }
 
-TWeaponHolder::TWeaponHolder(TWeapon *GunFront, TWeapon *GunBack, TWeapon *GunLeftSide, TWeapon *GunRightSide)
+TWeaponHolder::TWeaponHolder(TWeapon *gunFront, TWeapon *gunBack, TWeapon *gunLeftSide, TWeapon *gunRightSide)
     : TWeaponHolder() {
     assert(Weapons_.size() == 4);
-    SetGunByPlace(ShipFront, GunFront);
-    SetGunByPlace(ShipBack, GunBack);
-    SetGunByPlace(ShipLeftSide, GunLeftSide);
-    SetGunByPlace(ShipRightSide, GunRightSide);
+    SetGunByPlace(ShipFront, gunFront);
+    SetGunByPlace(ShipBack, gunBack);
+    SetGunByPlace(ShipLeftSide, gunLeftSide);
+    SetGunByPlace(ShipRightSide, gunRightSide);
 }
 
 TWeapon* TWeaponHolder::GetGunByPlace(EPlaceOnShip placeSearch) {

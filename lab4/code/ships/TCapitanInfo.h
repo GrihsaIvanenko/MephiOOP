@@ -16,13 +16,13 @@ private:
 public:
     TCapitanInfo();
     TCapitanInfo(
-            const std::string& Name, const std::string& Surname, const std::string& Patronymic, const std::string& Rank);
+            const std::string& name, const std::string& surname, const std::string& patronymic, const std::string& rank);
     TCapitanInfo(const TCapitanInfo& other);
     TCapitanInfo& operator = (const TCapitanInfo& other);
-    void SetName(const std::string& Name);
-    void SetSurname(const std::string& Surname);
-    void SetPatronymic(const std::string& Patronymic);
-    void SetRank(const std::string& Rank);
+    void SetName(const std::string& name);
+    void SetSurname(const std::string& surname);
+    void SetPatronymic(const std::string& patronymic);
+    void SetRank(const std::string& rank);
 
     std::string GetName() const;
     std::string GetSurname() const;

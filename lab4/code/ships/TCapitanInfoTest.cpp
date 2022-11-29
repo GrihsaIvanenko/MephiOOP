@@ -4,8 +4,6 @@
 
 #include "gtest/gtest.h"
 #include "TCapitanInfo.h"
-#include <vector>
-#include <string>
 
 std::vector<std::string> GetFields(const TCapitanInfo& capitanInfo) {
     return {capitanInfo.GetName(), capitanInfo.GetSurname(), capitanInfo.GetPatronymic(), capitanInfo.GetRank()};

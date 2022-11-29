@@ -7,11 +7,11 @@
 TCapitanInfo::TCapitanInfo(): Name_(""), Surname_(""), Patronymic_(""), Rank_("") { }
 
 TCapitanInfo::TCapitanInfo(
-        const std::string& Name, const std::string& Surname, const std::string& Patronymic, const std::string& Rank)
-    : Name_(Name)
-    , Surname_(Surname)
-    , Patronymic_(Patronymic)
-    , Rank_(Rank)
+        const std::string& name, const std::string& surname, const std::string& patronymic, const std::string& rank)
+    : Name_(name)
+    , Surname_(surname)
+    , Patronymic_(patronymic)
+    , Rank_(rank)
 { }
 
 TCapitanInfo::TCapitanInfo(const TCapitanInfo& other)
@@ -29,20 +29,20 @@ TCapitanInfo& TCapitanInfo::operator = (const TCapitanInfo& other) {
     return *this;
 }
 
-void TCapitanInfo::SetName(const std::string& Name) {
-    Name_ = Name;
+void TCapitanInfo::SetName(const std::string& name) {
+    Name_ = name;
 }
 
-void TCapitanInfo::SetSurname(const std::string& Surname) {
-    Surname_ = Surname;
+void TCapitanInfo::SetSurname(const std::string& surname) {
+    Surname_ = surname;
 }
 
-void TCapitanInfo::SetPatronymic(const std::string& Patronymic) {
-    Patronymic_ = Patronymic;
+void TCapitanInfo::SetPatronymic(const std::string& patronymic) {
+    Patronymic_ = patronymic;
 }
 
-void TCapitanInfo::SetRank(const std::string& Rank) {
-    Rank_ = Rank;
+void TCapitanInfo::SetRank(const std::string& rank) {
+    Rank_ = rank;
 }
 
 std::string TCapitanInfo::GetName() const {
