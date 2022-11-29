@@ -63,7 +63,7 @@
 											"top": 1855,
 											"width": 153.333984375,
 											"height": 13,
-											"text": "TWearpon"
+											"text": "TWeapon"
 										},
 										{
 											"_type": "LabelView",
@@ -135,7 +135,7 @@
 											"top": 1878,
 											"width": 153.333984375,
 											"height": 13,
-											"text": "+WearponType",
+											"text": "+WeaponType",
 											"horizontalAlignment": 0
 										},
 										{
@@ -413,7 +413,7 @@
 											"top": 1671,
 											"width": 123.1953125,
 											"height": 13,
-											"text": "TWearponHolder"
+											"text": "TWeaponHolder"
 										},
 										{
 											"_type": "LabelView",
@@ -485,7 +485,7 @@
 											"top": 1694,
 											"width": 123.1953125,
 											"height": 13,
-											"text": "+WearponsVector",
+											"text": "+WeaponsVector",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1670,7 +1670,7 @@
 											"top": 1502,
 											"width": 126,
 											"height": 13,
-											"text": "+WearponHolder",
+											"text": "+WeaponHolder",
 											"horizontalAlignment": 0
 										}
 									],
@@ -6787,7 +6787,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "TWearpon",
+					"name": "TWeapon",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -6852,7 +6852,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv0g9OzuucS4="
 							},
-							"name": "WearponType"
+							"name": "WeaponType"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6860,7 +6860,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv0g9OzuucS4="
 							},
-							"name": "Damage"
+							"name": "Damage",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6868,7 +6869,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv0g9OzuucS4="
 							},
-							"name": "CallDown"
+							"name": "CallDown",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6876,7 +6878,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv0g9OzuucS4="
 							},
-							"name": "Range"
+							"name": "Range",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6884,7 +6887,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv0g9OzuucS4="
 							},
-							"name": "ShotsTotal"
+							"name": "ShotsTotal",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6892,7 +6896,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv0g9OzuucS4="
 							},
-							"name": "ShotsNow"
+							"name": "ShotsNow",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6900,7 +6905,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv0g9OzuucS4="
 							},
-							"name": "Cost"
+							"name": "Cost",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -6936,7 +6942,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "TWearponHolder",
+					"name": "TWeaponHolder",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -7127,7 +7133,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv3uHzTwogJ4="
 							},
-							"name": "WearponsVector"
+							"name": "WeaponsVector"
 						}
 					],
 					"operations": [
@@ -7228,7 +7234,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4PBGT5bD2Y="
 							},
-							"name": "SurnameInitials"
+							"name": "SurnameInitials",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7236,7 +7243,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4PBGT5bD2Y="
 							},
-							"name": "Name"
+							"name": "Name",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7244,7 +7252,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4PBGT5bD2Y="
 							},
-							"name": "Surname"
+							"name": "Surname",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7252,7 +7261,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4PBGT5bD2Y="
 							},
-							"name": "Patronymic"
+							"name": "Patronymic",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7260,7 +7270,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4PBGT5bD2Y="
 							},
-							"name": "Rank"
+							"name": "Rank",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -7381,7 +7392,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4dKFUGP1Aw="
 							},
-							"name": "ShipType"
+							"name": "ShipType",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7389,7 +7401,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4dKFUGP1Aw="
 							},
-							"name": "ShipName"
+							"name": "ShipName",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7397,7 +7410,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4dKFUGP1Aw="
 							},
-							"name": "CapitanInfo"
+							"name": "CapitanInfo",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7405,7 +7419,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4dKFUGP1Aw="
 							},
-							"name": "MaxSpeed"
+							"name": "MaxSpeed",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7413,7 +7428,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4dKFUGP1Aw="
 							},
-							"name": "CurSpeed"
+							"name": "CurSpeed",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7421,7 +7437,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4dKFUGP1Aw="
 							},
-							"name": "HPTotal"
+							"name": "HPTotal",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7429,7 +7446,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4dKFUGP1Aw="
 							},
-							"name": "HPNow"
+							"name": "HPNow",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7437,7 +7455,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv4dKFUGP1Aw="
 							},
-							"name": "Cost"
+							"name": "Cost",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -7548,7 +7567,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv5WJyoDg0w4="
 							},
-							"name": "WearponHolder"
+							"name": "WeaponHolder"
 						}
 					],
 					"operations": [
@@ -7628,7 +7647,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv6mARL/V22E="
 							},
-							"name": "WeightTotal"
+							"name": "WeightTotal",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7636,7 +7656,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv6mARL/V22E="
 							},
-							"name": "WeightNow"
+							"name": "WeightNow",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7644,7 +7665,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv6mARL/V22E="
 							},
-							"name": "SlowKoefficient"
+							"name": "SlowKoefficient",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -7724,7 +7746,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv7BJ1gbtoSM="
 							},
-							"name": "T*"
+							"name": "T*",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -7813,7 +7836,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv7a8WSKJLqY="
 							},
-							"name": "State_PointerInVector"
+							"name": "State_PointerInVector",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -7915,7 +7939,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv7qiQTpJQlw="
 							},
-							"name": "Tship*"
+							"name": "Tship*",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7923,7 +7948,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv7qiQTpJQlw="
 							},
-							"name": "XCoordinate"
+							"name": "XCoordinate",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7931,7 +7957,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv7qiQTpJQlw="
 							},
-							"name": "YCoordinate"
+							"name": "YCoordinate",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7939,7 +7966,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv7qiQTpJQlw="
 							},
-							"name": "ShipName"
+							"name": "ShipName",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -8036,7 +8064,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv8CorXiek0A="
 							},
-							"name": "SpawnTime"
+							"name": "SpawnTime",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8044,7 +8073,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv8CorXiek0A="
 							},
-							"name": "SpawnDesctiptor"
+							"name": "SpawnDesctiptor",
+							"type": ""
 						}
 					]
 				},
@@ -8092,7 +8122,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv8DA0nzuo68="
 							},
-							"name": "XCoordinate"
+							"name": "XCoordinate",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8100,7 +8131,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv8DA0nzuo68="
 							},
-							"name": "YCoordinate"
+							"name": "YCoordinate",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -8179,7 +8211,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv8YqN6Jh2qI="
 							},
-							"name": "LoopTime"
+							"name": "LoopTime",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8187,7 +8220,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv8YqN6Jh2qI="
 							},
-							"name": "WarShipToSpawn"
+							"name": "WarShipToSpawn",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -8223,7 +8257,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "Capitan"
+							"name": "Capitan",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8231,7 +8266,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "Table_of_actual_convoy"
+							"name": "Table_of_actual_convoy",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8239,7 +8275,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "Table_of_actual_pirates"
+							"name": "Table_of_actual_pirates",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8247,7 +8284,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "MoneyTotal"
+							"name": "MoneyTotal",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8255,7 +8293,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "MoneyUsed"
+							"name": "MoneyUsed",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8263,7 +8302,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "WeightTotal"
+							"name": "WeightTotal",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8271,7 +8311,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "WeightNeedToPass"
+							"name": "WeightNeedToPass",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8279,7 +8320,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "WeightCompleted"
+							"name": "WeightCompleted",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8287,7 +8329,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "WeightLost"
+							"name": "WeightLost",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8295,7 +8338,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "PirateCountMax"
+							"name": "PirateCountMax",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8303,7 +8347,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "ConvoyCountMax"
+							"name": "ConvoyCountMax",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8311,7 +8356,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "Width"
+							"name": "Width",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8319,7 +8365,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "Heigth"
+							"name": "Heigth",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8327,7 +8374,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "BaseA"
+							"name": "BaseA",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8335,7 +8383,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "BaseB"
+							"name": "BaseB",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8343,7 +8392,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEv9X+54IvC50="
 							},
-							"name": "Table_of_PirateBase"
+							"name": "Table_of_PirateBase",
+							"type": ""
 						}
 					],
 					"operations": [
