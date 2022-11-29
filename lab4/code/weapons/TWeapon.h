@@ -19,6 +19,7 @@ public:
     TWeapon(int WeaponType, int Damage, int CallDown, int Range, int ShotsTotal, int ShotsNow, int Cost);
     TWeapon(const TWeapon& other);
     TWeapon& operator =(const TWeapon& other);
+
     void SetWeaponType(int WeaponType);
     void SetDamage(int Damage);
     void SetCallDown(int CallDown);

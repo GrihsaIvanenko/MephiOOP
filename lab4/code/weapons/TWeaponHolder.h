@@ -18,7 +18,9 @@ private:
 public:
     TWeaponHolder();
     TWeaponHolder(TWeapon* GunFront, TWeapon* GunBack, TWeapon* GunLeftSide, TWeapon* GunRightSide);
+
     TWeapon* GetGunByPlace(EPlaceOnShip place);
+
     void SetGunByPlace(EPlaceOnShip place, TWeapon* what);
 };
 

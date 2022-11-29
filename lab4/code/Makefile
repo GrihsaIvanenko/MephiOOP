@@ -1,6 +1,18 @@
-weapons: weapon
-	g++ -std=c++17 ./build/weapons/*.o -o weapon
-	rm ./build/weapons/*.o
+test: capitanInfoTest weaponHolderTest weaponTest
+
+##################################################
+
+capitanInfoTest: capitanInfo
+	g++ -std=c++17 ./ships/TCapitanInfoTest.cpp ./build/ships/*  -lgtest -lgtest_main -lpthread -o ./build/ships/test
+	./build/ships/test
+	rm ./build/ships/test
+
+capitanInfo:
+	g++ -std=c++17 -c ./ships/TCapitanInfo.cpp -o ./build/ships/TCapitanInfo.o
+
+
+
+#####################################################
 
 weaponHolderTest: weaponHolder
 	g++ -std=c++17 ./weapons/TWeaponHolderTest.cpp ./build/weapons/*  -lgtest -lgtest_main -lpthread -o ./build/weapons/test
@@ -18,5 +30,8 @@ weaponTest: weapon
 weapon:
 	g++ -std=c++17 -c ./weapons/TWeapon.cpp -o ./build/weapons/TWeapon.o
 
-clear:
+#####################################################
+
+clean:
+	rm -r ./build/ships/*
 	rm -r ./build/weapons/*
