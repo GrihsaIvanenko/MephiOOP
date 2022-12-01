@@ -43,7 +43,7 @@ TEST(TWeaponHolder, InitConstructorAndAssign) {
     //make shot to check copy-creating
     TWeapon* Gun1 = holder3.GetGunByPlace(ShipBack);
     TWeapon* Gun2 = holder3.GetGunByPlace(ShipLeftSide);
-    Gun1->MakeShot();
+    Gun1->MakeShot(0);
     ASSERT_EQ(Gun1->GetShotsNow() + 1, b.GetShotsNow());
     ASSERT_EQ(Gun2->GetShotsNow(), b.GetShotsNow());
 }
@@ -61,9 +61,35 @@ TEST(TWeaponHolder, SetByPlace) {
                     holder.GetGunByPlace(ShipFront),
                     holder.GetGunByPlace(ShipLeftSide)),
             true);
-    holder.GetGunByPlace(ShipFront)->MakeShot();
+    holder.GetGunByPlace(ShipFront)->MakeShot(0);
     ASSERT_EQ(holder.GetGunByPlace(ShipFront)->GetShotsNow() + 1, c.GetShotsNow());
     ASSERT_EQ(holder.GetGunByPlace(ShipFront)->GetShotsNow() + 1, holder.GetGunByPlace(ShipLeftSide)->GetShotsNow());
+}
+
+TEST(TWeaponHolder, MakeShot) {
+    TWeapon a(0, 100, 0, 20, 0, 3, 0);
+    TWeapon b(0, 1000, 0, 10, 0, 1, 0);
+    TWeaponHolder holder(nullptr, &b, &a, &b);
+    ASSERT_EQ(holder.MakeShot(20 * 20), 100);
+    ASSERT_EQ(holder.GetGunByPlace(ShipBack)->GetShotsNow(), 1);
+    ASSERT_EQ(holder.GetGunByPlace(ShipLeftSide)->GetShotsNow(), 2);
+    ASSERT_EQ(holder.GetGunByPlace(ShipRightSide)->GetShotsNow(), 1);
+
+    ASSERT_EQ(holder.MakeShot(10 * 10), 1000 + 1000 + 100);
+    ASSERT_EQ(holder.GetGunByPlace(ShipBack)->GetShotsNow(), 0);
+    ASSERT_EQ(holder.GetGunByPlace(ShipLeftSide)->GetShotsNow(), 1);
+    ASSERT_EQ(holder.GetGunByPlace(ShipRightSide)->GetShotsNow(), 0);
+
+    ASSERT_EQ(holder.MakeShot(10 * 10), 100);
+    ASSERT_EQ(holder.GetGunByPlace(ShipBack)->GetShotsNow(), 0);
+    ASSERT_EQ(holder.GetGunByPlace(ShipLeftSide)->GetShotsNow(), 0);
+    ASSERT_EQ(holder.GetGunByPlace(ShipRightSide)->GetShotsNow(), 0);
+
+    ASSERT_EQ(holder.MakeShot(0), 0);
+    ASSERT_EQ(holder.GetGunByPlace(ShipLeftSide)->GetShotsNow(), 0);
+
+    holder = TWeaponHolder(&a, &a, &a, &a);
+    ASSERT_EQ(holder.MakeShot(20 * 20), 100 * 4);
 }
 
 int main() {

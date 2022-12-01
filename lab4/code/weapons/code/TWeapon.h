@@ -38,7 +38,7 @@ public:
     int GetShotsNow() const;
     int GetCost() const;
 
-    int MakeShot();
+    int MakeShot(int sqDistance);
 };
 
 #endif //LAB4_TWEAPON_H

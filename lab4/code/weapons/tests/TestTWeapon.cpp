@@ -53,12 +53,19 @@ TEST(TWeapon, Setters) {
 }
 
 TEST(TWeapon, MakeShot) {
-    TWeapon weaponNotEmpty(0, 30, 0, 0, 10, 4, 0);
-    ASSERT_EQ(weaponNotEmpty.MakeShot(), 30);
+    TWeapon weaponNotEmpty(0, 30, 0, 3, 10, 4, 0);
+
+    ASSERT_EQ(weaponNotEmpty.MakeShot(8), 30);
     ASSERT_EQ(weaponNotEmpty.GetShotsNow(), 3);
 
-    TWeapon weaponEmpty(0, 40, 0, 0, 10, 0, 0);
-    ASSERT_EQ(weaponEmpty.MakeShot(), 0);
+    ASSERT_EQ(weaponNotEmpty.MakeShot(9), 30);
+    ASSERT_EQ(weaponNotEmpty.GetShotsNow(), 2);
+
+    ASSERT_EQ(weaponNotEmpty.MakeShot(10), 0);
+    ASSERT_EQ(weaponNotEmpty.GetShotsNow(), 2);
+
+    TWeapon weaponEmpty(0, 40, 0, 10, 10, 0, 0);
+    ASSERT_EQ(weaponEmpty.MakeShot(10), 0);
     ASSERT_EQ(weaponEmpty.GetShotsNow(), 0);
 }
 

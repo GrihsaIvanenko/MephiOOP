@@ -68,10 +68,10 @@ TEST(TShip, MakeDamage) {
     TCapitanInfo notEmptyInfo("a", "b", "c", "d");
     TShip notEmptyShip(11, "name", notEmptyInfo, 22, 33, 44, 55, 66);
 
-    notEmptyShip.MakeDamage(10);
+    notEmptyShip.BeDamaged(10);
     ASSERT_EQ(notEmptyShip.GetHPNow(), 45);
 
-    notEmptyShip.MakeDamage(100);
+    notEmptyShip.BeDamaged(100);
     ASSERT_EQ(notEmptyShip.GetHPNow(), 0);
 }
 

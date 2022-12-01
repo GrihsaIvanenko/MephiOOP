@@ -102,8 +102,10 @@ int TWeapon::GetCost() const {
     return Cost_;
 }
 
-int TWeapon::MakeShot() {
+int TWeapon::MakeShot(int sqDistance) {
     if (ShotsNow_ > 0) {
+        if (Range_ * Range_ < sqDistance)
+            return 0;
         --ShotsNow_;
         return Damage_;
     }

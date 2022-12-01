@@ -30,6 +30,8 @@ public:
 
     void SetGunByPlace(EPlaceOnShip place, TWeapon* what);
 
+    int MakeShot(int sqDistance);
+
     static bool SameGuns(const TWeapon* lhs, const TWeapon* rhs) {
         if (!lhs && !rhs)
             return true;

@@ -6,6 +6,7 @@
 #define LAB4_TSHIP_H
 
 #include <string>
+
 #include "TCapitanInfo.h"
 
 class TShip {
@@ -29,6 +30,7 @@ public:
             int hpNow,
             int cost);
     TShip(const TShip& other);
+    virtual ~TShip() = default;
     TShip& operator =(const TShip& other);
     bool operator ==(const TShip& other) const;
 
@@ -50,7 +52,7 @@ public:
     int GetHPNow() const;
     int GetCost() const;
 
-    void MakeDamage(int damage);
+    void BeDamaged(int damage);
 };
 
 #endif //LAB4_TSHIP_H

@@ -2,9 +2,9 @@
 // Created by grigorijivanenko on 29.11.22.
 //
 
-#include "TWeaponHolder.h"
 #include <cassert>
-#include <memory>
+
+#include "TWeaponHolder.h"
 
 TWeaponHolder::TWeaponHolder() {
     Weapons_.emplace_back(ShipFront, nullptr);
@@ -58,4 +58,12 @@ void TWeaponHolder::SetGunByPlace(EPlaceOnShip placeSearch, TWeapon* what) {
             return;
         }
     throw "Holder does not contains placeSearch!";
+}
+
+int TWeaponHolder::MakeShot(int sqDistance) {
+    int totalDamage = 0;
+    for (auto& [placeNow, GunPtr] : Weapons_)
+        if (GunPtr)
+            totalDamage += GunPtr->MakeShot(sqDistance);
+    return totalDamage;
 }

@@ -2,7 +2,25 @@ Test: TestWeapons TestShips
 
 #####################################################
 
-TestShips: TestTCapitanInfo TestTShip TestTCargoShip
+TestShips: TestTCapitanInfo TestTShip TestTCargoShip TestTWarShip
+
+TestTWarShip: TWarShip
+	g++ -std=c++17 \
+	        		./build/code/TWeapon.o \
+                    ./build/code/TWeaponHolder.o \
+        			./build/code/TCapitanInfo.o \
+        			./build/code/TShip.o \
+        			./build/code/TWarShip.o \
+        			./ships/tests/TestTWarShip.cpp \
+        			-lgtest -lgtest_main -lpthread \
+        			-o ./build/tests/TestTWarShip
+	./build/tests/TestTWarShip
+	rm ./build/tests/TestTWarShip
+
+TWarShip: TShip TWeaponHolder
+	g++ -std=c++17 -c \
+        			./ships/code/TWarShip.cpp \
+        			-o ./build/code/TWarShip.o
 
 TestTCargoShip: TCargoShip
 	g++ -std=c++17 \

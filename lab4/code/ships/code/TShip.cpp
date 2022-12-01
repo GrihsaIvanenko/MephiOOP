@@ -115,7 +115,7 @@ int TShip::GetCost() const {
     return Cost_;
 }
 
-void TShip::MakeDamage(int damage) {
+void TShip::BeDamaged(int damage) {
     HPNow_ = std::max(HPNow_ - damage, 0);
 }
 

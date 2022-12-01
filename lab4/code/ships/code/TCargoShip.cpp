@@ -2,8 +2,9 @@
 // Created by grigorijivanenko on 01.12.22.
 //
 
-#include "TCargoShip.h"
 #include <cmath>
+
+#include "TCargoShip.h"
 
 TCargoShip::TCargoShip(
         int shipType,
