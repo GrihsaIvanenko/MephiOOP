@@ -4,12 +4,7 @@
 
 #include "TWeaponHolder.h"
 #include <cassert>
-
-std::unique_ptr<TWeapon> TWeaponHolder::createUniquePtrByGunPrt(TWeapon* gun) {
-    return gun
-        ? std::move(std::make_unique<TWeapon>(*gun))
-        : nullptr;
-}
+#include <memory>
 
 TWeaponHolder::TWeaponHolder() {
     Weapons_.emplace_back(ShipFront, nullptr);
@@ -27,17 +22,39 @@ TWeaponHolder::TWeaponHolder(TWeapon *gunFront, TWeapon *gunBack, TWeapon *gunLe
     SetGunByPlace(ShipRightSide, gunRightSide);
 }
 
-TWeapon* TWeaponHolder::GetGunByPlace(EPlaceOnShip placeSearch) {
+TWeaponHolder::TWeaponHolder(const TWeaponHolder& other)
+    : TWeaponHolder() {
+    assert(Weapons_.size() == 4);
+    for (auto& [placeNow, gunPtr] : other.Weapons_)
+        if (gunPtr)
+            SetGunByPlace(placeNow, gunPtr.get());
+}
+
+TWeaponHolder& TWeaponHolder::operator =(const TWeaponHolder& other) {
+    for (auto& [placeNow, gunPtr] : other.Weapons_)
+        if (gunPtr)
+            SetGunByPlace(placeNow, gunPtr.get());
+    return *this;
+}
+
+bool TWeaponHolder::operator ==(const TWeaponHolder& other) const {
+    for (int id = 0; id < 4; ++id)
+        if (!SameGuns(this->Weapons_[id].second.get(), other.Weapons_[id].second.get()))
+            return false;
+    return true;
+}
+
+TWeapon* TWeaponHolder::GetGunByPlace(EPlaceOnShip placeSearch) const {
     for (auto& [placeNow, gunPtr] : Weapons_)
         if (placeNow == placeSearch)
             return gunPtr ? gunPtr.get() : nullptr;
     throw "Holder does not contains placeSearch!";
 }
 
-void TWeaponHolder::SetGunByPlace(EPlaceOnShip placeSearch, TWeapon *what) {
+void TWeaponHolder::SetGunByPlace(EPlaceOnShip placeSearch, TWeapon* what) {
     for (auto& [placeNow, GunPtr] : Weapons_)
         if (placeNow == placeSearch) {
-            GunPtr = std::move(createUniquePtrByGunPrt(what));
+            GunPtr = std::move(createUniquePtrByGunPtr(what));
             return;
         }
     throw "Holder does not contains placeSearch!";

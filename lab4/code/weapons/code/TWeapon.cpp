@@ -35,6 +35,17 @@ TWeapon& TWeapon::operator =(const TWeapon& other) {
     return *this;
 }
 
+bool TWeapon::operator ==(const TWeapon& other) const {
+    return
+        WeaponType_ == other.WeaponType_ &&
+        Damage_ == other.Damage_ &&
+        CallDown_ == other.CallDown_ &&
+        Range_ == other.Range_ &&
+        ShotsTotal_ == other.ShotsTotal_ &&
+        ShotsNow_ == other.ShotsNow_ &&
+        Cost_ == other.Cost_;
+}
+
 void TWeapon::SetWeaponType(int weaponType) {
     WeaponType_ = weaponType;
 }

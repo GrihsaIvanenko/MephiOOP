@@ -39,6 +39,18 @@ TShip& TShip::operator=(const TShip &other) {
     return *this;
 }
 
+bool TShip::operator ==(const TShip& other) const {
+    return
+        ShipType_ == other.ShipType_ &&
+        ShipName_ == other.ShipName_ &&
+        CapitanInfo_ == other.CapitanInfo_ &&
+        MaxSpeed_ == other.MaxSpeed_ &&
+        NowSpeed_ == other.NowSpeed_ &&
+        HPTotal_ == other.HPTotal_ &&
+        HPNow_ == other.HPNow_ &&
+        Cost_ == other.Cost_;
+}
+
 void TShip::SetShipType(int shipType) {
     ShipType_ = shipType;
 }

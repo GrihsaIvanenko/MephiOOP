@@ -9,7 +9,7 @@
 #include "TCapitanInfo.h"
 
 class TShip {
-private:
+protected:
     int ShipType_;
     std::string ShipName_;
     TCapitanInfo CapitanInfo_;
@@ -20,16 +20,17 @@ private:
     int Cost_;
 public:
     TShip(
-            int ShipType,
-            const std::string& ShipName,
-            const TCapitanInfo& CapitanInfo,
-            int MaxSpeed,
-            int NowSpeed,
-            int HpTotal,
-            int HpNow,
-            int Cost);
+            int shipType,
+            const std::string& shipName,
+            const TCapitanInfo& capitanInfo,
+            int maxSpeed,
+            int nowSpeed,
+            int hpTotal,
+            int hpNow,
+            int cost);
     TShip(const TShip& other);
     TShip& operator =(const TShip& other);
+    bool operator ==(const TShip& other) const;
 
     void SetShipType(int shipType);
     void SetShipName(const std::string& shipName);
@@ -49,7 +50,7 @@ public:
     int GetHPNow() const;
     int GetCost() const;
 
-    void MakeDamage(int Damage);
+    void MakeDamage(int damage);
 };
 
 #endif //LAB4_TSHIP_H

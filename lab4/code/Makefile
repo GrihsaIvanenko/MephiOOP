@@ -1,45 +1,90 @@
-test: capitanInfoTest weaponHolderTest weaponTest shipTest
-
-##################################################
-
-shipTest: ship
-	g++ -std=c++17 ./ships/TShipTest.cpp ./build/ships/TShip.o ./build/ships/TCapitanInfo.o  -lgtest -lgtest_main -lpthread -o ./build/ships/test
-	./build/ships/test
-	rm ./build/ships/test
-
-ship: capitanInfo
-	g++ -std=c++17 -c ./ships/TShip.cpp -o ./build/ships/TShip.o
-
-capitanInfoTest: capitanInfo
-	g++ -std=c++17 ./ships/TCapitanInfoTest.cpp ./build/ships/TCapitanInfo.o  -lgtest -lgtest_main -lpthread -o ./build/ships/test
-	./build/ships/test
-	rm ./build/ships/test
-
-capitanInfo:
-	g++ -std=c++17 -c ./ships/TCapitanInfo.cpp -o ./build/ships/TCapitanInfo.o
-
-
+Test: TestWeapons TestShips
 
 #####################################################
 
-weaponHolderTest: weaponHolder
-	g++ -std=c++17 ./weapons/TWeaponHolderTest.cpp ./build/weapons/TWeaponHolder.o ./build/weapons/TWeapon.o  -lgtest -lgtest_main -lpthread -o ./build/weapons/test
-	./build/weapons/test
-	rm ./build/weapons/test
+TestShips: TestTCapitanInfo TestTShip TestTCargoShip
 
-weaponHolder: weapon
-	g++ -std=c++17 -c ./weapons/TWeaponHolder.cpp -o ./build/weapons/TWeaponHolder.o
+TestTCargoShip: TCargoShip
+	g++ -std=c++17 \
+        			./build/code/TCapitanInfo.o \
+        			./build/code/TShip.o \
+        			./build/code/TCargoShip.o \
+        			./ships/tests/TestTCargoShip.cpp \
+        			-lgtest -lgtest_main -lpthread \
+        			-o ./build/tests/TestTCargoShip
+	./build/tests/TestTCargoShip
+	rm ./build/tests/TestTCargoShip
 
-weaponTest: weapon
-	g++ -std=c++17 ./weapons/TWeaponTest.cpp ./build/weapons/TWeapon.o  -lgtest -lgtest_main -lpthread -o ./build/weapons/test
-	./build/weapons/test
-	rm ./build/weapons/test
+TCargoShip: TShip
+	g++ -std=c++17 -c \
+        			./ships/code/TCargoShip.cpp \
+        			-o ./build/code/TCargoShip.o
 
-weapon:
-	g++ -std=c++17 -c ./weapons/TWeapon.cpp -o ./build/weapons/TWeapon.o
+TestTShip: TShip
+	g++ -std=c++17 \
+        			./build/code/TCapitanInfo.o \
+        			./build/code/TShip.o \
+        			./ships/tests/TestTShip.cpp \
+        			-lgtest -lgtest_main -lpthread \
+        			-o ./build/tests/TestTShip
+	./build/tests/TestTShip
+	rm ./build/tests/TestTShip
+
+TShip: TCapitanInfo
+	g++ -std=c++17 -c \
+        			./ships/code/TShip.cpp \
+        			-o ./build/code/TShip.o
+
+TestTCapitanInfo: TCapitanInfo
+	g++ -std=c++17 \
+    			./build/code/TCapitanInfo.o \
+    			./ships/tests/TestTCapitanInfo.cpp \
+    			-lgtest -lgtest_main -lpthread \
+    			-o ./build/tests/TestTCapitanInfo
+	./build/tests/TestTCapitanInfo
+	rm ./build/tests/TestTCapitanInfo
+
+TCapitanInfo:
+	g++ -std=c++17 -c \
+    			./ships/code/TCapitanInfo.cpp \
+    			-o ./build/code/TCapitanInfo.o
+
+#####################################################
+
+TestWeapons: TestTWeaponHolder TestTWeapon
+
+TestTWeaponHolder: TWeaponHolder
+	g++ -std=c++17 \
+			./build/code/TWeapon.o \
+			./build/code/TWeaponHolder.o \
+			./weapons/tests/TestTWeaponHolder.cpp \
+			-lgtest -lgtest_main -lpthread \
+			-o ./build/tests/TestTWeaponHolder
+	./build/tests/TestTWeaponHolder
+	rm ./build/tests/TestTWeaponHolder
+
+
+TWeaponHolder: TWeapon
+	g++ -std=c++17 -c \
+			./weapons/code/TWeaponHolder.cpp \
+			-o ./build/code/TWeaponHolder.o
+
+TestTWeapon: TWeapon
+	g++ -std=c++17 \
+			./build/code/TWeapon.o \
+			./weapons/tests/TestTWeapon.cpp \
+			-lgtest -lgtest_main -lpthread \
+			-o ./build/tests/TestTWeapon
+	./build/tests/TestTWeapon
+	rm ./build/tests/TestTWeapon
+
+
+TWeapon:
+	g++ -std=c++17 -c \
+			./weapons/code/TWeapon.cpp \
+			-o ./build/code/TWeapon.o
 
 #####################################################
 
 clean:
-	rm -r ./build/ships/*
-	rm -r ./build/weapons/*
+	rm -r ./build/code/*

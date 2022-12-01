@@ -29,6 +29,14 @@ TCapitanInfo& TCapitanInfo::operator = (const TCapitanInfo& other) {
     return *this;
 }
 
+bool TCapitanInfo::operator == (const TCapitanInfo& other) const {
+    return
+        Name_ == other.Name_ &&
+        Surname_ == other.Surname_ &&
+        Patronymic_ == other.Patronymic_ &&
+        Rank_ == other.Rank_;
+}
+
 void TCapitanInfo::SetName(const std::string& name) {
     Name_ = name;
 }

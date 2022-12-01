@@ -6,6 +6,7 @@
 #define LAB4_TWEAPON_H
 
 class TWeapon {
+    friend class TWeaponTestHelper;
 private:
     int WeaponType_;
     int Damage_;
@@ -19,6 +20,7 @@ public:
     TWeapon(int weaponType, int damage, int callDown, int range, int shotsTotal, int shotsNow, int cost);
     TWeapon(const TWeapon& other);
     TWeapon& operator =(const TWeapon& other);
+    bool operator ==(const TWeapon& other) const;
 
     void SetWeaponType(int weaponType);
     void SetDamage(int damage);

@@ -19,6 +19,8 @@ public:
             const std::string& name, const std::string& surname, const std::string& patronymic, const std::string& rank);
     TCapitanInfo(const TCapitanInfo& other);
     TCapitanInfo& operator = (const TCapitanInfo& other);
+    bool operator ==(const TCapitanInfo& other) const;
+
     void SetName(const std::string& name);
     void SetSurname(const std::string& surname);
     void SetPatronymic(const std::string& patronymic);
