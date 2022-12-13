@@ -4,10 +4,11 @@
 
 #include "TWeapon.h"
 
-TWeapon::TWeapon(int weaponType, int damage, int callDown, int range, int shotsTotal, int shotsNow, int cost)
+TWeapon::TWeapon(int weaponType, int damage, int callDown, int lastShot, int range, int shotsTotal, int shotsNow, int cost)
     : WeaponType_(weaponType)
     , Damage_(damage)
     , CallDown_(callDown)
+    , LastShot_(lastShot)
     , Range_(range)
     , ShotsTotal_(shotsTotal)
     , ShotsNow_(shotsNow)
@@ -18,6 +19,7 @@ TWeapon::TWeapon(const TWeapon &other)
     : WeaponType_(other.WeaponType_)
     , Damage_(other.Damage_)
     , CallDown_(other.CallDown_)
+    , LastShot_(other.LastShot_)
     , Range_(other.Range_)
     , ShotsTotal_(other.ShotsTotal_)
     , ShotsNow_(other.ShotsNow_)
@@ -28,6 +30,7 @@ TWeapon& TWeapon::operator =(const TWeapon& other) {
     WeaponType_ = other.WeaponType_;
     Damage_ = other.Damage_;
     CallDown_ = other.CallDown_;
+    LastShot_ = other.LastShot_;
     Range_ = other.Range_;
     ShotsTotal_ = other.ShotsTotal_;
     ShotsNow_ = other.ShotsNow_;
@@ -40,6 +43,7 @@ bool TWeapon::operator ==(const TWeapon& other) const {
         WeaponType_ == other.WeaponType_ &&
         Damage_ == other.Damage_ &&
         CallDown_ == other.CallDown_ &&
+        LastShot_ == other.LastShot_ &&
         Range_ == other.Range_ &&
         ShotsTotal_ == other.ShotsTotal_ &&
         ShotsNow_ == other.ShotsNow_ &&
@@ -56,6 +60,10 @@ void TWeapon::SetDamage(int damage) {
 
 void TWeapon::SetCallDown(int callDown) {
     CallDown_ = callDown;
+}
+
+void TWeapon::SetLastShot(int lastShot) {
+    LastShot_ = lastShot;
 }
 
 void TWeapon::SetRange(int range) {
@@ -82,6 +90,10 @@ int TWeapon::GetDamage() const {
     return Damage_;
 }
 
+int TWeapon::GetLastShot() const {
+    return LastShot_;
+}
+
 int TWeapon::GetCallDown() const {
     return CallDown_;
 }
@@ -102,13 +114,15 @@ int TWeapon::GetCost() const {
     return Cost_;
 }
 
-int TWeapon::MakeShot(int sqDistance) {
-    if (ShotsNow_ > 0) {
-        if (Range_ * Range_ < sqDistance)
-            return 0;
-        --ShotsNow_;
-        return Damage_;
-    }
-    return 0;
+int TWeapon::MakeShot(int sqDistance, int timeNow) {
+    if (LastShot_ + CallDown_ > timeNow)
+        return 0;
+    if (ShotsNow_ == 0)
+        return 0;
+    if (Range_ * Range_ < sqDistance)
+        returnv 0;
+    --ShotsNow_;
+    LastShot_ = timeNow;
+    return Damage_;
 }
 

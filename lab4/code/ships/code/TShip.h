@@ -8,8 +8,9 @@
 #include <string>
 
 #include "TCapitanInfo.h"
+#include "../../base/code/TObjectOnMap.h"
 
-class TShip {
+class TShip : public TObjectOnMap {
 protected:
     int ShipType_;
     std::string ShipName_;
@@ -21,6 +22,8 @@ protected:
     int Cost_;
 public:
     TShip(
+            int x,
+            int y,
             int shipType,
             const std::string& shipName,
             const TCapitanInfo& capitanInfo,
@@ -30,7 +33,6 @@ public:
             int hpNow,
             int cost);
     TShip(const TShip& other);
-    virtual ~TShip() = default;
     TShip& operator =(const TShip& other);
     bool operator ==(const TShip& other) const;
 

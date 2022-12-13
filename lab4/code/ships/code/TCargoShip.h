@@ -14,6 +14,8 @@ private:
     double SlowK_; // [0.0. 1.0) 0.0 - not matter. 1.0 - stop
 public:
     TCargoShip(
+            int x,
+            int y,
             int ShipType,
             const std::string& ShipName,
             const TCapitanInfo& CapitanInfo,

@@ -13,6 +13,8 @@ private:
     TWeaponHolder Holder_;
 public:
     TWarShip(
+            int x,
+            int y,
             int shipType,
             const std::string& shipName,
             const TCapitanInfo& capitanInfo,
@@ -30,7 +32,7 @@ public:
 
     TWeaponHolder GetHolder() const;
 
-    int MakeShot(int sqDistance);
+    int MakeShot(const TObjectOnMap& to, int timeNow);
 };
 
 #endif //LAB4_TWARSHIP_H

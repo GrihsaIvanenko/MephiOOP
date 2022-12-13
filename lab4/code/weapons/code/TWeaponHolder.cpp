@@ -60,10 +60,10 @@ void TWeaponHolder::SetGunByPlace(EPlaceOnShip placeSearch, TWeapon* what) {
     throw "Holder does not contains placeSearch!";
 }
 
-int TWeaponHolder::MakeShot(int sqDistance) {
+int TWeaponHolder::MakeShot(int sqDistance, int timeNow) {
     int totalDamage = 0;
     for (auto& [placeNow, GunPtr] : Weapons_)
         if (GunPtr)
-            totalDamage += GunPtr->MakeShot(sqDistance);
+            totalDamage += GunPtr->MakeShot(sqDistance, timeNow);
     return totalDamage;
 }

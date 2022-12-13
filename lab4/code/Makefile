@@ -2,10 +2,39 @@ Test: TestWeapons TestShips
 
 #####################################################
 
-TestShips: TestTCapitanInfo TestTShip TestTCargoShip TestTWarShip
+TObjectOnMap:
+	g++ -std=c++17 -c \
+    					./base/code/TObjectOnMap.cpp \
+    					-o ./build/code/TObjectOnMap.o
+
+#####################################################
+
+TestShips: TestTCapitanInfo TestTShip TestTCargoShip TestTWarShip TestTCargoWarShip
+
+TestTCargoWarShip: TCargoWarShip
+	g++ -std=c++17 \
+					./build/code/TObjectOnMap.o \
+					./build/code/TWeapon.o \
+					./build/code/TWeaponHolder.o \
+					./build/code/TCapitanInfo.o \
+					./build/code/TShip.o \
+					./build/code/TWarShip.o \
+					./build/code/TCargoShip.o \
+					./build/code/TCargoWarShip.o \
+					./ships/tests/TestTCargoWarShip.cpp \
+					-lgtest -lgtest_main -lpthread \
+					-o ./build/tests/TestTWarShip
+	./build/tests/TestTWarShip
+	rm ./build/tests/TestTWarShip
+
+TCargoWarShip: TWarShip TCargoShip
+	g++ -std=c++17 -c \
+					./ships/code/TCargoWarShip.cpp \
+					-o ./build/code/TCargoWarShip.o
 
 TestTWarShip: TWarShip
 	g++ -std=c++17 \
+					./build/code/TObjectOnMap.o \
 	        		./build/code/TWeapon.o \
                     ./build/code/TWeaponHolder.o \
         			./build/code/TCapitanInfo.o \
@@ -20,10 +49,12 @@ TestTWarShip: TWarShip
 TWarShip: TShip TWeaponHolder
 	g++ -std=c++17 -c \
         			./ships/code/TWarShip.cpp \
+        			./build/code/TObjectOnMap.o \
         			-o ./build/code/TWarShip.o
 
 TestTCargoShip: TCargoShip
 	g++ -std=c++17 \
+	        		./build/code/TObjectOnMap.o \
         			./build/code/TCapitanInfo.o \
         			./build/code/TShip.o \
         			./build/code/TCargoShip.o \
@@ -42,13 +73,14 @@ TestTShip: TShip
 	g++ -std=c++17 \
         			./build/code/TCapitanInfo.o \
         			./build/code/TShip.o \
+        			./build/code/TObjectOnMap.o \
         			./ships/tests/TestTShip.cpp \
         			-lgtest -lgtest_main -lpthread \
         			-o ./build/tests/TestTShip
 	./build/tests/TestTShip
 	rm ./build/tests/TestTShip
 
-TShip: TCapitanInfo
+TShip: TCapitanInfo TObjectOnMap
 	g++ -std=c++17 -c \
         			./ships/code/TShip.cpp \
         			-o ./build/code/TShip.o

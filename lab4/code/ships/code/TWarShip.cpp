@@ -5,6 +5,8 @@
 #include "TWarShip.h"
 
 TWarShip::TWarShip(
+        int x,
+        int y,
         int shipType,
         const std::string& shipName,
         const TCapitanInfo& capitanInfo,
@@ -15,6 +17,8 @@ TWarShip::TWarShip(
         int cost,
         const TWeaponHolder& holder)
     : TShip(
+            x,
+            y,
             shipType,
             shipName,
             capitanInfo,
@@ -50,6 +54,6 @@ TWeaponHolder TWarShip::GetHolder() const {
     return Holder_;
 }
 
-int TWarShip::MakeShot(int sqDistance) {
-    return Holder_.MakeShot(sqDistance);
+int TWarShip::MakeShot(const TObjectOnMap& to, int timeNow) {
+    return Holder_.MakeShot(DistTo(to), timeNow);
 }

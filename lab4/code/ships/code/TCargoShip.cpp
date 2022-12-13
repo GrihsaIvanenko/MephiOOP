@@ -7,6 +7,8 @@
 #include "TCargoShip.h"
 
 TCargoShip::TCargoShip(
+        int x,
+        int y,
         int shipType,
         const std::string& shipName,
         const TCapitanInfo& capitanInfo,
@@ -19,6 +21,8 @@ TCargoShip::TCargoShip(
         int weightNow,
         double slowK)
     : TShip(
+            x,
+            y,
             shipType,
             shipName,
             capitanInfo,
