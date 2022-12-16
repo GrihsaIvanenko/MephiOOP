@@ -31,6 +31,8 @@ TCargoWarShip::TCargoWarShip(
         hpNow,
         cost)
     , TCargoShip(
+            x,
+            y,
             shipType,
             shipName,
             capitanInfo,
@@ -43,6 +45,8 @@ TCargoWarShip::TCargoWarShip(
             weightNow,
             slowK)
     , TWarShip(
+            x,
+            y,
             shipType,
             shipName,
             capitanInfo,

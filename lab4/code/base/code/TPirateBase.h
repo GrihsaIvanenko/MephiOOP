@@ -12,8 +12,8 @@ class TPirateBase : public TBase {
 private:
     TSpawnDescriptor Spawner_;
 public:
-    TPirateBase(int x, int y, const TSpawnDescriptor& spawner);
-    TPirateBase(const TBase& other);
+    TPirateBase(int x, int y, int baseType, const TSpawnDescriptor& spawner);
+    TPirateBase(const TPirateBase& other);
     TPirateBase& operator =(const TPirateBase& other);
     bool operator ==(const TPirateBase& other) const;
 

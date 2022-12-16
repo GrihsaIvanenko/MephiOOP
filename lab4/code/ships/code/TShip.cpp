@@ -32,7 +32,7 @@ TShip::TShip(const TShip &other)
 { }
 
 TShip& TShip::operator=(const TShip &other) {
-    static_cast<TObjectBase&>(*this) = other;
+    static_cast<TObjectOnMap&>(*this) = other;
     ShipType_ = other.ShipType_;
     ShipName_ = other.ShipName_;
     CapitanInfo_ = other.CapitanInfo_;
@@ -46,7 +46,7 @@ TShip& TShip::operator=(const TShip &other) {
 
 bool TShip::operator ==(const TShip& other) const {
     return
-        static_cast<const TObjectBase&>(*this) == static_cast<const TObjectBase&>(other) &&
+        static_cast<const TObjectOnMap&>(*this) == static_cast<const TObjectOnMap&>(other) &&
         ShipType_ == other.ShipType_ &&
         ShipName_ == other.ShipName_ &&
         CapitanInfo_ == other.CapitanInfo_ &&

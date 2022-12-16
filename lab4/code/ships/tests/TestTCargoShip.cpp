@@ -7,7 +7,7 @@
 
 TEST(TCargoShip, InitConstructorAndAssign) {
     TCapitanInfo emptyInfo;
-    TCargoShip emptyShip(1, "", emptyInfo, 2, 3, 4, 5, 6, 7, 8, 9.0);
+    TCargoShip emptyShip(0, 0, 1, "", emptyInfo, 2, 3, 4, 5, 6, 7, 8, 9.0);
     ASSERT_EQ(emptyShip.GetShipType(), 1);
     ASSERT_EQ(emptyShip.GetShipName(), "");
     ASSERT_EQ(emptyShip.GetCapitanInfo(), emptyInfo);
@@ -24,14 +24,14 @@ TEST(TCargoShip, InitConstructorAndAssign) {
     ASSERT_EQ(emptyShip, otherShip);
 
     TCapitanInfo notEmptyInfo("a", "b", "c", "d");
-    TCargoShip notEmptyShip(11, "name", notEmptyInfo, 22, 33, 44, 55, 66, 77, 88, 99.0);
+    TCargoShip notEmptyShip(0, 0, 11, "name", notEmptyInfo, 22, 33, 44, 55, 66, 77, 88, 99.0);
     otherShip = notEmptyShip;
     ASSERT_EQ(notEmptyShip, otherShip);
 }
 
 TEST(TCargoShip, Setters) {
     TCapitanInfo emptyInfo;
-    TCargoShip notEmptyShip(11, "name", emptyInfo, 22, 33, 44, 55, 66, 77, 88, 9.0);
+    TCargoShip notEmptyShip(0, 0, 11, "name", emptyInfo, 22, 33, 44, 55, 66, 77, 88, 9.0);
 
     ASSERT_EQ(notEmptyShip.GetWeightTotal(), 77);
     notEmptyShip.SetWeightTotal(100);
@@ -48,7 +48,7 @@ TEST(TCargoShip, Setters) {
 
 TEST(TCargoShip, SpeedByWeight) {
     TCapitanInfo emptyInfo;
-    TCargoShip notEmptyShip(0, "", emptyInfo, 100, 0, 100, 100, 100, 20, 0, 0.5);
+    TCargoShip notEmptyShip(0, 0, 0, "", emptyInfo, 100, 0, 100, 100, 100, 20, 0, 0.5);
     ASSERT_EQ(notEmptyShip.SpeedByWeight(21), -1);
     ASSERT_EQ(notEmptyShip.SpeedByWeight(20), 50);
     ASSERT_EQ(notEmptyShip.SpeedByWeight(10), 75);
@@ -57,7 +57,7 @@ TEST(TCargoShip, SpeedByWeight) {
 
 TEST(TCargoShip, WeightMaxBySpeed) {
     TCapitanInfo emptyInfo;
-    TCargoShip notEmptyShip(0, "", emptyInfo, 100, 0, 100, 100, 100, 20, 0, 0.5);
+    TCargoShip notEmptyShip(0, 0, 0, "", emptyInfo, 100, 0, 100, 100, 100, 20, 0, 0.5);
     ASSERT_EQ(notEmptyShip.WeightMaxBySpeed(101), -1);
     ASSERT_EQ(notEmptyShip.WeightMaxBySpeed(100), 0);
     ASSERT_EQ(notEmptyShip.WeightMaxBySpeed(75), 10);

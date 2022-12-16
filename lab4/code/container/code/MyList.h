@@ -5,6 +5,8 @@
 #ifndef LAB4_MYLIST_H
 #define LAB4_MYLIST_H
 
+#include <memory>
+
 template<class T>
 class MyList {
 private:
@@ -13,20 +15,27 @@ private:
     class Node {
         friend class MyList;
     private:
-        T* Data_;
+        std::unique_ptr<T> Data_;
         Node* Next_;
     public:
         Node();
         Node(const T& data);
         Node(const T& data, Node* next);
-        ~Node();
         T& operator *() const;
     };
     Node* Head_;
+    Node* Tail_;
+
+    void Clear();
 
 public:
     MyList();
     ~MyList();
+
+    MyList(const MyList& other);
+    MyList(MyList&& other);
+    MyList& operator =(const MyList& other);
+    MyList& operator =(MyList&& other);
 
     class iterator {
         friend class MyList;
@@ -40,6 +49,7 @@ public:
         bool operator == (const iterator& other);
     };
 
+    int size() const;
     iterator begin() const;
     iterator end() const;
     void insert(const T& what, iterator beforeWho);//iterator will look at new Node

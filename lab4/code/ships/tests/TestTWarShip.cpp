@@ -6,8 +6,8 @@
 #include "../code/TWarShip.h"
 
 TWeaponHolder makeWeaponHolder(int type) {
-    TWeapon a(0, 100, 0, 20, 0, 3, 0);
-    TWeapon b(0, 1000, 0, 10, 0, 1, 0);
+    TWeapon a(0, 100, 1, 0, 20, 0, 3, 0);
+    TWeapon b(0, 1000, 1, 0, 10, 0, 1, 0);
     if (type == 1)
         return TWeaponHolder(nullptr, &a, &a, &b);
     else if (type == 2)
@@ -18,7 +18,7 @@ TWeaponHolder makeWeaponHolder(int type) {
 
 TEST(TWarShip, InitConstructorAndAssign) {
     TCapitanInfo emptyInfo;
-    TWarShip emptyShip(1, "", emptyInfo, 2, 3, 4, 5, 6, makeWeaponHolder(1));
+    TWarShip emptyShip(0, 0, 1, "", emptyInfo, 2, 3, 4, 5, 6, makeWeaponHolder(1));
     ASSERT_EQ(emptyShip.GetShipType(), 1);
     ASSERT_EQ(emptyShip.GetShipName(), "");
     ASSERT_EQ(emptyShip.GetCapitanInfo(), emptyInfo);
@@ -33,14 +33,14 @@ TEST(TWarShip, InitConstructorAndAssign) {
     ASSERT_EQ(emptyShip, otherShip);
 
     TCapitanInfo notEmptyInfo("a", "b", "c", "d");
-    TWarShip notEmptyShip(11, "name", notEmptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2) );
+    TWarShip notEmptyShip(0, 0, 11, "name", notEmptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2) );
     otherShip = notEmptyShip;
     ASSERT_EQ(notEmptyShip, otherShip);
 }
 
 TEST(TWarShip, Setters) {
     TCapitanInfo emptyInfo;
-    TWarShip notEmptyShip(11, "name", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2));
+    TWarShip notEmptyShip(0, 0, 11, "name", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2));
 
     ASSERT_EQ(notEmptyShip.GetHolder(), makeWeaponHolder(2));
     notEmptyShip.SetHolder(makeWeaponHolder(1));
@@ -49,16 +49,29 @@ TEST(TWarShip, Setters) {
 
 TEST(TWarShip, MakeShot) {
     TCapitanInfo emptyInfo;
-    TWarShip notEmptyShip(11, "name", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2));
-    ASSERT_EQ(notEmptyShip.MakeShot(20 * 20), 100);
-    ASSERT_EQ(notEmptyShip.MakeShot(20 * 20), 100);
-    ASSERT_EQ(notEmptyShip.MakeShot(20 * 20), 100);
-    ASSERT_EQ(notEmptyShip.MakeShot(20 * 20), 0);
-    ASSERT_EQ(notEmptyShip.MakeShot(10 * 10), 1000 + 1000);
-    ASSERT_EQ(notEmptyShip.MakeShot(10 * 10), 0);
+    TWarShip notEmptyShip(0, 0, 11, "name", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2));
+    TShip meat(20, 0, 1, "", emptyInfo, 2, 3, 4, 10000, 6);
+    ASSERT_EQ(notEmptyShip.MakeShot(meat, 1), true);// - 100
+    ASSERT_EQ(meat.GetHPNow(), 10000 - 100);
 
-    TWarShip emptyShip(11, "name", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(0));
-    ASSERT_EQ(emptyShip.MakeShot(0), 0);
+    ASSERT_EQ(notEmptyShip.MakeShot(meat, 2), true); // -100
+    ASSERT_EQ(meat.GetHPNow(), 10000 - 100 * 2);
+
+    ASSERT_EQ(notEmptyShip.MakeShot(meat, 3), true); // -100
+    ASSERT_EQ(meat.GetHPNow(), 10000 - 100 * 3);
+
+    ASSERT_EQ(notEmptyShip.MakeShot(meat, 4), true); // -0
+    ASSERT_EQ(meat.GetHPNow(), 10000 - 100 * 3);
+
+    meat.SetX(0);
+    ASSERT_EQ(notEmptyShip.MakeShot(meat, 5), true); //-2000
+    ASSERT_EQ(meat.GetHPNow(), 10000 - 100 * 3 - 2000);
+
+    ASSERT_EQ(notEmptyShip.MakeShot(meat, 6), true); // -0
+    ASSERT_EQ(meat.GetHPNow(), 10000 - 100 * 3 - 2000);
+
+    TWarShip emptyShip(0, 0, 11, "name", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(0));
+    ASSERT_EQ(emptyShip.MakeShot(meat, 1), true);
 }
 
 int main() {

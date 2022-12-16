@@ -32,7 +32,7 @@ public:
 
     TWeaponHolder GetHolder() const;
 
-    int MakeShot(const TObjectOnMap& to, int timeNow);
+    bool MakeShot(TShip& to, int timeNow);
 };
 
 #endif //LAB4_TWARSHIP_H

@@ -6,8 +6,8 @@
 #include "../code/TCargoWarShip.h"
 
 TWeaponHolder makeWeaponHolder(int type) {
-    TWeapon a(0, 100, 0, 20, 0, 3, 0);
-    TWeapon b(0, 1000, 0, 10, 0, 1, 0);
+    TWeapon a(0, 100, 1, 0, 20, 0, 3, 0);
+    TWeapon b(0, 1000, 1, 0, 10, 0, 1, 0);
     if (type == 1)
         return TWeaponHolder(nullptr, &a, &a, &b);
     else if (type == 2)
@@ -18,7 +18,7 @@ TWeaponHolder makeWeaponHolder(int type) {
 
 TEST(TCargoWarShip, InitConstructorAndAssign) {
     TCapitanInfo emptyInfo;
-    TCargoWarShip emptyShip(1, "", emptyInfo, 2, 3, 4, 5, 6, 7, 8, 9.0, makeWeaponHolder(1));
+    TCargoWarShip emptyShip(0, 0, 1, "", emptyInfo, 2, 3, 4, 5, 6, 7, 8, 9.0, makeWeaponHolder(1));
     ASSERT_EQ(emptyShip.GetShipType(), 1);
     ASSERT_EQ(emptyShip.GetShipName(), "");
     ASSERT_EQ(emptyShip.GetCapitanInfo(), emptyInfo);
@@ -36,7 +36,7 @@ TEST(TCargoWarShip, InitConstructorAndAssign) {
     ASSERT_EQ(emptyShip, otherShip);
 
     TCapitanInfo notEmptyInfo("a", "b", "c", "d");
-    TCargoWarShip notEmptyShip(11, "name", notEmptyInfo, 22, 33, 44, 55, 66, 77, 88, 99.0, makeWeaponHolder(2) );
+    TCargoWarShip notEmptyShip(0, 0, 11, "name", notEmptyInfo, 22, 33, 44, 55, 66, 77, 88, 99.0, makeWeaponHolder(2) );
     otherShip = notEmptyShip;
     ASSERT_EQ(notEmptyShip, otherShip);
 }

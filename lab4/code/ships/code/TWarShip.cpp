@@ -54,6 +54,8 @@ TWeaponHolder TWarShip::GetHolder() const {
     return Holder_;
 }
 
-int TWarShip::MakeShot(const TObjectOnMap& to, int timeNow) {
-    return Holder_.MakeShot(DistTo(to), timeNow);
+bool TWarShip::MakeShot(TShip& to, int timeNow) {
+    int damage = Holder_.MakeShot(DistTo(to), timeNow);
+    to.BeDamaged(damage);
+    return to.GetHPNow() != 0;
 }

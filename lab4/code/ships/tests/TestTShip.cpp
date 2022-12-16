@@ -7,7 +7,7 @@
 
 TEST(TShip, InitConstructorAndAssign) {
     TCapitanInfo emptyInfo;
-    TShip emptyShip(1, "", emptyInfo, 2, 3, 4, 5, 6);
+    TShip emptyShip(0, 0, 1, "", emptyInfo, 2, 3, 4, 5, 6);
     ASSERT_EQ(emptyShip.GetShipType(), 1);
     ASSERT_EQ(emptyShip.GetShipName(), "");
     ASSERT_EQ(emptyShip.GetCapitanInfo(), emptyInfo);
@@ -21,14 +21,14 @@ TEST(TShip, InitConstructorAndAssign) {
     ASSERT_EQ(otherShip, emptyShip);
 
     TCapitanInfo notEmptyInfo("a", "b", "c", "d");
-    TShip notEmptyShip(11, "name", notEmptyInfo, 22, 33, 44, 55, 66);
+    TShip notEmptyShip(0, 0, 11, "name", notEmptyInfo, 22, 33, 44, 55, 66);
     otherShip = notEmptyShip;
     ASSERT_EQ(otherShip, notEmptyShip);
 }
 
 TEST(TShip, Setters) {
     TCapitanInfo notEmptyInfo("a", "b", "c", "d");
-    TShip notEmptyShip(11, "name", notEmptyInfo, 22, 33, 44, 55, 66);
+    TShip notEmptyShip(0, 0, 11, "name", notEmptyInfo, 22, 33, 44, 55, 66);
     TCapitanInfo emptyInfo;
 
     ASSERT_EQ(notEmptyShip.GetShipType(), 11);
@@ -66,7 +66,7 @@ TEST(TShip, Setters) {
 
 TEST(TShip, MakeDamage) {
     TCapitanInfo notEmptyInfo("a", "b", "c", "d");
-    TShip notEmptyShip(11, "name", notEmptyInfo, 22, 33, 44, 55, 66);
+    TShip notEmptyShip(0, 0, 11, "name", notEmptyInfo, 22, 33, 44, 55, 66);
 
     notEmptyShip.BeDamaged(10);
     ASSERT_EQ(notEmptyShip.GetHPNow(), 45);

@@ -16,9 +16,9 @@ private:
     int LastSpam_;
 public:
     TSpawnDescriptor(const TWarShip& toSpam, int spamCount, int loopTime, int lastSpam);
-    TSpawnDescriptor(const TSpanDescriptor& other);
-    TSpawnDescriptor& operator =(const TSpanDescriptor& other);
-    bool operator ==(const TSpawnDescriptor& other);
+    TSpawnDescriptor(const TSpawnDescriptor& other);
+    TSpawnDescriptor& operator =(const TSpawnDescriptor& other);
+    bool operator ==(const TSpawnDescriptor& other) const;
 
     MyList<TWarShip> Spawn(int time);
 };

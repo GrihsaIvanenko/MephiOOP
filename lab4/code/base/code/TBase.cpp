@@ -19,9 +19,10 @@ TBase& TBase::operator =(const TBase& other) {
     BaseType_ = other.BaseType_;
     return *this;
 }
-bool TBase::operator ==(const TBase& other) {
+
+bool TBase::operator ==(const TBase& other) const {
     return
-        static_cast<TObjectOnMap&>(*this) == static_cast<TObjectOnMap&>(other) &&
+        static_cast<const TObjectOnMap&>(*this) == static_cast<const TObjectOnMap&>(other) &&
         BaseType_ == other.BaseType_;
 }
 

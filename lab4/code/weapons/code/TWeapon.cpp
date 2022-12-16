@@ -120,7 +120,7 @@ int TWeapon::MakeShot(int sqDistance, int timeNow) {
     if (ShotsNow_ == 0)
         return 0;
     if (Range_ * Range_ < sqDistance)
-        returnv 0;
+        return 0;
     --ShotsNow_;
     LastShot_ = timeNow;
     return Damage_;
