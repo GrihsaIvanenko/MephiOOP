@@ -1,0 +1,3 @@
+CapitanName: Dmitriy
+CapitanSurname: Telyakovskiy
+CapitanPatronymic: Sergeevich

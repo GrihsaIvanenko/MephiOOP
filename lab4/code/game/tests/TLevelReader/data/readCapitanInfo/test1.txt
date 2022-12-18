@@ -1,0 +1,5 @@
+CapitanName: Jack
+CapitanSurname: Vorobey
+CapitanPatronymic: The best
+CapitanRank: 1
+

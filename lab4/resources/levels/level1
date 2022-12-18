@@ -1,0 +1,56 @@
+CapitansCount: 3
+
+CapitanName: Jack
+CapitanSurname: Vorobey
+CapitanPatronymic: The best
+CapitanRank: 1
+
+CapitanName: Dmitriy
+CapitanSurname: Telyakovskiy
+CapitanPatronymic: Sergeevich
+CapitanRank: 2
+
+CapitanName: Vitaliy
+CapitanSurname: Kaminin
+CapitanPatronymic: Leonidovich
+CapitanRank: 2
+
+WeaponCount: 2
+
+WeaponType: 0
+Damage: 10
+CallDown: 5
+Range: 10
+ShotsTotal: 20
+Cost: 30
+
+WeaponType: 1
+Damage: 5
+CallDown: 6
+Range: 20
+ShotsTotal: 10
+Cost: 20
+
+ShipsCount: 3
+
+ShipType: 1
+CapitanInfoId: 1
+MaxSpeed: 30
+HPTotal: 100
+Cost: 300
+WeightTotal: 1000
+SlowK: 2
+
+ShipType: 2
+CapitanInfoId: 0
+MaxSpeed: 30
+HPTotal: 100
+Cost: 200
+
+ShipType: 3
+CapitanInfoId: 0
+MaxSpeed: 30
+HPTotal: 100
+Cost: 400
+WeightTotal: 1000
+SlowK: 2

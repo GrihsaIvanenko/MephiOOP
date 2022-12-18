@@ -1,0 +1,6 @@
+WeaponType: 0
+Damage: 10
+CallDown: 5
+Range: 10
+ShotsTotal: 20
+Cost: 30

@@ -1,11 +1,40 @@
-Test: TestWeapons TestShips TestBases
+Test: TestWeapons TestShips TestBases TestMyList
 
 #####################################################
 
-MyList:
+TestTLevelReader : TLevelReader TCapitanInfo TWeapon TWeaponHolder \
+ 					TCapitanInfo TObjectOnMap TShip TCargoShip TCargoWarShip
+	g++ -std=c++17 \
+					./build/code/TWeapon.o \
+					./build/code/TWeaponHolder.o \
+					./build/code/TCapitanInfo.o \
+					./build/code/TObjectOnMap.o \
+					./build/code/TShip.o \
+					./build/code/TCargoShip.o \
+					./build/code/TWarShip.o \
+					./build/code/TCargoWarShip.o \
+					./build/code/TLevelReader.o \
+					./game/tests/TLevelReader/code/TestTLevelReader.cpp \
+					-lgtest -lgtest_main -lpthread \
+					-o ./build/tests/TestTLevelReader
+	valgrind ./build/tests/TestTLevelReader
+	rm ./build/tests/TestTLevelReader
+
+TLevelReader:
 	g++ -std=c++17 -c \
-					./container/code/MyList.cpp \
-					-o ./build/code/MyList.o
+					./game/code/TLevelReader.cpp \
+					-o ./build/code/TLevelReader.o
+
+#####################################################
+
+TestMyList:
+	g++ -std=c++17 \
+					./container/tests/TestMyList.cpp \
+					-lgtest -lgtest_main -lpthread \
+					-o ./build/tests/TestMyList
+	valgrind ./build/tests/TestMyList
+	rm ./build/tests/TestMyList
+
 
 #####################################################
 
@@ -19,15 +48,14 @@ TestTPirateBase: TPirateBase
 					./build/code/TCapitanInfo.o \
 					./build/code/TShip.o \
 					./build/code/TWarShip.o \
-					./build/code/MyList.o \
 					./build/code/TSpawnDescriptor.o \
 					./build/code/TBase.o \
 					./build/code/TPirateBase.o \
 					./base/tests/TestTPirateBase.cpp \
 					-lgtest -lgtest_main -lpthread \
-					-o ./build/tests/TPirateBase
-	valgrind ./build/tests/TPirateBase
-	rm ./build/tests/TPirateBase
+					-o ./build/tests/TestPirateBase
+	valgrind ./build/tests/TestPirateBase
+	rm ./build/tests/TestPirateBase
 
 TPirateBase: TBase TSpawnDescriptor
 	g++ -std=c++17 -c \
@@ -42,7 +70,6 @@ TestTSpawnDescriptor: TSpawnDescriptor
 					./build/code/TCapitanInfo.o \
 					./build/code/TShip.o \
 					./build/code/TWarShip.o \
-					./build/code/MyList.o \
 					./build/code/TSpawnDescriptor.o \
 					./base/tests/TestTSpawnDescriptor.cpp \
 					-lgtest -lgtest_main -lpthread \
@@ -50,7 +77,7 @@ TestTSpawnDescriptor: TSpawnDescriptor
 	valgrind ./build/tests/TestTSpawnDescriptor
 	rm ./build/tests/TestTSpawnDescriptor
 
-TSpawnDescriptor: MyList TWarShip
+TSpawnDescriptor: TWarShip
 	g++ -std=c++17 -c \
 					./base/code/TSpawnDescriptor.cpp \
 					-o ./build/code/TSpawnDescriptor.o
