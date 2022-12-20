@@ -3,6 +3,7 @@
 //
 
 #include "TShip.h"
+#include <iostream>
 
 TShip::TShip(int x, int y, int shipType, const std::string &shipName, const TCapitanInfo &capitanInfo, int maxSpeed,
              int nowSpeed, int hpTotal, int hpNow, int cost)
@@ -123,6 +124,16 @@ int TShip::GetCost() const {
 
 void TShip::BeDamaged(int damage) {
     HPNow_ = std::max(HPNow_ - damage, 0);
+}
+
+void TShip::Print() const {
+    std::cout << "MaxSpeed = " << MaxSpeed_ << '\n';
+    std::cout << "HPTotal = " << HPTotal_ << '\n';
+    std::cout << "Cost = " << Cost_ << '\n';
+}
+
+std::unique_ptr<TShip> TShip::Clone() const {
+    return std::make_unique<TShip>(*this);
 }
 
 

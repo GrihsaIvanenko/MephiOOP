@@ -37,7 +37,7 @@ bool TSpawnDescriptor::operator ==(const TSpawnDescriptor& other) const {
 MyList<TWarShip> TSpawnDescriptor::Spawn(int time) {
     MyList<TWarShip> ans;
     while (SpamCount_ > 0 && LastSpam_ + LoopTime_ <= time) {
-        ans.insert(ToSpawn_, ans.begin());
+        ans.insert(std::move(ToSpawn_), ans.begin());
         --SpamCount_;
         LastSpam_ += LoopTime_;
     }

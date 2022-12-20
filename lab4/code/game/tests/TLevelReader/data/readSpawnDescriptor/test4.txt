@@ -1,0 +1,3 @@
+ShipSpawnType: 1
+SpamCount: -1
+LoopTime: 15

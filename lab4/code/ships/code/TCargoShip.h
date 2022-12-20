@@ -8,7 +8,7 @@
 #include "TShip.h"
 
 class TCargoShip : virtual public TShip {
-private:
+protected:
     int WeightTotal_;
     int WeightNow_;
     double SlowK_; // [0.0. 1.0) 0.0 - not matter. 1.0 - stop
@@ -41,6 +41,9 @@ public:
 
     int SpeedByWeight(int weight) const; //-1 if overWeight
     int WeightMaxBySpeed(int speed) const; // -1 if overSpeed
+
+    void Print() const;
+    std::unique_ptr<TShip> Clone() const;
 };
 
 #endif //LAB4_TCARGOSHIP_H

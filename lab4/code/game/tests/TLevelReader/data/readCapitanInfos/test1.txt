@@ -1,0 +1,16 @@
+CapitansCount: 3
+
+CapitanName: Jack
+CapitanSurname: Vorobey
+CapitanPatronymic: The best
+CapitanRank: 1
+
+CapitanName: Dmitriy
+CapitanSurname: Telyakovskiy
+CapitanPatronymic: Sergeevich
+CapitanRank: 2
+
+CapitanName: Vitaliy
+CapitanSurname: Kaminin
+CapitanPatronymic: Leonidovich
+CapitanRank: 2

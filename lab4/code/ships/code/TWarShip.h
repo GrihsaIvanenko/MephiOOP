@@ -9,7 +9,7 @@
 #include "TShip.h"
 
 class TWarShip : virtual public TShip {
-private:
+protected:
     TWeaponHolder Holder_;
 public:
     TWarShip(
@@ -29,10 +29,16 @@ public:
     bool operator ==(const TWarShip& other) const;
 
     void SetHolder(const TWeaponHolder& holder);
+    TWeaponHolder& GetHolder();
+
+    int GetCostWithGuns() const:
 
     TWeaponHolder GetHolder() const;
 
     bool MakeShot(TShip& to, int timeNow);
+
+    void Print() const;
+    std::unique_ptr<TShip> Clone() const;
 };
 
 #endif //LAB4_TWARSHIP_H

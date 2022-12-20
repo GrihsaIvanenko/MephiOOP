@@ -39,6 +39,10 @@ public:
             return false;
         return *lhs == *rhs;
     }
+
+    void Print() const;
+
+    int GetCost() const;
 };
 
 #endif //LAB4_TWEAPONHOLDER_H

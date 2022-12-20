@@ -18,8 +18,8 @@ private:
         Node* Next_;
     public:
         Node() : Data_(), Next_(nullptr) { }
-        Node(const T& data): Data_(std::make_unique<T>(data)), Next_(nullptr) { }
-        Node(const T& data, Node* next) : Data_(std::make_unique<T>(data)) , Next_(next) { }
+        Node(T&& data): Data_(std::make_unique<T>(std::move(data))), Next_(nullptr) { }
+        Node(T&& data, Node* next) : Data_(std::make_unique<T>(std::move(data))) , Next_(next) { }
         T& operator *() const{ return *Data_; }
     };
 
@@ -57,21 +57,10 @@ public:
     ~MyList(){
         Clear();
     }
-    MyList(const MyList& other) : Size_(0), Head_(new Node()), Tail_(Head_) {
-        for (const auto& elem : other)
-            insert(elem, end());
-    }
     MyList(MyList&& other) : Size_(other.Size_), Head_(other.Head_), Tail_(other.Tail_) {
         other.Size_ = 0;
         other.Head_ = nullptr;
         other.Tail_ = nullptr;
-    }
-    MyList& operator =(const MyList& other) {
-        Clear();
-        Tail_ = Head_ = new Node();
-        for (const auto& elem : other)
-            insert(elem, end());
-        return *this;
     }
     MyList& operator =(MyList&& other){
         Clear();
@@ -102,9 +91,9 @@ public:
     iterator end() const {
         return MyList<T>::iterator(Tail_);
     }
-    void insert(const T& what, iterator beforeWho) {
+    void insert(T&& what, iterator beforeWho) {
         ++Size_;
-        Node* nw = new Node(what, beforeWho.Data_->Next_);
+        Node* nw = new Node(std::move(what), beforeWho.Data_->Next_);
         if (Tail_ == beforeWho.Data_)
             Tail_ = nw;
         beforeWho.Data_->Next_ = nw;
@@ -119,7 +108,7 @@ public:
         std::swap(who.Data_->Data_, toDelete->Data_);
         delete toDelete;
     } //iterator will look at next Node
-    T getById(int id) const {
+    const T& getById(int id) const {
         if (id < 0 || id >= Size_) {
             std::string ex = "Bad id = " + std::to_string(id) + " in range [0, " + std::to_string(Size_) + ")";
             throw ex;

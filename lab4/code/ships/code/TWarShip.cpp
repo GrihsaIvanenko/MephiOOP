@@ -4,6 +4,8 @@
 
 #include "TWarShip.h"
 
+#include <iostream>
+
 TWarShip::TWarShip(
         int x,
         int y,
@@ -50,12 +52,27 @@ void TWarShip::SetHolder(const TWeaponHolder& holder) {
     Holder_ = holder;
 }
 
-TWeaponHolder TWarShip::GetHolder() const {
-    return Holder_;
-}
-
 bool TWarShip::MakeShot(TShip& to, int timeNow) {
     int damage = Holder_.MakeShot(DistTo(to), timeNow);
     to.BeDamaged(damage);
     return to.GetHPNow() != 0;
+}
+
+int TWarShip::GetCostWithGuns() const {
+    return Cost_ + Holder_.GetCost();
+}
+
+void TWarShip::Print() const {
+    std::cout << "MaxSpeed = " << MaxSpeed_ << '\n';
+    std::cout << "HPTotal = " << HPTotal_ << '\n';
+    Holder_.Print();
+    std::cout << "Cost = " << Cost_ << '\n';
+}
+
+std::unique_ptr<TShip> TWarShip::Clone() const {
+    return std::make_unique<TWarShip>(*this);
+}
+
+TWeaponHolder& TWarShip::GetHolder() {
+    return Holder_;
 }

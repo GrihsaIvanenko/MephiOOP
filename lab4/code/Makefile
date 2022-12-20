@@ -1,9 +1,9 @@
-Test: TestWeapons TestShips TestBases TestMyList
+Test: TestWeapons TestShips TestBases TestMyList TestTLevelReader
 
 #####################################################
 
 TestTLevelReader : TLevelReader TCapitanInfo TWeapon TWeaponHolder \
- 					TCapitanInfo TObjectOnMap TShip TCargoShip TCargoWarShip
+ 					TCapitanInfo TObjectOnMap TShip TCargoShip TCargoWarShip TBase TSpawnDescriptor TPirateBase TMission
 	g++ -std=c++17 \
 					./build/code/TWeapon.o \
 					./build/code/TWeaponHolder.o \
@@ -13,6 +13,10 @@ TestTLevelReader : TLevelReader TCapitanInfo TWeapon TWeaponHolder \
 					./build/code/TCargoShip.o \
 					./build/code/TWarShip.o \
 					./build/code/TCargoWarShip.o \
+					./build/code/TBase.o \
+					./build/code/TSpawnDescriptor.o \
+					./build/code/TPirateBase.o \
+					./build/code/TMission.o \
 					./build/code/TLevelReader.o \
 					./game/tests/TLevelReader/code/TestTLevelReader.cpp \
 					-lgtest -lgtest_main -lpthread \
@@ -24,6 +28,11 @@ TLevelReader:
 	g++ -std=c++17 -c \
 					./game/code/TLevelReader.cpp \
 					-o ./build/code/TLevelReader.o
+
+TMission:
+	g++ -std=c++17 -c \
+					./game/code/TMission.cpp \
+					-o ./build/code/TMission.o
 
 #####################################################
 

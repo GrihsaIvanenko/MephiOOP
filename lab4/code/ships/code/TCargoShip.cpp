@@ -3,6 +3,7 @@
 //
 
 #include <cmath>
+#include <iostream>
 
 #include "TCargoShip.h"
 
@@ -105,4 +106,16 @@ int TCargoShip::WeightMaxBySpeed(int speed) const {
     double weightICan = perUSed * WeightTotal_;
     int res = round(weightICan);
     return res;
+}
+
+void TCargoShip::Print() const {
+    std::cout << "MaxSpeed = " << MaxSpeed_ << '\n';
+    std::cout << "HPTotal = " << HPTotal_ << '\n';
+    std::cout << "Weight = " << WeightTotal_ << '\n';
+    std::cout << "SlowK = " << SlowK_ << '\n';
+    std::cout << "Cost = " << Cost_ << '\n';
+}
+
+std::unique_ptr<TShip> TCargoShip::Clone() const {
+    return std::make_unique<TCargoShip>(*this);
 }

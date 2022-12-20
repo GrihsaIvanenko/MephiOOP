@@ -24,6 +24,9 @@ TEST(TShip, InitConstructorAndAssign) {
     TShip notEmptyShip(0, 0, 11, "name", notEmptyInfo, 22, 33, 44, 55, 66);
     otherShip = notEmptyShip;
     ASSERT_EQ(otherShip, notEmptyShip);
+
+    auto it = emptyShip.Clone();
+    ASSERT_EQ(*(it.get()), emptyShip);
 }
 
 TEST(TShip, Setters) {

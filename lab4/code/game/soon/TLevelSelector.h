@@ -5,7 +5,7 @@
 #ifndef LAB4_TLEVELSELECTIOR_H
 #define LAB4_TLEVELSELECTIOR_H
 
-#include "TMission.h"
+#include "../code/TMission.h"
 
 #include <memory>
 #include <iostream>

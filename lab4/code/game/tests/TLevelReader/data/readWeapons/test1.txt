@@ -1,0 +1,15 @@
+WeaponCount: 2
+
+WeaponType: 0
+Damage: 10
+CallDown: 5
+Range: 10
+ShotsTotal: 20
+Cost: 30
+
+WeaponType: 1
+Damage: 5
+CallDown: 6
+Range: 20
+ShotsTotal: 10
+Cost: 20

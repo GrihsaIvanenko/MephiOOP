@@ -5,7 +5,7 @@
 #ifndef LAB4_TPLAYING_H
 #define LAB4_TPLAYING_H
 
-#include "TMission.h"
+#include "../code/TMission.h"
 #include <memory>
 
 class TPlaying {

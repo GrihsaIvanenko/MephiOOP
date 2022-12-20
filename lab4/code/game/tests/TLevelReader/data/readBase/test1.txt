@@ -1,0 +1,3 @@
+Base_X: 1
+Base_Y: 0
+Base_Type: 1

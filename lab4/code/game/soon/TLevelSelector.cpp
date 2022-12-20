@@ -32,7 +32,7 @@ std::string TLevelSelector::ReadLevelName() {
 std::string TLevelSelector::ReadLevelNumberFromKeyboard() {
     std::cout << "Enter level number\n";
     std::string s;
-    std::getline(std::cin, s);
+    getline(std::cin, s);
     try {
         int number = std::stoi(s);
         std::string levelNumber = std::to_string(number);

@@ -36,6 +36,10 @@ TEST(TWarShip, InitConstructorAndAssign) {
     TWarShip notEmptyShip(0, 0, 11, "name", notEmptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2) );
     otherShip = notEmptyShip;
     ASSERT_EQ(notEmptyShip, otherShip);
+
+
+    auto it = emptyShip.Clone();
+    ASSERT_EQ(*(it.get()), emptyShip);
 }
 
 TEST(TWarShip, Setters) {

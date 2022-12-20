@@ -5,7 +5,7 @@
 #ifndef LAB4_TLEVELREADER_H
 #define LAB4_TLEVELREADER_H
 
-#include "../soon/TMission.h"
+#include "TMission.h"
 
 #include <memory>
 #include <iostream>
@@ -19,21 +19,21 @@ public:
     TCapitanInfo ReadCapitanInfo(std::istream& file);
     TWeapon ReadWeapon(std::istream& file);
     std::unique_ptr<TShip> ReadShip(std::istream& file, const MyList<TCapitanInfo>& capitans);
-    TBase ReadBase(std::istream& file);
+    TBase ReadBase(std::istream& file, const std::string& what);
 
     MyList<int> ReadInts(std::istream& file, const std::string& what);
-    MyList<TCapitanInfo> readTCapitanInfos(std::istream& file);
-    MyList<TWeapon> ReadTWeaponKinds(std::istream& file);
-    MyList<TShip> ReadTShipKinds(std::istream& file);
-    MyList<TBase> readBases(std::istream& file, const std::string& what);
+    MyList<TCapitanInfo> ReadCapitanInfos(std::istream& file);
+    MyList<TWeapon> ReadWeapons(std::istream& file);
+    MyList<std::unique_ptr<TShip>> ReadShips(std::istream& file, const MyList<TCapitanInfo>& capitans);
 
-    void ValidateCapitan(std::istream& file, const MyList<TCapitanInfo>& capitans, int capitanId);
-    void ValidateWeapons(const MyList<TWeapon> weapons, const MyList<int>& weaponsEnableToBuy);
-    void ValidateShips(
-            const MyList<TShip> weapons,
-            const MyList<int>& shipsEnableToBuy,
-            const MyList<TCapitanInfo>& capitans);
-    std::unique_ptr<TMission> readMissionInfoFromStream(std::istream& file);
+    TSpawnDescriptor ReadSpawnDescriptor(std::istream& file, const MyList<std::unique_ptr<TShip>>& ships);
+    MyList<TSpawnDescriptor> ReadSpawnDescriptors(std::istream& file, const MyList<std::unique_ptr<TShip>>& ships);
+
+    TPirateBase ReadPirateBase(std::istream& file, const MyList<TSpawnDescriptor>& desctiptors);
+    MyList<TPirateBase> ReadPirateBases(std::istream& file, const MyList<TSpawnDescriptor>& descriptots);
+public:
+    std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::unique_ptr<TShip>>>>
+        ReadMissionInfoFromStream(std::istream& file);
 };
 
 #endif //LAB4_TLEVELREADER_H

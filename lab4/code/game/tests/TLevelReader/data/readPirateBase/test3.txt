@@ -1,0 +1,4 @@
+Base_X: 1
+Base_Y: 1
+Base_Type: 3
+DescriptorNumber: 10

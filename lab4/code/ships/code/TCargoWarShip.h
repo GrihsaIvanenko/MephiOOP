@@ -28,6 +28,9 @@ public:
     TCargoWarShip(const TCargoWarShip& other);
     TCargoWarShip& operator =(const TCargoWarShip& other);
     bool operator ==(const TCargoWarShip& other) const;
+
+    void Print() const;
+    std::unique_ptr<TShip> Clone() const;
 };
 
 #endif //LAB4_TCARGOWARSHIP_H

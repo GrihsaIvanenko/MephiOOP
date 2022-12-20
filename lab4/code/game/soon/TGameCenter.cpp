@@ -12,9 +12,9 @@
 
 void TGameCenter::Start() {
     try {
-        auto it = ChooseLevel();
-        //it = Shop(std::move(it));
-        //it = Play(std::move(it));
+        auto resOfInit = ChooseLevel();
+        auto missionAfterShop = Shop(std::move(it));
+        auto missionAfterGame = Play(std::move(missionAfterShop));
 
         std::cout << "game end because of (" << "Level Completed!" << ")\n";
         std::cout << "restart game to play again!\n";
@@ -27,12 +27,14 @@ void TGameCenter::Start() {
     }
 }
 
-std::unique_ptr<TMission> TGameCenter::ChooseLevel() {
+std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::unique_ptr<TShip>>>>
+            TGameCenter::ChooseLevel() {
     return std::move(TLevelSelector().ChooseLevel());
 }
-/*
-std::unique_ptr<TMission> Shop(std::unique_ptr<TMission> missionPtr) {
-    return std::move(TShopping().Shop(std::move(missionPtr)));
+
+std::unique_ptr<TMission> Shop(
+            std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::unique_ptr<TShip>>>>&& data) {
+    return std::move(TShop().Shop(std::move(missionPtr)));
 }
 
 std::unique_ptr<TMission> Play(std::unique_ptr<TMission> missionPtr) {

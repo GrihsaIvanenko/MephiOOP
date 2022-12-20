@@ -6,6 +6,7 @@
 #define LAB4_TSHIP_H
 
 #include <string>
+#include <memory>
 
 #include "TCapitanInfo.h"
 #include "../../base/code/TObjectOnMap.h"
@@ -55,6 +56,9 @@ public:
     int GetCost() const;
 
     void BeDamaged(int damage);
+
+    virtual void Print() const;
+    virtual std::unique_ptr<TShip> Clone() const;
 };
 
 #endif //LAB4_TSHIP_H

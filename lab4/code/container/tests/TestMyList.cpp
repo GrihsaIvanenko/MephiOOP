@@ -12,24 +12,11 @@ TEST(MyList, InitConstructorAndAssign) {
     list.insert(4, list.end());
     ASSERT_EQ(list.size(), 2);
 
-    MyList<int> list1(list);
-    ASSERT_EQ(list, list1);
-
     MyList<int> list3(std::move(list));
-    ASSERT_EQ(list3, list1);
+    ASSERT_EQ(list3.size(), 2);
     ASSERT_EQ(list.size(), 0);
     list = std::move(list3);
     ASSERT_EQ(list3.size(), 0);
-
-    MyList<int> list2;
-    list2.insert(2, list2.begin());
-    list1 = list2;
-    ASSERT_EQ(list1, list2);
-
-    ASSERT_EQ(list.size(), 2);
-    list2 = std::move(list);
-    ASSERT_EQ(list.size(), 0);
-    ASSERT_EQ(list2.size(), 2);
 }
 
 TEST(MyList, InsertErase) {

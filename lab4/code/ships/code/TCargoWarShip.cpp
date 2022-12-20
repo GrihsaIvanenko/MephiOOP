@@ -4,6 +4,8 @@
 
 #include "TCargoWarShip.h"
 
+#include <iostream>
+
 TCargoWarShip::TCargoWarShip(
         int x,
         int y,
@@ -74,4 +76,17 @@ bool TCargoWarShip::operator ==(const TCargoWarShip& other) const {
     return
         static_cast<const TCargoShip&>(*this) == static_cast<const TCargoShip&>(other) &&
         static_cast<const TWarShip&>(*this) == static_cast<const TWarShip&>(other);
+}
+
+void TCargoWarShip::Print() const {
+    std::cout << "MaxSpeed = " << MaxSpeed_ << '\n';
+    std::cout << "HPTotal = " << HPTotal_ << '\n';
+    std::cout << "Weight = " << WeightTotal_ << '\n';
+    std::cout << "SlowK = " << SlowK_ << '\n';
+    Holder_.Print();
+    std::cout << "Cost = " << Cost_ << '\n';
+}
+
+std::unique_ptr<TShip> TCargoWarShip::Clone() const {
+    return std::make_unique<TCargoShip>(*this);
 }

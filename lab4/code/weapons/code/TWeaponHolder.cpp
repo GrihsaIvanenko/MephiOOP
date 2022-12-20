@@ -3,6 +3,7 @@
 //
 
 #include <cassert>
+#include <iostream>
 
 #include "TWeaponHolder.h"
 
@@ -66,4 +67,42 @@ int TWeaponHolder::MakeShot(int sqDistance, int timeNow) {
         if (GunPtr)
             totalDamage += GunPtr->MakeShot(sqDistance, timeNow);
     return totalDamage;
+}
+
+void TWeaponHolder::Print() const {
+    std::cout << "gun in Front\n";
+    if (Weapons_[0].second) {
+        Weapons_[0].second->Print();
+    } else {
+        std::cout << "No Gun\n";
+    }
+
+    std::cout << "gun in Back\n";
+    if (Weapons_[1].second) {
+        Weapons_[1].second->Print();
+    } else {
+        std::cout << "No Gun\n";
+    }
+
+    std::cout << "gun in Left\n";
+    if (Weapons_[2].second) {
+        Weapons_[2].second->Print();
+    } else {
+        std::cout << "No Gun\n";
+    }
+
+    std::cout << "gun in Right\n";
+    if (Weapons_[3].second) {
+        Weapons_[3].second->Print();
+    } else {
+        std::cout << "No Gun\n";
+    }
+}
+
+int TWeaponHolder::GetCost() const {
+    int ans = 0;
+    for (auto& [placeNow, GunPtr] : Weapons_)
+        if (GunPtr)
+           ans += GunPtr->GetCost();
+    return ans;
 }

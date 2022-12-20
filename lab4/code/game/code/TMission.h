@@ -19,7 +19,6 @@ private:
     MyList<std::unique_ptr<TShip>> Convoy_;
     MyList<TWarShip> Pirates_;
     int MoneyTotal_;
-    int MoneyUsed_;
     int WeightTotal_;
     int WeightNeedToPass_;
     int WeightCompleted_;
@@ -39,8 +38,15 @@ public:
             int height,
             const TBase& a,
             const TBase& b,
-            const MyList<TPirateBase>& pirateBases);
+            MyList<TPirateBase>&& pirateBases);
 
+    void SetMoney(int money);
+
+    int GetMoney() const;
+
+    MyList<std::unique_ptr<TShip>>& GetConvoy() {
+        return Convoy_;
+    }
 
 };
 

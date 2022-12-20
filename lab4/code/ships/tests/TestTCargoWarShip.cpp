@@ -39,6 +39,9 @@ TEST(TCargoWarShip, InitConstructorAndAssign) {
     TCargoWarShip notEmptyShip(0, 0, 11, "name", notEmptyInfo, 22, 33, 44, 55, 66, 77, 88, 99.0, makeWeaponHolder(2) );
     otherShip = notEmptyShip;
     ASSERT_EQ(notEmptyShip, otherShip);
+
+    auto it = emptyShip.Clone();
+    ASSERT_EQ(*(it.get()), emptyShip);
 }
 
 int main() {

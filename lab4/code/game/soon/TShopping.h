@@ -5,7 +5,7 @@
 #ifndef LAB4_TSHOPPING_H
 #define LAB4_TSHOPPING_H
 
-#include "TMission.h"
+#include "../code/TMission.h"
 #include <memory>
 
 class TShopping {

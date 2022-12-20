@@ -3,6 +3,7 @@
 //
 
 #include "TWeapon.h"
+#include <iostream>
 
 TWeapon::TWeapon(int weaponType, int damage, int callDown, int lastShot, int range, int shotsTotal, int shotsNow, int cost)
     : WeaponType_(weaponType)
@@ -126,3 +127,10 @@ int TWeapon::MakeShot(int sqDistance, int timeNow) {
     return Damage_;
 }
 
+void TWeapon::Print() const {
+    std::cout << "Damage = " << Damage_ << '\n';
+    std::cout << "CallDown = " << CallDown_ << '\n';
+    std::cout << "Range = " << Range_ << '\n';
+    std::cout << "ShotsTotal = " << ShotsTotal_ << '\n';
+    std::cout << "Cost = " << Cost_ << '\n';
+}

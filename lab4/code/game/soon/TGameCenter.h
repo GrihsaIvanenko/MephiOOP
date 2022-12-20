@@ -5,13 +5,14 @@
 #ifndef LAB4_GAMECENTER_H
 #define LAB4_GAMECENTER_H
 
-#include "TMission.h"
+#include "../code/TMission.h"
 #include <memory>
 
 class TGameCenter {
 private:
-    std::unique_ptr<TMission> ChooseLevel();
-    std::unique_ptr<TMission> Shop(std::unique_ptr<TMission> missionPtr);
+    std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::unique_ptr<TShip>>>> ChooseLevel();
+    std::unique_ptr<TMission> Shop(
+            std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::unique_ptr<TShip>>>>&& data);
     std::unique_ptr<TMission> Play(std::unique_ptr<TMission> missionPtr);
 public:
     void Start();

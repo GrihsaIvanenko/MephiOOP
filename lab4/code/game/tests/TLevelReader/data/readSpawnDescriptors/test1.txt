@@ -1,0 +1,21 @@
+SpawnDescriptorsCount: 5
+
+ShipSpawnType: 1
+SpamCount: 10
+LoopTime: 1
+
+ShipSpawnType: 1
+SpamCount: 10
+LoopTime: 2
+
+ShipSpawnType: 1
+SpamCount: 10
+LoopTime: 3
+
+ShipSpawnType: 1
+SpamCount: 10
+LoopTime: 4
+
+ShipSpawnType: 1
+SpamCount: 10
+LoopTime: 5

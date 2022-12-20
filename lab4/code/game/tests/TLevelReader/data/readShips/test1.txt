@@ -1,0 +1,23 @@
+ShipsCount: 3
+
+ShipType: 1
+CapitanInfoId: 1
+MaxSpeed: 30
+HPTotal: 100
+Cost: 300
+WeightTotal: 1000
+SlowK: 2
+
+ShipType: 2
+CapitanInfoId: 0
+MaxSpeed: 30
+HPTotal: 100
+Cost: 200
+
+ShipType: 3
+CapitanInfoId: 0
+MaxSpeed: 30
+HPTotal: 100
+Cost: 400
+WeightTotal: 1000
+SlowK: 2

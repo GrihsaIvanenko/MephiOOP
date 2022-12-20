@@ -1,0 +1,21 @@
+TPirateBaseCount: 4
+
+Base_X: 1
+Base_Y: 2
+Base_Type: 3
+DescriptorNumber: 0
+
+Base_X: 1
+Base_Y: 3
+Base_Type: 3
+DescriptorNumber: 0
+
+Base_X: 2
+Base_Y: 1
+Base_Type: 3
+DescriptorNumber: 0
+
+Base_X: 2
+Base_Y: 1
+Base_Type: 3
+DescriptorNumber: 0
