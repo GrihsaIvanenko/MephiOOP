@@ -70,32 +70,32 @@ int TWeaponHolder::MakeShot(int sqDistance, int timeNow) {
 }
 
 void TWeaponHolder::Print() const {
-    std::cout << "gun in Front\n";
+    std::cout << "      gun in Front\n";
     if (Weapons_[0].second) {
         Weapons_[0].second->Print();
     } else {
-        std::cout << "No Gun\n";
+        std::cout << "          No Gun\n";
     }
 
-    std::cout << "gun in Back\n";
+    std::cout << "      gun in Back\n";
     if (Weapons_[1].second) {
         Weapons_[1].second->Print();
     } else {
-        std::cout << "No Gun\n";
+        std::cout << "          No Gun\n";
     }
 
-    std::cout << "gun in Left\n";
+    std::cout << "      gun in Left\n";
     if (Weapons_[2].second) {
         Weapons_[2].second->Print();
     } else {
-        std::cout << "No Gun\n";
+        std::cout << "          No Gun\n";
     }
 
-    std::cout << "gun in Right\n";
+    std::cout << "      gun in Right\n";
     if (Weapons_[3].second) {
         Weapons_[3].second->Print();
     } else {
-        std::cout << "No Gun\n";
+        std::cout << "          No Gun\n";
     }
 }
 

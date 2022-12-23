@@ -3,7 +3,7 @@
 //
 
 #include "TShop.h"
-#include <vector>
+#include <iostream>
 
 std::unique_ptr<TMission> TShop::Shop(
             std::pair<std::unique_ptr<TMission>,
@@ -11,7 +11,7 @@ std::unique_ptr<TMission> TShop::Shop(
             MyList<std::unique_ptr<TShip>>>>&& data,
             std::istream& file) {
     std::unique_ptr<TMission> missionAfterShop =
-            MainMenu(std::move(data.first), std::move(data.second.first), std::move(data.second.second));
+            MainMenu(std::move(data.first), std::move(data.second.first), std::move(data.second.second), file);
     return std::move(missionAfterShop);
 }
 
@@ -20,23 +20,22 @@ std::unique_ptr<TMission> TShop::MainMenu(
             MyList<TWeapon>&& weapons_,
             MyList<std::unique_ptr<TShip>>&& ships_,
             std::istream& file) {
-    std::vector<std::string>> options = {
+    std::vector<std::string> options = {
       "0. Play",
       "1. Buy Ship",
       "2. Sell Ship",
       "3. Buy Gun",
       "4. Sell Gun",
       "5. Add Weight to Ship"
-      "6. Remove Weight to Ship",
-      "7. Auto Weight"
+      "6. Remove Weight to Ship"
     };
-    MyList<TWeapon> weapons = std::move(weapons_),
-    MyList<std::unique_ptr<TShip>> ships = std::move(ships_),
+    MyList<TWeapon> weapons = std::move(weapons_);
+    MyList<std::unique_ptr<TShip>> ships = std::move(ships_);
 
     while (true) {
-        printOptions(options);
+        PrintOptions(options);
         try {
-            int option = ReadInt(file, 0, Optins.size());
+            int option = ReadInt(file, 0, (int)options.size());
             if (option == 0) {
                 if(AskPlay(mission, file))
                     break;
@@ -45,25 +44,23 @@ std::unique_ptr<TMission> TShop::MainMenu(
             } else if (option == 2) {
                 SellShip(mission, file);
             } else if (option == 3) {
-                BuyGun(mission, guns, file);
+                BuyGun(mission, weapons, file);
             } else if (option == 4) {
                 SellGun(mission, file);
             } else if (option == 5) {
-
+                AddWeight(mission, file);
             } else if (option == 6) {
-
-            } else if (option == 7) {
-
+                AddWeight(mission, file);
             }
         } catch(const std::string check) {
-            cout << check << '\n';
+            std::cout << check << '\n';
         }
-        PrintInfo(mision);
+        PrintInfo(mission);
     }
     return std::move(mission);
 }
 
-bool TShop::AskPlay(std::unique_ptr<TMission>& mission, std::istream& file) {
+bool TShop::AskPlay(const std::unique_ptr<TMission>& mission, std::istream& file) {
     PrintInfo(mission);
     std::cout << "You are certainly want to start?(Yes/No)\n";
     std::string ans;
@@ -72,11 +69,11 @@ bool TShop::AskPlay(std::unique_ptr<TMission>& mission, std::istream& file) {
         return true;
     if (ans == "No")
         return false;
-    std::string ex = "You wrote(" + ans + ") instreadOf Yes/No";
+    std::string ex = "You wrote(" + ans + ") instead Of Yes/No";
     throw ex;
 }
 
-void TShop::PrintOptions(const std::vector<std::string>>& options) {
+void TShop::PrintOptions(const std::vector<std::string>& options) {
     std::cout << "-----------------------------\n";
     for (const auto& option : options) {
         std::cout << option << '\n';
@@ -84,21 +81,21 @@ void TShop::PrintOptions(const std::vector<std::string>>& options) {
     std::cout << "-----------------------------\n";
 }
 
-void TShop::PrintInfo(std::unique_ptr<TMission>& mission) {
+void TShop::PrintInfo(const std::unique_ptr<TMission>& mission) {
     for (const auto& ship : mission->GetConvoy())
         ship->Print();
     std::cout << "You have also " << mission->GetMoney() << " money\n";
 }
 
-void TShop::ByShip(std::unique_ptr<TMission>& mission, const MyList<std::unique_ptr<TShip>>& ships, std::istream& file) {
+void TShop::BuyShip(std::unique_ptr<TMission>& mission, const MyList<std::unique_ptr<TShip>>& ships, std::istream& file) {
     std::cout << "Info about ships you can buy\n";
     int timer = 0;
     for (const auto& ship : ships) {
         std::cout << "Ship number" << timer << "\n";
-        ship.Print();
+        ship->Print();
     }
-    std::cout << "You have " << mission->GetMoney() << '\n';
-    std::cout << "Enter which ship you want to Buy. Enter 0 to exit";
+    std::cout << "You have " << mission->GetMoney() << " coins" << '\n';
+    std::cout << "Enter which ship you want to Buy. Enter 0 to exit\n";
     int ShipId = ReadInt(file, 0, ships.size() + 1);
     if (ShipId == 0) {
         return;
@@ -112,8 +109,8 @@ void TShop::ByShip(std::unique_ptr<TMission>& mission, const MyList<std::unique_
     std::unique_ptr<TShip> newShip = nw->Clone();
     mission->SetMoney(mission->GetMoney() - nw->GetCost());
     MyList<std::unique_ptr<TShip>>& convoy = mission->GetConvoy();
-    convoy.insert(std::move(newShip, convoy.begin()));
-    std::cout << "Ship bought";
+    convoy.insert(std::move(newShip), convoy.begin());
+    std::cout << "Ship bought\n";
 }
 
 void TShop::SellShip(std::unique_ptr<TMission>& mission, std::istream& file) {
@@ -129,6 +126,7 @@ void TShop::SellShip(std::unique_ptr<TMission>& mission, std::istream& file) {
     else
         mission->SetMoney(mission->GetMoney() + (*it)->GetCost());
     convoy.erase(it);
+    std::cout << "Ship sold\n";
 }
 
 void TShop::BuyGun(std::unique_ptr <TMission> &mission, const MyList<TWeapon> &guns, std::istream &file) {
@@ -137,6 +135,7 @@ void TShop::BuyGun(std::unique_ptr <TMission> &mission, const MyList<TWeapon> &g
     std::cout << "Enter ShipNumber where be new Gun\n";
     MyList<std::unique_ptr<TShip>>& convoy = mission->GetConvoy();
     int ShipId = ReadInt(file, 0, convoy.size());
+    auto it = convoy.begin();
     for (int i = 0; i < ShipId; ++i)
         ++it;
     if (!dynamic_cast<TWarShip*>((*it).get())) {
@@ -170,26 +169,13 @@ void TShop::BuyGun(std::unique_ptr <TMission> &mission, const MyList<TWeapon> &g
     auto& holder = ship->GetHolder();
 
     int sellMoney = 0;
-    if (placeId == 0) {
-        if (holder.GetGunByPlace(ShipFront))
-            sellMoney += holder.GetGunByPlace(ShipFront).GetCost();
-        holder.SetGunByPlace(ShipFront, gun);
-    }
-    if (placeId == 1) {
-        if (holder.GetGunByPlace(ShipBack))
-            sellMoney += holder.GetGunByPlace(ShipBack).GetCost();
-        holder.SetGunByPlace(ShipBack, gun);
-    }
-    if (placeId == 2) {
-        if (holder.GetGunByPlace(ShipLeftSide))
-            sellMoney += holder.GetGunByPlace(ShipLeftSide).GetCost();
-        holder.SetGunByPlace(ShipLeftSide, gun);
-    }
-    if (placeId == 3) {
-        if (holder.GetGunByPlace(ShipRightSide))
-            sellMoney += holder.GetGunByPlace(ShipRightSide).GetCost();
-        holder.SetGunByPlace(ShipRightSide, gun);
-    }
+    EPlaceOnShip place = (placeId == 0 || placeId == 1)
+                         ? (placeId == 0 ? ShipFront : ShipBack)
+                         : (placeId == 2 ? ShipLeftSide : ShipRightSide);
+
+    if (holder.GetGunByPlace(place))
+        sellMoney += holder.GetGunByPlace(place)->GetCost();
+    holder.SetGunByPlace(place, &gun);
     mission->SetMoney(mission->GetMoney() + sellMoney);
     std::cout << "Gun is bought!\n";
 }
@@ -200,6 +186,7 @@ void TShop::SellGun(std::unique_ptr <TMission> &mission, std::istream &file) {
     std::cout << "Enter ShipNumber where be gun be sold\n";
     MyList<std::unique_ptr<TShip>>& convoy = mission->GetConvoy();
     int ShipId = ReadInt(file, 0, convoy.size());
+    auto it = convoy.begin();
     for (int i = 0; i < ShipId; ++i)
         ++it;
     if (!dynamic_cast<TWarShip*>((*it).get())) {
@@ -217,47 +204,69 @@ void TShop::SellGun(std::unique_ptr <TMission> &mission, std::istream &file) {
     auto& holder = ship->GetHolder();
 
     int addMoney = 0;
-    if (placeId == 0) {
-        if (holder.GetGunByPlace(ShipFront)) {
-            addMoney += holder.GetGunByPlace(ShipFront)->GetCost();
-            std::cout << "Sold!\n";
-            holder.SetGunByPlace(ShipFront, nullptr);
-        } else {
-            std::cout << "No gun here\n";
-        }
-    }
-    if (placeId == 1) {
-        if (holder.GetGunByPlace(ShipBack)) {
-            addMoney += holder.GetGunByPlace(ShipBack)->GetCost();
-            std::cout << "Sold!\n";
-            holder.SetGunByPlace(ShipBack, nullptr);
-        } else {
-            std::cout << "No gun here\n";
-        }
-    }
-    if (placeId == 2) {
-        if (holder.GetGunByPlace(ShipLeftSide)) {
-            addMoney += holder.GetGunByPlace(ShipLeftSide)->GetCost();
-            std::cout << "Sold!\n";
-            holder.SetGunByPlace(ShipLeftSide, nullptr);
-        } else {
-            std::cout << "No gun here\n";
-        }
-    }
-    if (placeId == 3) {
-        if (holder.GetGunByPlace(ShipRightSide)) {
-            addMoney += holder.GetGunByPlace(ShipRightSide)->GetCost();
-            std::cout << "Sold!\n";
-            holder.SetGunByPlace(ShipRightSide, nullptr);
-        } else {
-            std::cout << "No gun here\n";
-        }
+    EPlaceOnShip place = (placeId == 0 || placeId == 1)
+            ? (placeId == 0 ? ShipFront : ShipBack)
+            : (placeId == 2 ? ShipLeftSide : ShipRightSide);
+
+    if (holder.GetGunByPlace(place)) {
+        addMoney += holder.GetGunByPlace(place)->GetCost();
+        std::cout << "Sold!\n";
+        holder.SetGunByPlace(place, nullptr);
+    } else {
+        std::cout << "No gun here\n";
     }
     mission->SetMoney(mission->GetMoney() + addMoney);
 }
 
-int TShop::ReadInt(std::stream& file, int from, int to) { // [, )
-	std::string line;
+void TShop::AddWeight(std::unique_ptr<TMission>& mission, std::istream& file) {
+    PrintInfo(mission);
+
+    std::cout << "Enter ShipNumber where add weight\n";
+    MyList<std::unique_ptr<TShip>>& convoy = mission->GetConvoy();
+    int ShipId = ReadInt(file, 0, convoy.size());
+    auto it = convoy.begin();
+    for (int i = 0; i < ShipId; ++i)
+        ++it;
+    if (!dynamic_cast<TCargoShip*>((*it).get())) {
+        std::cout << "This ship cant contain weight\n";
+        return;
+    }
+    TCargoShip* ship = dynamic_cast<TCargoShip*>((*it).get());
+    int maxValidWeight = std::min(
+            ship->GetWeightTotal() - ship->GetWeightNow(),
+            mission->GetWeightTotal() - mission->GetWeightPutted());
+    std::cout << "Enter number from in[0, " << maxValidWeight << "] - a weight you want to put" << "\n";
+    int weight = ReadInt(file, 0, maxValidWeight + 1);
+    ship->SetWeightNow(ship->GetWeightNow() + weight);
+    mission->SetWeightPutted(mission->GetWeightPutted() + weight);
+    std::cout << "Weight putted!\n";
+}
+
+void TShop::RemoveWeight(std::unique_ptr<TMission>& mission, std::istream& file) {
+    PrintInfo(mission);
+
+    std::cout << "Enter ShipNumber where remove weight\n";
+    MyList<std::unique_ptr<TShip>>& convoy = mission->GetConvoy();
+    int ShipId = ReadInt(file, 0, convoy.size());
+    auto it = convoy.begin();
+    for (int i = 0; i < ShipId; ++i)
+        ++it;
+    if (!dynamic_cast<TCargoShip*>((*it).get())) {
+        std::cout << "This ship cant contain weight\n";
+        return;
+    }
+    TCargoShip* ship = dynamic_cast<TCargoShip*>((*it).get());
+    int maxValidWeight = ship->GetWeightNow();
+    std::cout << "Enter number from in[0, " << maxValidWeight << "] - a weight you want to remove" << "\n";
+    int weight = ReadInt(file, 0, maxValidWeight + 1);
+    ship->SetWeightNow(ship->GetWeightNow() - weight);
+    mission->SetWeightPutted(mission->GetWeightPutted() - weight);
+    std::cout << "Weight removed!\n";
+}
+
+int TShop::ReadInt(std::istream& file, int from, int to) { // [, )
+
+    std::string line;
     getline(file, line);
 	for (auto x : line)
         if (!('0' <= x && x <= '9')) {
@@ -267,15 +276,17 @@ int TShop::ReadInt(std::stream& file, int from, int to) { // [, )
             throw errorReading;
         }
     try {
-        int result = std::stoi(mainPart);
+        int result = std::stoi(line);
         if (result < from || result >= to) {
             std::string errorReading = "input number(" +  std::to_string(result) + ") is not in ["
-                    + to_string(from) + ", " + std::to_string(to) + ")";
+                    + std::to_string(from) + ", " + std::to_string(to) + ")";
             throw errorReading;
         }
         return result;
+    } catch(const std::string& ex) {
+        throw ex;
     } catch(...) {
-        std::string errorReading = what + " - is not integer(" + mainPart + ")";
+        std::string errorReading = line + "- is not integer(" + line + ")";
         throw errorReading;
     }
 }

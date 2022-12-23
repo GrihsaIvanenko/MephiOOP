@@ -63,10 +63,12 @@ int TWarShip::GetCostWithGuns() const {
 }
 
 void TWarShip::Print() const {
-    std::cout << "MaxSpeed = " << MaxSpeed_ << '\n';
-    std::cout << "HPTotal = " << HPTotal_ << '\n';
+    std::cout << "---Info About (" << ShipName_ << ")\n";
+    std::cout << "  MaxSpeed = " << MaxSpeed_ << '\n';
+    std::cout << "  HPTotal = " << HPTotal_ << '\n';
     Holder_.Print();
-    std::cout << "Cost = " << Cost_ << '\n';
+    std::cout << "  Cost = " << Cost_ << '\n';
+    std::cout << "----------------\n";
 }
 
 std::unique_ptr<TShip> TWarShip::Clone() const {

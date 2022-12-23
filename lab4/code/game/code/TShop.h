@@ -9,15 +9,17 @@
 
 class TShop {
 public:
-    int ReadInt(std::istream& file);
-    void PrintOptions(const std::vector<std::string>>& options);
-    void PrintInfo(std::unique_ptr<TMission>& mission);
+    int ReadInt(std::istream& file, int from, int to);
+    void PrintOptions(const std::vector<std::string>& options);
+    void PrintInfo(const std::unique_ptr<TMission>& mission);
 
-    bool AskPlay(std::istream& file);
-    void ByShip(std::unique_ptr<TMission>& mission, const MyList<std::unique_ptr<TShip>>& ships, std::istream& file);
+    bool AskPlay(const std::unique_ptr<TMission>& mission, std::istream& file);
+    void BuyShip(std::unique_ptr<TMission>& mission, const MyList<std::unique_ptr<TShip>>& ships, std::istream& file);
     void SellShip(std::unique_ptr<TMission>& mission, std::istream& file);
-    void BuyGun(std::unique_ptr<TMission>& mission, const MyList<TWeapons>& guns, std::istream& file);
+    void BuyGun(std::unique_ptr<TMission>& mission, const MyList<TWeapon>& guns, std::istream& file);
     void SellGun(std::unique_ptr<TMission>& mission, std::istream& file);
+    void AddWeight(std::unique_ptr<TMission>& mission, std::istream& file);
+    void RemoveWeight(std::unique_ptr<TMission>& mission, std::istream& file);
 
     std::unique_ptr<TMission> MainMenu(
         std::unique_ptr<TMission> mission,

@@ -31,9 +31,7 @@ public:
     void SetHolder(const TWeaponHolder& holder);
     TWeaponHolder& GetHolder();
 
-    int GetCostWithGuns() const:
-
-    TWeaponHolder GetHolder() const;
+    int GetCostWithGuns() const;
 
     bool MakeShot(TShip& to, int timeNow);
 

@@ -9,6 +9,7 @@ TMission::TMission(const TCapitanInfo &capitan, int moneyTotal, int weightTotal,
    : Capitan_(capitan)
    , Convoy_()
    , Pirates_()
+   , WeightPutted_(0)
    , MoneyTotal_(moneyTotal)
    , WeightTotal_(weightTotal)
    , WeightNeedToPass_(weightNeedToPass)
@@ -24,6 +25,19 @@ int TMission::GetMoney() const {
         return MoneyTotal_;
 }
 
-void TMission::SetMoney(int money) {
-    MoneyUsed_ = money;
+int TMission::GetWeightPutted() const {
+    return WeightPutted_;
 }
+
+int TMission::GetWeightTotal() const {
+    return WeightTotal_;
+}
+
+void TMission::SetMoney(int money) {
+    MoneyTotal_ = money;
+}
+
+void TMission::SetWeightPutted(int weightPutted) {
+    WeightPutted_ = weightPutted;
+}
+

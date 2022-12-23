@@ -128,9 +128,9 @@ int TWeapon::MakeShot(int sqDistance, int timeNow) {
 }
 
 void TWeapon::Print() const {
-    std::cout << "Damage = " << Damage_ << '\n';
-    std::cout << "CallDown = " << CallDown_ << '\n';
-    std::cout << "Range = " << Range_ << '\n';
-    std::cout << "ShotsTotal = " << ShotsTotal_ << '\n';
-    std::cout << "Cost = " << Cost_ << '\n';
+    std::cout << "          Damage = " << Damage_ << '\n';
+    std::cout << "          CallDown = " << CallDown_ << '\n';
+    std::cout << "          Range = " << Range_ << '\n';
+    std::cout << "          ShotsTotal = " << ShotsTotal_ << '\n';
+    std::cout << "          Cost = " << Cost_ << '\n';
 }

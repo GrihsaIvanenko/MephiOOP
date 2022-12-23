@@ -79,12 +79,14 @@ bool TCargoWarShip::operator ==(const TCargoWarShip& other) const {
 }
 
 void TCargoWarShip::Print() const {
-    std::cout << "MaxSpeed = " << MaxSpeed_ << '\n';
-    std::cout << "HPTotal = " << HPTotal_ << '\n';
-    std::cout << "Weight = " << WeightTotal_ << '\n';
-    std::cout << "SlowK = " << SlowK_ << '\n';
+    std::cout << "---Info About (" << ShipName_ << ")\n";
+    std::cout << "  MaxSpeed = " << MaxSpeed_ << '\n';
+    std::cout << "  HPTotal = " << HPTotal_ << '\n';
+    std::cout << "  Weight = " << WeightTotal_ << '\n';
+    std::cout << "  SlowK = " << SlowK_ << '\n';
     Holder_.Print();
-    std::cout << "Cost = " << Cost_ << '\n';
+    std::cout << "  Cost = " << Cost_ << '\n';
+    std::cout << "----------------\n";
 }
 
 std::unique_ptr<TShip> TCargoWarShip::Clone() const {
