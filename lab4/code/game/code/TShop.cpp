@@ -26,8 +26,9 @@ std::unique_ptr<TMission> TShop::MainMenu(
       "2. Sell Ship",
       "3. Buy Gun",
       "4. Sell Gun",
-      "5. Add Weight to Ship"
-      "6. Remove Weight to Ship"
+      "5. Add Weight to Ship",
+      "6. Remove Weight to Ship",
+      "7. Auto Weight"
     };
     MyList<TWeapon> weapons = std::move(weapons_);
     MyList<std::unique_ptr<TShip>> ships = std::move(ships_);
@@ -51,10 +52,14 @@ std::unique_ptr<TMission> TShop::MainMenu(
                 AddWeight(mission, file);
             } else if (option == 6) {
                 AddWeight(mission, file);
+            } else if (option == 7) {
+                AutoWeight(mission);
             }
         } catch(const std::string check) {
             std::cout << check << '\n';
         }
+        for (int i = 0; i < 100; ++i)
+            std::cout << '\n';
         PrintInfo(mission);
     }
     return std::move(mission);
@@ -82,16 +87,20 @@ void TShop::PrintOptions(const std::vector<std::string>& options) {
 }
 
 void TShop::PrintInfo(const std::unique_ptr<TMission>& mission) {
+    std::cout << "\n\n\n\n\n";
+    std::cout << "-----------MissionInfo-----------------\n";
     for (const auto& ship : mission->GetConvoy())
         ship->Print();
     std::cout << "You have also " << mission->GetMoney() << " money\n";
+    std::cout << "\n\n\n\n\n";
 }
 
 void TShop::BuyShip(std::unique_ptr<TMission>& mission, const MyList<std::unique_ptr<TShip>>& ships, std::istream& file) {
     std::cout << "Info about ships you can buy\n";
-    int timer = 0;
+    int timer = 1;
     for (const auto& ship : ships) {
         std::cout << "Ship number" << timer << "\n";
+        ++timer;
         ship->Print();
     }
     std::cout << "You have " << mission->GetMoney() << " coins" << '\n';
@@ -262,6 +271,77 @@ void TShop::RemoveWeight(std::unique_ptr<TMission>& mission, std::istream& file)
     ship->SetWeightNow(ship->GetWeightNow() - weight);
     mission->SetWeightPutted(mission->GetWeightPutted() - weight);
     std::cout << "Weight removed!\n";
+}
+
+void TShop::AutoWeight(std::unique_ptr<TMission>& mission) {
+    int MaxPossibleWeight = 0;
+    for (const auto& ship : mission->GetConvoy()) {
+        TCargoShip* afterCast = dynamic_cast<TCargoShip*>(ship.get());
+        if (afterCast)
+            MaxPossibleWeight += afterCast->GetWeightTotal();
+    }
+    if (MaxPossibleWeight < mission->GetWeightTotal()) {
+        std::string ex = "Total weight bigger than ships can contain";
+        throw ex;
+    }
+
+    int lb = 0;
+    int rb = 0;
+    for (const auto& ship : mission->GetConvoy()) {
+        TCargoShip* afterCast = dynamic_cast<TCargoShip*>(ship.get());
+        if (afterCast)
+            rb = std::max(rb, afterCast->SpeedByWeight(0));
+        else
+            rb = std::max(rb, ship->GetMaxSpeed());
+    }
+
+    while (rb - lb > 1) {
+        int mid = (lb + rb) >> 1;
+        if (IsSpeedPossible(mission, mid))
+            lb = mid;
+        else
+            rb = mid;
+    }
+    std::cout << "Speed of ships will be = " << lb << '\n';
+    SetWeightBySpeed(mission, lb);
+}
+
+void TShop::SetWeightBySpeed(std::unique_ptr<TMission>& mission, int speed) {
+    int weightLeft = mission->GetWeightTotal();
+    int timer = 0;
+    for (const auto& ship : mission->GetConvoy()) {
+        TCargoShip* afterCast = dynamic_cast<TCargoShip*>(ship.get());
+        if (afterCast) {
+            int weightWeUse = std::min(weightLeft, afterCast->WeightMaxBySpeed(speed));
+            afterCast->SetWeightNow(weightWeUse);
+            weightLeft -= weightWeUse;
+            std::cout << "Ship number " << timer << " Gets " << weightWeUse << " kg\n";
+        }
+        ++timer;
+    }
+    if (weightLeft != 0) {
+        std::string ex = "Logic error in SetWeightBySpeed";
+        throw ex;
+    }
+}
+
+bool TShop::IsSpeedPossible(std::unique_ptr <TMission> &mission, int speedToCheck) {
+    int weightWeCanHold = 0;
+    for (const auto& ship : mission->GetConvoy()) {
+        TCargoShip* afterCast = dynamic_cast<TCargoShip*>(ship.get());
+        if (afterCast) {
+            int canShip = afterCast->WeightMaxBySpeed(speedToCheck);
+            if (canShip == -1)
+                return false;
+            weightWeCanHold += canShip;
+        } else {
+            if (ship->GetMaxSpeed() < speedToCheck)
+                return false;
+        }
+    }
+    if (weightWeCanHold < mission->GetWeightTotal())
+        return false;
+    return true;
 }
 
 int TShop::ReadInt(std::istream& file, int from, int to) { // [, )

@@ -5,7 +5,7 @@
 #ifndef LAB4_TLEVELSELECTIOR_H
 #define LAB4_TLEVELSELECTIOR_H
 
-#include "../code/TMission.h"
+#include "TMission.h"
 
 #include <memory>
 #include <iostream>
@@ -16,9 +16,11 @@ private:
     std::string ReadLevelNumberFromKeyboard();
     bool CheckExists(const std::string& path);
     std::string ReadLevelName();
-    std::unique_ptr<TMission> readMissionInfoFromStream(std::istream& file);
+    std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::unique_ptr<TShip>>>>
+            readMissionInfoFromStream(std::istream& file);
 public:
-    std::unique_ptr<TMission> ChooseLevel();
+    std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::unique_ptr<TShip>>>>
+            ChooseLevel();
 };
 
 #endif //LAB4_TLEVELSELECTIOR_H

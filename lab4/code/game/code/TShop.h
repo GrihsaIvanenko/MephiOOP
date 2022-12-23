@@ -20,6 +20,9 @@ public:
     void SellGun(std::unique_ptr<TMission>& mission, std::istream& file);
     void AddWeight(std::unique_ptr<TMission>& mission, std::istream& file);
     void RemoveWeight(std::unique_ptr<TMission>& mission, std::istream& file);
+    void AutoWeight(std::unique_ptr<TMission>& mission);
+    void SetWeightBySpeed(std::unique_ptr<TMission>& mission, int speed);
+    bool IsSpeedPossible(std::unique_ptr<TMission>& mission, int speedToCheck);
 
     std::unique_ptr<TMission> MainMenu(
         std::unique_ptr<TMission> mission,

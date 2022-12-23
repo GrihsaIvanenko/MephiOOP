@@ -390,7 +390,52 @@ TEST(TShop, addWeight4) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+TEST(TShop, autoWeight1) {
+    std::unique_ptr<TMission> mission = MakeMission({}, {}, {}, 20, 500);
+    std::unique_ptr<TShip> newShip1 = std::make_unique<TCargoShip>( 0, 0, 0, "Ship" + std::to_string(ShipId++), TCapitanInfo(), 100, 0, 0, 0, 0, 1000, 0, 0.5);
+    mission->GetConvoy().insert(std::move(newShip1), mission->GetConvoy().end());
+    TShop().AutoWeight(mission);
+    ASSERT_EQ(dynamic_cast<TCargoShip*>(mission->GetConvoy().getById(0).get())->GetWeightNow(), 500);
+}
 
+TEST(TShop, autoWeight2) {
+    std::unique_ptr<TMission> mission = MakeMission({}, {}, {}, 20, 1000);
+    std::unique_ptr<TShip> newShip1 = std::make_unique<TCargoShip>( 0, 0, 0, "Ship" + std::to_string(ShipId++), TCapitanInfo(), 100, 0, 0, 0, 0, 1000, 0, 0.5);
+    mission->GetConvoy().insert(std::move(newShip1), mission->GetConvoy().end());
+    std::unique_ptr<TShip> newShip2 = std::make_unique<TCargoShip>( 0, 0, 0, "Ship" + std::to_string(ShipId++), TCapitanInfo(), 60, 0, 0, 0, 0, 1000, 0, 0.5);
+    mission->GetConvoy().insert(std::move(newShip2), mission->GetConvoy().end());
+    TShop().AutoWeight(mission);
+    ASSERT_EQ(dynamic_cast<TCargoShip*>(mission->GetConvoy().getById(0).get())->GetWeightNow(), 880);
+    ASSERT_EQ(dynamic_cast<TCargoShip*>(mission->GetConvoy().getById(1).get())->GetWeightNow(), 120);
+}
+
+TEST(TShop, autoWeight3) {
+    std::unique_ptr<TMission> mission = MakeMission({}, {}, {}, 20, 1000);
+
+    std::unique_ptr<TShip> newShip1 = std::make_unique<TCargoShip>( 0, 0, 0, "Ship" + std::to_string(ShipId++), TCapitanInfo(), 100, 0, 0, 0, 0, 1000, 0, 0.5);
+    mission->GetConvoy().insert(std::move(newShip1), mission->GetConvoy().end());
+    std::unique_ptr<TShip> newShip2 = std::make_unique<TCargoShip>( 0, 0, 0, "Ship" + std::to_string(ShipId++), TCapitanInfo(), 60, 0, 0, 0, 0, 1000, 0, 0.5);
+    mission->GetConvoy().insert(std::move(newShip2), mission->GetConvoy().end());
+    std::unique_ptr<TShip> newShip3 = std::make_unique<TCargoShip>( 0, 0, 0, "Ship" + std::to_string(ShipId++), TCapitanInfo(), 10, 0, 0, 0, 0, 1000, 0, 0.5);
+    mission->GetConvoy().insert(std::move(newShip3), mission->GetConvoy().end());
+
+    TShop().AutoWeight(mission);
+    ASSERT_EQ(dynamic_cast<TCargoShip*>(mission->GetConvoy().getById(0).get())->GetWeightNow(), 1000);
+    ASSERT_EQ(dynamic_cast<TCargoShip*>(mission->GetConvoy().getById(1).get())->GetWeightNow(), 0);
+    ASSERT_EQ(dynamic_cast<TCargoShip*>(mission->GetConvoy().getById(2).get())->GetWeightNow(), 0);
+}
+
+TEST(TShop, autoWeight4) {
+    std::unique_ptr<TMission> mission = MakeMission({}, {}, {}, 20, 1000);
+    std::unique_ptr<TShip> newShip1 = std::make_unique<TCargoShip>( 0, 0, 0, "Ship" + std::to_string(ShipId++), TCapitanInfo(), 100, 0, 0, 0, 0, 500, 0, 0.5);
+    mission->GetConvoy().insert(std::move(newShip1), mission->GetConvoy().end());
+    try {
+        TShop().AutoWeight(mission);
+        ASSERT_EQ(true, false);
+    } catch(const std::string ex) {
+        ASSERT_EQ(ex, "Total weight bigger than ships can contain");
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

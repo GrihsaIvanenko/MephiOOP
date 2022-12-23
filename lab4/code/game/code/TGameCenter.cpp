@@ -5,15 +5,14 @@
 #include "TGameCenter.h"
 
 #include "TLevelSelector.h"
-#include "TShopping.h"
+#include "TShop.h"
 #include "TPlaying.h"
 
-#include <iostream>
-
 void TGameCenter::Start() {
+    system("clear");
     try {
         auto resOfInit = ChooseLevel();
-        auto missionAfterShop = Shop(std::move(it));
+        auto missionAfterShop = Shop(std::move(resOfInit));
         auto missionAfterGame = Play(std::move(missionAfterShop));
 
         std::cout << "game end because of (" << "Level Completed!" << ")\n";
@@ -32,13 +31,13 @@ std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::uniq
     return std::move(TLevelSelector().ChooseLevel());
 }
 
-std::unique_ptr<TMission> Shop(
+std::unique_ptr<TMission> TGameCenter::Shop(
             std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::unique_ptr<TShip>>>>&& data) {
-    return std::move(TShop().Shop(std::move(missionPtr)));
+    return std::move(TShop().Shop(std::move(data), std::cin));
 }
 
-std::unique_ptr<TMission> Play(std::unique_ptr<TMission> missionPtr) {
+std::unique_ptr<TMission> TGameCenter::Play(std::unique_ptr<TMission> missionPtr) {
     return std::move(TPlaying().Play(std::move(missionPtr)));
-}*/
+}
 
 

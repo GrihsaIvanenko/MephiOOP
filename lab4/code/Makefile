@@ -1,8 +1,44 @@
+all: TLevelReader TCapitanInfo TWeapon TWeaponHolder TObjectOnMap TShip TCargoShip TCargoWarShip TBase \
+							TSpawnDescriptor TPirateBase TMission TLevelReader TShop TLevelSelector TPlaying TGameCenter
+	g++ -std=c++17 \
+					./build/code/TWeapon.o \
+					./build/code/TWeaponHolder.o \
+					./build/code/TCapitanInfo.o \
+					./build/code/TObjectOnMap.o \
+					./build/code/TShip.o \
+					./build/code/TCargoShip.o \
+					./build/code/TWarShip.o \
+					./build/code/TCargoWarShip.o \
+					./build/code/TBase.o \
+					./build/code/TSpawnDescriptor.o \
+					./build/code/TPirateBase.o \
+					./build/code/TMission.o \
+					./build/code/TLevelReader.o \
+					./build/code/TLevelSelector.o \
+					./build/code/TShop.o \
+					./build/code/TPlaying.o \
+					./build/code/TGameCenter.o \
+					./game/code/main.cpp \
+					-o ./build/code/game
+	./build/code/game
+
+
+
 Test: TestWeapons TestShips TestBases TestMyList TestTLevelReader
 
 #####################################################
 
 TestGameLogic: TestTLevelReader TestTShop
+
+TGameCenter:
+	g++ -std=c++17 -c \
+					./game/code/TGameCenter.cpp \
+					-o ./build/code/TGameCenter.o
+
+TPlaying:
+	g++ -std=c++17 -c \
+					./game/code/TPlaying.cpp \
+					-o ./build/code/TPlaying.o
 
 TestTShop: TLevelReader TCapitanInfo TWeapon TWeaponHolder TObjectOnMap TShip \
            					 TCargoShip TCargoWarShip TBase TSpawnDescriptor TPirateBase TMission TLevelReader TShop
@@ -31,6 +67,11 @@ TShop:
 	g++ -std=c++17 -c \
 					./game/code/TShop.cpp \
 					-o ./build/code/TShop.o
+
+TLevelSelector:
+	g++ -std=c++17 -c \
+					./game/code/TLevelSelector.cpp \
+					-o ./build/code/TLevelSelector.o
 
 TestTLevelReader : TLevelReader TCapitanInfo TWeapon TWeaponHolder \
  					TCapitanInfo TObjectOnMap TShip TCargoShip TCargoWarShip TBase TSpawnDescriptor TPirateBase TMission

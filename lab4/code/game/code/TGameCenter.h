@@ -5,7 +5,7 @@
 #ifndef LAB4_GAMECENTER_H
 #define LAB4_GAMECENTER_H
 
-#include "../code/TMission.h"
+#include "TMission.h"
 #include <memory>
 
 class TGameCenter {
