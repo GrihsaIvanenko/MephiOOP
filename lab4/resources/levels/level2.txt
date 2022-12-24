@@ -68,15 +68,15 @@ Weapon4: 0
 moneyTotal: 5000
 weightTotal: 3000
 weightNeedToPass: 1800
-width: 30
-height: 20
+width: 100
+height: 30
 
 Base_X: 1
 Base_Y: 1
 Base_Type: 1
 
-Base_X: 19
-Base_Y: 29
+Base_X: 29
+Base_Y: 99
 Base_Type: 2
 
 SpawnDescriptorsCount: 5
