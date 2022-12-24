@@ -9,14 +9,18 @@ TSpawnDescriptor::TSpawnDescriptor(const TWarShip &toSpam, int spamCount, int lo
     , SpamCount_(spamCount)
     , LoopTime_(loopTime)
     , LastSpam_(lastSpam)
-{ }
+{
+    ToSpawn_.SetShipName("Pirate");
+}
 
 TSpawnDescriptor::TSpawnDescriptor(const TSpawnDescriptor &other)
     : ToSpawn_(other.ToSpawn_)
     , SpamCount_(other.SpamCount_)
     , LoopTime_(other.LoopTime_)
     , LastSpam_(other.LastSpam_)
-{ }
+{
+     ToSpawn_.SetShipName("Pirate");
+}
 
 TSpawnDescriptor& TSpawnDescriptor::operator =(const TSpawnDescriptor& other) {
     ToSpawn_ = other.ToSpawn_;
@@ -42,4 +46,9 @@ MyList<TWarShip> TSpawnDescriptor::Spawn(int time) {
         LastSpam_ += LoopTime_;
     }
     return ans;
+}
+
+void TSpawnDescriptor::SetXY(int x, int y) {
+    ToSpawn_.SetX(x);
+    ToSpawn_.SetY(y);
 }

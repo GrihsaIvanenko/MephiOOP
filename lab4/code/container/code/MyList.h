@@ -118,6 +118,17 @@ public:
                 return item;
         throw "228";
     }
+
+    T& getById(int id) {
+        if (id < 0 || id >= Size_) {
+            std::string ex = "Bad id = " + std::to_string(id) + " in range [0, " + std::to_string(Size_) + ")";
+            throw ex;
+        }
+        for (auto& item : *this)
+            if (id-- == 0)
+                return item;
+        throw "228";
+    }
 };
 
 #endif //LAB4_MYLIST_H

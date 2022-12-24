@@ -43,14 +43,21 @@ public:
 
     void SetMoney(int money);
     void SetWeightPutted(int weightPutted);
+    void SetWeightCompleted(int WeightCompleted);
 
     int GetMoney() const;
     int GetWeightPutted() const;
     int GetWeightTotal() const;
+    int GetWidth() const;
+    int GetHeight() const;
+    int GetWeightNeedToPass() const;
+    int GetWeightCompleted() const;
+    TBase& GetBaseA();
+    TBase& GetBaseB();
 
-    MyList<std::unique_ptr<TShip>>& GetConvoy() {
-        return Convoy_;
-    }
+    MyList<TWarShip>& GetPirates();
+    MyList<TPirateBase>& GetPirateBases();
+    MyList<std::unique_ptr<TShip>>& GetConvoy();
 
 };
 

@@ -85,7 +85,7 @@ void TCargoWarShip::Print() const {
     std::cout << "  Weight = " << WeightTotal_ << '\n';
     std::cout << "  SlowK = " << SlowK_ << '\n';
     Holder_.Print();
-    std::cout << "  Cost = " << Cost_ << '\n';
+    std::cout << "  Cost = " << GetCostWithGuns() << '\n';
     std::cout << "----------------\n";
 }
 

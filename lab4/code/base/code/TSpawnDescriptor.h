@@ -21,6 +21,7 @@ public:
     bool operator ==(const TSpawnDescriptor& other) const;
 
     MyList<TWarShip> Spawn(int time);
+    void SetXY(int x, int y);
 };
 
 #endif //LAB4_TSPAWNDESCRIPTOR_H

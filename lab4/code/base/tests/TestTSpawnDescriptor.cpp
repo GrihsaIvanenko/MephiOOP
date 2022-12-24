@@ -18,7 +18,7 @@ TWeaponHolder makeWeaponHolder(int type) {
 
 TEST(TShip, InitConstructorAndAssign) {
     TCapitanInfo emptyInfo;
-    TWarShip notEmptyShip(0, 0, 11, "name", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2));
+    TWarShip notEmptyShip(0, 0, 11, "Pirate", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2));
 
     TSpawnDescriptor obj(notEmptyShip, 10, 10, 0);
 
@@ -32,7 +32,7 @@ TEST(TShip, InitConstructorAndAssign) {
 
 TEST(TShip, Spawn) {
     TCapitanInfo emptyInfo;
-    TWarShip notEmptyShip(0, 0, 11, "name", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2));
+    TWarShip notEmptyShip(0, 0, 11, "Pirate", emptyInfo, 22, 33, 44, 55, 66, makeWeaponHolder(2));
     TSpawnDescriptor obj(notEmptyShip, 10, 10, 0);
 
     MyList<TWarShip> l1 = obj.Spawn(1);

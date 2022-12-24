@@ -1,5 +1,6 @@
 all: TLevelReader TCapitanInfo TWeapon TWeaponHolder TObjectOnMap TShip TCargoShip TCargoWarShip TBase \
-							TSpawnDescriptor TPirateBase TMission TLevelReader TShop TLevelSelector TPlaying TGameCenter
+							TSpawnDescriptor TPirateBase TMission TLevelReader TShop TLevelSelector TPlaying \
+							TGameCenter TimeHolder
 	g++ -std=c++17 \
 					./build/code/TWeapon.o \
 					./build/code/TWeaponHolder.o \
@@ -17,6 +18,7 @@ all: TLevelReader TCapitanInfo TWeapon TWeaponHolder TObjectOnMap TShip TCargoSh
 					./build/code/TLevelSelector.o \
 					./build/code/TShop.o \
 					./build/code/TPlaying.o \
+					./build/code/TimeHolder.o \
 					./build/code/TGameCenter.o \
 					./game/code/main.cpp \
 					-o ./build/code/game
@@ -35,10 +37,15 @@ TGameCenter:
 					./game/code/TGameCenter.cpp \
 					-o ./build/code/TGameCenter.o
 
-TPlaying:
+TPlaying: TimeHolder
 	g++ -std=c++17 -c \
 					./game/code/TPlaying.cpp \
 					-o ./build/code/TPlaying.o
+
+TimeHolder:
+	g++ -std=c++17 -c \
+					./game/code/TimeHolder.cpp \
+					-o ./build/code/TimeHolder.o
 
 TestTShop: TLevelReader TCapitanInfo TWeapon TWeaponHolder TObjectOnMap TShip \
            					 TCargoShip TCargoWarShip TBase TSpawnDescriptor TPirateBase TMission TLevelReader TShop

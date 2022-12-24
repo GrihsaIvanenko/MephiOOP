@@ -145,7 +145,7 @@ TEST(TLevelReader, ReadWeapon) {
     std::string pathToLevel = "./game/tests/TLevelReader/data/readWeapon/test1.txt";
     std::ifstream file(pathToLevel.c_str());
 	TWeapon val = TLevelReader().ReadWeapon(file);
-	ASSERT_EQ(val, TWeapon(0, 10, 5, 0, 10, 20, 0, 30));
+	ASSERT_EQ(val, TWeapon(0, 10, 5, 0, 10, 20, 20, 30));
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -158,60 +158,46 @@ MyList<TCapitanInfo> GetCapitanInfo() {
     return res;
 }
 
+MyList<TWeapon> GetWeapons() {
+    MyList<TWeapon> res;
+    res.insert(TWeapon(0, 100, 1, 0, 20, 0, 3, 11), res.end());
+    res.insert(TWeapon(0, 1000, 1, 0, 10, 0, 1, 12), res.end());
+    return res;
+}
+
 TEST(TLevelReader, ReadShip1) {
     std::string pathToLevel = "./game/tests/TLevelReader/data/readShip/test1.txt";
     std::ifstream file(pathToLevel.c_str());
     MyList<TCapitanInfo> capitanInfos = GetCapitanInfo();
-    std::unique_ptr<TShip> ptr = TLevelReader().ReadShip(file, capitanInfos);
+    MyList<TWeapon> weapons = GetWeapons();
+    std::unique_ptr<TShip> ptr = TLevelReader().ReadShip(file, weapons, capitanInfos);
     TCargoShip* shipPtr = dynamic_cast<TCargoShip*>(ptr.get());
     if (!shipPtr) {
         ASSERT_EQ(true, false);
     }
-    ASSERT_EQ(*shipPtr, TCargoShip(0, 0, 1, "", capitanInfos.getById(1), 30, 0, 100, 0, 300, 1000, 0, 1.0 / 2));
+    ASSERT_EQ(*shipPtr, TCargoShip(0, 0, 1, "", capitanInfos.getById(1), 30, 0, 100, 100, 300, 1000, 0, 1.0 / 2));
 }
 
 TEST(TLevelReader, ReadShip2) {
     std::string pathToLevel = "./game/tests/TLevelReader/data/readShip/test2.txt";
     std::ifstream file(pathToLevel.c_str());
     MyList<TCapitanInfo> capitanInfos = GetCapitanInfo();
-    std::unique_ptr<TShip> ptr = TLevelReader().ReadShip(file, capitanInfos);
-    TWarShip* shipPtr = dynamic_cast<TWarShip*>(ptr.get());
-    if (!shipPtr) {
-        ASSERT_EQ(true, false);
-    }
-    ASSERT_EQ(*shipPtr, TWarShip(0, 0, 1, "", capitanInfos.getById(0), 30, 0, 100, 0, 200, TWeaponHolder()));
-}
-
-TEST(TLevelReader, ReadShip3) {
-    std::string pathToLevel = "./game/tests/TLevelReader/data/readShip/test3.txt";
-    std::ifstream file(pathToLevel.c_str());
-    MyList<TCapitanInfo> capitanInfos = GetCapitanInfo();
-    std::unique_ptr<TShip> ptr = TLevelReader().ReadShip(file, capitanInfos);
-    TCargoWarShip* shipPtr = dynamic_cast<TCargoWarShip*>(ptr.get());
-    if (!shipPtr) {
-        ASSERT_EQ(true, false);
-    }
-    ASSERT_EQ(*shipPtr, TCargoWarShip(0, 0, 1, "", capitanInfos.getById(2), 30, 0, 100, 0, 400, 1000, 0, 1.0 / 2, TWeaponHolder()));
-}
-
-TEST(TLevelReader, ReadShip4) {
-    std::string pathToLevel = "./game/tests/TLevelReader/data/readShip/test4.txt";
-    std::ifstream file(pathToLevel.c_str());
-    MyList<TCapitanInfo> capitanInfos = GetCapitanInfo();
+    MyList<TWeapon> weapons = GetWeapons();
     try {
-        std::unique_ptr<TShip> ptr = TLevelReader().ReadShip(file, capitanInfos);
+        std::unique_ptr<TShip> ptr = TLevelReader().ReadShip(file, weapons, capitanInfos);
         ASSERT_EQ(true, false);
     } catch (const std::string& ex) {
         ASSERT_EQ(ex, "Wrong ShipType");
     }
 }
 
-TEST(TLevelReader, ReadShip5) {
-    std::string pathToLevel = "./game/tests/TLevelReader/data/readShip/test5.txt";
+TEST(TLevelReader, ReadShip3) {
+    std::string pathToLevel = "./game/tests/TLevelReader/data/readShip/test3.txt";
     std::ifstream file(pathToLevel.c_str());
     MyList<TCapitanInfo> capitanInfos = GetCapitanInfo();
+    MyList<TWeapon> weapons = GetWeapons();
     try {
-        std::unique_ptr<TShip> ptr = TLevelReader().ReadShip(file, capitanInfos);
+        std::unique_ptr<TShip> ptr = TLevelReader().ReadShip(file, weapons, capitanInfos);
         ASSERT_EQ(true, false);
     } catch (const std::string& ex) {
         ASSERT_EQ(ex, "Bad id = 7 in range [0, 3)");
@@ -308,8 +294,9 @@ TEST(TLevelReader, ReadWeapons1) {
 TEST(TLevelReader, ReadShips1) {
     std::string pathToLevel = "./game/tests/TLevelReader/data/readShips/test1.txt";
     std::ifstream file(pathToLevel.c_str());
-     MyList<TCapitanInfo> capitanInfos = GetCapitanInfo();
-    MyList<std::unique_ptr<TShip>> ships = TLevelReader().ReadShips(file, capitanInfos);
+    MyList<TCapitanInfo> capitanInfos = GetCapitanInfo();
+    MyList<TWeapon> weapons = GetWeapons();
+    MyList<std::unique_ptr<TShip>> ships = TLevelReader().ReadShips(file, weapons, capitanInfos);
     ASSERT_EQ(ships.size(), 3);
  }
 
@@ -319,11 +306,11 @@ MyList<std::unique_ptr<TShip>> GetShips() {
     MyList<TCapitanInfo> capitans = GetCapitanInfo();
     MyList<std::unique_ptr<TShip>> res;
     res.insert(std::make_unique<TCargoShip>(
-            0, 0, 1, "", capitans.getById(1), 30, 0, 100, 0, 300, 1000, 0, 1.0 / 2), res.end());
+            0, 0, 1, "Pirate", capitans.getById(1), 30, 0, 100, 0, 300, 1000, 0, 1.0 / 2), res.end());
     res.insert(std::make_unique<TWarShip>(
-            0, 0, 2, "", capitans.getById(0), 30, 0, 100, 0, 300, TWeaponHolder()), res.end());
+            0, 0, 2, "Pirate", capitans.getById(0), 30, 0, 100, 0, 300, TWeaponHolder()), res.end());
     res.insert(std::make_unique<TCargoWarShip>(
-            0, 0, 3, "", capitans.getById(1), 30, 0, 100, 0, 400, 1000, 0, 1.0 / 2, TWeaponHolder()), res.end());
+            0, 0, 3, "Pirate", capitans.getById(1), 30, 0, 100, 0, 400, 1000, 0, 1.0 / 2, TWeaponHolder()), res.end());
     return res;
 }
 

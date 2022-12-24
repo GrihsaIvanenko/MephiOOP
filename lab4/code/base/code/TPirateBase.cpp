@@ -30,6 +30,10 @@ void TPirateBase::SetSpawnDescriptor(const TSpawnDescriptor& spawner) {
     Spawner_ = spawner;
 }
 
-TSpawnDescriptor TPirateBase::GetSpawnDescriptor() const {
+void TPirateBase::SetXYInSpawn() {
+    Spawner_.SetXY(GetX(), GetY());
+}
+
+TSpawnDescriptor& TPirateBase::GetSpawnDescriptor(){
     return Spawner_;
 }

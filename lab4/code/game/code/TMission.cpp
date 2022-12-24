@@ -33,6 +33,42 @@ int TMission::GetWeightTotal() const {
     return WeightTotal_;
 }
 
+int TMission::GetWeightNeedToPass() const {
+    return WeightNeedToPass_;
+}
+
+int TMission::GetWeightCompleted() const {
+    return WeightCompleted_;
+}
+
+int TMission::GetWidth() const {
+    return Width_;
+}
+
+int TMission::GetHeight() const {
+    return Height_;
+}
+
+TBase& TMission::GetBaseA() {
+    return A_;
+}
+
+TBase& TMission::GetBaseB() {
+    return B_;
+}
+
+MyList<TWarShip>& TMission::GetPirates() {
+    return Pirates_;
+}
+
+MyList<TPirateBase>& TMission::GetPirateBases() {
+    return PirateBases_;
+}
+
+MyList<std::unique_ptr<TShip>>& TMission::GetConvoy() {
+    return Convoy_;
+}
+
 void TMission::SetMoney(int money) {
     MoneyTotal_ = money;
 }
@@ -40,4 +76,9 @@ void TMission::SetMoney(int money) {
 void TMission::SetWeightPutted(int weightPutted) {
     WeightPutted_ = weightPutted;
 }
+
+void TMission::SetWeightCompleted(int WeightCompleted) {
+    WeightCompleted_ = WeightCompleted;
+}
+
 

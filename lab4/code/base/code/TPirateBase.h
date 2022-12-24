@@ -18,8 +18,9 @@ public:
     bool operator ==(const TPirateBase& other) const;
 
     void SetSpawnDescriptor(const TSpawnDescriptor& x);
+    void SetXYInSpawn();
 
-    TSpawnDescriptor GetSpawnDescriptor() const;
+    TSpawnDescriptor& GetSpawnDescriptor();
 };
 
 #endif //LAB4_PIRATEBASE_H

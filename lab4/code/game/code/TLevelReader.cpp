@@ -74,11 +74,11 @@ TWeapon TLevelReader::ReadWeapon(std::istream& file) {
     int range = ReadInt(file, "Range");
     int shotsTotal = ReadInt(file, "ShotsTotal");
     int cost = ReadInt(file, "Cost");
-    TWeapon res(weaponType, damage, callDown, 0, range, shotsTotal, 0, cost);
+    TWeapon res(weaponType, damage, callDown, 0, range, shotsTotal, shotsTotal, cost);
     return res;
 }
 
-std::unique_ptr<TShip> TLevelReader::ReadShip(std::istream& file, const MyList<TCapitanInfo>& capitans) {
+std::unique_ptr<TShip> TLevelReader::ReadShip(std::istream& file, MyList<TWeapon>& weapons, const MyList<TCapitanInfo>& capitans) {
     int type = ReadInt(file, "ShipType");
     int capitanInfoId = ReadInt(file, "CapitanInfoId");
     TCapitanInfo capitanInfo = capitans.getById(capitanInfoId);
@@ -89,17 +89,34 @@ std::unique_ptr<TShip> TLevelReader::ReadShip(std::istream& file, const MyList<T
         int WeightTotal = ReadInt(file, "WeightTotal");
         double SlowK = 1.0 / ReadInt(file, "SlowK");
         std::unique_ptr<TCargoShip> ptr = std::make_unique<TCargoShip>(
-                0, 0, 1, "", capitanInfo, MaxSpeed, 0, HPTotal, 0, Cost, WeightTotal, 0, SlowK);
+                0, 0, 1, "", capitanInfo, MaxSpeed, 0, HPTotal, HPTotal, Cost, WeightTotal, 0, SlowK);
         return std::move(ptr);
     } else if (type == 2) {
+        int Weapon1 = ReadInt(file, "Weapon1");
+        int Weapon2 = ReadInt(file, "Weapon2");
+        int Weapon3 = ReadInt(file, "Weapon3");
+        int Weapon4 = ReadInt(file, "Weapon4");
+        TWeapon* weapon1 = Weapon1 == 0 ? nullptr : &(weapons.getById(Weapon1 - 1));
+        TWeapon* weapon2 = Weapon2 == 0 ? nullptr : &(weapons.getById(Weapon2 - 1));
+        TWeapon* weapon3 = Weapon3 == 0 ? nullptr : &(weapons.getById(Weapon3 - 1));
+        TWeapon* weapon4 = Weapon4 == 0 ? nullptr : &(weapons.getById(Weapon4 - 1));
+
         std::unique_ptr<TWarShip> ptr = std::make_unique<TWarShip>(
-                0, 0, 1, "", capitanInfo, MaxSpeed, 0, HPTotal, 0, Cost, TWeaponHolder());
+                0, 0, 1, "", capitanInfo, MaxSpeed, 0, HPTotal, HPTotal, Cost, TWeaponHolder(weapon1, weapon2, weapon3, weapon4));
         return std::move(ptr);
     } else if (type == 3) {
         int WeightTotal = ReadInt(file, "WeightTotal");
         double SlowK = 1.0 / ReadInt(file, "SlowK");
+        int Weapon1 = ReadInt(file, "Weapon1");
+        int Weapon2 = ReadInt(file, "Weapon2");
+        int Weapon3 = ReadInt(file, "Weapon3");
+        int Weapon4 = ReadInt(file, "Weapon4");
+        TWeapon* weapon1 = Weapon1 == 0 ? nullptr : &(weapons.getById(Weapon1 - 1));
+        TWeapon* weapon2 = Weapon2 == 0 ? nullptr : &(weapons.getById(Weapon2 - 1));
+        TWeapon* weapon3 = Weapon3 == 0 ? nullptr : &(weapons.getById(Weapon3 - 1));
+        TWeapon* weapon4 = Weapon4 == 0 ? nullptr : &(weapons.getById(Weapon4 - 1));
         std::unique_ptr<TCargoWarShip> ptr= std::make_unique<TCargoWarShip>(
-                0, 0, 1, "", capitanInfo, MaxSpeed, 0, HPTotal, 0, Cost, WeightTotal, 0, SlowK, TWeaponHolder());
+                0, 0, 1, "", capitanInfo, MaxSpeed, 0, HPTotal, HPTotal, Cost, WeightTotal, 0, SlowK, TWeaponHolder(weapon1, weapon2, weapon3, weapon4));
         return std::move(ptr);
     }
     std::string except = "Wrong ShipType";
@@ -170,7 +187,7 @@ MyList<TWeapon> TLevelReader::ReadWeapons(std::istream& file) {
     return std::move(res);
 }
 
-MyList<std::unique_ptr<TShip>> TLevelReader::ReadShips(std::istream& file, const MyList<TCapitanInfo>& capitans) {
+MyList<std::unique_ptr<TShip>> TLevelReader::ReadShips(std::istream& file, MyList<TWeapon>& weapons, const MyList<TCapitanInfo>& capitans) {
     int count = ReadInt(file, "ShipsCount");
     ReadEmpty(file);
     if (count < 0) {
@@ -179,7 +196,7 @@ MyList<std::unique_ptr<TShip>> TLevelReader::ReadShips(std::istream& file, const
     }
     MyList<std::unique_ptr<TShip>> res;
     for (int i = 0; i < count; ++i) {
-        std::unique_ptr<TShip> item = ReadShip(file, capitans);
+        std::unique_ptr<TShip> item = ReadShip(file, weapons, capitans);
         ReadEmpty(file);
         res.insert(std::move(item), res.end());
     }
@@ -267,7 +284,7 @@ std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::uniq
 
     MyList<TWeapon> weapons = ReadWeapons(file);
 
-    MyList<std::unique_ptr<TShip>> ships = ReadShips(file, capitans);
+    MyList<std::unique_ptr<TShip>> ships = ReadShips(file, weapons, capitans);
 
     int moneyTotal = ReadInt(file, "moneyTotal");
     int weightTotal = ReadInt(file, "weightTotal");

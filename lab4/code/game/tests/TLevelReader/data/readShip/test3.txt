@@ -1,7 +1,11 @@
 ShipType: 3
-CapitanInfoId: 2
+CapitanInfoId: 7
 MaxSpeed: 30
 HPTotal: 100
 Cost: 400
 WeightTotal: 1000
 SlowK: 2
+Weapon1: 2
+Weapon2: 0
+Weapon3: 1
+Weapon4: 0

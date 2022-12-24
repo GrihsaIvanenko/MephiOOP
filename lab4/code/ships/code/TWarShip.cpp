@@ -67,7 +67,7 @@ void TWarShip::Print() const {
     std::cout << "  MaxSpeed = " << MaxSpeed_ << '\n';
     std::cout << "  HPTotal = " << HPTotal_ << '\n';
     Holder_.Print();
-    std::cout << "  Cost = " << Cost_ << '\n';
+    std::cout << "  Cost = " << GetCostWithGuns() << '\n';
     std::cout << "----------------\n";
 }
 

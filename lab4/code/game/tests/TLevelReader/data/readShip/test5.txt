@@ -1,7 +1,0 @@
-ShipType: 3
-CapitanInfoId: 7
-MaxSpeed: 30
-HPTotal: 100
-Cost: 400
-WeightTotal: 1000
-SlowK: 2
