@@ -7,6 +7,9 @@
 
 #include "TMission.h"
 
+/*!
+ * \brief Класс, реализовывающий логику происходящего в игре
+ */
 class TShop {
 public:
     /*!
