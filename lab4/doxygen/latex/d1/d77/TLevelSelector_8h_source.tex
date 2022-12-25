@@ -1,0 +1,32 @@
+\hypertarget{TLevelSelector_8h_source}{}\doxysection{TLevel\+Selector.\+h}
+\label{TLevelSelector_8h_source}\index{game/code/TLevelSelector.h@{game/code/TLevelSelector.h}}
+\mbox{\hyperlink{TLevelSelector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 17.12.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TLEVELSELECTIOR\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TLEVELSELECTIOR\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TMission_8h}{TMission.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classTLevelSelector}{TLevelSelector}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     std::string \mbox{\hyperlink{classTLevelSelector_ac719b80a2836bee570fcedf85dd770f2}{ReadLevelNumberFromKeyboard}}();}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTLevelSelector_a06fea104968332d1f13ef69d0cd403ea}{CheckExists}}(\textcolor{keyword}{const} std::string\& path);}
+\DoxyCodeLine{18     std::string \mbox{\hyperlink{classTLevelSelector_a80979f7dca4479daec5fc9145c5710bf}{ReadLevelName}}();}
+\DoxyCodeLine{19     std::pair<std::unique\_ptr<TMission>, std::pair<MyList<TWeapon>, \mbox{\hyperlink{classMyList}{MyList<std::unique\_ptr<TShip>}}>>>}
+\DoxyCodeLine{20             \mbox{\hyperlink{classTLevelSelector_a1ce3be0dec7c17d6674837ff8742d5ee}{readMissionInfoFromStream}}(std::istream\& file);}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     std::pair<std::unique\_ptr<TMission>, std::pair<MyList<TWeapon>, \mbox{\hyperlink{classMyList}{MyList<std::unique\_ptr<TShip>}}>>>}
+\DoxyCodeLine{23             \mbox{\hyperlink{classTLevelSelector_a8052aa13fccc78befaf7cd0cc95fbe97}{ChooseLevel}}();}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TLEVELSELECTIOR\_H}}
+
+\end{DoxyCode}

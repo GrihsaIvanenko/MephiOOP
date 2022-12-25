@@ -5,6 +5,11 @@
 #ifndef LAB4_TWEAPON_H
 #define LAB4_TWEAPON_H
 
+/*!
+ * \brief Класс, описывающий вооружение
+ */
+
+
 class TWeapon {
     friend class TWeaponTestHelper;
 private:
@@ -41,7 +46,17 @@ public:
     int GetShotsNow() const;
     int GetCost() const;
 
+    /*!
+     * Возвращает урон, если орудие успело перезарядиться, есть пули, и цель ближе, чем радиус стрельбы.
+     * @param sqDistance  Передавать квадрат расстояния до объекта
+     * @param timeNow Время выстрела
+     * @return
+     */
     int MakeShot(int sqDistance, int timeNow);
+
+    /*!
+     * Используется для вывода информации в магазине
+     */
     void Print() const;
 };
 

@@ -1,0 +1,11 @@
+<map id="TPlaying::MoveShips" name="TPlaying::MoveShips">
+<area shape="rect" id="node1" title=" " alt="" coords="5,144,163,169"/>
+<area shape="rect" id="node2" href="$d5/d55/classTObjectOnMap.html#ac427e764b888613f234e51f1b97b8754" title=" " alt="" coords="427,5,594,31"/>
+<area shape="rect" id="node3" href="$db/dab/classTPlaying.html#ab7d5a4c10c234917eb40c53b81186e80" title=" " alt="" coords="214,93,357,119"/>
+<area shape="rect" id="node4" href="$d5/d55/classTObjectOnMap.html#a55207fb8607d587b3578745bc1062b17" title=" " alt="" coords="431,80,590,105"/>
+<area shape="rect" id="node5" href="$d5/d55/classTObjectOnMap.html#a4ef34ec3dde1bc159678f57aa463c972" title=" " alt="" coords="432,137,589,163"/>
+<area shape="rect" id="node6" href="$db/dab/classTPlaying.html#aef014ab7b215fa8b936719318fcfd1a2" title=" " alt="" coords="211,245,360,271"/>
+<area shape="rect" id="node7" href="$d3/d81/classTCargoShip.html#aac8aa5512f4e7ea9641f3a5812cc8722" title=" " alt="" coords="411,195,611,220"/>
+<area shape="rect" id="node9" href="$d1/d07/classTShip.html#a978c830c3ba51fecd4482819110a814e" title=" " alt="" coords="218,295,353,320"/>
+<area shape="rect" id="node8" href="$d3/d81/classTCargoShip.html#a2058989e985027329e36e55be4d83cc9" title=" " alt="" coords="408,245,613,271"/>
+</map>

@@ -8,6 +8,10 @@
 #include "TWarShip.h"
 #include "TCargoShip.h"
 
+/*!
+ * \brief Корабль, имеющий и орудиея, и груз на борту.
+ */
+
 class TCargoWarShip : public TCargoShip, public TWarShip {
 public:
     TCargoWarShip(
@@ -29,8 +33,16 @@ public:
     TCargoWarShip& operator =(const TCargoWarShip& other);
     bool operator ==(const TCargoWarShip& other) const;
 
-    void Print() const;
-    std::unique_ptr<TShip> Clone() const;
+    /*!
+    * Определяет вывод информации в магазине об этго виде корабля.
+    */
+    void Print() const override;
+
+    /*!
+     * Определяет Clone для этого вида кораблей.
+     * @return
+     */
+    std::unique_ptr<TShip> Clone() const override;
 };
 
 #endif //LAB4_TCARGOWARSHIP_H

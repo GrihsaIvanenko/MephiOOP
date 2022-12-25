@@ -1,0 +1,57 @@
+\hypertarget{TCargoShip_8h_source}{}\doxysection{TCargo\+Ship.\+h}
+\label{TCargoShip_8h_source}\index{ships/code/TCargoShip.h@{ships/code/TCargoShip.h}}
+\mbox{\hyperlink{TCargoShip_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 01.12.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TCARGOSHIP\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TCARGOSHIP\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TShip_8h}{TShip.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classTCargoShip}{TCargoShip}} : \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{classTShip}{TShip}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTCargoShip_abe5fef928f7c057ea438ab047773420c}{WeightTotal\_}};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTCargoShip_a96c8e77c24681fd53ca3813e955c407e}{WeightNow\_}};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{double} \mbox{\hyperlink{classTCargoShip_a51223da17b438c6370d2418395dee769}{SlowK\_}}; \textcolor{comment}{// [0.0. 1.0) 0.0 -\/ not matter. 1.0 -\/ stop}}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{classTCargoShip}{TCargoShip}}(}
+\DoxyCodeLine{25             \textcolor{keywordtype}{int} x,}
+\DoxyCodeLine{26             \textcolor{keywordtype}{int} y,}
+\DoxyCodeLine{27             \textcolor{keywordtype}{int} ShipType,}
+\DoxyCodeLine{28             \textcolor{keyword}{const} std::string\& ShipName,}
+\DoxyCodeLine{29             \textcolor{keyword}{const} \mbox{\hyperlink{classTCapitanInfo}{TCapitanInfo}}\& CapitanInfo,}
+\DoxyCodeLine{30             \textcolor{keywordtype}{int} MaxSpeed,}
+\DoxyCodeLine{31             \textcolor{keywordtype}{int} NowSpeed,}
+\DoxyCodeLine{32             \textcolor{keywordtype}{int} HpTotal,}
+\DoxyCodeLine{33             \textcolor{keywordtype}{int} HpNow,}
+\DoxyCodeLine{34             \textcolor{keywordtype}{int} Cost,}
+\DoxyCodeLine{35             \textcolor{keywordtype}{int} WeightTotal,}
+\DoxyCodeLine{36             \textcolor{keywordtype}{int} WeightNow,}
+\DoxyCodeLine{37             \textcolor{keywordtype}{double} SlowK);}
+\DoxyCodeLine{38     \mbox{\hyperlink{classTCargoShip}{TCargoShip}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTCargoShip}{TCargoShip}}\& other);}
+\DoxyCodeLine{39     \mbox{\hyperlink{classTCargoShip}{TCargoShip}}\& \mbox{\hyperlink{classTCargoShip_a87336dcc7d2b6e2389ce0d93e5ca765b}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{classTCargoShip}{TCargoShip}}\& other);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTCargoShip_a6576613e8beb62567adb59af431701c8}{operator == }}(\textcolor{keyword}{const} \mbox{\hyperlink{classTCargoShip}{TCargoShip}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTCargoShip_a15e744d84fa3dab4954b59e9d4caf254}{SetWeightTotal}}(\textcolor{keywordtype}{int} weightTotal);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTCargoShip_a9a12a2c02b7b32f49c952f4c13e74a77}{SetWeightNow}}(\textcolor{keywordtype}{int} weightNow);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTCargoShip_ace0c59c661248f3e8f4623c24a345150}{SetSlowK}}(\textcolor{keywordtype}{double} SlowK);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTCargoShip_af864094175baefdf2e6f8c88a53ad716}{GetWeightTotal}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTCargoShip_aac8aa5512f4e7ea9641f3a5812cc8722}{GetWeightNow}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{48     \textcolor{keywordtype}{double} \mbox{\hyperlink{classTCargoShip_a28ddc9fa25ff3cccaeddd385f5003cc1}{GetSlowK}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTCargoShip_a2058989e985027329e36e55be4d83cc9}{SpeedByWeight}}(\textcolor{keywordtype}{int} weight) \textcolor{keyword}{const}; \textcolor{comment}{//-\/1 if overWeight}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTCargoShip_a1f4cbd4a7effa3987f1298da081e8aec}{WeightMaxBySpeed}}(\textcolor{keywordtype}{int} speed) \textcolor{keyword}{const}; \textcolor{comment}{// -\/1 if overSpeed}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTCargoShip_ac65e2dfc380082584a2ba473384d46c6}{Print}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{75     std::unique\_ptr<TShip> \mbox{\hyperlink{classTCargoShip_ad6518f045b33ef07a6f84014d7921b4e}{Clone}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TCARGOSHIP\_H}}
+
+\end{DoxyCode}

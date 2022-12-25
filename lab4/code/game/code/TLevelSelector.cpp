@@ -13,10 +13,6 @@ std::pair<std::unique_ptr<TMission>, std::pair<MyList<TWeapon>, MyList<std::uniq
         TLevelSelector::ChooseLevel() {
     std::string pathToLevel = ReadLevelName();
     std::ifstream file(pathToLevel.c_str());
-    if (!file) {
-        std::string reasonToFinishGame = "Error opening file with level!";
-        throw reasonToFinishGame;
-    }
     auto newMission = readMissionInfoFromStream(file);
     return std::move(newMission);
 }

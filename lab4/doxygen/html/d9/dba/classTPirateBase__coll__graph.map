@@ -1,0 +1,15 @@
+<map id="TPirateBase" name="TPirateBase">
+<area shape="rect" id="node1" title=" " alt="" coords="100,2656,311,2916"/>
+<area shape="rect" id="node2" href="$d9/d38/classTBase.html" title=" " alt="" coords="42,1595,243,1811"/>
+<area shape="rect" id="node3" href="$d5/d55/classTObjectOnMap.html" title=" " alt="" coords="5,343,232,661"/>
+<area shape="rect" id="node6" href="$d1/d07/classTShip.html" title="Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей" alt="" coords="249,797,487,1571"/>
+<area shape="rect" id="node4" href="$d2/da3/classTSpawnDescriptor.html" title=" " alt="" coords="227,2289,482,2593"/>
+<area shape="rect" id="node5" href="$db/df3/classTWarShip.html" title="Корабль, имеющий вооружение. Добавляются поле &#45; Holder орудий" alt="" coords="249,1835,487,2227"/>
+<area shape="rect" id="node7" title=" " alt="" coords="415,123,510,163"/>
+<area shape="rect" id="node9" href="$dd/dec/classTCapitanInfo.html" title="Класс для хранения информации о капитане." alt="" coords="256,269,480,735"/>
+<area shape="rect" id="node8" title=" " alt="" coords="389,5,536,60"/>
+<area shape="rect" id="node10" href="$d4/de2/classTWeaponHolder.html" title="Класс, хранящий все вооружение боевого корабля." alt="" coords="567,966,809,1402"/>
+<area shape="rect" id="node11" title=" " alt="" coords="642,445,849,559"/>
+<area shape="rect" id="node12" title=" " alt="" coords="677,123,814,163"/>
+<area shape="rect" id="node13" title=" " alt="" coords="726,13,765,53"/>
+</map>

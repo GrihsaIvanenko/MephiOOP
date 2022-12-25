@@ -1,0 +1,49 @@
+\hypertarget{TWarShip_8h_source}{}\doxysection{TWar\+Ship.\+h}
+\label{TWarShip_8h_source}\index{ships/code/TWarShip.h@{ships/code/TWarShip.h}}
+\mbox{\hyperlink{TWarShip_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 01.12.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TWARSHIP\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TWARSHIP\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../../weapons/code/TWeaponHolder.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TShip_8h}{TShip.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classTWarShip}{TWarShip}} : \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{classTShip}{TShip}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}} \mbox{\hyperlink{classTWarShip_a7727142afbd97adb34165dd6be098b38}{Holder\_}};}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{classTWarShip}{TWarShip}}(}
+\DoxyCodeLine{20             \textcolor{keywordtype}{int} x,}
+\DoxyCodeLine{21             \textcolor{keywordtype}{int} y,}
+\DoxyCodeLine{22             \textcolor{keywordtype}{int} shipType,}
+\DoxyCodeLine{23             \textcolor{keyword}{const} std::string\& shipName,}
+\DoxyCodeLine{24             \textcolor{keyword}{const} \mbox{\hyperlink{classTCapitanInfo}{TCapitanInfo}}\& capitanInfo,}
+\DoxyCodeLine{25             \textcolor{keywordtype}{int} maxSpeed,}
+\DoxyCodeLine{26             \textcolor{keywordtype}{int} nowSpeed,}
+\DoxyCodeLine{27             \textcolor{keywordtype}{int} hpTotal,}
+\DoxyCodeLine{28             \textcolor{keywordtype}{int} hpNow,}
+\DoxyCodeLine{29             \textcolor{keywordtype}{int} cost,}
+\DoxyCodeLine{30             \textcolor{keyword}{const} \mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}}\& holder);}
+\DoxyCodeLine{31     \mbox{\hyperlink{classTWarShip}{TWarShip}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWarShip}{TWarShip}}\& other);}
+\DoxyCodeLine{32     \mbox{\hyperlink{classTWarShip}{TWarShip}}\& \mbox{\hyperlink{classTWarShip_a6f5e68d2e222d505e6321b2ae651ada7}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWarShip}{TWarShip}}\& other);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTWarShip_a76ebaabe031ec477e28b9507c8915ccd}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWarShip}{TWarShip}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWarShip_a67184a3b3cdec019493cf077be2b8974}{SetHolder}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}}\& holder);}
+\DoxyCodeLine{36     \mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}}\& \mbox{\hyperlink{classTWarShip_a6498ce65a99aba4649774151442b3637}{GetHolder}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWarShip_a1deb0d2b3eee3d1a4a9976ae55300307}{GetCostWithGuns}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTWarShip_a56e43d63b1ccd69ea277306ca0e2522c}{MakeShot}}(\mbox{\hyperlink{classTShip}{TShip}}\& to, \textcolor{keywordtype}{int} timeNow);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWarShip_a1728538cd00c77fb09b08357e491bca8}{Print}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{64     std::unique\_ptr<TShip> \mbox{\hyperlink{classTWarShip_a7069de33689498bfdcf2f2c7ed4af31e}{Clone}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{65 \};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TWARSHIP\_H}}
+
+\end{DoxyCode}

@@ -7,6 +7,7 @@
 
 #include "TCargoShip.h"
 
+
 TCargoShip::TCargoShip(
         int x,
         int y,

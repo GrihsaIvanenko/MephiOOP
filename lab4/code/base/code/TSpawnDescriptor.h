@@ -8,6 +8,10 @@
 #include "../../ships/code/TWarShip.h"
 #include "../../container/code/MyList.h"
 
+/*!
+ * \brief Класс, описываюший спавн пиратов.
+ */
+
 class TSpawnDescriptor {
 private:
     TWarShip ToSpawn_;
@@ -20,7 +24,19 @@ public:
     TSpawnDescriptor& operator =(const TSpawnDescriptor& other);
     bool operator ==(const TSpawnDescriptor& other) const;
 
+    /*!
+     * Доспавнит пиратов с момента предыдущего спавна до time.
+     * Вернет список появившихся кораблей.
+     * @param time
+     * @return
+     */
     MyList<TWarShip> Spawn(int time);
+
+    /*!
+     * Функция, выставляющая XY появления кораблей для этого спавнера
+     * @param x
+     * @param y
+     */
     void SetXY(int x, int y);
 };
 

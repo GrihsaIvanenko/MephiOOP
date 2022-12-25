@@ -13,6 +13,10 @@
 
 #include <memory>
 
+/*!
+ * \brief Класс, хронящий информацию о проходимом уровне
+ */
+
 class TMission {
 private:
     TCapitanInfo Capitan_;

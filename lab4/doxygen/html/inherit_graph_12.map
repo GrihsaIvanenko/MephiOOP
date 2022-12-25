@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$d5/d55/classTObjectOnMap.html" title=" " alt="" coords="5,31,124,56"/>
+<area shape="rect" id="node2" href="$d9/d38/classTBase.html" title=" " alt="" coords="172,5,235,31"/>
+<area shape="rect" id="node4" href="$d1/d07/classTShip.html" title="Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей" alt="" coords="174,55,233,80"/>
+<area shape="rect" id="node3" href="$de/d4e/classTPirateBase.html" title=" " alt="" coords="283,5,383,31"/>
+<area shape="rect" id="node5" href="$d3/d81/classTCargoShip.html" title="Корабль, несущий груз. Добавляются поля &#45; коеф замедления, максимальный груз, текущий груз." alt="" coords="285,55,380,80"/>
+<area shape="rect" id="node7" href="$db/df3/classTWarShip.html" title="Корабль, имеющий вооружение. Добавляются поле &#45; Holder орудий" alt="" coords="291,104,374,129"/>
+<area shape="rect" id="node6" href="$d0/dc5/classTCargoWarShip.html" title="Корабль, имеющий и оррудиея, и груз на борту." alt="" coords="431,80,551,105"/>
+</map>

@@ -11,6 +11,10 @@
 #include "TCapitanInfo.h"
 #include "../../base/code/TObjectOnMap.h"
 
+/*!
+ * \brief Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей
+ */
+
 class TShip : public TObjectOnMap {
 protected:
     int ShipType_;
@@ -55,9 +59,21 @@ public:
     int GetHPNow() const;
     int GetCost() const;
 
+    /*!
+     * Принимает урон, нанесенный по кораблю. Вычитает его из значения HPNow. Сделает его равным max(HPNow - damage, 0);
+     * @param damage - урон, который получил корабль
+     */
     void BeDamaged(int damage);
 
+    /*!
+     * Используется для вывода информации в магазине
+     */
     virtual void Print() const;
+
+    /*!
+     * Создает копию корабля. есть override в каждом наследнике, который скопирует все поля более частного случая корабля
+     * @return
+     */
     virtual std::unique_ptr<TShip> Clone() const;
 };
 

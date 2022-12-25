@@ -5,6 +5,10 @@
 #ifndef LAB4_TOBJECTONMAP_H
 #define LAB4_TOBJECTONMAP_H
 
+/*!
+ * \brief Базовый класс для всех объектов на карте
+ */
+
 class TObjectOnMap {
 private:
     int X_;
@@ -22,6 +26,11 @@ public:
     int GetX() const;
     int GetY() const;
 
+    /*!
+     * Вычисляет расстояние до другого объекта на карте.
+     * @param other
+     * @return Вернет квадрат расстояния до объекта
+     */
     int DistTo(const TObjectOnMap& other) const;
 };
 

@@ -1,0 +1,358 @@
+\hypertarget{classTLevelReader}{}\doxysection{TLevel\+Reader Class Reference}
+\label{classTLevelReader}\index{TLevelReader@{TLevelReader}}
+
+
+{\ttfamily \#include $<$TLevel\+Reader.\+h$>$}
+
+
+
+Collaboration diagram for TLevel\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d8/d3e/classTLevelReader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classTLevelReader_a82ec22fb9386deb547a0a0862bc90301}{Read\+Int}} (std\+::istream \&file, const std\+::string \&what)
+\item 
+std\+::string \mbox{\hyperlink{classTLevelReader_a2b97e074354c270b0502ec57d528d73b}{Read\+String}} (std\+::istream \&file, const std\+::string \&what)
+\item 
+void \mbox{\hyperlink{classTLevelReader_a25bd379fa12d624375f165251b9c1178}{Read\+Empty}} (std\+::istream \&file)
+\item 
+\mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \mbox{\hyperlink{classTLevelReader_aa3fd2b19c5d17f7e5b71d28780a7557c}{Read\+Capitan\+Info}} (std\+::istream \&file)
+\item 
+\mbox{\hyperlink{classTWeapon}{TWeapon}} \mbox{\hyperlink{classTLevelReader_ad7b63a611a8e08c9d9b38ee2972c82fc}{Read\+Weapon}} (std\+::istream \&file)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \mbox{\hyperlink{classTLevelReader_a111bc6a9c4250c31a0689e62f7113254}{Read\+Ship}} (std\+::istream \&file, \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&weapons, const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ \&capitans)
+\item 
+\mbox{\hyperlink{classTBase}{TBase}} \mbox{\hyperlink{classTLevelReader_ac28bf996f8431c89710180136c30c180}{Read\+Base}} (std\+::istream \&file, const std\+::string \&what)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ int $>$ \mbox{\hyperlink{classTLevelReader_ac6e2fd6477af4205d0c85433bdb02985}{Read\+Ints}} (std\+::istream \&file, const std\+::string \&what)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ \mbox{\hyperlink{classTLevelReader_a68c3199258c974d81e965a715a61e7e2}{Read\+Capitan\+Infos}} (std\+::istream \&file)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \mbox{\hyperlink{classTLevelReader_a4467cdf7d7766981a6b8eeb23076b433}{Read\+Weapons}} (std\+::istream \&file)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \mbox{\hyperlink{classTLevelReader_a06cbe367f372ca443af250d9c581b58b}{Read\+Ships}} (std\+::istream \&file, \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&weapons, const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ \&capitans)
+\item 
+\mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} \mbox{\hyperlink{classTLevelReader_a392f8ceec89e3ff9f3f87ea030c117d6}{Read\+Spawn\+Descriptor}} (std\+::istream \&file, const \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&ships)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ \mbox{\hyperlink{classTLevelReader_a6e0d6c10291d52c31f5c22b8673dbb98}{Read\+Spawn\+Descriptors}} (std\+::istream \&file, const \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&ships)
+\item 
+\mbox{\hyperlink{classTPirateBase}{TPirate\+Base}} \mbox{\hyperlink{classTLevelReader_a98a8afd39b4ade7d9e3843a51109ea1d}{Read\+Pirate\+Base}} (std\+::istream \&file, const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ \&desctiptors)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTPirateBase}{TPirate\+Base}} $>$ \mbox{\hyperlink{classTLevelReader_ae7a5a65dfddd9c939dbdf18846054725}{Read\+Pirate\+Bases}} (std\+::istream \&file, const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ \&descriptots)
+\item 
+std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$, std\+::pair$<$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ $>$ $>$ \mbox{\hyperlink{classTLevelReader_a5e3953bd0caf6e6c60d6750ff732150a}{Read\+Mission\+Info\+From\+Stream}} (std\+::istream \&file)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTLevelReader_ac28bf996f8431c89710180136c30c180}\label{classTLevelReader_ac28bf996f8431c89710180136c30c180}} 
+\index{TLevelReader@{TLevelReader}!ReadBase@{ReadBase}}
+\index{ReadBase@{ReadBase}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadBase()}{ReadBase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTBase}{TBase}} TLevel\+Reader\+::\+Read\+Base (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const std\+::string \&}]{what }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_ac28bf996f8431c89710180136c30c180_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_ac28bf996f8431c89710180136c30c180_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_aa3fd2b19c5d17f7e5b71d28780a7557c}\label{classTLevelReader_aa3fd2b19c5d17f7e5b71d28780a7557c}} 
+\index{TLevelReader@{TLevelReader}!ReadCapitanInfo@{ReadCapitanInfo}}
+\index{ReadCapitanInfo@{ReadCapitanInfo}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadCapitanInfo()}{ReadCapitanInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} TLevel\+Reader\+::\+Read\+Capitan\+Info (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_aa3fd2b19c5d17f7e5b71d28780a7557c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_aa3fd2b19c5d17f7e5b71d28780a7557c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a68c3199258c974d81e965a715a61e7e2}\label{classTLevelReader_a68c3199258c974d81e965a715a61e7e2}} 
+\index{TLevelReader@{TLevelReader}!ReadCapitanInfos@{ReadCapitanInfos}}
+\index{ReadCapitanInfos@{ReadCapitanInfos}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadCapitanInfos()}{ReadCapitanInfos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ TLevel\+Reader\+::\+Read\+Capitan\+Infos (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a68c3199258c974d81e965a715a61e7e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a68c3199258c974d81e965a715a61e7e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a25bd379fa12d624375f165251b9c1178}\label{classTLevelReader_a25bd379fa12d624375f165251b9c1178}} 
+\index{TLevelReader@{TLevelReader}!ReadEmpty@{ReadEmpty}}
+\index{ReadEmpty@{ReadEmpty}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadEmpty()}{ReadEmpty()}}
+{\footnotesize\ttfamily void TLevel\+Reader\+::\+Read\+Empty (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a25bd379fa12d624375f165251b9c1178_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a82ec22fb9386deb547a0a0862bc90301}\label{classTLevelReader_a82ec22fb9386deb547a0a0862bc90301}} 
+\index{TLevelReader@{TLevelReader}!ReadInt@{ReadInt}}
+\index{ReadInt@{ReadInt}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadInt()}{ReadInt()}}
+{\footnotesize\ttfamily int TLevel\+Reader\+::\+Read\+Int (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const std\+::string \&}]{what }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a82ec22fb9386deb547a0a0862bc90301_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_ac6e2fd6477af4205d0c85433bdb02985}\label{classTLevelReader_ac6e2fd6477af4205d0c85433bdb02985}} 
+\index{TLevelReader@{TLevelReader}!ReadInts@{ReadInts}}
+\index{ReadInts@{ReadInts}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadInts()}{ReadInts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ int $>$ TLevel\+Reader\+::\+Read\+Ints (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const std\+::string \&}]{what }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_ac6e2fd6477af4205d0c85433bdb02985_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{d5/d99/classTLevelReader_ac6e2fd6477af4205d0c85433bdb02985_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a5e3953bd0caf6e6c60d6750ff732150a}\label{classTLevelReader_a5e3953bd0caf6e6c60d6750ff732150a}} 
+\index{TLevelReader@{TLevelReader}!ReadMissionInfoFromStream@{ReadMissionInfoFromStream}}
+\index{ReadMissionInfoFromStream@{ReadMissionInfoFromStream}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadMissionInfoFromStream()}{ReadMissionInfoFromStream()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$, std\+::pair$<$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ $>$ $>$ TLevel\+Reader\+::\+Read\+Mission\+Info\+From\+Stream (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a5e3953bd0caf6e6c60d6750ff732150a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a5e3953bd0caf6e6c60d6750ff732150a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a98a8afd39b4ade7d9e3843a51109ea1d}\label{classTLevelReader_a98a8afd39b4ade7d9e3843a51109ea1d}} 
+\index{TLevelReader@{TLevelReader}!ReadPirateBase@{ReadPirateBase}}
+\index{ReadPirateBase@{ReadPirateBase}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadPirateBase()}{ReadPirateBase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTPirateBase}{TPirate\+Base}} TLevel\+Reader\+::\+Read\+Pirate\+Base (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ \&}]{desctiptors }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a98a8afd39b4ade7d9e3843a51109ea1d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a98a8afd39b4ade7d9e3843a51109ea1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_ae7a5a65dfddd9c939dbdf18846054725}\label{classTLevelReader_ae7a5a65dfddd9c939dbdf18846054725}} 
+\index{TLevelReader@{TLevelReader}!ReadPirateBases@{ReadPirateBases}}
+\index{ReadPirateBases@{ReadPirateBases}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadPirateBases()}{ReadPirateBases()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTPirateBase}{TPirate\+Base}} $>$ TLevel\+Reader\+::\+Read\+Pirate\+Bases (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ \&}]{descriptots }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_ae7a5a65dfddd9c939dbdf18846054725_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_ae7a5a65dfddd9c939dbdf18846054725_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a111bc6a9c4250c31a0689e62f7113254}\label{classTLevelReader_a111bc6a9c4250c31a0689e62f7113254}} 
+\index{TLevelReader@{TLevelReader}!ReadShip@{ReadShip}}
+\index{ReadShip@{ReadShip}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadShip()}{ReadShip()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ TLevel\+Reader\+::\+Read\+Ship (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&}]{weapons,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ \&}]{capitans }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a111bc6a9c4250c31a0689e62f7113254_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a111bc6a9c4250c31a0689e62f7113254_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a06cbe367f372ca443af250d9c581b58b}\label{classTLevelReader_a06cbe367f372ca443af250d9c581b58b}} 
+\index{TLevelReader@{TLevelReader}!ReadShips@{ReadShips}}
+\index{ReadShips@{ReadShips}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadShips()}{ReadShips()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ TLevel\+Reader\+::\+Read\+Ships (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&}]{weapons,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ \&}]{capitans }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a06cbe367f372ca443af250d9c581b58b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a06cbe367f372ca443af250d9c581b58b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a392f8ceec89e3ff9f3f87ea030c117d6}\label{classTLevelReader_a392f8ceec89e3ff9f3f87ea030c117d6}} 
+\index{TLevelReader@{TLevelReader}!ReadSpawnDescriptor@{ReadSpawnDescriptor}}
+\index{ReadSpawnDescriptor@{ReadSpawnDescriptor}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadSpawnDescriptor()}{ReadSpawnDescriptor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} TLevel\+Reader\+::\+Read\+Spawn\+Descriptor (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a392f8ceec89e3ff9f3f87ea030c117d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a392f8ceec89e3ff9f3f87ea030c117d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a6e0d6c10291d52c31f5c22b8673dbb98}\label{classTLevelReader_a6e0d6c10291d52c31f5c22b8673dbb98}} 
+\index{TLevelReader@{TLevelReader}!ReadSpawnDescriptors@{ReadSpawnDescriptors}}
+\index{ReadSpawnDescriptors@{ReadSpawnDescriptors}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadSpawnDescriptors()}{ReadSpawnDescriptors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ TLevel\+Reader\+::\+Read\+Spawn\+Descriptors (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a6e0d6c10291d52c31f5c22b8673dbb98_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a6e0d6c10291d52c31f5c22b8673dbb98_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a2b97e074354c270b0502ec57d528d73b}\label{classTLevelReader_a2b97e074354c270b0502ec57d528d73b}} 
+\index{TLevelReader@{TLevelReader}!ReadString@{ReadString}}
+\index{ReadString@{ReadString}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadString()}{ReadString()}}
+{\footnotesize\ttfamily std\+::string TLevel\+Reader\+::\+Read\+String (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const std\+::string \&}]{what }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a2b97e074354c270b0502ec57d528d73b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_ad7b63a611a8e08c9d9b38ee2972c82fc}\label{classTLevelReader_ad7b63a611a8e08c9d9b38ee2972c82fc}} 
+\index{TLevelReader@{TLevelReader}!ReadWeapon@{ReadWeapon}}
+\index{ReadWeapon@{ReadWeapon}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadWeapon()}{ReadWeapon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTWeapon}{TWeapon}} TLevel\+Reader\+::\+Read\+Weapon (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_ad7b63a611a8e08c9d9b38ee2972c82fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_ad7b63a611a8e08c9d9b38ee2972c82fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTLevelReader_a4467cdf7d7766981a6b8eeb23076b433}\label{classTLevelReader_a4467cdf7d7766981a6b8eeb23076b433}} 
+\index{TLevelReader@{TLevelReader}!ReadWeapons@{ReadWeapons}}
+\index{ReadWeapons@{ReadWeapons}!TLevelReader@{TLevelReader}}
+\doxysubsubsection{\texorpdfstring{ReadWeapons()}{ReadWeapons()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ TLevel\+Reader\+::\+Read\+Weapons (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a4467cdf7d7766981a6b8eeb23076b433_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d99/classTLevelReader_a4467cdf7d7766981a6b8eeb23076b433_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/code/\mbox{\hyperlink{TLevelReader_8h}{TLevel\+Reader.\+h}}\item 
+game/code/\mbox{\hyperlink{TLevelReader_8cpp}{TLevel\+Reader.\+cpp}}\end{DoxyCompactItemize}

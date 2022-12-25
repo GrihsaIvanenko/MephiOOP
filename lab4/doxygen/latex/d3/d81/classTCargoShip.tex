@@ -1,0 +1,290 @@
+\hypertarget{classTCargoShip}{}\doxysection{TCargo\+Ship Class Reference}
+\label{classTCargoShip}\index{TCargoShip@{TCargoShip}}
+
+
+Корабль, несущий груз. Добавляются поля -\/ коеф замедления, максимальный груз, текущий груз.  
+
+
+
+
+{\ttfamily \#include $<$TCargo\+Ship.\+h$>$}
+
+
+
+Inheritance diagram for TCargo\+Ship\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d0/d1e/classTCargoShip__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCargo\+Ship\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d2/d9f/classTCargoShip__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTCargoShip_a3c899e2095ba323aa5170361ebcdb4c9}{TCargo\+Ship}} (int x, int y, int Ship\+Type, const std\+::string \&Ship\+Name, const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&Capitan\+Info, int Max\+Speed, int Now\+Speed, int Hp\+Total, int Hp\+Now, int Cost, int Weight\+Total, int Weight\+Now, double SlowK)
+\item 
+\mbox{\hyperlink{classTCargoShip_ad1aee8ba2809ed0c482a8492e1f58172}{TCargo\+Ship}} (const \mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} \&other)
+\item 
+\mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} \& \mbox{\hyperlink{classTCargoShip_a87336dcc7d2b6e2389ce0d93e5ca765b}{operator=}} (const \mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} \&other)
+\item 
+bool \mbox{\hyperlink{classTCargoShip_a6576613e8beb62567adb59af431701c8}{operator==}} (const \mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} \&other) const
+\item 
+void \mbox{\hyperlink{classTCargoShip_a15e744d84fa3dab4954b59e9d4caf254}{Set\+Weight\+Total}} (int weight\+Total)
+\item 
+void \mbox{\hyperlink{classTCargoShip_a9a12a2c02b7b32f49c952f4c13e74a77}{Set\+Weight\+Now}} (int weight\+Now)
+\item 
+void \mbox{\hyperlink{classTCargoShip_ace0c59c661248f3e8f4623c24a345150}{Set\+SlowK}} (double SlowK)
+\item 
+int \mbox{\hyperlink{classTCargoShip_af864094175baefdf2e6f8c88a53ad716}{Get\+Weight\+Total}} () const
+\item 
+int \mbox{\hyperlink{classTCargoShip_aac8aa5512f4e7ea9641f3a5812cc8722}{Get\+Weight\+Now}} () const
+\item 
+double \mbox{\hyperlink{classTCargoShip_a28ddc9fa25ff3cccaeddd385f5003cc1}{Get\+SlowK}} () const
+\item 
+int \mbox{\hyperlink{classTCargoShip_a2058989e985027329e36e55be4d83cc9}{Speed\+By\+Weight}} (int weight) const
+\item 
+int \mbox{\hyperlink{classTCargoShip_a1f4cbd4a7effa3987f1298da081e8aec}{Weight\+Max\+By\+Speed}} (int speed) const
+\item 
+void \mbox{\hyperlink{classTCargoShip_ac65e2dfc380082584a2ba473384d46c6}{Print}} () const override
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \mbox{\hyperlink{classTCargoShip_ad6518f045b33ef07a6f84014d7921b4e}{Clone}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classTCargoShip_abe5fef928f7c057ea438ab047773420c}{Weight\+Total\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTCargoShip_a96c8e77c24681fd53ca3813e955c407e}{Weight\+Now\+\_\+}}
+\item 
+double \mbox{\hyperlink{classTCargoShip_a51223da17b438c6370d2418395dee769}{Slow\+K\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Корабль, несущий груз. Добавляются поля -\/ коеф замедления, максимальный груз, текущий груз. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCargoShip_a3c899e2095ba323aa5170361ebcdb4c9}\label{classTCargoShip_a3c899e2095ba323aa5170361ebcdb4c9}} 
+\index{TCargoShip@{TCargoShip}!TCargoShip@{TCargoShip}}
+\index{TCargoShip@{TCargoShip}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{TCargoShip()}{TCargoShip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TCargo\+Ship\+::\+TCargo\+Ship (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{Ship\+Type,  }\item[{const std\+::string \&}]{Ship\+Name,  }\item[{const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&}]{Capitan\+Info,  }\item[{int}]{Max\+Speed,  }\item[{int}]{Now\+Speed,  }\item[{int}]{Hp\+Total,  }\item[{int}]{Hp\+Now,  }\item[{int}]{Cost,  }\item[{int}]{Weight\+Total,  }\item[{int}]{Weight\+Now,  }\item[{double}]{SlowK }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTCargoShip_ad1aee8ba2809ed0c482a8492e1f58172}\label{classTCargoShip_ad1aee8ba2809ed0c482a8492e1f58172}} 
+\index{TCargoShip@{TCargoShip}!TCargoShip@{TCargoShip}}
+\index{TCargoShip@{TCargoShip}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{TCargoShip()}{TCargoShip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TCargo\+Ship\+::\+TCargo\+Ship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCargoShip_ad6518f045b33ef07a6f84014d7921b4e}\label{classTCargoShip_ad6518f045b33ef07a6f84014d7921b4e}} 
+\index{TCargoShip@{TCargoShip}!Clone@{Clone}}
+\index{Clone@{Clone}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ TCargo\+Ship\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Определяет Clone для этого вида кораблей. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTShip_a36838d6bbb57ef7e04818c5965a562ad}{TShip}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTCargoWarShip_ae906a869c5cd8ffae728b0e1e6716207}{TCargo\+War\+Ship}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{d3/d81/classTCargoShip_ad6518f045b33ef07a6f84014d7921b4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTCargoShip_a28ddc9fa25ff3cccaeddd385f5003cc1}\label{classTCargoShip_a28ddc9fa25ff3cccaeddd385f5003cc1}} 
+\index{TCargoShip@{TCargoShip}!GetSlowK@{GetSlowK}}
+\index{GetSlowK@{GetSlowK}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{GetSlowK()}{GetSlowK()}}
+{\footnotesize\ttfamily double TCargo\+Ship\+::\+Get\+SlowK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{d3/d81/classTCargoShip_a28ddc9fa25ff3cccaeddd385f5003cc1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTCargoShip_aac8aa5512f4e7ea9641f3a5812cc8722}\label{classTCargoShip_aac8aa5512f4e7ea9641f3a5812cc8722}} 
+\index{TCargoShip@{TCargoShip}!GetWeightNow@{GetWeightNow}}
+\index{GetWeightNow@{GetWeightNow}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{GetWeightNow()}{GetWeightNow()}}
+{\footnotesize\ttfamily int TCargo\+Ship\+::\+Get\+Weight\+Now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d81/classTCargoShip_aac8aa5512f4e7ea9641f3a5812cc8722_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTCargoShip_af864094175baefdf2e6f8c88a53ad716}\label{classTCargoShip_af864094175baefdf2e6f8c88a53ad716}} 
+\index{TCargoShip@{TCargoShip}!GetWeightTotal@{GetWeightTotal}}
+\index{GetWeightTotal@{GetWeightTotal}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{GetWeightTotal()}{GetWeightTotal()}}
+{\footnotesize\ttfamily int TCargo\+Ship\+::\+Get\+Weight\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d81/classTCargoShip_af864094175baefdf2e6f8c88a53ad716_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTCargoShip_a87336dcc7d2b6e2389ce0d93e5ca765b}\label{classTCargoShip_a87336dcc7d2b6e2389ce0d93e5ca765b}} 
+\index{TCargoShip@{TCargoShip}!operator=@{operator=}}
+\index{operator=@{operator=}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} \& TCargo\+Ship\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTCargoShip_a6576613e8beb62567adb59af431701c8}\label{classTCargoShip_a6576613e8beb62567adb59af431701c8}} 
+\index{TCargoShip@{TCargoShip}!operator==@{operator==}}
+\index{operator==@{operator==}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool TCargo\+Ship\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classTCargoShip_ac65e2dfc380082584a2ba473384d46c6}\label{classTCargoShip_ac65e2dfc380082584a2ba473384d46c6}} 
+\index{TCargoShip@{TCargoShip}!Print@{Print}}
+\index{Print@{Print}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void TCargo\+Ship\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Определяет вывод информации в магазине об этго виде корабля. 
+
+Reimplemented from \mbox{\hyperlink{classTShip_a69a25d7b3bce32e46a1dcebe06d63209}{TShip}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTCargoWarShip_a68e8702482af0683c976e316a500db04}{TCargo\+War\+Ship}}.
+
+\mbox{\Hypertarget{classTCargoShip_ace0c59c661248f3e8f4623c24a345150}\label{classTCargoShip_ace0c59c661248f3e8f4623c24a345150}} 
+\index{TCargoShip@{TCargoShip}!SetSlowK@{SetSlowK}}
+\index{SetSlowK@{SetSlowK}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{SetSlowK()}{SetSlowK()}}
+{\footnotesize\ttfamily void TCargo\+Ship\+::\+Set\+SlowK (\begin{DoxyParamCaption}\item[{double}]{SlowK }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d3/d81/classTCargoShip_ace0c59c661248f3e8f4623c24a345150_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTCargoShip_a9a12a2c02b7b32f49c952f4c13e74a77}\label{classTCargoShip_a9a12a2c02b7b32f49c952f4c13e74a77}} 
+\index{TCargoShip@{TCargoShip}!SetWeightNow@{SetWeightNow}}
+\index{SetWeightNow@{SetWeightNow}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{SetWeightNow()}{SetWeightNow()}}
+{\footnotesize\ttfamily void TCargo\+Ship\+::\+Set\+Weight\+Now (\begin{DoxyParamCaption}\item[{int}]{weight\+Now }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d81/classTCargoShip_a9a12a2c02b7b32f49c952f4c13e74a77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTCargoShip_a15e744d84fa3dab4954b59e9d4caf254}\label{classTCargoShip_a15e744d84fa3dab4954b59e9d4caf254}} 
+\index{TCargoShip@{TCargoShip}!SetWeightTotal@{SetWeightTotal}}
+\index{SetWeightTotal@{SetWeightTotal}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{SetWeightTotal()}{SetWeightTotal()}}
+{\footnotesize\ttfamily void TCargo\+Ship\+::\+Set\+Weight\+Total (\begin{DoxyParamCaption}\item[{int}]{weight\+Total }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{d3/d81/classTCargoShip_a15e744d84fa3dab4954b59e9d4caf254_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTCargoShip_a2058989e985027329e36e55be4d83cc9}\label{classTCargoShip_a2058989e985027329e36e55be4d83cc9}} 
+\index{TCargoShip@{TCargoShip}!SpeedByWeight@{SpeedByWeight}}
+\index{SpeedByWeight@{SpeedByWeight}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{SpeedByWeight()}{SpeedByWeight()}}
+{\footnotesize\ttfamily int TCargo\+Ship\+::\+Speed\+By\+Weight (\begin{DoxyParamCaption}\item[{int}]{weight }\end{DoxyParamCaption}) const}
+
+Вычисляет скорость, с которой будет двигаться корябль, если в него загрузить weight веса Вернет -\/1, если загружено больше максимума. 
+\begin{DoxyParams}{Parameters}
+{\em weight} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d81/classTCargoShip_a2058989e985027329e36e55be4d83cc9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTCargoShip_a1f4cbd4a7effa3987f1298da081e8aec}\label{classTCargoShip_a1f4cbd4a7effa3987f1298da081e8aec}} 
+\index{TCargoShip@{TCargoShip}!WeightMaxBySpeed@{WeightMaxBySpeed}}
+\index{WeightMaxBySpeed@{WeightMaxBySpeed}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{WeightMaxBySpeed()}{WeightMaxBySpeed()}}
+{\footnotesize\ttfamily int TCargo\+Ship\+::\+Weight\+Max\+By\+Speed (\begin{DoxyParamCaption}\item[{int}]{speed }\end{DoxyParamCaption}) const}
+
+Вычисляет максимальный вес, который можно загрузить, чтобы двигатьбся со скоростью speed Вернет -\/1, если скорость больше максимальной. 
+\begin{DoxyParams}{Parameters}
+{\em speed} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d81/classTCargoShip_a1f4cbd4a7effa3987f1298da081e8aec_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTCargoShip_a51223da17b438c6370d2418395dee769}\label{classTCargoShip_a51223da17b438c6370d2418395dee769}} 
+\index{TCargoShip@{TCargoShip}!SlowK\_@{SlowK\_}}
+\index{SlowK\_@{SlowK\_}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{SlowK\_}{SlowK\_}}
+{\footnotesize\ttfamily double TCargo\+Ship\+::\+Slow\+K\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+При полной загрузке корабль имеет скорость Max\+Speed $\ast$ SlowK. Замедление прямопропорционально загрузке корабля. \mbox{\Hypertarget{classTCargoShip_a96c8e77c24681fd53ca3813e955c407e}\label{classTCargoShip_a96c8e77c24681fd53ca3813e955c407e}} 
+\index{TCargoShip@{TCargoShip}!WeightNow\_@{WeightNow\_}}
+\index{WeightNow\_@{WeightNow\_}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{WeightNow\_}{WeightNow\_}}
+{\footnotesize\ttfamily int TCargo\+Ship\+::\+Weight\+Now\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classTCargoShip_abe5fef928f7c057ea438ab047773420c}\label{classTCargoShip_abe5fef928f7c057ea438ab047773420c}} 
+\index{TCargoShip@{TCargoShip}!WeightTotal\_@{WeightTotal\_}}
+\index{WeightTotal\_@{WeightTotal\_}!TCargoShip@{TCargoShip}}
+\doxysubsubsection{\texorpdfstring{WeightTotal\_}{WeightTotal\_}}
+{\footnotesize\ttfamily int TCargo\+Ship\+::\+Weight\+Total\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ships/code/\mbox{\hyperlink{TCargoShip_8h}{TCargo\+Ship.\+h}}\item 
+ships/code/\mbox{\hyperlink{TCargoShip_8cpp}{TCargo\+Ship.\+cpp}}\end{DoxyCompactItemize}

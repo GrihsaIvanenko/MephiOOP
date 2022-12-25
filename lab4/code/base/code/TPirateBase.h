@@ -8,6 +8,10 @@
 #include "TBase.h"
 #include "TSpawnDescriptor.h"
 
+/*!
+ * \brief Класс, описывающий базу пиратов. Есть поле - спавнер
+ */
+
 class TPirateBase : public TBase {
 private:
     TSpawnDescriptor Spawner_;
@@ -18,6 +22,10 @@ public:
     bool operator ==(const TPirateBase& other) const;
 
     void SetSpawnDescriptor(const TSpawnDescriptor& x);
+
+    /*!
+     * Вызывает аналогичный метод у spawner для задания координаты, где будут появляться новые корабли.
+     */
     void SetXYInSpawn();
 
     TSpawnDescriptor& GetSpawnDescriptor();

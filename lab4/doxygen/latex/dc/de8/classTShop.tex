@@ -1,0 +1,325 @@
+\hypertarget{classTShop}{}\doxysection{TShop Class Reference}
+\label{classTShop}\index{TShop@{TShop}}
+
+
+{\ttfamily \#include $<$TShop.\+h$>$}
+
+
+
+Collaboration diagram for TShop\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d6/d5d/classTShop__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classTShop_aa10e5887f689e5928cce716aa1bf9ea6}{Read\+Int}} (std\+::istream \&file, int from, int to)
+\item 
+void \mbox{\hyperlink{classTShop_a50adc3df9d34e65a112b243e1da598d4}{Print\+Options}} (const std\+::vector$<$ std\+::string $>$ \&options)
+\item 
+void \mbox{\hyperlink{classTShop_a46d86376a3b839bf3299639a9bb844a7}{Print\+Info}} (const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission)
+\item 
+bool \mbox{\hyperlink{classTShop_a5e84a0c01c9d507bda6ce4a0de43eaa7}{Ask\+Play}} (const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, std\+::istream \&file)
+\item 
+void \mbox{\hyperlink{classTShop_aecceb42ffe39e9e0e9f1e152fa0c258d}{Buy\+Ship}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, const \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&ships, std\+::istream \&file)
+\item 
+void \mbox{\hyperlink{classTShop_ae39747c12e22b3bd4641affc0be979e3}{Sell\+Ship}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, std\+::istream \&file)
+\item 
+void \mbox{\hyperlink{classTShop_ac463d2ee0ef76283f4dac87a51353c36}{Buy\+Gun}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&guns, std\+::istream \&file)
+\item 
+void \mbox{\hyperlink{classTShop_a7c75fe3801c08795282fefc2baae29b8}{Sell\+Gun}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, std\+::istream \&file)
+\item 
+void \mbox{\hyperlink{classTShop_aef476da75c7312f1d68373c4883b20b0}{Add\+Weight}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, std\+::istream \&file)
+\item 
+void \mbox{\hyperlink{classTShop_af5388fd8d61bac1887a93d9d52ebe482}{Remove\+Weight}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, std\+::istream \&file)
+\item 
+void \mbox{\hyperlink{classTShop_aa31244972d1d22e92673e8446ef50f2d}{Auto\+Weight}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission)
+\item 
+void \mbox{\hyperlink{classTShop_ae77eb41b055433f33b63810b32dfb88c}{Set\+Weight\+By\+Speed}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, int speed)
+\item 
+bool \mbox{\hyperlink{classTShop_abe63a0587be037f14a2e04e62fd1fc60}{Is\+Speed\+Possible}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, int speed\+To\+Check)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \mbox{\hyperlink{classTShop_a1dcf7617180c288121288af2ed21909b}{Main\+Menu}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ mission, \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&\&weapons\+\_\+, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&\&ships\+\_\+, std\+::istream \&file)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \mbox{\hyperlink{classTShop_a789d5e786476555b588aece81642f6f9}{Shop}} (std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$, std\+::pair$<$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ $>$ $>$ \&\&data, std\+::istream \&file)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTShop_aef476da75c7312f1d68373c4883b20b0}\label{classTShop_aef476da75c7312f1d68373c4883b20b0}} 
+\index{TShop@{TShop}!AddWeight@{AddWeight}}
+\index{AddWeight@{AddWeight}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{AddWeight()}{AddWeight()}}
+{\footnotesize\ttfamily void TShop\+::\+Add\+Weight (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_aef476da75c7312f1d68373c4883b20b0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_aef476da75c7312f1d68373c4883b20b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_a5e84a0c01c9d507bda6ce4a0de43eaa7}\label{classTShop_a5e84a0c01c9d507bda6ce4a0de43eaa7}} 
+\index{TShop@{TShop}!AskPlay@{AskPlay}}
+\index{AskPlay@{AskPlay}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{AskPlay()}{AskPlay()}}
+{\footnotesize\ttfamily bool TShop\+::\+Ask\+Play (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{dc/de8/classTShop_a5e84a0c01c9d507bda6ce4a0de43eaa7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_a5e84a0c01c9d507bda6ce4a0de43eaa7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_aa31244972d1d22e92673e8446ef50f2d}\label{classTShop_aa31244972d1d22e92673e8446ef50f2d}} 
+\index{TShop@{TShop}!AutoWeight@{AutoWeight}}
+\index{AutoWeight@{AutoWeight}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{AutoWeight()}{AutoWeight()}}
+{\footnotesize\ttfamily void TShop\+::\+Auto\+Weight (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_aa31244972d1d22e92673e8446ef50f2d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_aa31244972d1d22e92673e8446ef50f2d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_ac463d2ee0ef76283f4dac87a51353c36}\label{classTShop_ac463d2ee0ef76283f4dac87a51353c36}} 
+\index{TShop@{TShop}!BuyGun@{BuyGun}}
+\index{BuyGun@{BuyGun}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{BuyGun()}{BuyGun()}}
+{\footnotesize\ttfamily void TShop\+::\+Buy\+Gun (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&}]{guns,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_ac463d2ee0ef76283f4dac87a51353c36_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_ac463d2ee0ef76283f4dac87a51353c36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_aecceb42ffe39e9e0e9f1e152fa0c258d}\label{classTShop_aecceb42ffe39e9e0e9f1e152fa0c258d}} 
+\index{TShop@{TShop}!BuyShip@{BuyShip}}
+\index{BuyShip@{BuyShip}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{BuyShip()}{BuyShip()}}
+{\footnotesize\ttfamily void TShop\+::\+Buy\+Ship (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{dc/de8/classTShop_aecceb42ffe39e9e0e9f1e152fa0c258d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_aecceb42ffe39e9e0e9f1e152fa0c258d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_abe63a0587be037f14a2e04e62fd1fc60}\label{classTShop_abe63a0587be037f14a2e04e62fd1fc60}} 
+\index{TShop@{TShop}!IsSpeedPossible@{IsSpeedPossible}}
+\index{IsSpeedPossible@{IsSpeedPossible}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{IsSpeedPossible()}{IsSpeedPossible()}}
+{\footnotesize\ttfamily bool TShop\+::\+Is\+Speed\+Possible (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{int}]{speed\+To\+Check }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_abe63a0587be037f14a2e04e62fd1fc60_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_abe63a0587be037f14a2e04e62fd1fc60_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_a1dcf7617180c288121288af2ed21909b}\label{classTShop_a1dcf7617180c288121288af2ed21909b}} 
+\index{TShop@{TShop}!MainMenu@{MainMenu}}
+\index{MainMenu@{MainMenu}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{MainMenu()}{MainMenu()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ TShop\+::\+Main\+Menu (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$}]{mission,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&\&}]{weapons\+\_\+,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&\&}]{ships\+\_\+,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_a1dcf7617180c288121288af2ed21909b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{dc/de8/classTShop_a1dcf7617180c288121288af2ed21909b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_a46d86376a3b839bf3299639a9bb844a7}\label{classTShop_a46d86376a3b839bf3299639a9bb844a7}} 
+\index{TShop@{TShop}!PrintInfo@{PrintInfo}}
+\index{PrintInfo@{PrintInfo}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{PrintInfo()}{PrintInfo()}}
+{\footnotesize\ttfamily void TShop\+::\+Print\+Info (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_a46d86376a3b839bf3299639a9bb844a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_a50adc3df9d34e65a112b243e1da598d4}\label{classTShop_a50adc3df9d34e65a112b243e1da598d4}} 
+\index{TShop@{TShop}!PrintOptions@{PrintOptions}}
+\index{PrintOptions@{PrintOptions}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{PrintOptions()}{PrintOptions()}}
+{\footnotesize\ttfamily void TShop\+::\+Print\+Options (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{options }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_a50adc3df9d34e65a112b243e1da598d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_aa10e5887f689e5928cce716aa1bf9ea6}\label{classTShop_aa10e5887f689e5928cce716aa1bf9ea6}} 
+\index{TShop@{TShop}!ReadInt@{ReadInt}}
+\index{ReadInt@{ReadInt}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{ReadInt()}{ReadInt()}}
+{\footnotesize\ttfamily int TShop\+::\+Read\+Int (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_aa10e5887f689e5928cce716aa1bf9ea6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_af5388fd8d61bac1887a93d9d52ebe482}\label{classTShop_af5388fd8d61bac1887a93d9d52ebe482}} 
+\index{TShop@{TShop}!RemoveWeight@{RemoveWeight}}
+\index{RemoveWeight@{RemoveWeight}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{RemoveWeight()}{RemoveWeight()}}
+{\footnotesize\ttfamily void TShop\+::\+Remove\+Weight (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_af5388fd8d61bac1887a93d9d52ebe482_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_a7c75fe3801c08795282fefc2baae29b8}\label{classTShop_a7c75fe3801c08795282fefc2baae29b8}} 
+\index{TShop@{TShop}!SellGun@{SellGun}}
+\index{SellGun@{SellGun}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{SellGun()}{SellGun()}}
+{\footnotesize\ttfamily void TShop\+::\+Sell\+Gun (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_a7c75fe3801c08795282fefc2baae29b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_a7c75fe3801c08795282fefc2baae29b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_ae39747c12e22b3bd4641affc0be979e3}\label{classTShop_ae39747c12e22b3bd4641affc0be979e3}} 
+\index{TShop@{TShop}!SellShip@{SellShip}}
+\index{SellShip@{SellShip}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{SellShip()}{SellShip()}}
+{\footnotesize\ttfamily void TShop\+::\+Sell\+Ship (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_ae39747c12e22b3bd4641affc0be979e3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_ae39747c12e22b3bd4641affc0be979e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_ae77eb41b055433f33b63810b32dfb88c}\label{classTShop_ae77eb41b055433f33b63810b32dfb88c}} 
+\index{TShop@{TShop}!SetWeightBySpeed@{SetWeightBySpeed}}
+\index{SetWeightBySpeed@{SetWeightBySpeed}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{SetWeightBySpeed()}{SetWeightBySpeed()}}
+{\footnotesize\ttfamily void TShop\+::\+Set\+Weight\+By\+Speed (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_ae77eb41b055433f33b63810b32dfb88c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_ae77eb41b055433f33b63810b32dfb88c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShop_a789d5e786476555b588aece81642f6f9}\label{classTShop_a789d5e786476555b588aece81642f6f9}} 
+\index{TShop@{TShop}!Shop@{Shop}}
+\index{Shop@{Shop}!TShop@{TShop}}
+\doxysubsubsection{\texorpdfstring{Shop()}{Shop()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ TShop\+::\+Shop (\begin{DoxyParamCaption}\item[{std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$, std\+::pair$<$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ $>$ $>$ \&\&}]{data,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classTShop_a789d5e786476555b588aece81642f6f9_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/code/\mbox{\hyperlink{TShop_8h}{TShop.\+h}}\item 
+game/code/\mbox{\hyperlink{TShop_8cpp}{TShop.\+cpp}}\end{DoxyCompactItemize}

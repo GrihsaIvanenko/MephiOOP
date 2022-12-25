@@ -1,0 +1,268 @@
+\hypertarget{classMyList}{}\doxysection{My\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classMyList}\index{MyList$<$ T $>$@{MyList$<$ T $>$}}
+
+
+{\ttfamily \#include $<$My\+List.\+h$>$}
+
+
+
+Inheritance diagram for My\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d83/classMyList__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for My\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{dc/d91/classMyList__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMyList_1_1iterator}{iterator}}
+\item 
+class \mbox{\hyperlink{classMyList_1_1Node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMyList_aaa11039853c7adb2fbcb770eab8b7305}{My\+List}} ()
+\item 
+\mbox{\hyperlink{classMyList_aa622b9fb3e108b8b8c298ef1996dd256}{$\sim$\+My\+List}} ()
+\item 
+\mbox{\hyperlink{classMyList_a8d26a9aeff9bba7f61e0898056501f86}{My\+List}} (\mbox{\hyperlink{classMyList}{My\+List}} \&\&other)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}} \& \mbox{\hyperlink{classMyList_a73539ac9c4e822931c1e74b228867099}{operator=}} (\mbox{\hyperlink{classMyList}{My\+List}} \&\&other)
+\item 
+bool \mbox{\hyperlink{classMyList_aca073a4bc1535a2a831f062f6c082e50}{operator==}} (const \mbox{\hyperlink{classMyList}{My\+List}} \&other) const
+\item 
+int \mbox{\hyperlink{classMyList_a37366fbfd16acad1dfa69a141b339095}{size}} () const
+\item 
+\mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \mbox{\hyperlink{classMyList_a281f359e28eb5d6014ba3405cf0e6895}{begin}} () const
+\item 
+\mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \mbox{\hyperlink{classMyList_a723c00a8380b8fd0705cb286cdd179d2}{end}} () const
+\item 
+void \mbox{\hyperlink{classMyList_ab5e189776aca91f01ee5fe930318c289}{insert}} (T \&\&what, \mbox{\hyperlink{classMyList_1_1iterator}{iterator}} before\+Who)
+\item 
+void \mbox{\hyperlink{classMyList_a0bf752e12a79f715ac37ed5e03255833}{erase}} (\mbox{\hyperlink{classMyList_1_1iterator}{iterator}} who)
+\item 
+const T \& \mbox{\hyperlink{classMyList_a80edb252c7e71107fac78c29647be513}{get\+By\+Id}} (int id) const
+\item 
+T \& \mbox{\hyperlink{classMyList_af0f64167348972fa5212fb1b63bbed10}{get\+By\+Id}} (int id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMyList_ad938b99ab951ca843516bfee51e30c84}{Clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\+\_\+}}
+\item 
+\mbox{\hyperlink{classMyList_1_1Node}{Node}} $\ast$ \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\+\_\+}}
+\item 
+\mbox{\hyperlink{classMyList_1_1Node}{Node}} $\ast$ \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMyList_aaa11039853c7adb2fbcb770eab8b7305}\label{classMyList_aaa11039853c7adb2fbcb770eab8b7305}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!MyList@{MyList}}
+\index{MyList@{MyList}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MyList()}{MyList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\mbox{\hyperlink{classMyList}{\+::\+My\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMyList_aa622b9fb3e108b8b8c298ef1996dd256}\label{classMyList_aa622b9fb3e108b8b8c298ef1996dd256}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!````~MyList@{$\sim$MyList}}
+\index{````~MyList@{$\sim$MyList}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$MyList()}{~MyList()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classMyList}{My\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{d8/d51/classMyList_aa622b9fb3e108b8b8c298ef1996dd256_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMyList_a8d26a9aeff9bba7f61e0898056501f86}\label{classMyList_a8d26a9aeff9bba7f61e0898056501f86}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!MyList@{MyList}}
+\index{MyList@{MyList}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MyList()}{MyList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\mbox{\hyperlink{classMyList}{\+::\+My\+List}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMyList_a281f359e28eb5d6014ba3405cf0e6895}\label{classMyList_a281f359e28eb5d6014ba3405cf0e6895}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d51/classMyList_a281f359e28eb5d6014ba3405cf0e6895_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMyList_ad938b99ab951ca843516bfee51e30c84}\label{classMyList_ad938b99ab951ca843516bfee51e30c84}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!Clear@{Clear}}
+\index{Clear@{Clear}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{d8/d51/classMyList_ad938b99ab951ca843516bfee51e30c84_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMyList_a723c00a8380b8fd0705cb286cdd179d2}\label{classMyList_a723c00a8380b8fd0705cb286cdd179d2}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!end@{end}}
+\index{end@{end}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d51/classMyList_a723c00a8380b8fd0705cb286cdd179d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMyList_a0bf752e12a79f715ac37ed5e03255833}\label{classMyList_a0bf752e12a79f715ac37ed5e03255833}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList_1_1iterator}{iterator}}}]{who }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d51/classMyList_a0bf752e12a79f715ac37ed5e03255833_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMyList_af0f64167348972fa5212fb1b63bbed10}\label{classMyList_af0f64167348972fa5212fb1b63bbed10}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!getById@{getById}}
+\index{getById@{getById}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getById()}{getById()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \& \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMyList_a80edb252c7e71107fac78c29647be513}\label{classMyList_a80edb252c7e71107fac78c29647be513}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!getById@{getById}}
+\index{getById@{getById}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getById()}{getById()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T \& \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d51/classMyList_a80edb252c7e71107fac78c29647be513_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMyList_ab5e189776aca91f01ee5fe930318c289}\label{classMyList_ab5e189776aca91f01ee5fe930318c289}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{T \&\&}]{what,  }\item[{\mbox{\hyperlink{classMyList_1_1iterator}{iterator}}}]{before\+Who }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d51/classMyList_ab5e189776aca91f01ee5fe930318c289_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMyList_a73539ac9c4e822931c1e74b228867099}\label{classMyList_a73539ac9c4e822931c1e74b228867099}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classMyList}{My\+List}} \& \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{d8/d51/classMyList_a73539ac9c4e822931c1e74b228867099_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMyList_aca073a4bc1535a2a831f062f6c082e50}\label{classMyList_aca073a4bc1535a2a831f062f6c082e50}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{d8/d51/classMyList_aca073a4bc1535a2a831f062f6c082e50_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMyList_a37366fbfd16acad1dfa69a141b339095}\label{classMyList_a37366fbfd16acad1dfa69a141b339095}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!size@{size}}
+\index{size@{size}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d51/classMyList_a37366fbfd16acad1dfa69a141b339095_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMyList_adae23b7986d8ae1f07e15c5024f40209}\label{classMyList_adae23b7986d8ae1f07e15c5024f40209}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!Head\_@{Head\_}}
+\index{Head\_@{Head\_}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Head\_}{Head\_}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classMyList_1_1Node}{Node}}$\ast$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::\+Head\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMyList_a7244f911873525e0efe2ee11535f6dff}\label{classMyList_a7244f911873525e0efe2ee11535f6dff}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!Size\_@{Size\_}}
+\index{Size\_@{Size\_}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Size\_}{Size\_}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::\+Size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMyList_a2235256cb6fd28cc633b49354330a7fe}\label{classMyList_a2235256cb6fd28cc633b49354330a7fe}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!Tail\_@{Tail\_}}
+\index{Tail\_@{Tail\_}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Tail\_}{Tail\_}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classMyList_1_1Node}{Node}}$\ast$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::\+Tail\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+container/code/\mbox{\hyperlink{MyList_8h}{My\+List.\+h}}\end{DoxyCompactItemize}

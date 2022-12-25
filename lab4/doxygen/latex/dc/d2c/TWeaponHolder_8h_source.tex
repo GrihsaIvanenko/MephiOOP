@@ -1,0 +1,53 @@
+\hypertarget{TWeaponHolder_8h_source}{}\doxysection{TWeapon\+Holder.\+h}
+\label{TWeaponHolder_8h_source}\index{weapons/code/TWeaponHolder.h@{weapons/code/TWeaponHolder.h}}
+\mbox{\hyperlink{TWeaponHolder_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 29.11.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TWEAPONHOLDER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TWEAPONHOLDER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}../../enums/enum\_place\_on\_ship.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TWeapon_8h}{TWeapon.h}}"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}} \{}
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     std::vector<std::pair<EPlaceOnShip, std::unique\_ptr<TWeapon>>> \mbox{\hyperlink{classTWeaponHolder_a93b29966fff3f52f6c9139c859ea1ba5}{Weapons\_}};}
+\DoxyCodeLine{21     \textcolor{keyword}{static} std::unique\_ptr<TWeapon> \mbox{\hyperlink{classTWeaponHolder_afe77ebf75c23b7d4dd8229d12a8369a0}{createUniquePtrByGunPtr}}(\mbox{\hyperlink{classTWeapon}{TWeapon}}* gun) \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{return} gun}
+\DoxyCodeLine{23                ? std::move(std::make\_unique<TWeapon>(*gun))}
+\DoxyCodeLine{24                : \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{classTWeaponHolder_a7ace817882700f160ba674a9af8be875}{TWeaponHolder}}();}
+\DoxyCodeLine{28     \mbox{\hyperlink{classTWeaponHolder_a7ace817882700f160ba674a9af8be875}{TWeaponHolder}}(\mbox{\hyperlink{classTWeapon}{TWeapon}}* gunFront, \mbox{\hyperlink{classTWeapon}{TWeapon}}* gunBack, \mbox{\hyperlink{classTWeapon}{TWeapon}}* gunLeftSide, \mbox{\hyperlink{classTWeapon}{TWeapon}}* gunRightSide);}
+\DoxyCodeLine{29     \mbox{\hyperlink{classTWeaponHolder_a7ace817882700f160ba674a9af8be875}{TWeaponHolder}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}}\& other);}
+\DoxyCodeLine{30     \mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}}\& \mbox{\hyperlink{classTWeaponHolder_a4593dd1194e80fe9c0a38f58a5e3be8e}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}}\& other);}
+\DoxyCodeLine{31     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTWeaponHolder_a8d274e1323dc939abb78ed67982428b0}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{38     \mbox{\hyperlink{classTWeapon}{TWeapon}}* \mbox{\hyperlink{classTWeaponHolder_a1c57748293f9f082f1598c51b288de34}{GetGunByPlace}}(\mbox{\hyperlink{enum__place__on__ship_8h_a3d353360a01922d6d32607a45d6183a5}{EPlaceOnShip}} place) \textcolor{keyword}{const};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeaponHolder_a406848fe7546ce72723653687232701a}{SetGunByPlace}}(\mbox{\hyperlink{enum__place__on__ship_8h_a3d353360a01922d6d32607a45d6183a5}{EPlaceOnShip}} place, \mbox{\hyperlink{classTWeapon}{TWeapon}}* what);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeaponHolder_aebd61b2cf0f9cc9f03a3868335a17adf}{MakeShot}}(\textcolor{keywordtype}{int} sqDistance, \textcolor{keywordtype}{int} timeNow);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{63     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTWeaponHolder_a766a97ee820575ba76a8792b9a2b2824}{SameGuns}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWeapon}{TWeapon}}* lhs, \textcolor{keyword}{const} \mbox{\hyperlink{classTWeapon}{TWeapon}}* rhs) \{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{if} (!lhs \&\& !rhs)}
+\DoxyCodeLine{65             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{66         \textcolor{keywordflow}{if} (!lhs || !rhs)}
+\DoxyCodeLine{67             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{68         \textcolor{keywordflow}{return} *lhs == *rhs;}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeaponHolder_ac1330fe768fc0ea732f579c166650dc5}{Print}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeaponHolder_a41344ca59e32b01ba31c08ee5d609731}{GetCost}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TWEAPONHOLDER\_H}}
+
+\end{DoxyCode}

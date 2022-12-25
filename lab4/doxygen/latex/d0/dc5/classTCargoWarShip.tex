@@ -1,0 +1,125 @@
+\hypertarget{classTCargoWarShip}{}\doxysection{TCargo\+War\+Ship Class Reference}
+\label{classTCargoWarShip}\index{TCargoWarShip@{TCargoWarShip}}
+
+
+Корабль, имеющий и оррудиея, и груз на борту.  
+
+
+
+
+{\ttfamily \#include $<$TCargo\+War\+Ship.\+h$>$}
+
+
+
+Inheritance diagram for TCargo\+War\+Ship\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/d0e/classTCargoWarShip__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCargo\+War\+Ship\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d1/d0a/classTCargoWarShip__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTCargoWarShip_a0df4eac5fa973abaa329f1031ac067fb}{TCargo\+War\+Ship}} (int x, int y, int ship\+Type, const std\+::string \&ship\+Name, const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&capitan\+Info, int max\+Speed, int now\+Speed, int hp\+Total, int hp\+Now, int cost, int Weight\+Total, int Weight\+Now, double SlowK, const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&holder)
+\item 
+\mbox{\hyperlink{classTCargoWarShip_a2a665ee94fb8f1c6bf681ddb27b2fbcc}{TCargo\+War\+Ship}} (const \mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} \&other)
+\item 
+\mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} \& \mbox{\hyperlink{classTCargoWarShip_a945330a8a9cb8ad152f1d3eb895f55d2}{operator=}} (const \mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} \&other)
+\item 
+bool \mbox{\hyperlink{classTCargoWarShip_aec30ca647427db94ad024e5dd7009634}{operator==}} (const \mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} \&other) const
+\item 
+void \mbox{\hyperlink{classTCargoWarShip_a68e8702482af0683c976e316a500db04}{Print}} () const override
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \mbox{\hyperlink{classTCargoWarShip_ae906a869c5cd8ffae728b0e1e6716207}{Clone}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Корабль, имеющий и оррудиея, и груз на борту. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCargoWarShip_a0df4eac5fa973abaa329f1031ac067fb}\label{classTCargoWarShip_a0df4eac5fa973abaa329f1031ac067fb}} 
+\index{TCargoWarShip@{TCargoWarShip}!TCargoWarShip@{TCargoWarShip}}
+\index{TCargoWarShip@{TCargoWarShip}!TCargoWarShip@{TCargoWarShip}}
+\doxysubsubsection{\texorpdfstring{TCargoWarShip()}{TCargoWarShip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TCargo\+War\+Ship\+::\+TCargo\+War\+Ship (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{ship\+Type,  }\item[{const std\+::string \&}]{ship\+Name,  }\item[{const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&}]{capitan\+Info,  }\item[{int}]{max\+Speed,  }\item[{int}]{now\+Speed,  }\item[{int}]{hp\+Total,  }\item[{int}]{hp\+Now,  }\item[{int}]{cost,  }\item[{int}]{Weight\+Total,  }\item[{int}]{Weight\+Now,  }\item[{double}]{SlowK,  }\item[{const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&}]{holder }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTCargoWarShip_a2a665ee94fb8f1c6bf681ddb27b2fbcc}\label{classTCargoWarShip_a2a665ee94fb8f1c6bf681ddb27b2fbcc}} 
+\index{TCargoWarShip@{TCargoWarShip}!TCargoWarShip@{TCargoWarShip}}
+\index{TCargoWarShip@{TCargoWarShip}!TCargoWarShip@{TCargoWarShip}}
+\doxysubsubsection{\texorpdfstring{TCargoWarShip()}{TCargoWarShip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TCargo\+War\+Ship\+::\+TCargo\+War\+Ship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCargoWarShip_ae906a869c5cd8ffae728b0e1e6716207}\label{classTCargoWarShip_ae906a869c5cd8ffae728b0e1e6716207}} 
+\index{TCargoWarShip@{TCargoWarShip}!Clone@{Clone}}
+\index{Clone@{Clone}!TCargoWarShip@{TCargoWarShip}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ TCargo\+War\+Ship\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Определяет Clone для этого вида кораблей. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTCargoShip_ad6518f045b33ef07a6f84014d7921b4e}{TCargo\+Ship}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{d0/dc5/classTCargoWarShip_ae906a869c5cd8ffae728b0e1e6716207_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTCargoWarShip_a945330a8a9cb8ad152f1d3eb895f55d2}\label{classTCargoWarShip_a945330a8a9cb8ad152f1d3eb895f55d2}} 
+\index{TCargoWarShip@{TCargoWarShip}!operator=@{operator=}}
+\index{operator=@{operator=}!TCargoWarShip@{TCargoWarShip}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} \& TCargo\+War\+Ship\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTCargoWarShip_aec30ca647427db94ad024e5dd7009634}\label{classTCargoWarShip_aec30ca647427db94ad024e5dd7009634}} 
+\index{TCargoWarShip@{TCargoWarShip}!operator==@{operator==}}
+\index{operator==@{operator==}!TCargoWarShip@{TCargoWarShip}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool TCargo\+War\+Ship\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classTCargoWarShip_a68e8702482af0683c976e316a500db04}\label{classTCargoWarShip_a68e8702482af0683c976e316a500db04}} 
+\index{TCargoWarShip@{TCargoWarShip}!Print@{Print}}
+\index{Print@{Print}!TCargoWarShip@{TCargoWarShip}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void TCargo\+War\+Ship\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Определяет вывод информации в магазине об этго виде корабля. 
+
+Reimplemented from \mbox{\hyperlink{classTCargoShip_ac65e2dfc380082584a2ba473384d46c6}{TCargo\+Ship}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc5/classTCargoWarShip_a68e8702482af0683c976e316a500db04_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ships/code/\mbox{\hyperlink{TCargoWarShip_8h}{TCargo\+War\+Ship.\+h}}\item 
+ships/code/\mbox{\hyperlink{TCargoWarShip_8cpp}{TCargo\+War\+Ship.\+cpp}}\end{DoxyCompactItemize}

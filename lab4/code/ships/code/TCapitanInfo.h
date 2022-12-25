@@ -7,6 +7,10 @@
 
 #include <string>
 
+/*!
+ * \brief Класс для хранения информации о капитане.
+ */
+
 class TCapitanInfo {
 private:
     std::string Name_;

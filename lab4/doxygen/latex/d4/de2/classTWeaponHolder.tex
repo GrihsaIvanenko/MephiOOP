@@ -1,0 +1,276 @@
+\hypertarget{classTWeaponHolder}{}\doxysection{TWeapon\+Holder Class Reference}
+\label{classTWeaponHolder}\index{TWeaponHolder@{TWeaponHolder}}
+
+
+Класс, хранящий все вооружение боевого корабля.  
+
+
+
+
+{\ttfamily \#include $<$TWeapon\+Holder.\+h$>$}
+
+
+
+Collaboration diagram for TWeapon\+Holder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dd/dfd/classTWeaponHolder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTWeaponHolder_a7ace817882700f160ba674a9af8be875}{TWeapon\+Holder}} ()
+\item 
+\mbox{\hyperlink{classTWeaponHolder_ac318361c4e724468f5e89ba9d3af0946}{TWeapon\+Holder}} (\mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$gun\+Front, \mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$gun\+Back, \mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$gun\+Left\+Side, \mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$gun\+Right\+Side)
+\item 
+\mbox{\hyperlink{classTWeaponHolder_ab99973ddf3beced4f21726d79a98f761}{TWeapon\+Holder}} (const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&other)
+\item 
+\mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \& \mbox{\hyperlink{classTWeaponHolder_a4593dd1194e80fe9c0a38f58a5e3be8e}{operator=}} (const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&other)
+\item 
+bool \mbox{\hyperlink{classTWeaponHolder_a8d274e1323dc939abb78ed67982428b0}{operator==}} (const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&other) const
+\item 
+\mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$ \mbox{\hyperlink{classTWeaponHolder_a1c57748293f9f082f1598c51b288de34}{Get\+Gun\+By\+Place}} (\mbox{\hyperlink{enum__place__on__ship_8h_a3d353360a01922d6d32607a45d6183a5}{EPlace\+On\+Ship}} place) const
+\item 
+void \mbox{\hyperlink{classTWeaponHolder_a406848fe7546ce72723653687232701a}{Set\+Gun\+By\+Place}} (\mbox{\hyperlink{enum__place__on__ship_8h_a3d353360a01922d6d32607a45d6183a5}{EPlace\+On\+Ship}} place, \mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$what)
+\item 
+int \mbox{\hyperlink{classTWeaponHolder_aebd61b2cf0f9cc9f03a3868335a17adf}{Make\+Shot}} (int sq\+Distance, int time\+Now)
+\item 
+void \mbox{\hyperlink{classTWeaponHolder_ac1330fe768fc0ea732f579c166650dc5}{Print}} () const
+\item 
+int \mbox{\hyperlink{classTWeaponHolder_a41344ca59e32b01ba31c08ee5d609731}{Get\+Cost}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classTWeaponHolder_a766a97ee820575ba76a8792b9a2b2824}{Same\+Guns}} (const \mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$lhs, const \mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \mbox{\hyperlink{classTWeaponHolder_afe77ebf75c23b7d4dd8229d12a8369a0}{create\+Unique\+Ptr\+By\+Gun\+Ptr}} (\mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$gun)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{enum__place__on__ship_8h_a3d353360a01922d6d32607a45d6183a5}{EPlace\+On\+Ship}}, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ $>$ $>$ \mbox{\hyperlink{classTWeaponHolder_a93b29966fff3f52f6c9139c859ea1ba5}{Weapons\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, хранящий все вооружение боевого корабля. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTWeaponHolder_a7ace817882700f160ba674a9af8be875}\label{classTWeaponHolder_a7ace817882700f160ba674a9af8be875}} 
+\index{TWeaponHolder@{TWeaponHolder}!TWeaponHolder@{TWeaponHolder}}
+\index{TWeaponHolder@{TWeaponHolder}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{TWeaponHolder()}{TWeaponHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily TWeapon\+Holder\+::\+TWeapon\+Holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTWeaponHolder_ac318361c4e724468f5e89ba9d3af0946}\label{classTWeaponHolder_ac318361c4e724468f5e89ba9d3af0946}} 
+\index{TWeaponHolder@{TWeaponHolder}!TWeaponHolder@{TWeaponHolder}}
+\index{TWeaponHolder@{TWeaponHolder}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{TWeaponHolder()}{TWeaponHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily TWeapon\+Holder\+::\+TWeapon\+Holder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$}]{gun\+Front,  }\item[{\mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$}]{gun\+Back,  }\item[{\mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$}]{gun\+Left\+Side,  }\item[{\mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$}]{gun\+Right\+Side }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_ac318361c4e724468f5e89ba9d3af0946_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeaponHolder_ab99973ddf3beced4f21726d79a98f761}\label{classTWeaponHolder_ab99973ddf3beced4f21726d79a98f761}} 
+\index{TWeaponHolder@{TWeaponHolder}!TWeaponHolder@{TWeaponHolder}}
+\index{TWeaponHolder@{TWeaponHolder}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{TWeaponHolder()}{TWeaponHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily TWeapon\+Holder\+::\+TWeapon\+Holder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&}]{other }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_ab99973ddf3beced4f21726d79a98f761_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTWeaponHolder_afe77ebf75c23b7d4dd8229d12a8369a0}\label{classTWeaponHolder_afe77ebf75c23b7d4dd8229d12a8369a0}} 
+\index{TWeaponHolder@{TWeaponHolder}!createUniquePtrByGunPtr@{createUniquePtrByGunPtr}}
+\index{createUniquePtrByGunPtr@{createUniquePtrByGunPtr}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{createUniquePtrByGunPtr()}{createUniquePtrByGunPtr()}}
+{\footnotesize\ttfamily static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ TWeapon\+Holder\+::create\+Unique\+Ptr\+By\+Gun\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$}]{gun }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_afe77ebf75c23b7d4dd8229d12a8369a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeaponHolder_a41344ca59e32b01ba31c08ee5d609731}\label{classTWeaponHolder_a41344ca59e32b01ba31c08ee5d609731}} 
+\index{TWeaponHolder@{TWeaponHolder}!GetCost@{GetCost}}
+\index{GetCost@{GetCost}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{GetCost()}{GetCost()}}
+{\footnotesize\ttfamily int TWeapon\+Holder\+::\+Get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_a41344ca59e32b01ba31c08ee5d609731_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeaponHolder_a1c57748293f9f082f1598c51b288de34}\label{classTWeaponHolder_a1c57748293f9f082f1598c51b288de34}} 
+\index{TWeaponHolder@{TWeaponHolder}!GetGunByPlace@{GetGunByPlace}}
+\index{GetGunByPlace@{GetGunByPlace}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{GetGunByPlace()}{GetGunByPlace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$ TWeapon\+Holder\+::\+Get\+Gun\+By\+Place (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enum__place__on__ship_8h_a3d353360a01922d6d32607a45d6183a5}{EPlace\+On\+Ship}}}]{place }\end{DoxyParamCaption}) const}
+
+Возвращает указатель на орудие по его позиции. Если орудия там нет, вернет nullptr 
+\begin{DoxyParams}{Parameters}
+{\em place} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_a1c57748293f9f082f1598c51b288de34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeaponHolder_aebd61b2cf0f9cc9f03a3868335a17adf}\label{classTWeaponHolder_aebd61b2cf0f9cc9f03a3868335a17adf}} 
+\index{TWeaponHolder@{TWeaponHolder}!MakeShot@{MakeShot}}
+\index{MakeShot@{MakeShot}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{MakeShot()}{MakeShot()}}
+{\footnotesize\ttfamily int TWeapon\+Holder\+::\+Make\+Shot (\begin{DoxyParamCaption}\item[{int}]{sq\+Distance,  }\item[{int}]{time\+Now }\end{DoxyParamCaption})}
+
+Вернет урон всех орудий Holder-\/а, выстреливших в момент timenow на расстояние, квадрат которого sq\+Distance 
+\begin{DoxyParams}{Parameters}
+{\em sq\+Distance} & \\
+\hline
+{\em time\+Now} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_aebd61b2cf0f9cc9f03a3868335a17adf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeaponHolder_a4593dd1194e80fe9c0a38f58a5e3be8e}\label{classTWeaponHolder_a4593dd1194e80fe9c0a38f58a5e3be8e}} 
+\index{TWeaponHolder@{TWeaponHolder}!operator=@{operator=}}
+\index{operator=@{operator=}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \& TWeapon\+Holder\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&}]{other }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_a4593dd1194e80fe9c0a38f58a5e3be8e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeaponHolder_a8d274e1323dc939abb78ed67982428b0}\label{classTWeaponHolder_a8d274e1323dc939abb78ed67982428b0}} 
+\index{TWeaponHolder@{TWeaponHolder}!operator==@{operator==}}
+\index{operator==@{operator==}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool TWeapon\+Holder\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&}]{other }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_a8d274e1323dc939abb78ed67982428b0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeaponHolder_ac1330fe768fc0ea732f579c166650dc5}\label{classTWeaponHolder_ac1330fe768fc0ea732f579c166650dc5}} 
+\index{TWeaponHolder@{TWeaponHolder}!Print@{Print}}
+\index{Print@{Print}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void TWeapon\+Holder\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Используется для вывода информации в магазине Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_ac1330fe768fc0ea732f579c166650dc5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeaponHolder_a766a97ee820575ba76a8792b9a2b2824}\label{classTWeaponHolder_a766a97ee820575ba76a8792b9a2b2824}} 
+\index{TWeaponHolder@{TWeaponHolder}!SameGuns@{SameGuns}}
+\index{SameGuns@{SameGuns}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{SameGuns()}{SameGuns()}}
+{\footnotesize\ttfamily static bool TWeapon\+Holder\+::\+Same\+Guns (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$}]{lhs,  }\item[{const \mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Проверяет, совпадают ли орудия, на которые указывают указатели 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_a766a97ee820575ba76a8792b9a2b2824_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeaponHolder_a406848fe7546ce72723653687232701a}\label{classTWeaponHolder_a406848fe7546ce72723653687232701a}} 
+\index{TWeaponHolder@{TWeaponHolder}!SetGunByPlace@{SetGunByPlace}}
+\index{SetGunByPlace@{SetGunByPlace}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{SetGunByPlace()}{SetGunByPlace()}}
+{\footnotesize\ttfamily void TWeapon\+Holder\+::\+Set\+Gun\+By\+Place (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enum__place__on__ship_8h_a3d353360a01922d6d32607a45d6183a5}{EPlace\+On\+Ship}}}]{place,  }\item[{\mbox{\hyperlink{classTWeapon}{TWeapon}} $\ast$}]{what }\end{DoxyParamCaption})}
+
+Принимает позицию на корабле и указатель на орудие, которое мы собираемся установить. Корректно работает с nullptr Если орудие на этой позиции было, оно удалится. 
+\begin{DoxyParams}{Parameters}
+{\em place} & \\
+\hline
+{\em what} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_a406848fe7546ce72723653687232701a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de2/classTWeaponHolder_a406848fe7546ce72723653687232701a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTWeaponHolder_a93b29966fff3f52f6c9139c859ea1ba5}\label{classTWeaponHolder_a93b29966fff3f52f6c9139c859ea1ba5}} 
+\index{TWeaponHolder@{TWeaponHolder}!Weapons\_@{Weapons\_}}
+\index{Weapons\_@{Weapons\_}!TWeaponHolder@{TWeaponHolder}}
+\doxysubsubsection{\texorpdfstring{Weapons\_}{Weapons\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$\mbox{\hyperlink{enum__place__on__ship_8h_a3d353360a01922d6d32607a45d6183a5}{EPlace\+On\+Ship}}, std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classTWeapon}{TWeapon}}$>$ $>$ $>$ TWeapon\+Holder\+::\+Weapons\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+weapons/code/\mbox{\hyperlink{TWeaponHolder_8h}{TWeapon\+Holder.\+h}}\item 
+weapons/code/\mbox{\hyperlink{TWeaponHolder_8cpp}{TWeapon\+Holder.\+cpp}}\end{DoxyCompactItemize}

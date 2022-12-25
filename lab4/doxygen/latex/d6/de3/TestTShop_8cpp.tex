@@ -1,0 +1,652 @@
+\hypertarget{TestTShop_8cpp}{}\doxysection{game/tests/\+TShop/code/\+Test\+TShop.cpp File Reference}
+\label{TestTShop_8cpp}\index{game/tests/TShop/code/TestTShop.cpp@{game/tests/TShop/code/TestTShop.cpp}}
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../../../game/code/\+TShop.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for Test\+TShop.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d77/TestTShop_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a6a31479cc90ee0c2dce924f066536024}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Read\+Int1)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a77bc75eaa80b3e219a0ffc8a4aafe92a}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Read\+Int2)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a0cfc71ea90e2a95b0b8b0d231699977e}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Read\+Int3)
+\item 
+\mbox{\hyperlink{classTWeapon}{TWeapon}} \mbox{\hyperlink{TestTShop_8cpp_aa640d265bfe0b60b6dcce43c1c1d0bd7}{weapon\+By\+Tag}} (int type)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \mbox{\hyperlink{TestTShop_8cpp_a943e89378179371c951c54c476040453}{Get\+Guns}} (const std\+::vector$<$ int $>$ \&weapon\+Tags)
+\item 
+\mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \mbox{\hyperlink{TestTShop_8cpp_a93785f1846e55fd76f966f49a790e128}{make\+Weapon\+Holder}} (int type)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \mbox{\hyperlink{TestTShop_8cpp_a91b1072b73146edaa17d465723f7e752}{Cargo\+Ship\+By\+Tag}} (int tag)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \mbox{\hyperlink{TestTShop_8cpp_afff93d5bf1558a5c4f5e44394b804afb}{War\+Ship\+By\+Tag}} (int tag)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \mbox{\hyperlink{TestTShop_8cpp_a4656159259c8555e9734cbedce4e2646}{Cargo\+War\+Ship\+By\+Tag}} (int tag)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \mbox{\hyperlink{TestTShop_8cpp_acc124bf06c40325957436a2853bad584}{Get\+Ships}} (const std\+::vector$<$ int $>$ \&cargo\+Ship\+Tags, const std\+::vector$<$ int $>$ \&war\+Ship\+Tags, const std\+::vector$<$ int $>$ \&cargo\+War\+Ship\+Tags)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \mbox{\hyperlink{TestTShop_8cpp_a98ee64221600db3809453989f6bf69eb}{Make\+Mission}} (const std\+::vector$<$ int $>$ \&cargo\+Ship\+Tags, const std\+::vector$<$ int $>$ \&war\+Ship\+Tags, const std\+::vector$<$ int $>$ \&cargo\+War\+Ship\+Tags, int money=0, int weight=0)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a937e13c3ba627f9a4aaa50df1b38f793}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Ask\+Play1)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_abab6042c5e7fd32273baa9a16c45f7d8}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Ask\+Play2)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_af5fae10b643ffe27435a00f4a6b698e0}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Ask\+Play3)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a5562ee70e33ebf86ef84ec90cc4a005b}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Buy\+Ship1)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_aff02f0853784e3b598826c58e1744748}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Buy\+Ship2)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a50a627d6f250cb5ba16b4cc7baec07a6}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Buy\+Ship3)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_ac97fb89041a078a29c13fe7c9a070fea}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, sell\+Ship1)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a59105b7091788a7f1dcbab1fb8bfeb05}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, sell\+Ship2)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_aff5703801efc9a424393aa4f342dfe93}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, sell\+Ship3)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a9090d51b3bf731e31e72a99c51bb40c1}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Buy\+Gun1)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a553ef8578b4962c872c83624c88d0022}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Buy\+Gun2)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a4cfd68c036d09b1d5dde8095d3f2f452}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Buy\+Gun3)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_af3efc6b7d9c84d76cbcffbce9853a1d0}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Buy\+Gun4)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a756f3996932ae99ad8601a6f616c83e9}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Buy\+Gun5)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a0c616a1444206604ad8398d6e493ec68}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, Buy\+Gun6)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a99ee2f047e7cb3a8b35e4f41ad4cbd01}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, sell\+Gun1)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a02e37051e5a5044ead36608902284c3d}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, sell\+Gun2)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_acabc7991b77f3b1c92c6486558f2c2e6}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, sell\+Gun3)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_abf19072233725f485741d4fc4c183c68}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, sell\+Gun4)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a242ef9f292e9f72a6c3b7e9b4c02985e}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, sell\+Gun5)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a11b4c02681e228079a3d05ed1a5d3c99}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, add\+Weight1)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a01a658afd2a6634176d0c0039f6f9a7c}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, add\+Weight2)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_ac40ae520069495e698fe80096981448f}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, add\+Weight3)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_ad839db7fed09df196088a5c2f51eb527}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, add\+Weight4)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a0b24fc99887a7f67ed7c6900b81c2bf8}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, auto\+Weight1)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_aad021f973f942bfe967a89a17649d65a}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, auto\+Weight2)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a939efb07fb82e4cb061859761ef43789}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, auto\+Weight3)
+\item 
+\mbox{\hyperlink{TestTShop_8cpp_a8f77662ac086d32911b767b681bfb9f1}{TEST}} (\mbox{\hyperlink{classTShop}{TShop}}, auto\+Weight4)
+\item 
+int \mbox{\hyperlink{TestTShop_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{TestTShop_8cpp_a91b1072b73146edaa17d465723f7e752}\label{TestTShop_8cpp_a91b1072b73146edaa17d465723f7e752}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!CargoShipByTag@{CargoShipByTag}}
+\index{CargoShipByTag@{CargoShipByTag}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{CargoShipByTag()}{CargoShipByTag()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ Cargo\+Ship\+By\+Tag (\begin{DoxyParamCaption}\item[{int}]{tag }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a91b1072b73146edaa17d465723f7e752_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a4656159259c8555e9734cbedce4e2646}\label{TestTShop_8cpp_a4656159259c8555e9734cbedce4e2646}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!CargoWarShipByTag@{CargoWarShipByTag}}
+\index{CargoWarShipByTag@{CargoWarShipByTag}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{CargoWarShipByTag()}{CargoWarShipByTag()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ Cargo\+War\+Ship\+By\+Tag (\begin{DoxyParamCaption}\item[{int}]{tag }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a4656159259c8555e9734cbedce4e2646_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a4656159259c8555e9734cbedce4e2646_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a943e89378179371c951c54c476040453}\label{TestTShop_8cpp_a943e89378179371c951c54c476040453}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!GetGuns@{GetGuns}}
+\index{GetGuns@{GetGuns}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{GetGuns()}{GetGuns()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ Get\+Guns (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{weapon\+Tags }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{d6/de3/TestTShop_8cpp_a943e89378179371c951c54c476040453_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{d6/de3/TestTShop_8cpp_a943e89378179371c951c54c476040453_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_acc124bf06c40325957436a2853bad584}\label{TestTShop_8cpp_acc124bf06c40325957436a2853bad584}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!GetShips@{GetShips}}
+\index{GetShips@{GetShips}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{GetShips()}{GetShips()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ Get\+Ships (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{cargo\+Ship\+Tags,  }\item[{const std\+::vector$<$ int $>$ \&}]{war\+Ship\+Tags,  }\item[{const std\+::vector$<$ int $>$ \&}]{cargo\+War\+Ship\+Tags }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_acc124bf06c40325957436a2853bad584_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{TestTShop_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!main@{main}}
+\index{main@{main}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestTShop_8cpp_a98ee64221600db3809453989f6bf69eb}\label{TestTShop_8cpp_a98ee64221600db3809453989f6bf69eb}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!MakeMission@{MakeMission}}
+\index{MakeMission@{MakeMission}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeMission()}{MakeMission()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ Make\+Mission (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{cargo\+Ship\+Tags,  }\item[{const std\+::vector$<$ int $>$ \&}]{war\+Ship\+Tags,  }\item[{const std\+::vector$<$ int $>$ \&}]{cargo\+War\+Ship\+Tags,  }\item[{int}]{money = {\ttfamily 0},  }\item[{int}]{weight = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a98ee64221600db3809453989f6bf69eb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{d6/de3/TestTShop_8cpp_a98ee64221600db3809453989f6bf69eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a93785f1846e55fd76f966f49a790e128}\label{TestTShop_8cpp_a93785f1846e55fd76f966f49a790e128}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!makeWeaponHolder@{makeWeaponHolder}}
+\index{makeWeaponHolder@{makeWeaponHolder}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{makeWeaponHolder()}{makeWeaponHolder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} make\+Weapon\+Holder (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{d6/de3/TestTShop_8cpp_a93785f1846e55fd76f966f49a790e128_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a93785f1846e55fd76f966f49a790e128_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a11b4c02681e228079a3d05ed1a5d3c99}\label{TestTShop_8cpp_a11b4c02681e228079a3d05ed1a5d3c99}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{add\+Weight1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a11b4c02681e228079a3d05ed1a5d3c99_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a01a658afd2a6634176d0c0039f6f9a7c}\label{TestTShop_8cpp_a01a658afd2a6634176d0c0039f6f9a7c}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{add\+Weight2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a01a658afd2a6634176d0c0039f6f9a7c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_ac40ae520069495e698fe80096981448f}\label{TestTShop_8cpp_ac40ae520069495e698fe80096981448f}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{add\+Weight3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_ac40ae520069495e698fe80096981448f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_ad839db7fed09df196088a5c2f51eb527}\label{TestTShop_8cpp_ad839db7fed09df196088a5c2f51eb527}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{add\+Weight4}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_ad839db7fed09df196088a5c2f51eb527_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a937e13c3ba627f9a4aaa50df1b38f793}\label{TestTShop_8cpp_a937e13c3ba627f9a4aaa50df1b38f793}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Ask\+Play1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a937e13c3ba627f9a4aaa50df1b38f793_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_abab6042c5e7fd32273baa9a16c45f7d8}\label{TestTShop_8cpp_abab6042c5e7fd32273baa9a16c45f7d8}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Ask\+Play2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_abab6042c5e7fd32273baa9a16c45f7d8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_af5fae10b643ffe27435a00f4a6b698e0}\label{TestTShop_8cpp_af5fae10b643ffe27435a00f4a6b698e0}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Ask\+Play3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_af5fae10b643ffe27435a00f4a6b698e0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a0b24fc99887a7f67ed7c6900b81c2bf8}\label{TestTShop_8cpp_a0b24fc99887a7f67ed7c6900b81c2bf8}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{auto\+Weight1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a0b24fc99887a7f67ed7c6900b81c2bf8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_aad021f973f942bfe967a89a17649d65a}\label{TestTShop_8cpp_aad021f973f942bfe967a89a17649d65a}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{auto\+Weight2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_aad021f973f942bfe967a89a17649d65a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a939efb07fb82e4cb061859761ef43789}\label{TestTShop_8cpp_a939efb07fb82e4cb061859761ef43789}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{auto\+Weight3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a939efb07fb82e4cb061859761ef43789_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a8f77662ac086d32911b767b681bfb9f1}\label{TestTShop_8cpp_a8f77662ac086d32911b767b681bfb9f1}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{auto\+Weight4}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a8f77662ac086d32911b767b681bfb9f1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a9090d51b3bf731e31e72a99c51bb40c1}\label{TestTShop_8cpp_a9090d51b3bf731e31e72a99c51bb40c1}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Buy\+Gun1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a9090d51b3bf731e31e72a99c51bb40c1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a553ef8578b4962c872c83624c88d0022}\label{TestTShop_8cpp_a553ef8578b4962c872c83624c88d0022}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Buy\+Gun2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a553ef8578b4962c872c83624c88d0022_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a4cfd68c036d09b1d5dde8095d3f2f452}\label{TestTShop_8cpp_a4cfd68c036d09b1d5dde8095d3f2f452}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Buy\+Gun3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a4cfd68c036d09b1d5dde8095d3f2f452_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_af3efc6b7d9c84d76cbcffbce9853a1d0}\label{TestTShop_8cpp_af3efc6b7d9c84d76cbcffbce9853a1d0}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Buy\+Gun4}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_af3efc6b7d9c84d76cbcffbce9853a1d0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a756f3996932ae99ad8601a6f616c83e9}\label{TestTShop_8cpp_a756f3996932ae99ad8601a6f616c83e9}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Buy\+Gun5}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a756f3996932ae99ad8601a6f616c83e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a0c616a1444206604ad8398d6e493ec68}\label{TestTShop_8cpp_a0c616a1444206604ad8398d6e493ec68}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Buy\+Gun6}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a0c616a1444206604ad8398d6e493ec68_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a5562ee70e33ebf86ef84ec90cc4a005b}\label{TestTShop_8cpp_a5562ee70e33ebf86ef84ec90cc4a005b}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Buy\+Ship1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a5562ee70e33ebf86ef84ec90cc4a005b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_aff02f0853784e3b598826c58e1744748}\label{TestTShop_8cpp_aff02f0853784e3b598826c58e1744748}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Buy\+Ship2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_aff02f0853784e3b598826c58e1744748_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a50a627d6f250cb5ba16b4cc7baec07a6}\label{TestTShop_8cpp_a50a627d6f250cb5ba16b4cc7baec07a6}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Buy\+Ship3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a50a627d6f250cb5ba16b4cc7baec07a6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a6a31479cc90ee0c2dce924f066536024}\label{TestTShop_8cpp_a6a31479cc90ee0c2dce924f066536024}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [21/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Read\+Int1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{d6/de3/TestTShop_8cpp_a6a31479cc90ee0c2dce924f066536024_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a77bc75eaa80b3e219a0ffc8a4aafe92a}\label{TestTShop_8cpp_a77bc75eaa80b3e219a0ffc8a4aafe92a}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [22/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Read\+Int2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{d6/de3/TestTShop_8cpp_a77bc75eaa80b3e219a0ffc8a4aafe92a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a0cfc71ea90e2a95b0b8b0d231699977e}\label{TestTShop_8cpp_a0cfc71ea90e2a95b0b8b0d231699977e}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [23/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{Read\+Int3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{d6/de3/TestTShop_8cpp_a0cfc71ea90e2a95b0b8b0d231699977e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a99ee2f047e7cb3a8b35e4f41ad4cbd01}\label{TestTShop_8cpp_a99ee2f047e7cb3a8b35e4f41ad4cbd01}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [24/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{sell\+Gun1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a99ee2f047e7cb3a8b35e4f41ad4cbd01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a02e37051e5a5044ead36608902284c3d}\label{TestTShop_8cpp_a02e37051e5a5044ead36608902284c3d}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [25/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{sell\+Gun2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a02e37051e5a5044ead36608902284c3d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_acabc7991b77f3b1c92c6486558f2c2e6}\label{TestTShop_8cpp_acabc7991b77f3b1c92c6486558f2c2e6}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [26/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{sell\+Gun3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_acabc7991b77f3b1c92c6486558f2c2e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_abf19072233725f485741d4fc4c183c68}\label{TestTShop_8cpp_abf19072233725f485741d4fc4c183c68}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [27/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{sell\+Gun4}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_abf19072233725f485741d4fc4c183c68_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a242ef9f292e9f72a6c3b7e9b4c02985e}\label{TestTShop_8cpp_a242ef9f292e9f72a6c3b7e9b4c02985e}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [28/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{sell\+Gun5}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a242ef9f292e9f72a6c3b7e9b4c02985e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_ac97fb89041a078a29c13fe7c9a070fea}\label{TestTShop_8cpp_ac97fb89041a078a29c13fe7c9a070fea}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [29/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{sell\+Ship1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_ac97fb89041a078a29c13fe7c9a070fea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_a59105b7091788a7f1dcbab1fb8bfeb05}\label{TestTShop_8cpp_a59105b7091788a7f1dcbab1fb8bfeb05}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [30/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{sell\+Ship2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_a59105b7091788a7f1dcbab1fb8bfeb05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_aff5703801efc9a424393aa4f342dfe93}\label{TestTShop_8cpp_aff5703801efc9a424393aa4f342dfe93}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [31/31]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShop}{TShop}}}]{,  }\item[{sell\+Ship3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_aff5703801efc9a424393aa4f342dfe93_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_afff93d5bf1558a5c4f5e44394b804afb}\label{TestTShop_8cpp_afff93d5bf1558a5c4f5e44394b804afb}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!WarShipByTag@{WarShipByTag}}
+\index{WarShipByTag@{WarShipByTag}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{WarShipByTag()}{WarShipByTag()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ War\+Ship\+By\+Tag (\begin{DoxyParamCaption}\item[{int}]{tag }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_afff93d5bf1558a5c4f5e44394b804afb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_afff93d5bf1558a5c4f5e44394b804afb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTShop_8cpp_aa640d265bfe0b60b6dcce43c1c1d0bd7}\label{TestTShop_8cpp_aa640d265bfe0b60b6dcce43c1c1d0bd7}} 
+\index{TestTShop.cpp@{TestTShop.cpp}!weaponByTag@{weaponByTag}}
+\index{weaponByTag@{weaponByTag}!TestTShop.cpp@{TestTShop.cpp}}
+\doxysubsubsection{\texorpdfstring{weaponByTag()}{weaponByTag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTWeapon}{TWeapon}} weapon\+By\+Tag (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/de3/TestTShop_8cpp_aa640d265bfe0b60b6dcce43c1c1d0bd7_icgraph}
+\end{center}
+\end{figure}

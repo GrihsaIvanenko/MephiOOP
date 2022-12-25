@@ -1,0 +1,427 @@
+\hypertarget{classTWeapon}{}\doxysection{TWeapon Class Reference}
+\label{classTWeapon}\index{TWeapon@{TWeapon}}
+
+
+Класс, описывающий вооружение  
+
+
+
+
+{\ttfamily \#include $<$TWeapon.\+h$>$}
+
+
+
+Collaboration diagram for TWeapon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dc/d5c/classTWeapon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTWeapon_a86a457b25cf0540c276d6e185ba88f1d}{TWeapon}} (int weapon\+Type, int damage, int call\+Down, int last\+Shot, int range, int shots\+Total, int shots\+Now, int cost)
+\item 
+\mbox{\hyperlink{classTWeapon_af276d49b2763d5fce468d898ba5e5f29}{TWeapon}} (const \mbox{\hyperlink{classTWeapon}{TWeapon}} \&other)
+\item 
+\mbox{\hyperlink{classTWeapon}{TWeapon}} \& \mbox{\hyperlink{classTWeapon_a718fbce052e6b5776494f7a1e02e9897}{operator=}} (const \mbox{\hyperlink{classTWeapon}{TWeapon}} \&other)
+\item 
+bool \mbox{\hyperlink{classTWeapon_a1d6ae03d1a77ff241107f10d385e674f}{operator==}} (const \mbox{\hyperlink{classTWeapon}{TWeapon}} \&other) const
+\item 
+void \mbox{\hyperlink{classTWeapon_a7df03e5ad6b3e1031dd8ad37d3f300cd}{Set\+Weapon\+Type}} (int weapon\+Type)
+\item 
+void \mbox{\hyperlink{classTWeapon_ac69ac49187c45f5bb347b178d6068e2d}{Set\+Damage}} (int damage)
+\item 
+void \mbox{\hyperlink{classTWeapon_a8203fa767f0be727fd4aa43bc3d54d8d}{Set\+Call\+Down}} (int call\+Down)
+\item 
+void \mbox{\hyperlink{classTWeapon_ac3598f27952d282a4afb5adc1f98ef6c}{Set\+Last\+Shot}} (int call\+Down)
+\item 
+void \mbox{\hyperlink{classTWeapon_a072c99bb30315d650640fe8283f3b181}{Set\+Range}} (int range)
+\item 
+void \mbox{\hyperlink{classTWeapon_ac4dc7b5d57c1e0c818671a7353a33171}{Set\+Shots\+Total}} (int shots\+Total)
+\item 
+void \mbox{\hyperlink{classTWeapon_afb6cca8a42446761cc6fef8656392269}{Set\+Shots\+Now}} (int shots\+Now)
+\item 
+void \mbox{\hyperlink{classTWeapon_ac4fea7ba700a0ea83af7b3469b8a1fd9}{Set\+Cost}} (int cost)
+\item 
+int \mbox{\hyperlink{classTWeapon_af5165ccb82aed7d3852f0e6f7f936148}{Get\+Weapon\+Type}} () const
+\item 
+int \mbox{\hyperlink{classTWeapon_ad3dabcddb3f17a8e0cec427b30df1f50}{Get\+Damage}} () const
+\item 
+int \mbox{\hyperlink{classTWeapon_ae92ec3b0c63bd45b32550e102f46b6e0}{Get\+Call\+Down}} () const
+\item 
+int \mbox{\hyperlink{classTWeapon_a3cd2bb843a107a28dfa55ed33e3f5a85}{Get\+Last\+Shot}} () const
+\item 
+int \mbox{\hyperlink{classTWeapon_acfec269f458a55f449332f84849b80d5}{Get\+Range}} () const
+\item 
+int \mbox{\hyperlink{classTWeapon_a87ca4fe2cd5ce2aaceda038bab216fd0}{Get\+Shots\+Total}} () const
+\item 
+int \mbox{\hyperlink{classTWeapon_a552b334667ca95387af82df662334f72}{Get\+Shots\+Now}} () const
+\item 
+int \mbox{\hyperlink{classTWeapon_a2074e5b5b326730d5212a3dc00df06f4}{Get\+Cost}} () const
+\item 
+int \mbox{\hyperlink{classTWeapon_a2bf519e492f0236067ee217b618483e8}{Make\+Shot}} (int sq\+Distance, int time\+Now)
+\item 
+void \mbox{\hyperlink{classTWeapon_ab883c0bb224a04511e201461821e1144}{Print}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classTWeapon_a54a75427de15a9e038b85b9a4b131b87}{Weapon\+Type\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTWeapon_afa83b1472fce84c8030826f1b108257f}{Damage\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTWeapon_ab4cecfdcffdc9e7d80c08a87cfc7857c}{Call\+Down\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTWeapon_a304f11a50841093ddb062e874f49d9c6}{Last\+Shot\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTWeapon_a2d3e7981b5f9544e7fcdbcf96b76c93e}{Range\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTWeapon_a8af562dde37e908349edf7eeae83a2c0}{Shots\+Total\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTWeapon_a0b23d1c0740d0cbef8a4534445228bf6}{Shots\+Now\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTWeapon_a59a7b3407e8028b9ae3a38543a43fcce}{Cost\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTWeapon_a2c8be83e7e0e62dabb3e6450e2d09c55}{TWeapon\+Test\+Helper}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, описывающий вооружение 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTWeapon_a86a457b25cf0540c276d6e185ba88f1d}\label{classTWeapon_a86a457b25cf0540c276d6e185ba88f1d}} 
+\index{TWeapon@{TWeapon}!TWeapon@{TWeapon}}
+\index{TWeapon@{TWeapon}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{TWeapon()}{TWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TWeapon\+::\+TWeapon (\begin{DoxyParamCaption}\item[{int}]{weapon\+Type,  }\item[{int}]{damage,  }\item[{int}]{call\+Down,  }\item[{int}]{last\+Shot,  }\item[{int}]{range,  }\item[{int}]{shots\+Total,  }\item[{int}]{shots\+Now,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTWeapon_af276d49b2763d5fce468d898ba5e5f29}\label{classTWeapon_af276d49b2763d5fce468d898ba5e5f29}} 
+\index{TWeapon@{TWeapon}!TWeapon@{TWeapon}}
+\index{TWeapon@{TWeapon}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{TWeapon()}{TWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TWeapon\+::\+TWeapon (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWeapon}{TWeapon}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTWeapon_ae92ec3b0c63bd45b32550e102f46b6e0}\label{classTWeapon_ae92ec3b0c63bd45b32550e102f46b6e0}} 
+\index{TWeapon@{TWeapon}!GetCallDown@{GetCallDown}}
+\index{GetCallDown@{GetCallDown}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{GetCallDown()}{GetCallDown()}}
+{\footnotesize\ttfamily int TWeapon\+::\+Get\+Call\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{d1/d3d/classTWeapon_ae92ec3b0c63bd45b32550e102f46b6e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_a2074e5b5b326730d5212a3dc00df06f4}\label{classTWeapon_a2074e5b5b326730d5212a3dc00df06f4}} 
+\index{TWeapon@{TWeapon}!GetCost@{GetCost}}
+\index{GetCost@{GetCost}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{GetCost()}{GetCost()}}
+{\footnotesize\ttfamily int TWeapon\+::\+Get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d3d/classTWeapon_a2074e5b5b326730d5212a3dc00df06f4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_ad3dabcddb3f17a8e0cec427b30df1f50}\label{classTWeapon_ad3dabcddb3f17a8e0cec427b30df1f50}} 
+\index{TWeapon@{TWeapon}!GetDamage@{GetDamage}}
+\index{GetDamage@{GetDamage}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{GetDamage()}{GetDamage()}}
+{\footnotesize\ttfamily int TWeapon\+::\+Get\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{d1/d3d/classTWeapon_ad3dabcddb3f17a8e0cec427b30df1f50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_a3cd2bb843a107a28dfa55ed33e3f5a85}\label{classTWeapon_a3cd2bb843a107a28dfa55ed33e3f5a85}} 
+\index{TWeapon@{TWeapon}!GetLastShot@{GetLastShot}}
+\index{GetLastShot@{GetLastShot}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{GetLastShot()}{GetLastShot()}}
+{\footnotesize\ttfamily int TWeapon\+::\+Get\+Last\+Shot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{d1/d3d/classTWeapon_a3cd2bb843a107a28dfa55ed33e3f5a85_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_acfec269f458a55f449332f84849b80d5}\label{classTWeapon_acfec269f458a55f449332f84849b80d5}} 
+\index{TWeapon@{TWeapon}!GetRange@{GetRange}}
+\index{GetRange@{GetRange}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{GetRange()}{GetRange()}}
+{\footnotesize\ttfamily int TWeapon\+::\+Get\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{d1/d3d/classTWeapon_acfec269f458a55f449332f84849b80d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_a552b334667ca95387af82df662334f72}\label{classTWeapon_a552b334667ca95387af82df662334f72}} 
+\index{TWeapon@{TWeapon}!GetShotsNow@{GetShotsNow}}
+\index{GetShotsNow@{GetShotsNow}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{GetShotsNow()}{GetShotsNow()}}
+{\footnotesize\ttfamily int TWeapon\+::\+Get\+Shots\+Now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{d1/d3d/classTWeapon_a552b334667ca95387af82df662334f72_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_a87ca4fe2cd5ce2aaceda038bab216fd0}\label{classTWeapon_a87ca4fe2cd5ce2aaceda038bab216fd0}} 
+\index{TWeapon@{TWeapon}!GetShotsTotal@{GetShotsTotal}}
+\index{GetShotsTotal@{GetShotsTotal}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{GetShotsTotal()}{GetShotsTotal()}}
+{\footnotesize\ttfamily int TWeapon\+::\+Get\+Shots\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{d1/d3d/classTWeapon_a87ca4fe2cd5ce2aaceda038bab216fd0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_af5165ccb82aed7d3852f0e6f7f936148}\label{classTWeapon_af5165ccb82aed7d3852f0e6f7f936148}} 
+\index{TWeapon@{TWeapon}!GetWeaponType@{GetWeaponType}}
+\index{GetWeaponType@{GetWeaponType}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{GetWeaponType()}{GetWeaponType()}}
+{\footnotesize\ttfamily int TWeapon\+::\+Get\+Weapon\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{d1/d3d/classTWeapon_af5165ccb82aed7d3852f0e6f7f936148_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_a2bf519e492f0236067ee217b618483e8}\label{classTWeapon_a2bf519e492f0236067ee217b618483e8}} 
+\index{TWeapon@{TWeapon}!MakeShot@{MakeShot}}
+\index{MakeShot@{MakeShot}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{MakeShot()}{MakeShot()}}
+{\footnotesize\ttfamily int TWeapon\+::\+Make\+Shot (\begin{DoxyParamCaption}\item[{int}]{sq\+Distance,  }\item[{int}]{time\+Now }\end{DoxyParamCaption})}
+
+Возвращает урон, если орудие успело перезарядиться, есть пули, и цель ближе, чем радиус стрельбы. 
+\begin{DoxyParams}{Parameters}
+{\em sq\+Distance} & Передавать квадрат расстояния до объекта \\
+\hline
+{\em time\+Now} & Время выстрела \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{d1/d3d/classTWeapon_a2bf519e492f0236067ee217b618483e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_a718fbce052e6b5776494f7a1e02e9897}\label{classTWeapon_a718fbce052e6b5776494f7a1e02e9897}} 
+\index{TWeapon@{TWeapon}!operator=@{operator=}}
+\index{operator=@{operator=}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTWeapon}{TWeapon}} \& TWeapon\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWeapon}{TWeapon}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTWeapon_a1d6ae03d1a77ff241107f10d385e674f}\label{classTWeapon_a1d6ae03d1a77ff241107f10d385e674f}} 
+\index{TWeapon@{TWeapon}!operator==@{operator==}}
+\index{operator==@{operator==}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool TWeapon\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWeapon}{TWeapon}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classTWeapon_ab883c0bb224a04511e201461821e1144}\label{classTWeapon_ab883c0bb224a04511e201461821e1144}} 
+\index{TWeapon@{TWeapon}!Print@{Print}}
+\index{Print@{Print}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Используется для вывода информации в магазине \mbox{\Hypertarget{classTWeapon_a8203fa767f0be727fd4aa43bc3d54d8d}\label{classTWeapon_a8203fa767f0be727fd4aa43bc3d54d8d}} 
+\index{TWeapon@{TWeapon}!SetCallDown@{SetCallDown}}
+\index{SetCallDown@{SetCallDown}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{SetCallDown()}{SetCallDown()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Set\+Call\+Down (\begin{DoxyParamCaption}\item[{int}]{call\+Down }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{d1/d3d/classTWeapon_a8203fa767f0be727fd4aa43bc3d54d8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_ac4fea7ba700a0ea83af7b3469b8a1fd9}\label{classTWeapon_ac4fea7ba700a0ea83af7b3469b8a1fd9}} 
+\index{TWeapon@{TWeapon}!SetCost@{SetCost}}
+\index{SetCost@{SetCost}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{SetCost()}{SetCost()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Set\+Cost (\begin{DoxyParamCaption}\item[{int}]{cost }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{d1/d3d/classTWeapon_ac4fea7ba700a0ea83af7b3469b8a1fd9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_ac69ac49187c45f5bb347b178d6068e2d}\label{classTWeapon_ac69ac49187c45f5bb347b178d6068e2d}} 
+\index{TWeapon@{TWeapon}!SetDamage@{SetDamage}}
+\index{SetDamage@{SetDamage}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{SetDamage()}{SetDamage()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Set\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{d1/d3d/classTWeapon_ac69ac49187c45f5bb347b178d6068e2d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_ac3598f27952d282a4afb5adc1f98ef6c}\label{classTWeapon_ac3598f27952d282a4afb5adc1f98ef6c}} 
+\index{TWeapon@{TWeapon}!SetLastShot@{SetLastShot}}
+\index{SetLastShot@{SetLastShot}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{SetLastShot()}{SetLastShot()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Set\+Last\+Shot (\begin{DoxyParamCaption}\item[{int}]{call\+Down }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{d1/d3d/classTWeapon_ac3598f27952d282a4afb5adc1f98ef6c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_a072c99bb30315d650640fe8283f3b181}\label{classTWeapon_a072c99bb30315d650640fe8283f3b181}} 
+\index{TWeapon@{TWeapon}!SetRange@{SetRange}}
+\index{SetRange@{SetRange}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{SetRange()}{SetRange()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Set\+Range (\begin{DoxyParamCaption}\item[{int}]{range }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{d1/d3d/classTWeapon_a072c99bb30315d650640fe8283f3b181_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_afb6cca8a42446761cc6fef8656392269}\label{classTWeapon_afb6cca8a42446761cc6fef8656392269}} 
+\index{TWeapon@{TWeapon}!SetShotsNow@{SetShotsNow}}
+\index{SetShotsNow@{SetShotsNow}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{SetShotsNow()}{SetShotsNow()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Set\+Shots\+Now (\begin{DoxyParamCaption}\item[{int}]{shots\+Now }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{d1/d3d/classTWeapon_afb6cca8a42446761cc6fef8656392269_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_ac4dc7b5d57c1e0c818671a7353a33171}\label{classTWeapon_ac4dc7b5d57c1e0c818671a7353a33171}} 
+\index{TWeapon@{TWeapon}!SetShotsTotal@{SetShotsTotal}}
+\index{SetShotsTotal@{SetShotsTotal}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{SetShotsTotal()}{SetShotsTotal()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Set\+Shots\+Total (\begin{DoxyParamCaption}\item[{int}]{shots\+Total }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{d1/d3d/classTWeapon_ac4dc7b5d57c1e0c818671a7353a33171_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWeapon_a7df03e5ad6b3e1031dd8ad37d3f300cd}\label{classTWeapon_a7df03e5ad6b3e1031dd8ad37d3f300cd}} 
+\index{TWeapon@{TWeapon}!SetWeaponType@{SetWeaponType}}
+\index{SetWeaponType@{SetWeaponType}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{SetWeaponType()}{SetWeaponType()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Set\+Weapon\+Type (\begin{DoxyParamCaption}\item[{int}]{weapon\+Type }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{d1/d3d/classTWeapon_a7df03e5ad6b3e1031dd8ad37d3f300cd_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classTWeapon_a2c8be83e7e0e62dabb3e6450e2d09c55}\label{classTWeapon_a2c8be83e7e0e62dabb3e6450e2d09c55}} 
+\index{TWeapon@{TWeapon}!TWeaponTestHelper@{TWeaponTestHelper}}
+\index{TWeaponTestHelper@{TWeaponTestHelper}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{TWeaponTestHelper}{TWeaponTestHelper}}
+{\footnotesize\ttfamily friend class TWeapon\+Test\+Helper\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTWeapon_ab4cecfdcffdc9e7d80c08a87cfc7857c}\label{classTWeapon_ab4cecfdcffdc9e7d80c08a87cfc7857c}} 
+\index{TWeapon@{TWeapon}!CallDown\_@{CallDown\_}}
+\index{CallDown\_@{CallDown\_}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{CallDown\_}{CallDown\_}}
+{\footnotesize\ttfamily int TWeapon\+::\+Call\+Down\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTWeapon_a59a7b3407e8028b9ae3a38543a43fcce}\label{classTWeapon_a59a7b3407e8028b9ae3a38543a43fcce}} 
+\index{TWeapon@{TWeapon}!Cost\_@{Cost\_}}
+\index{Cost\_@{Cost\_}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{Cost\_}{Cost\_}}
+{\footnotesize\ttfamily int TWeapon\+::\+Cost\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTWeapon_afa83b1472fce84c8030826f1b108257f}\label{classTWeapon_afa83b1472fce84c8030826f1b108257f}} 
+\index{TWeapon@{TWeapon}!Damage\_@{Damage\_}}
+\index{Damage\_@{Damage\_}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{Damage\_}{Damage\_}}
+{\footnotesize\ttfamily int TWeapon\+::\+Damage\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTWeapon_a304f11a50841093ddb062e874f49d9c6}\label{classTWeapon_a304f11a50841093ddb062e874f49d9c6}} 
+\index{TWeapon@{TWeapon}!LastShot\_@{LastShot\_}}
+\index{LastShot\_@{LastShot\_}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{LastShot\_}{LastShot\_}}
+{\footnotesize\ttfamily int TWeapon\+::\+Last\+Shot\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTWeapon_a2d3e7981b5f9544e7fcdbcf96b76c93e}\label{classTWeapon_a2d3e7981b5f9544e7fcdbcf96b76c93e}} 
+\index{TWeapon@{TWeapon}!Range\_@{Range\_}}
+\index{Range\_@{Range\_}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{Range\_}{Range\_}}
+{\footnotesize\ttfamily int TWeapon\+::\+Range\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTWeapon_a0b23d1c0740d0cbef8a4534445228bf6}\label{classTWeapon_a0b23d1c0740d0cbef8a4534445228bf6}} 
+\index{TWeapon@{TWeapon}!ShotsNow\_@{ShotsNow\_}}
+\index{ShotsNow\_@{ShotsNow\_}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{ShotsNow\_}{ShotsNow\_}}
+{\footnotesize\ttfamily int TWeapon\+::\+Shots\+Now\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTWeapon_a8af562dde37e908349edf7eeae83a2c0}\label{classTWeapon_a8af562dde37e908349edf7eeae83a2c0}} 
+\index{TWeapon@{TWeapon}!ShotsTotal\_@{ShotsTotal\_}}
+\index{ShotsTotal\_@{ShotsTotal\_}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{ShotsTotal\_}{ShotsTotal\_}}
+{\footnotesize\ttfamily int TWeapon\+::\+Shots\+Total\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTWeapon_a54a75427de15a9e038b85b9a4b131b87}\label{classTWeapon_a54a75427de15a9e038b85b9a4b131b87}} 
+\index{TWeapon@{TWeapon}!WeaponType\_@{WeaponType\_}}
+\index{WeaponType\_@{WeaponType\_}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{WeaponType\_}{WeaponType\_}}
+{\footnotesize\ttfamily int TWeapon\+::\+Weapon\+Type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+weapons/code/\mbox{\hyperlink{TWeapon_8h}{TWeapon.\+h}}\item 
+weapons/code/\mbox{\hyperlink{TWeapon_8cpp}{TWeapon.\+cpp}}\end{DoxyCompactItemize}

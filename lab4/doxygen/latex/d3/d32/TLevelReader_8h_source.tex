@@ -1,0 +1,45 @@
+\hypertarget{TLevelReader_8h_source}{}\doxysection{TLevel\+Reader.\+h}
+\label{TLevelReader_8h_source}\index{game/code/TLevelReader.h@{game/code/TLevelReader.h}}
+\mbox{\hyperlink{TLevelReader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 18.12.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TLEVELREADER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TLEVELREADER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TMission_8h}{TMission.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classTLevelReader}{TLevelReader}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTLevelReader_a82ec22fb9386deb547a0a0862bc90301}{ReadInt}}(std::istream\& file, \textcolor{keyword}{const} std::string\& what);}
+\DoxyCodeLine{16     std::string \mbox{\hyperlink{classTLevelReader_a2b97e074354c270b0502ec57d528d73b}{ReadString}}(std::istream\& file, \textcolor{keyword}{const} std::string\& what);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTLevelReader_a25bd379fa12d624375f165251b9c1178}{ReadEmpty}}(std::istream\& file);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \mbox{\hyperlink{classTCapitanInfo}{TCapitanInfo}} \mbox{\hyperlink{classTLevelReader_aa3fd2b19c5d17f7e5b71d28780a7557c}{ReadCapitanInfo}}(std::istream\& file);}
+\DoxyCodeLine{20     \mbox{\hyperlink{classTWeapon}{TWeapon}} \mbox{\hyperlink{classTLevelReader_ad7b63a611a8e08c9d9b38ee2972c82fc}{ReadWeapon}}(std::istream\& file);}
+\DoxyCodeLine{21     std::unique\_ptr<TShip> \mbox{\hyperlink{classTLevelReader_a111bc6a9c4250c31a0689e62f7113254}{ReadShip}}(std::istream\& file, \mbox{\hyperlink{classMyList}{MyList<TWeapon>}}\& weapons, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList<TCapitanInfo>}}\& capitans);}
+\DoxyCodeLine{22     \mbox{\hyperlink{classTBase}{TBase}} \mbox{\hyperlink{classTLevelReader_ac28bf996f8431c89710180136c30c180}{ReadBase}}(std::istream\& file, \textcolor{keyword}{const} std::string\& what);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \mbox{\hyperlink{classMyList}{MyList<int>}} \mbox{\hyperlink{classTLevelReader_ac6e2fd6477af4205d0c85433bdb02985}{ReadInts}}(std::istream\& file, \textcolor{keyword}{const} std::string\& what);}
+\DoxyCodeLine{25     \mbox{\hyperlink{classMyList}{MyList<TCapitanInfo>}} \mbox{\hyperlink{classTLevelReader_a68c3199258c974d81e965a715a61e7e2}{ReadCapitanInfos}}(std::istream\& file);}
+\DoxyCodeLine{26     \mbox{\hyperlink{classMyList}{MyList<TWeapon>}} \mbox{\hyperlink{classTLevelReader_a4467cdf7d7766981a6b8eeb23076b433}{ReadWeapons}}(std::istream\& file);}
+\DoxyCodeLine{27     \mbox{\hyperlink{classMyList}{MyList<std::unique\_ptr<TShip>}}> \mbox{\hyperlink{classTLevelReader_a06cbe367f372ca443af250d9c581b58b}{ReadShips}}(std::istream\& file, \mbox{\hyperlink{classMyList}{MyList<TWeapon>}}\& weapons, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList<TCapitanInfo>}}\& capitans);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{classTSpawnDescriptor}{TSpawnDescriptor}} \mbox{\hyperlink{classTLevelReader_a392f8ceec89e3ff9f3f87ea030c117d6}{ReadSpawnDescriptor}}(std::istream\& file, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\& ships);}
+\DoxyCodeLine{30     \mbox{\hyperlink{classMyList}{MyList<TSpawnDescriptor>}} \mbox{\hyperlink{classTLevelReader_a6e0d6c10291d52c31f5c22b8673dbb98}{ReadSpawnDescriptors}}(std::istream\& file, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\& ships);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \mbox{\hyperlink{classTPirateBase}{TPirateBase}} \mbox{\hyperlink{classTLevelReader_a98a8afd39b4ade7d9e3843a51109ea1d}{ReadPirateBase}}(std::istream\& file, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList<TSpawnDescriptor>}}\& desctiptors);}
+\DoxyCodeLine{33     \mbox{\hyperlink{classMyList}{MyList<TPirateBase>}} \mbox{\hyperlink{classTLevelReader_ae7a5a65dfddd9c939dbdf18846054725}{ReadPirateBases}}(std::istream\& file, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList<TSpawnDescriptor>}}\& descriptots);}
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     std::pair<std::unique\_ptr<TMission>, std::pair<MyList<TWeapon>, \mbox{\hyperlink{classMyList}{MyList<std::unique\_ptr<TShip>}}>>>}
+\DoxyCodeLine{36         \mbox{\hyperlink{classTLevelReader_a5e3953bd0caf6e6c60d6750ff732150a}{ReadMissionInfoFromStream}}(std::istream\& file);}
+\DoxyCodeLine{37 \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TLEVELREADER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,444 @@
+\hypertarget{classTPlaying}{}\doxysection{TPlaying Class Reference}
+\label{classTPlaying}\index{TPlaying@{TPlaying}}
+
+
+{\ttfamily \#include $<$TPlaying.\+h$>$}
+
+
+
+Collaboration diagram for TPlaying\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d1/d74/classTPlaying__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \mbox{\hyperlink{classTPlaying_a55b9a1e2159468036c18440cd361c749}{Play}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ mission\+Ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTPlaying_a658ffefee14a5d2049f7f7e1c031cd81}{Fill\+In}} (std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&image, int x, int y, std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&to\+Print)
+\item 
+void \mbox{\hyperlink{classTPlaying_a9809c88608f55eadb7715f3618f850f6}{Draw\+Pirate\+Base}} (\mbox{\hyperlink{classTPirateBase}{TPirate\+Base}} $\ast$pirate\+Base, int x, int y, std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&to\+Print)
+\item 
+void \mbox{\hyperlink{classTPlaying_a2e156f71550516644fab0862e2599284}{Draw\+Base}} (\mbox{\hyperlink{classTBase}{TBase}} $\ast$base, int x, int y, std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&to\+Print)
+\item 
+void \mbox{\hyperlink{classTPlaying_a6440ea7e27c02041156f20759d748f61}{Draw\+Cargo\+War\+Ship}} (\mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} $\ast$ship, int x, int y, std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&to\+Print)
+\item 
+void \mbox{\hyperlink{classTPlaying_aca7c355d1279d2be9d1bfb54832608e2}{Draw\+Cargo\+Ship}} (\mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} $\ast$ship, int x, int y, std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&to\+Print)
+\item 
+void \mbox{\hyperlink{classTPlaying_a805bbfe7a1288c545be6910b31b170c5}{Draw\+War\+Ship}} (\mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $\ast$ship, int x, int y, std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&to\+Print)
+\item 
+\mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} \mbox{\hyperlink{classTPlaying_ab7d5a4c10c234917eb40c53b81186e80}{Find\+Best}} (\mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$from, \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$to, int speed, const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&new\+Pole)
+\item 
+void \mbox{\hyperlink{classTPlaying_a8a870c10a0e30f93551d5dc8b02bf93b}{Init}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission)
+\item 
+void \mbox{\hyperlink{classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac}{Make\+Spawn}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, int now\+Time)
+\item 
+void \mbox{\hyperlink{classTPlaying_af7330a2cd413bb1934ba6c12c267722a}{Refill\+Bases}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&new\+Pole)
+\item 
+int \mbox{\hyperlink{classTPlaying_aef014ab7b215fa8b936719318fcfd1a2}{Get\+Speed}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \&ship)
+\item 
+void \mbox{\hyperlink{classTPlaying_ae0d73d17b32678662ea5894822f4913a}{Move\+Ships}} (\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&ships, \mbox{\hyperlink{classTBase}{TBase}} \&b, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&new\+Pole)
+\item 
+void \mbox{\hyperlink{classTPlaying_a7c9be3b09cdc2970853ead2edd84ca7b}{Move\+Ships}} (\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&pirates, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&goals, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&new\+Pole)
+\item 
+void \mbox{\hyperlink{classTPlaying_a029211b1dce0b41bb75ee19a8db34550}{Make\+Shot}} (\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&attack, \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&defend, int now\+Time)
+\item 
+void \mbox{\hyperlink{classTPlaying_a9818cb20cb77e87134ea1755099a0160}{Make\+Shot}} (\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&attack, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&defend, int now\+Time)
+\item 
+void \mbox{\hyperlink{classTPlaying_ad407c73e7fccabda36c46de8e58b6fe4}{Remove\+Ripped}} (\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&ships)
+\item 
+void \mbox{\hyperlink{classTPlaying_a2f2f477130ea067b82ac292b96e5cf8d}{Remove\+Ripped}} (\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&ships)
+\item 
+void \mbox{\hyperlink{classTPlaying_a8599ce61fd2748b737b054b0a5c62647}{Make\+Moves}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, int now\+Time)
+\item 
+void \mbox{\hyperlink{classTPlaying_a42f315c7d636f9ed24fe716a591c8d5e}{Show\+On\+Screen}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission)
+\item 
+void \mbox{\hyperlink{classTPlaying_a0f43d403bf5d61d112782be4e517c06d}{Fill\+Pole}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&mission, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&pole)
+\item 
+void \mbox{\hyperlink{classTPlaying_a4cb98dff7d9a323fd893863f26b9c87d}{Fill\+Point}} (\mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$object, int line, int pos, std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&to\+Print)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTPlaying_a2e156f71550516644fab0862e2599284}\label{classTPlaying_a2e156f71550516644fab0862e2599284}} 
+\index{TPlaying@{TPlaying}!DrawBase@{DrawBase}}
+\index{DrawBase@{DrawBase}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{DrawBase()}{DrawBase()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Draw\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTBase}{TBase}} $\ast$}]{base,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{db/dab/classTPlaying_a2e156f71550516644fab0862e2599284_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a2e156f71550516644fab0862e2599284_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_aca7c355d1279d2be9d1bfb54832608e2}\label{classTPlaying_aca7c355d1279d2be9d1bfb54832608e2}} 
+\index{TPlaying@{TPlaying}!DrawCargoShip@{DrawCargoShip}}
+\index{DrawCargoShip@{DrawCargoShip}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{DrawCargoShip()}{DrawCargoShip()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Draw\+Cargo\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} $\ast$}]{ship,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{db/dab/classTPlaying_aca7c355d1279d2be9d1bfb54832608e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_aca7c355d1279d2be9d1bfb54832608e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a6440ea7e27c02041156f20759d748f61}\label{classTPlaying_a6440ea7e27c02041156f20759d748f61}} 
+\index{TPlaying@{TPlaying}!DrawCargoWarShip@{DrawCargoWarShip}}
+\index{DrawCargoWarShip@{DrawCargoWarShip}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{DrawCargoWarShip()}{DrawCargoWarShip()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Draw\+Cargo\+War\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} $\ast$}]{ship,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a6440ea7e27c02041156f20759d748f61_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a6440ea7e27c02041156f20759d748f61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a9809c88608f55eadb7715f3618f850f6}\label{classTPlaying_a9809c88608f55eadb7715f3618f850f6}} 
+\index{TPlaying@{TPlaying}!DrawPirateBase@{DrawPirateBase}}
+\index{DrawPirateBase@{DrawPirateBase}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{DrawPirateBase()}{DrawPirateBase()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Draw\+Pirate\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTPirateBase}{TPirate\+Base}} $\ast$}]{pirate\+Base,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{db/dab/classTPlaying_a9809c88608f55eadb7715f3618f850f6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a9809c88608f55eadb7715f3618f850f6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a805bbfe7a1288c545be6910b31b170c5}\label{classTPlaying_a805bbfe7a1288c545be6910b31b170c5}} 
+\index{TPlaying@{TPlaying}!DrawWarShip@{DrawWarShip}}
+\index{DrawWarShip@{DrawWarShip}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{DrawWarShip()}{DrawWarShip()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Draw\+War\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $\ast$}]{ship,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a805bbfe7a1288c545be6910b31b170c5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a805bbfe7a1288c545be6910b31b170c5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a658ffefee14a5d2049f7f7e1c031cd81}\label{classTPlaying_a658ffefee14a5d2049f7f7e1c031cd81}} 
+\index{TPlaying@{TPlaying}!FillIn@{FillIn}}
+\index{FillIn@{FillIn}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{FillIn()}{FillIn()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Fill\+In (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{image,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a658ffefee14a5d2049f7f7e1c031cd81_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a4cb98dff7d9a323fd893863f26b9c87d}\label{classTPlaying_a4cb98dff7d9a323fd893863f26b9c87d}} 
+\index{TPlaying@{TPlaying}!FillPoint@{FillPoint}}
+\index{FillPoint@{FillPoint}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{FillPoint()}{FillPoint()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Fill\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$}]{object,  }\item[{int}]{line,  }\item[{int}]{pos,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a4cb98dff7d9a323fd893863f26b9c87d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a4cb98dff7d9a323fd893863f26b9c87d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a0f43d403bf5d61d112782be4e517c06d}\label{classTPlaying_a0f43d403bf5d61d112782be4e517c06d}} 
+\index{TPlaying@{TPlaying}!FillPole@{FillPole}}
+\index{FillPole@{FillPole}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{FillPole()}{FillPole()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Fill\+Pole (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a0f43d403bf5d61d112782be4e517c06d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_ab7d5a4c10c234917eb40c53b81186e80}\label{classTPlaying_ab7d5a4c10c234917eb40c53b81186e80}} 
+\index{TPlaying@{TPlaying}!FindBest@{FindBest}}
+\index{FindBest@{FindBest}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{FindBest()}{FindBest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} TPlaying\+::\+Find\+Best (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$}]{from,  }\item[{\mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$}]{to,  }\item[{int}]{speed,  }\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{new\+Pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{db/dab/classTPlaying_ab7d5a4c10c234917eb40c53b81186e80_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_ab7d5a4c10c234917eb40c53b81186e80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_aef014ab7b215fa8b936719318fcfd1a2}\label{classTPlaying_aef014ab7b215fa8b936719318fcfd1a2}} 
+\index{TPlaying@{TPlaying}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily int TPlaying\+::\+Get\+Speed (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \&}]{ship }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_aef014ab7b215fa8b936719318fcfd1a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_aef014ab7b215fa8b936719318fcfd1a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a8a870c10a0e30f93551d5dc8b02bf93b}\label{classTPlaying_a8a870c10a0e30f93551d5dc8b02bf93b}} 
+\index{TPlaying@{TPlaying}!Init@{Init}}
+\index{Init@{Init}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{db/dab/classTPlaying_a8a870c10a0e30f93551d5dc8b02bf93b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a8599ce61fd2748b737b054b0a5c62647}\label{classTPlaying_a8599ce61fd2748b737b054b0a5c62647}} 
+\index{TPlaying@{TPlaying}!MakeMoves@{MakeMoves}}
+\index{MakeMoves@{MakeMoves}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{MakeMoves()}{MakeMoves()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Make\+Moves (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{int}]{now\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a8599ce61fd2748b737b054b0a5c62647_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{db/dab/classTPlaying_a8599ce61fd2748b737b054b0a5c62647_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a029211b1dce0b41bb75ee19a8db34550}\label{classTPlaying_a029211b1dce0b41bb75ee19a8db34550}} 
+\index{TPlaying@{TPlaying}!MakeShot@{MakeShot}}
+\index{MakeShot@{MakeShot}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{MakeShot()}{MakeShot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TPlaying\+::\+Make\+Shot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{attack,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&}]{defend,  }\item[{int}]{now\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{db/dab/classTPlaying_a029211b1dce0b41bb75ee19a8db34550_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a029211b1dce0b41bb75ee19a8db34550_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a9818cb20cb77e87134ea1755099a0160}\label{classTPlaying_a9818cb20cb77e87134ea1755099a0160}} 
+\index{TPlaying@{TPlaying}!MakeShot@{MakeShot}}
+\index{MakeShot@{MakeShot}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{MakeShot()}{MakeShot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TPlaying\+::\+Make\+Shot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&}]{attack,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{defend,  }\item[{int}]{now\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac}\label{classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac}} 
+\index{TPlaying@{TPlaying}!MakeSpawn@{MakeSpawn}}
+\index{MakeSpawn@{MakeSpawn}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{MakeSpawn()}{MakeSpawn()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Make\+Spawn (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{int}]{now\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{db/dab/classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_ae0d73d17b32678662ea5894822f4913a}\label{classTPlaying_ae0d73d17b32678662ea5894822f4913a}} 
+\index{TPlaying@{TPlaying}!MoveShips@{MoveShips}}
+\index{MoveShips@{MoveShips}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{MoveShips()}{MoveShips()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TPlaying\+::\+Move\+Ships (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships,  }\item[{\mbox{\hyperlink{classTBase}{TBase}} \&}]{b,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{new\+Pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_ae0d73d17b32678662ea5894822f4913a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_ae0d73d17b32678662ea5894822f4913a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a7c9be3b09cdc2970853ead2edd84ca7b}\label{classTPlaying_a7c9be3b09cdc2970853ead2edd84ca7b}} 
+\index{TPlaying@{TPlaying}!MoveShips@{MoveShips}}
+\index{MoveShips@{MoveShips}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{MoveShips()}{MoveShips()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TPlaying\+::\+Move\+Ships (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&}]{pirates,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{goals,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{new\+Pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a7c9be3b09cdc2970853ead2edd84ca7b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a55b9a1e2159468036c18440cd361c749}\label{classTPlaying_a55b9a1e2159468036c18440cd361c749}} 
+\index{TPlaying@{TPlaying}!Play@{Play}}
+\index{Play@{Play}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ TPlaying\+::\+Play (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$}]{mission\+Ptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a55b9a1e2159468036c18440cd361c749_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_af7330a2cd413bb1934ba6c12c267722a}\label{classTPlaying_af7330a2cd413bb1934ba6c12c267722a}} 
+\index{TPlaying@{TPlaying}!RefillBases@{RefillBases}}
+\index{RefillBases@{RefillBases}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{RefillBases()}{RefillBases()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Refill\+Bases (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{new\+Pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_af7330a2cd413bb1934ba6c12c267722a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_ad407c73e7fccabda36c46de8e58b6fe4}\label{classTPlaying_ad407c73e7fccabda36c46de8e58b6fe4}} 
+\index{TPlaying@{TPlaying}!RemoveRipped@{RemoveRipped}}
+\index{RemoveRipped@{RemoveRipped}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{RemoveRipped()}{RemoveRipped()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TPlaying\+::\+Remove\+Ripped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_ad407c73e7fccabda36c46de8e58b6fe4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a2f2f477130ea067b82ac292b96e5cf8d}\label{classTPlaying_a2f2f477130ea067b82ac292b96e5cf8d}} 
+\index{TPlaying@{TPlaying}!RemoveRipped@{RemoveRipped}}
+\index{RemoveRipped@{RemoveRipped}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{RemoveRipped()}{RemoveRipped()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TPlaying\+::\+Remove\+Ripped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&}]{ships }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{db/dab/classTPlaying_a2f2f477130ea067b82ac292b96e5cf8d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTPlaying_a42f315c7d636f9ed24fe716a591c8d5e}\label{classTPlaying_a42f315c7d636f9ed24fe716a591c8d5e}} 
+\index{TPlaying@{TPlaying}!ShowOnScreen@{ShowOnScreen}}
+\index{ShowOnScreen@{ShowOnScreen}!TPlaying@{TPlaying}}
+\doxysubsubsection{\texorpdfstring{ShowOnScreen()}{ShowOnScreen()}}
+{\footnotesize\ttfamily void TPlaying\+::\+Show\+On\+Screen (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dab/classTPlaying_a42f315c7d636f9ed24fe716a591c8d5e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{db/dab/classTPlaying_a42f315c7d636f9ed24fe716a591c8d5e_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/code/\mbox{\hyperlink{TPlaying_8h}{TPlaying.\+h}}\item 
+game/code/\mbox{\hyperlink{TPlaying_8cpp}{TPlaying.\+cpp}}\end{DoxyCompactItemize}

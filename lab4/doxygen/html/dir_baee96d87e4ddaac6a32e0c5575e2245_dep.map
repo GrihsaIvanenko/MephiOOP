@@ -1,0 +1,10 @@
+<map id="ships" name="ships">
+<area shape="rect" id="node2" href="dir_08f3a1deae7fcbc3bfc24fda85c654ca.html" title="code" alt="" coords="51,100,104,125"/>
+<area shape="rect" id="node4" href="dir_e914ee4d4a44400f1fdb170cb4ead18a.html" title="base" alt="" coords="5,173,59,199"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000006_000000.html" title="1" alt="" coords="52,155,61,170"/>
+<area shape="rect" id="node5" href="dir_f9c9c8c78e18fad7d63c56a86a71b7e5.html" title="weapons" alt="" coords="83,173,163,199"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000006_000019.html" title="1" alt="" coords="108,146,117,161"/>
+<area shape="rect" id="node3" href="dir_3bed385a549f242bdb2be690d3db6c17.html" title="tests" alt="" coords="50,27,105,52"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000015_000006.html" title="5" alt="" coords="81,74,90,89"/>
+<area shape="rect" id="clust1" href="dir_baee96d87e4ddaac6a32e0c5575e2245.html" alt="" coords="39,16,196,136"/>
+</map>

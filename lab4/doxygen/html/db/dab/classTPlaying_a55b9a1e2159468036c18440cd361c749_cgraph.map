@@ -1,0 +1,35 @@
+<map id="TPlaying::Play" name="TPlaying::Play">
+<area shape="rect" id="node1" title=" " alt="" coords="5,321,120,347"/>
+<area shape="rect" id="node2" href="$d1/d9d/classTimeHolder.html#a07ef47775ad596e4597dde926680eaa1" title=" " alt="" coords="182,173,337,199"/>
+<area shape="rect" id="node4" href="$db/dab/classTPlaying.html#a8a870c10a0e30f93551d5dc8b02bf93b" title=" " alt="" coords="206,272,313,297"/>
+<area shape="rect" id="node5" href="$db/dab/classTPlaying.html#a8599ce61fd2748b737b054b0a5c62647" title=" " alt="" coords="177,321,341,347"/>
+<area shape="rect" id="node22" href="$db/dab/classTPlaying.html#a42f315c7d636f9ed24fe716a591c8d5e" title=" " alt="" coords="168,445,351,471"/>
+<area shape="rect" id="node33" href="$d1/d9d/classTimeHolder.html#afc0267165f81a3b975e60521a5e056eb" title=" " alt="" coords="191,495,328,520"/>
+<area shape="rect" id="node3" href="$d1/d9d/classTimeHolder.html#abb450030013a9fd81dc9125500e08ac1" title=" " alt="" coords="399,148,595,173"/>
+<area shape="rect" id="node6" href="$db/dab/classTPlaying.html#a029211b1dce0b41bb75ee19a8db34550" title=" " alt="" coords="421,419,572,444"/>
+<area shape="rect" id="node9" href="$db/dab/classTPlaying.html#ab30b266040a5de9cebdebc0e6130e2ac" title=" " alt="" coords="415,197,579,223"/>
+<area shape="rect" id="node11" href="$db/dab/classTPlaying.html#ae0d73d17b32678662ea5894822f4913a" title=" " alt="" coords="418,247,575,272"/>
+<area shape="rect" id="node20" href="$db/dab/classTPlaying.html#af7330a2cd413bb1934ba6c12c267722a" title=" " alt="" coords="417,296,576,321"/>
+<area shape="rect" id="node21" href="$db/dab/classTPlaying.html#ad407c73e7fccabda36c46de8e58b6fe4" title=" " alt="" coords="404,345,589,371"/>
+<area shape="rect" id="node7" href="$d8/d51/classMyList.html#a80edb252c7e71107fac78c29647be513" title=" " alt="" coords="687,408,809,433"/>
+<area shape="rect" id="node8" href="$d8/d51/classMyList.html#a37366fbfd16acad1dfa69a141b339095" title=" " alt="" coords="699,457,797,483"/>
+<area shape="rect" id="node10" href="$d8/d51/classMyList.html#ab5e189776aca91f01ee5fe930318c289" title=" " alt="" coords="693,5,803,31"/>
+<area shape="rect" id="node12" href="$d5/d55/classTObjectOnMap.html#ac427e764b888613f234e51f1b97b8754" title=" " alt="" coords="921,308,1087,333"/>
+<area shape="rect" id="node13" href="$db/dab/classTPlaying.html#ab7d5a4c10c234917eb40c53b81186e80" title=" " alt="" coords="677,207,819,232"/>
+<area shape="rect" id="node14" href="$d5/d55/classTObjectOnMap.html#a55207fb8607d587b3578745bc1062b17" title=" " alt="" coords="925,181,1083,207"/>
+<area shape="rect" id="node15" href="$d5/d55/classTObjectOnMap.html#a4ef34ec3dde1bc159678f57aa463c972" title=" " alt="" coords="925,244,1083,269"/>
+<area shape="rect" id="node16" href="$db/dab/classTPlaying.html#aef014ab7b215fa8b936719318fcfd1a2" title=" " alt="" coords="673,55,823,80"/>
+<area shape="rect" id="node17" href="$d3/d81/classTCargoShip.html#aac8aa5512f4e7ea9641f3a5812cc8722" title=" " alt="" coords="904,105,1104,131"/>
+<area shape="rect" id="node19" href="$d1/d07/classTShip.html#a978c830c3ba51fecd4482819110a814e" title=" " alt="" coords="681,359,815,384"/>
+<area shape="rect" id="node18" href="$d3/d81/classTCargoShip.html#a2058989e985027329e36e55be4d83cc9" title=" " alt="" coords="901,55,1107,80"/>
+<area shape="rect" id="node23" href="$db/dab/classTPlaying.html#a4cb98dff7d9a323fd893863f26b9c87d" title=" " alt="" coords="427,556,566,581"/>
+<area shape="rect" id="node32" href="$db/dab/classTPlaying.html#a0f43d403bf5d61d112782be4e517c06d" title=" " alt="" coords="430,605,563,631"/>
+<area shape="rect" id="node24" href="$db/dab/classTPlaying.html#a2e156f71550516644fab0862e2599284" title=" " alt="" coords="672,507,824,532"/>
+<area shape="rect" id="node27" href="$db/dab/classTPlaying.html#aca7c355d1279d2be9d1bfb54832608e2" title=" " alt="" coords="655,556,841,581"/>
+<area shape="rect" id="node28" href="$db/dab/classTPlaying.html#a6440ea7e27c02041156f20759d748f61" title=" " alt="" coords="643,605,853,631"/>
+<area shape="rect" id="node29" href="$db/dab/classTPlaying.html#a9809c88608f55eadb7715f3618f850f6" title=" " alt="" coords="653,655,843,680"/>
+<area shape="rect" id="node30" href="$db/dab/classTPlaying.html#a805bbfe7a1288c545be6910b31b170c5" title=" " alt="" coords="661,704,835,729"/>
+<area shape="rect" id="node25" href="$db/dab/classTPlaying.html#a658ffefee14a5d2049f7f7e1c031cd81" title=" " alt="" coords="945,605,1063,631"/>
+<area shape="rect" id="node26" href="$d9/d38/classTBase.html#a66f564ea6287b2392bd593a9a8722e87" title=" " alt="" coords="927,507,1081,532"/>
+<area shape="rect" id="node31" href="$d1/d07/classTShip.html#acce1d32955675a0258d5c78bd323f7cc" title=" " alt="" coords="926,704,1082,729"/>
+</map>

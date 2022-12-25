@@ -1,0 +1,234 @@
+\hypertarget{classTWarShip}{}\doxysection{TWar\+Ship Class Reference}
+\label{classTWarShip}\index{TWarShip@{TWarShip}}
+
+
+Корабль, имеющий вооружение. Добавляются поле -\/ Holder орудий  
+
+
+
+
+{\ttfamily \#include $<$TWar\+Ship.\+h$>$}
+
+
+
+Inheritance diagram for TWar\+Ship\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d9/de7/classTWarShip__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TWar\+Ship\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d9/d70/classTWarShip__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTWarShip_a767bc9a1ecae43ee9efbc69e581d0c70}{TWar\+Ship}} (int x, int y, int ship\+Type, const std\+::string \&ship\+Name, const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&capitan\+Info, int max\+Speed, int now\+Speed, int hp\+Total, int hp\+Now, int cost, const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&holder)
+\item 
+\mbox{\hyperlink{classTWarShip_a2bade34beb324c590526f986b6bbc294}{TWar\+Ship}} (const \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} \&other)
+\item 
+\mbox{\hyperlink{classTWarShip}{TWar\+Ship}} \& \mbox{\hyperlink{classTWarShip_a6f5e68d2e222d505e6321b2ae651ada7}{operator=}} (const \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} \&other)
+\item 
+bool \mbox{\hyperlink{classTWarShip_a76ebaabe031ec477e28b9507c8915ccd}{operator==}} (const \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} \&other) const
+\item 
+void \mbox{\hyperlink{classTWarShip_a67184a3b3cdec019493cf077be2b8974}{Set\+Holder}} (const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&holder)
+\item 
+\mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \& \mbox{\hyperlink{classTWarShip_a6498ce65a99aba4649774151442b3637}{Get\+Holder}} ()
+\item 
+int \mbox{\hyperlink{classTWarShip_a1deb0d2b3eee3d1a4a9976ae55300307}{Get\+Cost\+With\+Guns}} () const
+\item 
+bool \mbox{\hyperlink{classTWarShip_a56e43d63b1ccd69ea277306ca0e2522c}{Make\+Shot}} (\mbox{\hyperlink{classTShip}{TShip}} \&to, int time\+Now)
+\item 
+void \mbox{\hyperlink{classTWarShip_a1728538cd00c77fb09b08357e491bca8}{Print}} () const override
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \mbox{\hyperlink{classTWarShip_a7069de33689498bfdcf2f2c7ed4af31e}{Clone}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \mbox{\hyperlink{classTWarShip_a7727142afbd97adb34165dd6be098b38}{Holder\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Корабль, имеющий вооружение. Добавляются поле -\/ Holder орудий 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTWarShip_a767bc9a1ecae43ee9efbc69e581d0c70}\label{classTWarShip_a767bc9a1ecae43ee9efbc69e581d0c70}} 
+\index{TWarShip@{TWarShip}!TWarShip@{TWarShip}}
+\index{TWarShip@{TWarShip}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{TWarShip()}{TWarShip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TWar\+Ship\+::\+TWar\+Ship (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{ship\+Type,  }\item[{const std\+::string \&}]{ship\+Name,  }\item[{const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&}]{capitan\+Info,  }\item[{int}]{max\+Speed,  }\item[{int}]{now\+Speed,  }\item[{int}]{hp\+Total,  }\item[{int}]{hp\+Now,  }\item[{int}]{cost,  }\item[{const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&}]{holder }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTWarShip_a2bade34beb324c590526f986b6bbc294}\label{classTWarShip_a2bade34beb324c590526f986b6bbc294}} 
+\index{TWarShip@{TWarShip}!TWarShip@{TWarShip}}
+\index{TWarShip@{TWarShip}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{TWarShip()}{TWarShip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TWar\+Ship\+::\+TWar\+Ship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTWarShip_a7069de33689498bfdcf2f2c7ed4af31e}\label{classTWarShip_a7069de33689498bfdcf2f2c7ed4af31e}} 
+\index{TWarShip@{TWarShip}!Clone@{Clone}}
+\index{Clone@{Clone}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ TWar\+Ship\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Определяет Clone для этого вида кораблей. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTShip_a36838d6bbb57ef7e04818c5965a562ad}{TShip}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{db/df3/classTWarShip_a7069de33689498bfdcf2f2c7ed4af31e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWarShip_a1deb0d2b3eee3d1a4a9976ae55300307}\label{classTWarShip_a1deb0d2b3eee3d1a4a9976ae55300307}} 
+\index{TWarShip@{TWarShip}!GetCostWithGuns@{GetCostWithGuns}}
+\index{GetCostWithGuns@{GetCostWithGuns}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{GetCostWithGuns()}{GetCostWithGuns()}}
+{\footnotesize\ttfamily int TWar\+Ship\+::\+Get\+Cost\+With\+Guns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Используется для продажи корабля. Вернет цену корабля с учетом орудий, установленных не него \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/classTWarShip_a1deb0d2b3eee3d1a4a9976ae55300307_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/classTWarShip_a1deb0d2b3eee3d1a4a9976ae55300307_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWarShip_a6498ce65a99aba4649774151442b3637}\label{classTWarShip_a6498ce65a99aba4649774151442b3637}} 
+\index{TWarShip@{TWarShip}!GetHolder@{GetHolder}}
+\index{GetHolder@{GetHolder}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{GetHolder()}{GetHolder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \& TWar\+Ship\+::\+Get\+Holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/classTWarShip_a6498ce65a99aba4649774151442b3637_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWarShip_a56e43d63b1ccd69ea277306ca0e2522c}\label{classTWarShip_a56e43d63b1ccd69ea277306ca0e2522c}} 
+\index{TWarShip@{TWarShip}!MakeShot@{MakeShot}}
+\index{MakeShot@{MakeShot}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{MakeShot()}{MakeShot()}}
+{\footnotesize\ttfamily bool TWar\+Ship\+::\+Make\+Shot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTShip}{TShip}} \&}]{to,  }\item[{int}]{time\+Now }\end{DoxyParamCaption})}
+
+Делает выстрел по кораблю в момент time\+Now Влачале вычисляется урон -\/ результат выстрела всех орудий по кораблю Затем это турон наосится цели, по которой произведенн выстрел 
+\begin{DoxyParams}{Parameters}
+{\em to} & \\
+\hline
+{\em time\+Now} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/classTWarShip_a56e43d63b1ccd69ea277306ca0e2522c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{db/df3/classTWarShip_a56e43d63b1ccd69ea277306ca0e2522c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWarShip_a6f5e68d2e222d505e6321b2ae651ada7}\label{classTWarShip_a6f5e68d2e222d505e6321b2ae651ada7}} 
+\index{TWarShip@{TWarShip}!operator=@{operator=}}
+\index{operator=@{operator=}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} \& TWar\+Ship\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTWarShip_a76ebaabe031ec477e28b9507c8915ccd}\label{classTWarShip_a76ebaabe031ec477e28b9507c8915ccd}} 
+\index{TWarShip@{TWarShip}!operator==@{operator==}}
+\index{operator==@{operator==}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool TWar\+Ship\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classTWarShip_a1728538cd00c77fb09b08357e491bca8}\label{classTWarShip_a1728538cd00c77fb09b08357e491bca8}} 
+\index{TWarShip@{TWarShip}!Print@{Print}}
+\index{Print@{Print}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void TWar\+Ship\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Определяет вывод информации в магазине об этго виде корабля. 
+
+Reimplemented from \mbox{\hyperlink{classTShip_a69a25d7b3bce32e46a1dcebe06d63209}{TShip}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/classTWarShip_a1728538cd00c77fb09b08357e491bca8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/classTWarShip_a1728538cd00c77fb09b08357e491bca8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTWarShip_a67184a3b3cdec019493cf077be2b8974}\label{classTWarShip_a67184a3b3cdec019493cf077be2b8974}} 
+\index{TWarShip@{TWarShip}!SetHolder@{SetHolder}}
+\index{SetHolder@{SetHolder}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{SetHolder()}{SetHolder()}}
+{\footnotesize\ttfamily void TWar\+Ship\+::\+Set\+Holder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} \&}]{holder }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{db/df3/classTWarShip_a67184a3b3cdec019493cf077be2b8974_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTWarShip_a7727142afbd97adb34165dd6be098b38}\label{classTWarShip_a7727142afbd97adb34165dd6be098b38}} 
+\index{TWarShip@{TWarShip}!Holder\_@{Holder\_}}
+\index{Holder\_@{Holder\_}!TWarShip@{TWarShip}}
+\doxysubsubsection{\texorpdfstring{Holder\_}{Holder\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTWeaponHolder}{TWeapon\+Holder}} TWar\+Ship\+::\+Holder\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ships/code/\mbox{\hyperlink{TWarShip_8h}{TWar\+Ship.\+h}}\item 
+ships/code/\mbox{\hyperlink{TWarShip_8cpp}{TWar\+Ship.\+cpp}}\end{DoxyCompactItemize}

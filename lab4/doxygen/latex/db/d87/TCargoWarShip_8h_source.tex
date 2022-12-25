@@ -1,0 +1,43 @@
+\hypertarget{TCargoWarShip_8h_source}{}\doxysection{TCargo\+War\+Ship.\+h}
+\label{TCargoWarShip_8h_source}\index{ships/code/TCargoWarShip.h@{ships/code/TCargoWarShip.h}}
+\mbox{\hyperlink{TCargoWarShip_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 06.12.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TCARGOWARSHIP\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TCARGOWARSHIP\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TWarShip_8h}{TWarShip.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TCargoShip_8h}{TCargoShip.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classTCargoWarShip}{TCargoWarShip}} : \textcolor{keyword}{public} \mbox{\hyperlink{classTCargoShip}{TCargoShip}}, \textcolor{keyword}{public} \mbox{\hyperlink{classTWarShip}{TWarShip}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{classTCargoWarShip}{TCargoWarShip}}(}
+\DoxyCodeLine{18             \textcolor{keywordtype}{int} x,}
+\DoxyCodeLine{19             \textcolor{keywordtype}{int} y,}
+\DoxyCodeLine{20             \textcolor{keywordtype}{int} shipType,}
+\DoxyCodeLine{21             \textcolor{keyword}{const} std::string\& shipName,}
+\DoxyCodeLine{22             \textcolor{keyword}{const} \mbox{\hyperlink{classTCapitanInfo}{TCapitanInfo}}\& capitanInfo,}
+\DoxyCodeLine{23             \textcolor{keywordtype}{int} maxSpeed,}
+\DoxyCodeLine{24             \textcolor{keywordtype}{int} nowSpeed,}
+\DoxyCodeLine{25             \textcolor{keywordtype}{int} hpTotal,}
+\DoxyCodeLine{26             \textcolor{keywordtype}{int} hpNow,}
+\DoxyCodeLine{27             \textcolor{keywordtype}{int} cost,}
+\DoxyCodeLine{28             \textcolor{keywordtype}{int} WeightTotal,}
+\DoxyCodeLine{29             \textcolor{keywordtype}{int} WeightNow,}
+\DoxyCodeLine{30             \textcolor{keywordtype}{double} SlowK,}
+\DoxyCodeLine{31             \textcolor{keyword}{const} \mbox{\hyperlink{classTWeaponHolder}{TWeaponHolder}}\& holder);}
+\DoxyCodeLine{32     \mbox{\hyperlink{classTCargoWarShip}{TCargoWarShip}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTCargoWarShip}{TCargoWarShip}}\& other);}
+\DoxyCodeLine{33     \mbox{\hyperlink{classTCargoWarShip}{TCargoWarShip}}\& \mbox{\hyperlink{classTCargoWarShip_a945330a8a9cb8ad152f1d3eb895f55d2}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTCargoWarShip}{TCargoWarShip}}\& other);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTCargoWarShip_aec30ca647427db94ad024e5dd7009634}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTCargoWarShip}{TCargoWarShip}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTCargoWarShip_a68e8702482af0683c976e316a500db04}{Print}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{45     std::unique\_ptr<TShip> \mbox{\hyperlink{classTCargoWarShip_ae906a869c5cd8ffae728b0e1e6716207}{Clone}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TCARGOWARSHIP\_H}}
+
+\end{DoxyCode}

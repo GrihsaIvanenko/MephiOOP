@@ -1,0 +1,71 @@
+\hypertarget{TShip_8h_source}{}\doxysection{TShip.\+h}
+\label{TShip_8h_source}\index{ships/code/TShip.h@{ships/code/TShip.h}}
+\mbox{\hyperlink{TShip_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 29.11.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TSHIP\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TSHIP\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TCapitanInfo_8h}{TCapitanInfo.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}../../base/code/TObjectOnMap.h"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{classTShip}{TShip}} : \textcolor{keyword}{public} \mbox{\hyperlink{classTObjectOnMap}{TObjectOnMap}} \{}
+\DoxyCodeLine{19 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_a7e341cfd35e7902c195a261db9f79fa1}{ShipType\_}};}
+\DoxyCodeLine{21     std::string \mbox{\hyperlink{classTShip_aebc6c0819361776d5989d57e24e061e2}{ShipName\_}};}
+\DoxyCodeLine{22     \mbox{\hyperlink{classTCapitanInfo}{TCapitanInfo}} \mbox{\hyperlink{classTShip_a1b566dd25a913f25c3710eeee5a88b4a}{CapitanInfo\_}};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_a0bc6879d2a60aec451fea30f7062a3e4}{MaxSpeed\_}};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_aaefd2d332219b52758b71af626d3d839}{NowSpeed\_}};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_ac0a9c987e5e7130d744893c62c5e73b9}{HPTotal\_}};}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_aa1c076f9ff6b8d573c3da9114b2b95ae}{HPNow\_}};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_a0c713932667be77a1bbd35e64bba6b24}{Cost\_}};}
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \mbox{\hyperlink{classTShip}{TShip}}(}
+\DoxyCodeLine{30             \textcolor{keywordtype}{int} x,}
+\DoxyCodeLine{31             \textcolor{keywordtype}{int} y,}
+\DoxyCodeLine{32             \textcolor{keywordtype}{int} shipType,}
+\DoxyCodeLine{33             \textcolor{keyword}{const} std::string\& shipName,}
+\DoxyCodeLine{34             \textcolor{keyword}{const} \mbox{\hyperlink{classTCapitanInfo}{TCapitanInfo}}\& capitanInfo,}
+\DoxyCodeLine{35             \textcolor{keywordtype}{int} maxSpeed,}
+\DoxyCodeLine{36             \textcolor{keywordtype}{int} nowSpeed,}
+\DoxyCodeLine{37             \textcolor{keywordtype}{int} hpTotal,}
+\DoxyCodeLine{38             \textcolor{keywordtype}{int} hpNow,}
+\DoxyCodeLine{39             \textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{40     \mbox{\hyperlink{classTShip}{TShip}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTShip}{TShip}}\& other);}
+\DoxyCodeLine{41     \mbox{\hyperlink{classTShip}{TShip}}\& \mbox{\hyperlink{classTShip_ac26cd3069009648dae1360c5ca51e396}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTShip}{TShip}}\& other);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTShip_a50e72042cdaa2310e85ca1ad09952fb6}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTShip}{TShip}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_ac1e00339be3dbde29c4d1c4339c598b1}{SetShipType}}(\textcolor{keywordtype}{int} shipType);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_a2aeba03fb8955226c61990d230fd9b6e}{SetShipName}}(\textcolor{keyword}{const} std::string\& shipName);}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_adc9d8b6025e235d0f552740cd06130e1}{SetCapitanInfo}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTCapitanInfo}{TCapitanInfo}}\& capitanInfo);}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_a478b3dbff8f7b1e35903bf12fd4d384b}{SetMaxSpeed}}(\textcolor{keywordtype}{int} maxSpeed);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_a6738b2e86941caadd0ac9dd98dd32f83}{SetNowSpeed}}(\textcolor{keywordtype}{int} nowSpeed);}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_ab6ac08507bac326fda11fa1c713b8562}{SetHPTotal}}(\textcolor{keywordtype}{int} hpTotal);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_a978c830c3ba51fecd4482819110a814e}{SetHPNow}}(\textcolor{keywordtype}{int} hpNow);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_ab9ae47309dea81319ef8583fbf6ca1ac}{SetCost}}(\textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_afa32e3f3b93a2749de2734914896bdbc}{GetShipType}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{54     std::string \mbox{\hyperlink{classTShip_acce1d32955675a0258d5c78bd323f7cc}{GetShipName}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{55     \mbox{\hyperlink{classTCapitanInfo}{TCapitanInfo}} \mbox{\hyperlink{classTShip_aa9ede65f6d5b238b077438769bee3132}{GetCapitanInfo}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_a6176faf62af1a95fef2440e119afb717}{GetMaxSpeed}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{57     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_a17546c8543198bd7a937c2b025c6d5e9}{GetNowSpeed}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{58     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_a0bec10d9d6f98500e99821ffab20e9d3}{GetHPTotal}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{59     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_a4a57aac91bcd0b7ac413b30d228162cb}{GetHPNow}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShip_ab9eb49417d6be99d181e74a9327d9136}{GetCost}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_acd163830df7d2e25fba46c9696ae8494}{BeDamaged}}(\textcolor{keywordtype}{int} damage);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{71     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShip_a69a25d7b3bce32e46a1dcebe06d63209}{Print}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{77     \textcolor{keyword}{virtual} std::unique\_ptr<TShip> \mbox{\hyperlink{classTShip_a36838d6bbb57ef7e04818c5965a562ad}{Clone}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{78 \};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TSHIP\_H}}
+
+\end{DoxyCode}

@@ -113,7 +113,7 @@ void TPlaying::MoveShips(MyList<std::unique_ptr<TShip>>& ships, TBase& b, std::u
         if (to.DistTo(b) == 1) {
             TCargoShip* cast = dynamic_cast<TCargoShip*>(shipPtr.get());
             if (cast)
-                mission->SetWeightCompleted(mission->GetWeightCompleted() + cast->GetWeightTotal());
+                mission->SetWeightCompleted(mission->GetWeightCompleted() + cast->GetWeightNow());
             shipPtr->SetHPNow(0);
         } else {
             newPole[to.GetX()][to.GetY()] = shipPtr.get();

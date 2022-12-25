@@ -1,0 +1,56 @@
+\hypertarget{TWeapon_8h_source}{}\doxysection{TWeapon.\+h}
+\label{TWeapon_8h_source}\index{weapons/code/TWeapon.h@{weapons/code/TWeapon.h}}
+\mbox{\hyperlink{TWeapon_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 29.11.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TWEAPON\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TWEAPON\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classTWeapon}{TWeapon}} \{}
+\DoxyCodeLine{14     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classTWeapon_a2c8be83e7e0e62dabb3e6450e2d09c55}{TWeaponTestHelper}};}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a54a75427de15a9e038b85b9a4b131b87}{WeaponType\_}};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_afa83b1472fce84c8030826f1b108257f}{Damage\_}};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_ab4cecfdcffdc9e7d80c08a87cfc7857c}{CallDown\_}};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a304f11a50841093ddb062e874f49d9c6}{LastShot\_}};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a2d3e7981b5f9544e7fcdbcf96b76c93e}{Range\_}};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a8af562dde37e908349edf7eeae83a2c0}{ShotsTotal\_}};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a0b23d1c0740d0cbef8a4534445228bf6}{ShotsNow\_}};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a59a7b3407e8028b9ae3a38543a43fcce}{Cost\_}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{classTWeapon}{TWeapon}}(\textcolor{keywordtype}{int} weaponType, \textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{int} callDown, \textcolor{keywordtype}{int} lastShot, \textcolor{keywordtype}{int} range, \textcolor{keywordtype}{int} shotsTotal, \textcolor{keywordtype}{int} shotsNow, \textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{27     \mbox{\hyperlink{classTWeapon}{TWeapon}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWeapon}{TWeapon}}\& other);}
+\DoxyCodeLine{28     \mbox{\hyperlink{classTWeapon}{TWeapon}}\& \mbox{\hyperlink{classTWeapon_a718fbce052e6b5776494f7a1e02e9897}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWeapon}{TWeapon}}\& other);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTWeapon_a1d6ae03d1a77ff241107f10d385e674f}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWeapon}{TWeapon}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeapon_a7df03e5ad6b3e1031dd8ad37d3f300cd}{SetWeaponType}}(\textcolor{keywordtype}{int} weaponType);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeapon_ac69ac49187c45f5bb347b178d6068e2d}{SetDamage}}(\textcolor{keywordtype}{int} damage);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeapon_a8203fa767f0be727fd4aa43bc3d54d8d}{SetCallDown}}(\textcolor{keywordtype}{int} callDown);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeapon_ac3598f27952d282a4afb5adc1f98ef6c}{SetLastShot}}(\textcolor{keywordtype}{int} callDown);}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeapon_a072c99bb30315d650640fe8283f3b181}{SetRange}}(\textcolor{keywordtype}{int} range);}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeapon_ac4dc7b5d57c1e0c818671a7353a33171}{SetShotsTotal}}(\textcolor{keywordtype}{int} shotsTotal);}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeapon_afb6cca8a42446761cc6fef8656392269}{SetShotsNow}}(\textcolor{keywordtype}{int} shotsNow);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeapon_ac4fea7ba700a0ea83af7b3469b8a1fd9}{SetCost}}(\textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_af5165ccb82aed7d3852f0e6f7f936148}{GetWeaponType}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_ad3dabcddb3f17a8e0cec427b30df1f50}{GetDamage}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_ae92ec3b0c63bd45b32550e102f46b6e0}{GetCallDown}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a3cd2bb843a107a28dfa55ed33e3f5a85}{GetLastShot}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_acfec269f458a55f449332f84849b80d5}{GetRange}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{45     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a87ca4fe2cd5ce2aaceda038bab216fd0}{GetShotsTotal}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{46     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a552b334667ca95387af82df662334f72}{GetShotsNow}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a2074e5b5b326730d5212a3dc00df06f4}{GetCost}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTWeapon_a2bf519e492f0236067ee217b618483e8}{MakeShot}}(\textcolor{keywordtype}{int} sqDistance, \textcolor{keywordtype}{int} timeNow);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTWeapon_ab883c0bb224a04511e201461821e1144}{Print}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{61 \};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TWEAPON\_H}}
+\DoxyCodeLine{64 }
+
+\end{DoxyCode}

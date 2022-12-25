@@ -1,0 +1,445 @@
+\hypertarget{classTShip}{}\doxysection{TShip Class Reference}
+\label{classTShip}\index{TShip@{TShip}}
+
+
+Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей  
+
+
+
+
+{\ttfamily \#include $<$TShip.\+h$>$}
+
+
+
+Inheritance diagram for TShip\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d5/db9/classTShip__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TShip\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d0/d7d/classTShip__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTShip_abeec6d73077958d52c8af6e59c0b8f68}{TShip}} (int x, int y, int ship\+Type, const std\+::string \&ship\+Name, const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&capitan\+Info, int max\+Speed, int now\+Speed, int hp\+Total, int hp\+Now, int cost)
+\item 
+\mbox{\hyperlink{classTShip_ab8c50180a8c5d95c6bfe072518dae809}{TShip}} (const \mbox{\hyperlink{classTShip}{TShip}} \&other)
+\item 
+\mbox{\hyperlink{classTShip}{TShip}} \& \mbox{\hyperlink{classTShip_ac26cd3069009648dae1360c5ca51e396}{operator=}} (const \mbox{\hyperlink{classTShip}{TShip}} \&other)
+\item 
+bool \mbox{\hyperlink{classTShip_a50e72042cdaa2310e85ca1ad09952fb6}{operator==}} (const \mbox{\hyperlink{classTShip}{TShip}} \&other) const
+\item 
+void \mbox{\hyperlink{classTShip_ac1e00339be3dbde29c4d1c4339c598b1}{Set\+Ship\+Type}} (int ship\+Type)
+\item 
+void \mbox{\hyperlink{classTShip_a2aeba03fb8955226c61990d230fd9b6e}{Set\+Ship\+Name}} (const std\+::string \&ship\+Name)
+\item 
+void \mbox{\hyperlink{classTShip_adc9d8b6025e235d0f552740cd06130e1}{Set\+Capitan\+Info}} (const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&capitan\+Info)
+\item 
+void \mbox{\hyperlink{classTShip_a478b3dbff8f7b1e35903bf12fd4d384b}{Set\+Max\+Speed}} (int max\+Speed)
+\item 
+void \mbox{\hyperlink{classTShip_a6738b2e86941caadd0ac9dd98dd32f83}{Set\+Now\+Speed}} (int now\+Speed)
+\item 
+void \mbox{\hyperlink{classTShip_ab6ac08507bac326fda11fa1c713b8562}{Set\+HPTotal}} (int hp\+Total)
+\item 
+void \mbox{\hyperlink{classTShip_a978c830c3ba51fecd4482819110a814e}{Set\+HPNow}} (int hp\+Now)
+\item 
+void \mbox{\hyperlink{classTShip_ab9ae47309dea81319ef8583fbf6ca1ac}{Set\+Cost}} (int cost)
+\item 
+int \mbox{\hyperlink{classTShip_afa32e3f3b93a2749de2734914896bdbc}{Get\+Ship\+Type}} () const
+\item 
+std\+::string \mbox{\hyperlink{classTShip_acce1d32955675a0258d5c78bd323f7cc}{Get\+Ship\+Name}} () const
+\item 
+\mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \mbox{\hyperlink{classTShip_aa9ede65f6d5b238b077438769bee3132}{Get\+Capitan\+Info}} () const
+\item 
+int \mbox{\hyperlink{classTShip_a6176faf62af1a95fef2440e119afb717}{Get\+Max\+Speed}} () const
+\item 
+int \mbox{\hyperlink{classTShip_a17546c8543198bd7a937c2b025c6d5e9}{Get\+Now\+Speed}} () const
+\item 
+int \mbox{\hyperlink{classTShip_a0bec10d9d6f98500e99821ffab20e9d3}{Get\+HPTotal}} () const
+\item 
+int \mbox{\hyperlink{classTShip_a4a57aac91bcd0b7ac413b30d228162cb}{Get\+HPNow}} () const
+\item 
+int \mbox{\hyperlink{classTShip_ab9eb49417d6be99d181e74a9327d9136}{Get\+Cost}} () const
+\item 
+void \mbox{\hyperlink{classTShip_acd163830df7d2e25fba46c9696ae8494}{Be\+Damaged}} (int damage)
+\item 
+virtual void \mbox{\hyperlink{classTShip_a69a25d7b3bce32e46a1dcebe06d63209}{Print}} () const
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \mbox{\hyperlink{classTShip_a36838d6bbb57ef7e04818c5965a562ad}{Clone}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classTShip_a7e341cfd35e7902c195a261db9f79fa1}{Ship\+Type\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classTShip_aebc6c0819361776d5989d57e24e061e2}{Ship\+Name\+\_\+}}
+\item 
+\mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \mbox{\hyperlink{classTShip_a1b566dd25a913f25c3710eeee5a88b4a}{Capitan\+Info\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTShip_a0bc6879d2a60aec451fea30f7062a3e4}{Max\+Speed\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTShip_aaefd2d332219b52758b71af626d3d839}{Now\+Speed\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTShip_ac0a9c987e5e7130d744893c62c5e73b9}{HPTotal\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTShip_aa1c076f9ff6b8d573c3da9114b2b95ae}{HPNow\+\_\+}}
+\item 
+int \mbox{\hyperlink{classTShip_a0c713932667be77a1bbd35e64bba6b24}{Cost\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTShip_abeec6d73077958d52c8af6e59c0b8f68}\label{classTShip_abeec6d73077958d52c8af6e59c0b8f68}} 
+\index{TShip@{TShip}!TShip@{TShip}}
+\index{TShip@{TShip}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{TShip()}{TShip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TShip\+::\+TShip (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{ship\+Type,  }\item[{const std\+::string \&}]{ship\+Name,  }\item[{const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&}]{capitan\+Info,  }\item[{int}]{max\+Speed,  }\item[{int}]{now\+Speed,  }\item[{int}]{hp\+Total,  }\item[{int}]{hp\+Now,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTShip_ab8c50180a8c5d95c6bfe072518dae809}\label{classTShip_ab8c50180a8c5d95c6bfe072518dae809}} 
+\index{TShip@{TShip}!TShip@{TShip}}
+\index{TShip@{TShip}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{TShip()}{TShip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TShip\+::\+TShip (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTShip}{TShip}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTShip_acd163830df7d2e25fba46c9696ae8494}\label{classTShip_acd163830df7d2e25fba46c9696ae8494}} 
+\index{TShip@{TShip}!BeDamaged@{BeDamaged}}
+\index{BeDamaged@{BeDamaged}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{BeDamaged()}{BeDamaged()}}
+{\footnotesize\ttfamily void TShip\+::\+Be\+Damaged (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+Принимает урон, нанесенный по кораблю. Вычитает его из значения HPNow. Сделает его равным max(HPNow -\/ damage, 0); 
+\begin{DoxyParams}{Parameters}
+{\em damage} & -\/ урон, который получил корабль \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d07/classTShip_acd163830df7d2e25fba46c9696ae8494_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_a36838d6bbb57ef7e04818c5965a562ad}\label{classTShip_a36838d6bbb57ef7e04818c5965a562ad}} 
+\index{TShip@{TShip}!Clone@{Clone}}
+\index{Clone@{Clone}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ TShip\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Создает копию корабля. есть override в каждом наследнике, который скопирует все поля более частного случая корабля \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTCargoShip_ad6518f045b33ef07a6f84014d7921b4e}{TCargo\+Ship}}, \mbox{\hyperlink{classTCargoWarShip_ae906a869c5cd8ffae728b0e1e6716207}{TCargo\+War\+Ship}}, and \mbox{\hyperlink{classTWarShip_a7069de33689498bfdcf2f2c7ed4af31e}{TWar\+Ship}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d07/classTShip_a36838d6bbb57ef7e04818c5965a562ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_aa9ede65f6d5b238b077438769bee3132}\label{classTShip_aa9ede65f6d5b238b077438769bee3132}} 
+\index{TShip@{TShip}!GetCapitanInfo@{GetCapitanInfo}}
+\index{GetCapitanInfo@{GetCapitanInfo}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetCapitanInfo()}{GetCapitanInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} TShip\+::\+Get\+Capitan\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d1/d07/classTShip_aa9ede65f6d5b238b077438769bee3132_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_ab9eb49417d6be99d181e74a9327d9136}\label{classTShip_ab9eb49417d6be99d181e74a9327d9136}} 
+\index{TShip@{TShip}!GetCost@{GetCost}}
+\index{GetCost@{GetCost}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetCost()}{GetCost()}}
+{\footnotesize\ttfamily int TShip\+::\+Get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d07/classTShip_ab9eb49417d6be99d181e74a9327d9136_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_a4a57aac91bcd0b7ac413b30d228162cb}\label{classTShip_a4a57aac91bcd0b7ac413b30d228162cb}} 
+\index{TShip@{TShip}!GetHPNow@{GetHPNow}}
+\index{GetHPNow@{GetHPNow}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetHPNow()}{GetHPNow()}}
+{\footnotesize\ttfamily int TShip\+::\+Get\+HPNow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d07/classTShip_a4a57aac91bcd0b7ac413b30d228162cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_a0bec10d9d6f98500e99821ffab20e9d3}\label{classTShip_a0bec10d9d6f98500e99821ffab20e9d3}} 
+\index{TShip@{TShip}!GetHPTotal@{GetHPTotal}}
+\index{GetHPTotal@{GetHPTotal}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetHPTotal()}{GetHPTotal()}}
+{\footnotesize\ttfamily int TShip\+::\+Get\+HPTotal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{d1/d07/classTShip_a0bec10d9d6f98500e99821ffab20e9d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_a6176faf62af1a95fef2440e119afb717}\label{classTShip_a6176faf62af1a95fef2440e119afb717}} 
+\index{TShip@{TShip}!GetMaxSpeed@{GetMaxSpeed}}
+\index{GetMaxSpeed@{GetMaxSpeed}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetMaxSpeed()}{GetMaxSpeed()}}
+{\footnotesize\ttfamily int TShip\+::\+Get\+Max\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{d1/d07/classTShip_a6176faf62af1a95fef2440e119afb717_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_a17546c8543198bd7a937c2b025c6d5e9}\label{classTShip_a17546c8543198bd7a937c2b025c6d5e9}} 
+\index{TShip@{TShip}!GetNowSpeed@{GetNowSpeed}}
+\index{GetNowSpeed@{GetNowSpeed}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetNowSpeed()}{GetNowSpeed()}}
+{\footnotesize\ttfamily int TShip\+::\+Get\+Now\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{d1/d07/classTShip_a17546c8543198bd7a937c2b025c6d5e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_acce1d32955675a0258d5c78bd323f7cc}\label{classTShip_acce1d32955675a0258d5c78bd323f7cc}} 
+\index{TShip@{TShip}!GetShipName@{GetShipName}}
+\index{GetShipName@{GetShipName}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetShipName()}{GetShipName()}}
+{\footnotesize\ttfamily std\+::string TShip\+::\+Get\+Ship\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d07/classTShip_acce1d32955675a0258d5c78bd323f7cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_afa32e3f3b93a2749de2734914896bdbc}\label{classTShip_afa32e3f3b93a2749de2734914896bdbc}} 
+\index{TShip@{TShip}!GetShipType@{GetShipType}}
+\index{GetShipType@{GetShipType}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetShipType()}{GetShipType()}}
+{\footnotesize\ttfamily int TShip\+::\+Get\+Ship\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{d1/d07/classTShip_afa32e3f3b93a2749de2734914896bdbc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_ac26cd3069009648dae1360c5ca51e396}\label{classTShip_ac26cd3069009648dae1360c5ca51e396}} 
+\index{TShip@{TShip}!operator=@{operator=}}
+\index{operator=@{operator=}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTShip}{TShip}} \& TShip\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTShip}{TShip}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTShip_a50e72042cdaa2310e85ca1ad09952fb6}\label{classTShip_a50e72042cdaa2310e85ca1ad09952fb6}} 
+\index{TShip@{TShip}!operator==@{operator==}}
+\index{operator==@{operator==}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool TShip\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTShip}{TShip}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classTShip_a69a25d7b3bce32e46a1dcebe06d63209}\label{classTShip_a69a25d7b3bce32e46a1dcebe06d63209}} 
+\index{TShip@{TShip}!Print@{Print}}
+\index{Print@{Print}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void TShip\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Используется для вывода информации в магазине 
+
+Reimplemented in \mbox{\hyperlink{classTCargoShip_ac65e2dfc380082584a2ba473384d46c6}{TCargo\+Ship}}, \mbox{\hyperlink{classTCargoWarShip_a68e8702482af0683c976e316a500db04}{TCargo\+War\+Ship}}, and \mbox{\hyperlink{classTWarShip_a1728538cd00c77fb09b08357e491bca8}{TWar\+Ship}}.
+
+\mbox{\Hypertarget{classTShip_adc9d8b6025e235d0f552740cd06130e1}\label{classTShip_adc9d8b6025e235d0f552740cd06130e1}} 
+\index{TShip@{TShip}!SetCapitanInfo@{SetCapitanInfo}}
+\index{SetCapitanInfo@{SetCapitanInfo}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetCapitanInfo()}{SetCapitanInfo()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Capitan\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} \&}]{capitan\+Info }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{d1/d07/classTShip_adc9d8b6025e235d0f552740cd06130e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_ab9ae47309dea81319ef8583fbf6ca1ac}\label{classTShip_ab9ae47309dea81319ef8583fbf6ca1ac}} 
+\index{TShip@{TShip}!SetCost@{SetCost}}
+\index{SetCost@{SetCost}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetCost()}{SetCost()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Cost (\begin{DoxyParamCaption}\item[{int}]{cost }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{d1/d07/classTShip_ab9ae47309dea81319ef8583fbf6ca1ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_a978c830c3ba51fecd4482819110a814e}\label{classTShip_a978c830c3ba51fecd4482819110a814e}} 
+\index{TShip@{TShip}!SetHPNow@{SetHPNow}}
+\index{SetHPNow@{SetHPNow}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetHPNow()}{SetHPNow()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+HPNow (\begin{DoxyParamCaption}\item[{int}]{hp\+Now }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d07/classTShip_a978c830c3ba51fecd4482819110a814e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_ab6ac08507bac326fda11fa1c713b8562}\label{classTShip_ab6ac08507bac326fda11fa1c713b8562}} 
+\index{TShip@{TShip}!SetHPTotal@{SetHPTotal}}
+\index{SetHPTotal@{SetHPTotal}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetHPTotal()}{SetHPTotal()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+HPTotal (\begin{DoxyParamCaption}\item[{int}]{hp\+Total }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{d1/d07/classTShip_ab6ac08507bac326fda11fa1c713b8562_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_a478b3dbff8f7b1e35903bf12fd4d384b}\label{classTShip_a478b3dbff8f7b1e35903bf12fd4d384b}} 
+\index{TShip@{TShip}!SetMaxSpeed@{SetMaxSpeed}}
+\index{SetMaxSpeed@{SetMaxSpeed}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetMaxSpeed()}{SetMaxSpeed()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Max\+Speed (\begin{DoxyParamCaption}\item[{int}]{max\+Speed }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{d1/d07/classTShip_a478b3dbff8f7b1e35903bf12fd4d384b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_a6738b2e86941caadd0ac9dd98dd32f83}\label{classTShip_a6738b2e86941caadd0ac9dd98dd32f83}} 
+\index{TShip@{TShip}!SetNowSpeed@{SetNowSpeed}}
+\index{SetNowSpeed@{SetNowSpeed}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetNowSpeed()}{SetNowSpeed()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Now\+Speed (\begin{DoxyParamCaption}\item[{int}]{now\+Speed }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{d1/d07/classTShip_a6738b2e86941caadd0ac9dd98dd32f83_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_a2aeba03fb8955226c61990d230fd9b6e}\label{classTShip_a2aeba03fb8955226c61990d230fd9b6e}} 
+\index{TShip@{TShip}!SetShipName@{SetShipName}}
+\index{SetShipName@{SetShipName}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetShipName()}{SetShipName()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Ship\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ship\+Name }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d07/classTShip_a2aeba03fb8955226c61990d230fd9b6e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTShip_ac1e00339be3dbde29c4d1c4339c598b1}\label{classTShip_ac1e00339be3dbde29c4d1c4339c598b1}} 
+\index{TShip@{TShip}!SetShipType@{SetShipType}}
+\index{SetShipType@{SetShipType}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetShipType()}{SetShipType()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Ship\+Type (\begin{DoxyParamCaption}\item[{int}]{ship\+Type }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{d1/d07/classTShip_ac1e00339be3dbde29c4d1c4339c598b1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTShip_a1b566dd25a913f25c3710eeee5a88b4a}\label{classTShip_a1b566dd25a913f25c3710eeee5a88b4a}} 
+\index{TShip@{TShip}!CapitanInfo\_@{CapitanInfo\_}}
+\index{CapitanInfo\_@{CapitanInfo\_}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{CapitanInfo\_}{CapitanInfo\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} TShip\+::\+Capitan\+Info\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classTShip_a0c713932667be77a1bbd35e64bba6b24}\label{classTShip_a0c713932667be77a1bbd35e64bba6b24}} 
+\index{TShip@{TShip}!Cost\_@{Cost\_}}
+\index{Cost\_@{Cost\_}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{Cost\_}{Cost\_}}
+{\footnotesize\ttfamily int TShip\+::\+Cost\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classTShip_aa1c076f9ff6b8d573c3da9114b2b95ae}\label{classTShip_aa1c076f9ff6b8d573c3da9114b2b95ae}} 
+\index{TShip@{TShip}!HPNow\_@{HPNow\_}}
+\index{HPNow\_@{HPNow\_}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{HPNow\_}{HPNow\_}}
+{\footnotesize\ttfamily int TShip\+::\+HPNow\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classTShip_ac0a9c987e5e7130d744893c62c5e73b9}\label{classTShip_ac0a9c987e5e7130d744893c62c5e73b9}} 
+\index{TShip@{TShip}!HPTotal\_@{HPTotal\_}}
+\index{HPTotal\_@{HPTotal\_}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{HPTotal\_}{HPTotal\_}}
+{\footnotesize\ttfamily int TShip\+::\+HPTotal\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classTShip_a0bc6879d2a60aec451fea30f7062a3e4}\label{classTShip_a0bc6879d2a60aec451fea30f7062a3e4}} 
+\index{TShip@{TShip}!MaxSpeed\_@{MaxSpeed\_}}
+\index{MaxSpeed\_@{MaxSpeed\_}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{MaxSpeed\_}{MaxSpeed\_}}
+{\footnotesize\ttfamily int TShip\+::\+Max\+Speed\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classTShip_aaefd2d332219b52758b71af626d3d839}\label{classTShip_aaefd2d332219b52758b71af626d3d839}} 
+\index{TShip@{TShip}!NowSpeed\_@{NowSpeed\_}}
+\index{NowSpeed\_@{NowSpeed\_}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{NowSpeed\_}{NowSpeed\_}}
+{\footnotesize\ttfamily int TShip\+::\+Now\+Speed\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classTShip_aebc6c0819361776d5989d57e24e061e2}\label{classTShip_aebc6c0819361776d5989d57e24e061e2}} 
+\index{TShip@{TShip}!ShipName\_@{ShipName\_}}
+\index{ShipName\_@{ShipName\_}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{ShipName\_}{ShipName\_}}
+{\footnotesize\ttfamily std\+::string TShip\+::\+Ship\+Name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classTShip_a7e341cfd35e7902c195a261db9f79fa1}\label{classTShip_a7e341cfd35e7902c195a261db9f79fa1}} 
+\index{TShip@{TShip}!ShipType\_@{ShipType\_}}
+\index{ShipType\_@{ShipType\_}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{ShipType\_}{ShipType\_}}
+{\footnotesize\ttfamily int TShip\+::\+Ship\+Type\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ships/code/\mbox{\hyperlink{TShip_8h}{TShip.\+h}}\item 
+ships/code/\mbox{\hyperlink{TShip_8cpp}{TShip.\+cpp}}\end{DoxyCompactItemize}

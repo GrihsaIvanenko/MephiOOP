@@ -1,0 +1,50 @@
+\hypertarget{TPlaying_8h_source}{}\doxysection{TPlaying.\+h}
+\label{TPlaying_8h_source}\index{game/code/TPlaying.h@{game/code/TPlaying.h}}
+\mbox{\hyperlink{TPlaying_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 17.12.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TPLAYING\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TPLAYING\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TMission_8h}{TMission.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{TPlaying_8h_a93d9566c68f3fc922e9ee815e2bff2bb}{H\_of\_one}} = 1;}
+\DoxyCodeLine{12 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{TPlaying_8h_a6e00a7dd729cfa516018f687ff821c57}{W\_of\_one}} = 1;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classTPlaying}{TPlaying}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a658ffefee14a5d2049f7f7e1c031cd81}{FillIn}}(std::vector<std::vector<char>>\& image, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, std::vector<std::vector<char>>\& toPrint);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a9809c88608f55eadb7715f3618f850f6}{DrawPirateBase}}(\mbox{\hyperlink{classTPirateBase}{TPirateBase}}* pirateBase, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, std::vector<std::vector<char>>\& toPrint);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a2e156f71550516644fab0862e2599284}{DrawBase}}(\mbox{\hyperlink{classTBase}{TBase}}* base, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, std::vector<std::vector<char>>\& toPrint);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a6440ea7e27c02041156f20759d748f61}{DrawCargoWarShip}}(\mbox{\hyperlink{classTCargoWarShip}{TCargoWarShip}}* ship, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, std::vector<std::vector<char>>\& toPrint);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_aca7c355d1279d2be9d1bfb54832608e2}{DrawCargoShip}}(\mbox{\hyperlink{classTCargoShip}{TCargoShip}}* ship, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, std::vector<std::vector<char>>\& toPrint);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a805bbfe7a1288c545be6910b31b170c5}{DrawWarShip}}(\mbox{\hyperlink{classTWarShip}{TWarShip}}* ship, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, std::vector<std::vector<char>>\& toPrint);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \mbox{\hyperlink{classTObjectOnMap}{TObjectOnMap}} \mbox{\hyperlink{classTPlaying_ab7d5a4c10c234917eb40c53b81186e80}{FindBest}}(\mbox{\hyperlink{classTObjectOnMap}{TObjectOnMap}}* from, \mbox{\hyperlink{classTObjectOnMap}{TObjectOnMap}}* to, \textcolor{keywordtype}{int} speed, \textcolor{keyword}{const} std::vector<std::vector<TObjectOnMap*>>\& newPole);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a8a870c10a0e30f93551d5dc8b02bf93b}{Init}}(std::unique\_ptr<TMission>\& mission);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac}{MakeSpawn}}(std::unique\_ptr<TMission>\& mission, \textcolor{keywordtype}{int} nowTime);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_af7330a2cd413bb1934ba6c12c267722a}{RefillBases}}(std::unique\_ptr<TMission>\& mission, std::vector<std::vector<TObjectOnMap*>>\& newPole);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTPlaying_aef014ab7b215fa8b936719318fcfd1a2}{GetSpeed}}(std::unique\_ptr<TShip>\& ship);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_ae0d73d17b32678662ea5894822f4913a}{MoveShips}}(\mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\& ships, \mbox{\hyperlink{classTBase}{TBase}}\& b, std::unique\_ptr<TMission>\& mission, std::vector<std::vector<TObjectOnMap*>>\& newPole);}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_ae0d73d17b32678662ea5894822f4913a}{MoveShips}}(\mbox{\hyperlink{classMyList}{MyList<TWarShip>}}\& pirates, \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\& goals, std::vector<std::vector<TObjectOnMap*>>\& newPole);}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a029211b1dce0b41bb75ee19a8db34550}{MakeShot}}(\mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\& attack, \mbox{\hyperlink{classMyList}{MyList<TWarShip>}}\& defend, \textcolor{keywordtype}{int} nowTime);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a029211b1dce0b41bb75ee19a8db34550}{MakeShot}}(\mbox{\hyperlink{classMyList}{MyList<TWarShip>}}\& attack, \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\& defend, \textcolor{keywordtype}{int} nowTime);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_ad407c73e7fccabda36c46de8e58b6fe4}{RemoveRipped}}(\mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\& ships);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_ad407c73e7fccabda36c46de8e58b6fe4}{RemoveRipped}}(\mbox{\hyperlink{classMyList}{MyList<TWarShip>}}\& ships);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a8599ce61fd2748b737b054b0a5c62647}{MakeMoves}}(std::unique\_ptr<TMission>\& mission, \textcolor{keywordtype}{int} nowTime);}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a42f315c7d636f9ed24fe716a591c8d5e}{ShowOnScreen}}(std::unique\_ptr<TMission>\& mission);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a0f43d403bf5d61d112782be4e517c06d}{FillPole}}(std::unique\_ptr<TMission>\& mission, std::vector<std::vector<TObjectOnMap*>>\& pole);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTPlaying_a4cb98dff7d9a323fd893863f26b9c87d}{FillPoint}}(\mbox{\hyperlink{classTObjectOnMap}{TObjectOnMap}}* \textcolor{keywordtype}{object}, \textcolor{keywordtype}{int} line, \textcolor{keywordtype}{int} pos, std::vector<std::vector<char>>\& toPrint);}
+\DoxyCodeLine{40 \textcolor{keyword}{public}:}
+\DoxyCodeLine{41     std::unique\_ptr<TMission> \mbox{\hyperlink{classTPlaying_a55b9a1e2159468036c18440cd361c749}{Play}}(std::unique\_ptr<TMission> missionPtr);}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TPLAYING\_H}}
+
+\end{DoxyCode}

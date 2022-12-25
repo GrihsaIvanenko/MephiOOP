@@ -1,0 +1,33 @@
+\hypertarget{TSpawnDescriptor_8h_source}{}\doxysection{TSpawn\+Descriptor.\+h}
+\label{TSpawnDescriptor_8h_source}\index{base/code/TSpawnDescriptor.h@{base/code/TSpawnDescriptor.h}}
+\mbox{\hyperlink{TSpawnDescriptor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 13.12.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TSPAWNDESCRIPTOR\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TSPAWNDESCRIPTOR\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../../ships/code/TWarShip.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../../container/code/MyList.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classTSpawnDescriptor}{TSpawnDescriptor}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{private}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{classTWarShip}{TWarShip}} \mbox{\hyperlink{classTSpawnDescriptor_ab615606e270e3a41bf971414c1c8ab67}{ToSpawn\_}};}
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTSpawnDescriptor_ac344bf2f3abf94beb308442dfe990029}{SpamCount\_}};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTSpawnDescriptor_a613f79b7cb959989e2f69eec862fb28a}{LoopTime\_}};}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTSpawnDescriptor_a8a6f865d07fc0f3a054c017990ad41e5}{LastSpam\_}};}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{classTSpawnDescriptor}{TSpawnDescriptor}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTWarShip}{TWarShip}}\& toSpam, \textcolor{keywordtype}{int} spamCount, \textcolor{keywordtype}{int} loopTime, \textcolor{keywordtype}{int} lastSpam);}
+\DoxyCodeLine{19     \mbox{\hyperlink{classTSpawnDescriptor}{TSpawnDescriptor}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTSpawnDescriptor}{TSpawnDescriptor}}\& other);}
+\DoxyCodeLine{20     \mbox{\hyperlink{classTSpawnDescriptor}{TSpawnDescriptor}}\& \mbox{\hyperlink{classTSpawnDescriptor_ab6be9ff0f5bdfd38365e165c35989bea}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTSpawnDescriptor}{TSpawnDescriptor}}\& other);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTSpawnDescriptor_a3c426b517f96c133be601dcb16601685}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTSpawnDescriptor}{TSpawnDescriptor}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \mbox{\hyperlink{classMyList}{MyList<TWarShip>}} \mbox{\hyperlink{classTSpawnDescriptor_a115ff7e494d2997651192e6d69bb4689}{Spawn}}(\textcolor{keywordtype}{int} time);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTSpawnDescriptor_a2bfa0d9a8473a6dc7df369933bf892f3}{SetXY}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TSPAWNDESCRIPTOR\_H}}
+
+\end{DoxyCode}

@@ -8,9 +8,16 @@
 #include <memory>
 #include "../../ships/code/TShip.h"
 
+/*!
+ * \brief Односвазный список
+ */
+
 template<class T>
 class MyList {
 private:
+    /*
+     * Класс для хранения одного элемента контейнера и указателя на следующий
+     */
     class Node {
         friend class MyList;
     private:
@@ -24,6 +31,10 @@ private:
     };
 
 public:
+    /*
+     * Класс для итерации по нашему контейнеру.
+     * Тип итератора - ForwardIterator
+     */
     class iterator {
         friend class MyList;
     private:
@@ -91,6 +102,12 @@ public:
     iterator end() const {
         return MyList<T>::iterator(Tail_);
     }
+    /*!
+     * Inserts element
+     * Complexity - O(1)
+     * @param what
+     * @param beforeWho iterator, which element will be next after insterted
+     */
     void insert(T&& what, iterator beforeWho) {
         ++Size_;
         Node* nw = new Node(std::move(what), beforeWho.Data_->Next_);
@@ -99,6 +116,12 @@ public:
         beforeWho.Data_->Next_ = nw;
         std::swap(nw->Data_, beforeWho.Data_->Data_);
     }//iterator will look at new Node
+
+    /*!
+     * Erases element under iterator
+     * Complexity - O(1)
+     * @param who
+     */
     void erase(iterator who){
         --Size_;
         Node* toDelete = who.Data_->Next_;
@@ -108,6 +131,14 @@ public:
         std::swap(who.Data_->Data_, toDelete->Data_);
         delete toDelete;
     } //iterator will look at next Node
+
+    /*!
+     * Gives const link to Element with number you give
+     * Numbers 0, 1 ...
+     * Complexity - O(size)
+     * @param id
+     * @return
+     */
     const T& getById(int id) const {
         if (id < 0 || id >= Size_) {
             std::string ex = "Bad id = " + std::to_string(id) + " in range [0, " + std::to_string(Size_) + ")";
@@ -119,6 +150,13 @@ public:
         throw "228";
     }
 
+    /*!
+     * Gives link to Element with number you give
+     * Numbers 0, 1 ...
+     * Complexity - O(size)
+     * @param id
+     * @return
+     */
     T& getById(int id) {
         if (id < 0 || id >= Size_) {
             std::string ex = "Bad id = " + std::to_string(id) + " in range [0, " + std::to_string(Size_) + ")";

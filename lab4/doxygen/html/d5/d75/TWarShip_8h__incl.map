@@ -1,0 +1,12 @@
+<map id="ships/code/TWarShip.h" name="ships/code/TWarShip.h">
+<area shape="rect" id="node1" title=" " alt="" coords="347,5,515,31"/>
+<area shape="rect" id="node2" href="$dc/d2c/TWeaponHolder_8h.html" title=" " alt="" coords="268,79,408,119"/>
+<area shape="rect" id="node7" href="$d0/d93/TShip_8h.html" title=" " alt="" coords="489,86,560,111"/>
+<area shape="rect" id="node3" title=" " alt="" coords="410,174,487,199"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,174,68,199"/>
+<area shape="rect" id="node5" href="$d8/d66/enum__place__on__ship_8h.html" title=" " alt="" coords="93,167,266,207"/>
+<area shape="rect" id="node6" href="$d0/df8/TWeapon_8h.html" title=" " alt="" coords="291,174,385,199"/>
+<area shape="rect" id="node8" title=" " alt="" coords="543,255,602,280"/>
+<area shape="rect" id="node9" href="$de/da2/TCapitanInfo_8h.html" title=" " alt="" coords="563,174,679,199"/>
+<area shape="rect" id="node10" href="$dc/d06/TObjectOnMap_8h.html" title=" " alt="" coords="703,167,887,207"/>
+</map>

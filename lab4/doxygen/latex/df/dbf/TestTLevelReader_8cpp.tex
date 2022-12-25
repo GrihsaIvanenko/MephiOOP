@@ -1,0 +1,669 @@
+\hypertarget{TestTLevelReader_8cpp}{}\doxysection{game/tests/\+TLevel\+Reader/code/\+Test\+TLevel\+Reader.cpp File Reference}
+\label{TestTLevelReader_8cpp}\index{game/tests/TLevelReader/code/TestTLevelReader.cpp@{game/tests/TLevelReader/code/TestTLevelReader.cpp}}
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../../../game/code/\+TLevel\+Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for Test\+TLevel\+Reader.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df7/TestTLevelReader_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a995a7e2b0d8407e28d6fa2a5cd0f849d}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Int1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a688fb9827e9ae57791246c07b3010ab2}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Int2)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_afd596f33556fe14d4a49126d012485e1}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Int3)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_ab22dbaa9eb9caa900343d0874d8be209}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Int4)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a8d0dde8c10a21c5e1725ea4c8f5bfef0}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Int5)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a26efccd365e4fbc1179bd9c60661a350}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+String1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_aa0b79a9394387fdf29f5f430b721abe8}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+String2)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_ad44fa683054d539effb0670e154bd58e}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+String3)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a020e23a9251bc52f0d4dcef03a542b77}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Capitan\+Info1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a6caaf343307b95e560244d3d157e95f2}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Capitan\+Info2)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_ae9f8a39d969c382e1a7a670ddb31fe45}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Capitan\+Info3)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a598b8e4872386b8642b01e8623734cdb}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Capitan\+Info4)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a57e37dff84d7dea3c514214fc5d43956}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Capitan\+Info5)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_aa7b57f5c4f46491ed887d757af6cf774}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Weapon)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ \mbox{\hyperlink{TestTLevelReader_8cpp_a04829e963b7ea7cf309dfa703ceb950e}{Get\+Capitan\+Info}} ()
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \mbox{\hyperlink{TestTLevelReader_8cpp_a75c05778cfeaafda2b661762c0a22de8}{Get\+Weapons}} ()
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a0b38a70622c5f89d667fa6639c424089}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Ship1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a41ad2bc025b36f214a5f0abc9df1aba6}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Ship2)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a6b32b3eac60dee52c0671e70fcc56094}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Ship3)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_acf4d4d465fbfa2f3e33843debed606aa}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Base1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a69a4af6dfef11dd141ff09b1418e9a9d}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Base2)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a792fcbb6d6bdee2270f520ec2e6f235a}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Base3)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a6c36f508b1750d59e3ab18b7a77174ea}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Ints1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a1c107aa60baea3cdb36e612a59eb7bc6}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Ints2)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a160183933a79ac06ca47ffffae6088f4}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Ints3)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a24daca223446d45d535988669914051e}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Capitan\+Infos1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a5d44caed3904c1ef6c734477bed059f0}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Weapons1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_ae1685fd5cbbb95637c7623fffb0a0a7f}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Ships1)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \mbox{\hyperlink{TestTLevelReader_8cpp_a32e07d67b7efd1d03d13a110958eece8}{Get\+Ships}} ()
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a7345c8c1666adc3189772b4d8c854505}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Spawn\+Descriptor1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_aea046e13a91e7a1380892ac2ea32b792}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Spawn\+Descriptor2)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_ae5eeb71a22e774f25838b6c1258d3822}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Spawn\+Descriptor3)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a2ec22c5c0380e25482b30c0b1dee01f5}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Spawn\+Descriptor4)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a69858fb8c48df8a75d0c309e5a5b0eb4}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Spawn\+Descriptor5)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a3d91a40a002dd06ad7a815653e1c1bfd}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Spawn\+Descriptors1)
+\item 
+\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ \mbox{\hyperlink{TestTLevelReader_8cpp_ac86806b1ea40e9e267dcb76e291d2c89}{Get\+Descriptors}} ()
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a755cf3ec78fcb2c18a1579f855288e53}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Pirate\+Base1)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_ad8ca26b2785094afac51b7d461f833c9}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Pirate\+Base2)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a5539ef6695ae90f8c120dab07db5028a}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Pirate\+Base3)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_ae486e71c128cb1945779cfcc50810a9e}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Pirate\+Bases)
+\item 
+\mbox{\hyperlink{TestTLevelReader_8cpp_a5b89023c1d74cccde2a4947bc710cd5b}{TEST}} (\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}, Read\+Mission\+Info\+From\+Stream1)
+\item 
+int \mbox{\hyperlink{TestTLevelReader_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a04829e963b7ea7cf309dfa703ceb950e}\label{TestTLevelReader_8cpp_a04829e963b7ea7cf309dfa703ceb950e}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!GetCapitanInfo@{GetCapitanInfo}}
+\index{GetCapitanInfo@{GetCapitanInfo}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{GetCapitanInfo()}{GetCapitanInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ Get\+Capitan\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{df/dbf/TestTLevelReader_8cpp_a04829e963b7ea7cf309dfa703ceb950e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a04829e963b7ea7cf309dfa703ceb950e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_ac86806b1ea40e9e267dcb76e291d2c89}\label{TestTLevelReader_8cpp_ac86806b1ea40e9e267dcb76e291d2c89}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!GetDescriptors@{GetDescriptors}}
+\index{GetDescriptors@{GetDescriptors}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{GetDescriptors()}{GetDescriptors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ Get\+Descriptors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_ac86806b1ea40e9e267dcb76e291d2c89_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{df/dbf/TestTLevelReader_8cpp_ac86806b1ea40e9e267dcb76e291d2c89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a32e07d67b7efd1d03d13a110958eece8}\label{TestTLevelReader_8cpp_a32e07d67b7efd1d03d13a110958eece8}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!GetShips@{GetShips}}
+\index{GetShips@{GetShips}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{GetShips()}{GetShips()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ Get\+Ships (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a32e07d67b7efd1d03d13a110958eece8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{df/dbf/TestTLevelReader_8cpp_a32e07d67b7efd1d03d13a110958eece8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a75c05778cfeaafda2b661762c0a22de8}\label{TestTLevelReader_8cpp_a75c05778cfeaafda2b661762c0a22de8}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!GetWeapons@{GetWeapons}}
+\index{GetWeapons@{GetWeapons}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{GetWeapons()}{GetWeapons()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ Get\+Weapons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{df/dbf/TestTLevelReader_8cpp_a75c05778cfeaafda2b661762c0a22de8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{df/dbf/TestTLevelReader_8cpp_a75c05778cfeaafda2b661762c0a22de8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{TestTLevelReader_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!main@{main}}
+\index{main@{main}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestTLevelReader_8cpp_acf4d4d465fbfa2f3e33843debed606aa}\label{TestTLevelReader_8cpp_acf4d4d465fbfa2f3e33843debed606aa}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Base1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_acf4d4d465fbfa2f3e33843debed606aa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a69a4af6dfef11dd141ff09b1418e9a9d}\label{TestTLevelReader_8cpp_a69a4af6dfef11dd141ff09b1418e9a9d}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Base2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a69a4af6dfef11dd141ff09b1418e9a9d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a792fcbb6d6bdee2270f520ec2e6f235a}\label{TestTLevelReader_8cpp_a792fcbb6d6bdee2270f520ec2e6f235a}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Base3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a792fcbb6d6bdee2270f520ec2e6f235a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a020e23a9251bc52f0d4dcef03a542b77}\label{TestTLevelReader_8cpp_a020e23a9251bc52f0d4dcef03a542b77}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Capitan\+Info1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a020e23a9251bc52f0d4dcef03a542b77_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a6caaf343307b95e560244d3d157e95f2}\label{TestTLevelReader_8cpp_a6caaf343307b95e560244d3d157e95f2}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Capitan\+Info2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a6caaf343307b95e560244d3d157e95f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_ae9f8a39d969c382e1a7a670ddb31fe45}\label{TestTLevelReader_8cpp_ae9f8a39d969c382e1a7a670ddb31fe45}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Capitan\+Info3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_ae9f8a39d969c382e1a7a670ddb31fe45_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a598b8e4872386b8642b01e8623734cdb}\label{TestTLevelReader_8cpp_a598b8e4872386b8642b01e8623734cdb}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Capitan\+Info4}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a598b8e4872386b8642b01e8623734cdb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a57e37dff84d7dea3c514214fc5d43956}\label{TestTLevelReader_8cpp_a57e37dff84d7dea3c514214fc5d43956}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Capitan\+Info5}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a57e37dff84d7dea3c514214fc5d43956_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a24daca223446d45d535988669914051e}\label{TestTLevelReader_8cpp_a24daca223446d45d535988669914051e}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Capitan\+Infos1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a24daca223446d45d535988669914051e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a995a7e2b0d8407e28d6fa2a5cd0f849d}\label{TestTLevelReader_8cpp_a995a7e2b0d8407e28d6fa2a5cd0f849d}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Int1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{df/dbf/TestTLevelReader_8cpp_a995a7e2b0d8407e28d6fa2a5cd0f849d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a688fb9827e9ae57791246c07b3010ab2}\label{TestTLevelReader_8cpp_a688fb9827e9ae57791246c07b3010ab2}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Int2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{df/dbf/TestTLevelReader_8cpp_a688fb9827e9ae57791246c07b3010ab2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_afd596f33556fe14d4a49126d012485e1}\label{TestTLevelReader_8cpp_afd596f33556fe14d4a49126d012485e1}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Int3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{df/dbf/TestTLevelReader_8cpp_afd596f33556fe14d4a49126d012485e1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_ab22dbaa9eb9caa900343d0874d8be209}\label{TestTLevelReader_8cpp_ab22dbaa9eb9caa900343d0874d8be209}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Int4}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{df/dbf/TestTLevelReader_8cpp_ab22dbaa9eb9caa900343d0874d8be209_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a8d0dde8c10a21c5e1725ea4c8f5bfef0}\label{TestTLevelReader_8cpp_a8d0dde8c10a21c5e1725ea4c8f5bfef0}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Int5}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{df/dbf/TestTLevelReader_8cpp_a8d0dde8c10a21c5e1725ea4c8f5bfef0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a6c36f508b1750d59e3ab18b7a77174ea}\label{TestTLevelReader_8cpp_a6c36f508b1750d59e3ab18b7a77174ea}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Ints1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a6c36f508b1750d59e3ab18b7a77174ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a1c107aa60baea3cdb36e612a59eb7bc6}\label{TestTLevelReader_8cpp_a1c107aa60baea3cdb36e612a59eb7bc6}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Ints2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a1c107aa60baea3cdb36e612a59eb7bc6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a160183933a79ac06ca47ffffae6088f4}\label{TestTLevelReader_8cpp_a160183933a79ac06ca47ffffae6088f4}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Ints3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a160183933a79ac06ca47ffffae6088f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a5b89023c1d74cccde2a4947bc710cd5b}\label{TestTLevelReader_8cpp_a5b89023c1d74cccde2a4947bc710cd5b}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Mission\+Info\+From\+Stream1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a5b89023c1d74cccde2a4947bc710cd5b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a755cf3ec78fcb2c18a1579f855288e53}\label{TestTLevelReader_8cpp_a755cf3ec78fcb2c18a1579f855288e53}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Pirate\+Base1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a755cf3ec78fcb2c18a1579f855288e53_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_ad8ca26b2785094afac51b7d461f833c9}\label{TestTLevelReader_8cpp_ad8ca26b2785094afac51b7d461f833c9}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Pirate\+Base2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_ad8ca26b2785094afac51b7d461f833c9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a5539ef6695ae90f8c120dab07db5028a}\label{TestTLevelReader_8cpp_a5539ef6695ae90f8c120dab07db5028a}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [21/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Pirate\+Base3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a5539ef6695ae90f8c120dab07db5028a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_ae486e71c128cb1945779cfcc50810a9e}\label{TestTLevelReader_8cpp_ae486e71c128cb1945779cfcc50810a9e}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [22/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Pirate\+Bases}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_ae486e71c128cb1945779cfcc50810a9e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a0b38a70622c5f89d667fa6639c424089}\label{TestTLevelReader_8cpp_a0b38a70622c5f89d667fa6639c424089}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [23/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Ship1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a0b38a70622c5f89d667fa6639c424089_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a41ad2bc025b36f214a5f0abc9df1aba6}\label{TestTLevelReader_8cpp_a41ad2bc025b36f214a5f0abc9df1aba6}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [24/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Ship2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a41ad2bc025b36f214a5f0abc9df1aba6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a6b32b3eac60dee52c0671e70fcc56094}\label{TestTLevelReader_8cpp_a6b32b3eac60dee52c0671e70fcc56094}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [25/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Ship3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a6b32b3eac60dee52c0671e70fcc56094_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_ae1685fd5cbbb95637c7623fffb0a0a7f}\label{TestTLevelReader_8cpp_ae1685fd5cbbb95637c7623fffb0a0a7f}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [26/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Ships1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_ae1685fd5cbbb95637c7623fffb0a0a7f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a7345c8c1666adc3189772b4d8c854505}\label{TestTLevelReader_8cpp_a7345c8c1666adc3189772b4d8c854505}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [27/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Spawn\+Descriptor1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a7345c8c1666adc3189772b4d8c854505_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_aea046e13a91e7a1380892ac2ea32b792}\label{TestTLevelReader_8cpp_aea046e13a91e7a1380892ac2ea32b792}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [28/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Spawn\+Descriptor2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_aea046e13a91e7a1380892ac2ea32b792_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_ae5eeb71a22e774f25838b6c1258d3822}\label{TestTLevelReader_8cpp_ae5eeb71a22e774f25838b6c1258d3822}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [29/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Spawn\+Descriptor3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_ae5eeb71a22e774f25838b6c1258d3822_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a2ec22c5c0380e25482b30c0b1dee01f5}\label{TestTLevelReader_8cpp_a2ec22c5c0380e25482b30c0b1dee01f5}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [30/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Spawn\+Descriptor4}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a2ec22c5c0380e25482b30c0b1dee01f5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a69858fb8c48df8a75d0c309e5a5b0eb4}\label{TestTLevelReader_8cpp_a69858fb8c48df8a75d0c309e5a5b0eb4}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [31/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Spawn\+Descriptor5}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a69858fb8c48df8a75d0c309e5a5b0eb4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a3d91a40a002dd06ad7a815653e1c1bfd}\label{TestTLevelReader_8cpp_a3d91a40a002dd06ad7a815653e1c1bfd}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [32/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Spawn\+Descriptors1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a3d91a40a002dd06ad7a815653e1c1bfd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a26efccd365e4fbc1179bd9c60661a350}\label{TestTLevelReader_8cpp_a26efccd365e4fbc1179bd9c60661a350}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [33/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+String1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{df/dbf/TestTLevelReader_8cpp_a26efccd365e4fbc1179bd9c60661a350_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_aa0b79a9394387fdf29f5f430b721abe8}\label{TestTLevelReader_8cpp_aa0b79a9394387fdf29f5f430b721abe8}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [34/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+String2}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{df/dbf/TestTLevelReader_8cpp_aa0b79a9394387fdf29f5f430b721abe8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_ad44fa683054d539effb0670e154bd58e}\label{TestTLevelReader_8cpp_ad44fa683054d539effb0670e154bd58e}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [35/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+String3}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{df/dbf/TestTLevelReader_8cpp_ad44fa683054d539effb0670e154bd58e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_aa7b57f5c4f46491ed887d757af6cf774}\label{TestTLevelReader_8cpp_aa7b57f5c4f46491ed887d757af6cf774}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [36/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Weapon}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_aa7b57f5c4f46491ed887d757af6cf774_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{TestTLevelReader_8cpp_a5d44caed3904c1ef6c734477bed059f0}\label{TestTLevelReader_8cpp_a5d44caed3904c1ef6c734477bed059f0}} 
+\index{TestTLevelReader.cpp@{TestTLevelReader.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!TestTLevelReader.cpp@{TestTLevelReader.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [37/37]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTLevelReader}{TLevel\+Reader}}}]{,  }\item[{Read\+Weapons1}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dbf/TestTLevelReader_8cpp_a5d44caed3904c1ef6c734477bed059f0_cgraph}
+\end{center}
+\end{figure}

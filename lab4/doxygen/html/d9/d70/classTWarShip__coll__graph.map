@@ -1,0 +1,12 @@
+<map id="TWarShip" name="TWarShip">
+<area shape="rect" id="node1" title="Корабль, имеющий вооружение. Добавляются поле &#45; Holder орудий" alt="" coords="358,1633,597,2025"/>
+<area shape="rect" id="node2" href="$d1/d07/classTShip.html" title="Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей" alt="" coords="227,797,466,1571"/>
+<area shape="rect" id="node3" href="$d5/d55/classTObjectOnMap.html" title=" " alt="" coords="5,343,232,661"/>
+<area shape="rect" id="node4" title=" " alt="" coords="301,123,395,163"/>
+<area shape="rect" id="node6" href="$dd/dec/classTCapitanInfo.html" title="Класс для хранения информации о капитане." alt="" coords="393,269,617,735"/>
+<area shape="rect" id="node5" title=" " alt="" coords="275,5,421,60"/>
+<area shape="rect" id="node7" href="$d4/de2/classTWeaponHolder.html" title="Класс, хранящий все вооружение боевого корабля." alt="" coords="523,966,765,1402"/>
+<area shape="rect" id="node8" title=" " alt="" coords="642,445,849,559"/>
+<area shape="rect" id="node9" title=" " alt="" coords="677,123,814,163"/>
+<area shape="rect" id="node10" title=" " alt="" coords="726,13,765,53"/>
+</map>

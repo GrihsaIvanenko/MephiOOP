@@ -1,0 +1,34 @@
+\hypertarget{TBase_8h_source}{}\doxysection{TBase.\+h}
+\label{TBase_8h_source}\index{base/code/TBase.h@{base/code/TBase.h}}
+\mbox{\hyperlink{TBase_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grigorijivanenko on 13.12.22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef LAB4\_TBASE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define LAB4\_TBASE\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define BASE\_A 1}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define BASE\_B 2}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define BASE\_P 3}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TObjectOnMap_8h}{TObjectOnMap.h}}"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classTBase}{TBase}} : \textcolor{keyword}{public} \mbox{\hyperlink{classTObjectOnMap}{TObjectOnMap}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTBase_a352189f4a8b9180d73b1272097e1a36b}{BaseType\_}};}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{classTBase}{TBase}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} baseType);}
+\DoxyCodeLine{19     \mbox{\hyperlink{classTBase}{TBase}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTBase}{TBase}}\& other);}
+\DoxyCodeLine{20     \mbox{\hyperlink{classTBase}{TBase}}\& \mbox{\hyperlink{classTBase_a6f45fc8497526a5861e718bf294a35ee}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTBase}{TBase}}\& other);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTBase_afb6eb5c111222ce3cec0af84d795baf2}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classTBase}{TBase}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTBase_acded593c9a7b27d53d8699e87bc5518b}{SetBaseType}}(\textcolor{keywordtype}{int} baseType);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTBase_a66f564ea6287b2392bd593a9a8722e87}{GetBaseType}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TBASE\_H}}
+
+\end{DoxyCode}

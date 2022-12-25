@@ -1,0 +1,13 @@
+<map id="TMission" name="TMission">
+<area shape="rect" id="node1" title=" " alt="" coords="431,1193,729,1791"/>
+<area shape="rect" id="node2" href="$dd/dec/classTCapitanInfo.html" title="Класс для хранения информации о капитане." alt="" coords="5,651,229,1116"/>
+<area shape="rect" id="node3" title=" " alt="" coords="70,365,165,405"/>
+<area shape="rect" id="node4" title=" " alt="" coords="44,49,191,104"/>
+<area shape="rect" id="node5" href="$d8/d51/classMyList.html" title=" " alt="" coords="253,702,448,1065"/>
+<area shape="rect" id="node6" href="$da/d27/classMyList_1_1Node.html" title=" " alt="" coords="351,5,534,148"/>
+<area shape="rect" id="node7" href="$d8/d51/classMyList.html" title=" " alt="" coords="479,233,673,537"/>
+<area shape="rect" id="node8" href="$d8/d51/classMyList.html" title=" " alt="" coords="711,724,926,1043"/>
+<area shape="rect" id="node11" href="$d8/d51/classMyList.html" title=" " alt="" coords="473,724,687,1043"/>
+<area shape="rect" id="node9" href="$d9/d38/classTBase.html" title=" " alt="" coords="950,775,1151,991"/>
+<area shape="rect" id="node10" href="$d5/d55/classTObjectOnMap.html" title=" " alt="" coords="937,225,1164,544"/>
+</map>

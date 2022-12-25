@@ -11,6 +11,11 @@
 
 #include "TObjectOnMap.h"
 
+/*!
+ * \brief База на карте.
+ * Есть поле BaseType - код базы: начальная точка маршрута(1), конечная(2) или же это база пиратов(3).
+ */
+
 class TBase : public TObjectOnMap {
 private:
     int BaseType_;
