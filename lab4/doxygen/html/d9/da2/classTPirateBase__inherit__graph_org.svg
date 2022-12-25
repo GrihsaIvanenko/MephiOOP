@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Класс, описывающий базу пиратов. Есть поле &#45; спавнер">
 <polygon fill="#999999" stroke="#666666" points="167.5,-206 2.5,-206 2.5,0 167.5,0 167.5,-206"/>
 <text text-anchor="middle" x="85" y="-194" font-family="Helvetica,sans-Serif" font-size="10.00">{TPirateBase</text>
 <text text-anchor="start" x="10.5" y="-183" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; TSpawnDescriptor Spawner_</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d9/d38/classTBase.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d9/d38/classTBase.html" target="_top" xlink:title="База на карте. Есть поле BaseType &#45; код базы: начальная точка маршрута(1), конечная(2) или же это баз...">
 <polygon fill="white" stroke="#666666" points="160.5,-404 9.5,-404 9.5,-242 160.5,-242 160.5,-404"/>
 <text text-anchor="middle" x="85" y="-392" font-family="Helvetica,sans-Serif" font-size="10.00">{TBase</text>
 <text text-anchor="start" x="17.5" y="-381" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int BaseType_</text>
@@ -65,7 +65,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title="Базовый класс для всех объектов на карте">
 <polygon fill="white" stroke="#666666" points="170,-679 0,-679 0,-440 170,-440 170,-679"/>
 <text text-anchor="middle" x="85" y="-667" font-family="Helvetica,sans-Serif" font-size="10.00">{TObjectOnMap</text>
 <text text-anchor="start" x="8" y="-656" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int X_</text>

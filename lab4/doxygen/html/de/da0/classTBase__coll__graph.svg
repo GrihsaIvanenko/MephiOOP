@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="База на карте. Есть поле BaseType &#45; код базы: начальная точка маршрута(1), конечная(2) или же это баз...">
 <polygon fill="#999999" stroke="#666666" points="160.5,-162 9.5,-162 9.5,0 160.5,0 160.5,-162"/>
 <text text-anchor="middle" x="85" y="-150" font-family="Helvetica,sans-Serif" font-size="10.00">{TBase</text>
 <text text-anchor="start" x="17.5" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int BaseType_</text>
@@ -33,7 +33,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title="Базовый класс для всех объектов на карте">
 <polygon fill="white" stroke="#666666" points="170,-437 0,-437 0,-198 170,-198 170,-437"/>
 <text text-anchor="middle" x="85" y="-425" font-family="Helvetica,sans-Serif" font-size="10.00">{TObjectOnMap</text>
 <text text-anchor="start" x="8" y="-414" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int X_</text>

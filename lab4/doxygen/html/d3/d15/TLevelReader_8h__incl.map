@@ -1,5 +1,5 @@
-<map id="game/code/TLevelReader.h" name="game/code/TLevelReader.h">
-<area shape="rect" id="node1" title=" " alt="" coords="813,5,1011,31"/>
+<map id="code/game/code/TLevelReader.h" name="code/game/code/TLevelReader.h">
+<area shape="rect" id="node1" title=" " alt="" coords="795,5,1029,31"/>
 <area shape="rect" id="node2" href="$d3/dd9/TMission_8h.html" title=" " alt="" coords="443,79,535,104"/>
 <area shape="rect" id="node6" title=" " alt="" coords="868,497,945,522"/>
 <area shape="rect" id="node19" title=" " alt="" coords="949,79,1029,104"/>

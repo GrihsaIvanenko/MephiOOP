@@ -2,11 +2,17 @@
 \label{classTLevelSelector}\index{TLevelSelector@{TLevelSelector}}
 
 
+Класс, отвечающий за выбор уровня пользователем  
+
+
+
+
 {\ttfamily \#include $<$TLevel\+Selector.\+h$>$}
 
 
 
-Collaboration diagram for TLevel\+Selector\+:\nopagebreak
+Collaboration diagram for TLevel\+Selector\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,6 +37,9 @@ std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMissio
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Класс, отвечающий за выбор уровня пользователем 
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classTLevelSelector_a06fea104968332d1f13ef69d0cd403ea}\label{classTLevelSelector_a06fea104968332d1f13ef69d0cd403ea}} 
 \index{TLevelSelector@{TLevelSelector}!CheckExists@{CheckExists}}
@@ -38,7 +47,7 @@ std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMissio
 \doxysubsubsection{\texorpdfstring{CheckExists()}{CheckExists()}}
 {\footnotesize\ttfamily bool TLevel\+Selector\+::\+Check\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the caller graph for this function\+:\nopagebreak
+Проверит, что в /resources/levels/ существует файл с именем level + номер уровня + .txt Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -51,7 +60,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ChooseLevel()}{ChooseLevel()}}
 {\footnotesize\ttfamily std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$, std\+::pair$<$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ $>$ $>$ TLevel\+Selector\+::\+Choose\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+вызывает Read\+Level\+Name. открывает файл с этим именем. после чего запускает read\+Mission\+Info\+From\+Stream для считывания уровня. Вернет Миссию, список орудий и кораблей для покупки в магазине Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -64,7 +73,7 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadLevelName()}{ReadLevelName()}}
 {\footnotesize\ttfamily std\+::string TLevel\+Selector\+::\+Read\+Level\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Организовывает ввод имени файла Вводит номер уровня. Конструирует путь до него. Проверяет, что он существует. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -84,7 +93,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadLevelNumberFromKeyboard()}{ReadLevelNumberFromKeyboard()}}
 {\footnotesize\ttfamily std\+::string TLevel\+Selector\+::\+Read\+Level\+Number\+From\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the caller graph for this function\+:\nopagebreak
+Считает строку. Если ввести не число, произойдет ошибка Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -97,7 +106,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{readMissionInfoFromStream()}{readMissionInfoFromStream()}}
 {\footnotesize\ttfamily std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$, std\+::pair$<$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ $>$ $>$ TLevel\+Selector\+::read\+Mission\+Info\+From\+Stream (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Вызывает вспомогательный класс, который считает из потока уровень. Вернет Миссию, список орудий и кораблей для покупки в магазине Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -115,5 +124,5 @@ Here is the caller graph for this function\+:\nopagebreak
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/code/\mbox{\hyperlink{TLevelSelector_8h}{TLevel\+Selector.\+h}}\item 
-game/code/\mbox{\hyperlink{TLevelSelector_8cpp}{TLevel\+Selector.\+cpp}}\end{DoxyCompactItemize}
+code/game/code/\mbox{\hyperlink{TLevelSelector_8h}{TLevel\+Selector.\+h}}\item 
+code/game/code/\mbox{\hyperlink{TLevelSelector_8cpp}{TLevel\+Selector.\+cpp}}\end{DoxyCompactItemize}

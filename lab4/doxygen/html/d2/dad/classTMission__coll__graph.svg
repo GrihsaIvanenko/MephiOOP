@@ -57,7 +57,7 @@ var sectionId = 'dynsection-0';
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Класс, хронящий информацию о проходимом уровне">
 <polygon fill="#999999" stroke="#666666" points="542.5,-448 319.5,-448 319.5,0 542.5,0 542.5,-448"/>
 <text text-anchor="middle" x="431" y="-436" font-family="Helvetica,sans-Serif" font-size="10.00">{TMission</text>
 <text text-anchor="start" x="327.5" y="-425" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int MoneyTotal_</text>
@@ -259,7 +259,7 @@ var sectionId = 'dynsection-0';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../d8/d51/classMyList.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="../../d8/d51/classMyList.html" target="_top" xlink:title="Односвазный список">
 <polygon fill="white" stroke="#666666" points="501,-1168.5 355,-1168.5 355,-940.5 501,-940.5 501,-1168.5"/>
 <text text-anchor="middle" x="428" y="-1156.5" font-family="Helvetica,sans-Serif" font-size="10.00">{MyList&lt; T &gt;</text>
 <text text-anchor="start" x="363" y="-1145.5" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int Size_</text>
@@ -398,7 +398,7 @@ var sectionId = 'dynsection-0';
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../d9/d38/classTBase.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="../../d9/d38/classTBase.html" target="_top" xlink:title="База на карте. Есть поле BaseType &#45; код базы: начальная точка маршрута(1), конечная(2) или же это баз...">
 <polygon fill="white" stroke="#666666" points="859.5,-761.5 708.5,-761.5 708.5,-599.5 859.5,-599.5 859.5,-761.5"/>
 <text text-anchor="middle" x="784" y="-749.5" font-family="Helvetica,sans-Serif" font-size="10.00">{TBase</text>
 <text text-anchor="start" x="716.5" y="-738.5" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int BaseType_</text>
@@ -428,7 +428,7 @@ var sectionId = 'dynsection-0';
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title="Базовый класс для всех объектов на карте">
 <polygon fill="white" stroke="#666666" points="869,-1174 699,-1174 699,-935 869,-935 869,-1174"/>
 <text text-anchor="middle" x="784" y="-1162" font-family="Helvetica,sans-Serif" font-size="10.00">{TObjectOnMap</text>
 <text text-anchor="start" x="707" y="-1151" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int X_</text>

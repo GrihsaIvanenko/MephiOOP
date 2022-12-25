@@ -2,6 +2,6 @@
 <area shape="rect" id="node1" title="Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей" alt="" coords="187,372,426,1175"/>
 <area shape="rect" id="node3" href="$d3/d81/classTCargoShip.html" title="Корабль, несущий груз. Добавляются поля &#45; коеф замедления, максимальный груз, текущий груз." alt="" coords="5,1223,312,1776"/>
 <area shape="rect" id="node5" href="$db/df3/classTWarShip.html" title="Корабль, имеющий вооружение. Добавляются поле &#45; Holder орудий" alt="" coords="337,1296,575,1703"/>
-<area shape="rect" id="node2" href="$d5/d55/classTObjectOnMap.html" title=" " alt="" coords="193,5,420,324"/>
-<area shape="rect" id="node4" href="$d0/dc5/classTCargoWarShip.html" title="Корабль, имеющий и оррудиея, и груз на борту." alt="" coords="169,1824,445,2143"/>
+<area shape="rect" id="node2" href="$d5/d55/classTObjectOnMap.html" title="Базовый класс для всех объектов на карте" alt="" coords="193,5,420,324"/>
+<area shape="rect" id="node4" href="$d0/dc5/classTCargoWarShip.html" title="Корабль, имеющий и орудиея, и груз на борту." alt="" coords="169,1824,445,2143"/>
 </map>

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Односвазный список">
 <polygon fill="#999999" stroke="#666666" points="146,-228 0,-228 0,0 146,0 146,-228"/>
 <text text-anchor="middle" x="73" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">{MyList&lt; T &gt;</text>
 <text text-anchor="start" x="8" y="-205" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int Size_</text>

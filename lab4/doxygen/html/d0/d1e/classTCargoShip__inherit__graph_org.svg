@@ -56,7 +56,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d0/dc5/classTCargoWarShip.html" target="_top" xlink:title="Корабль, имеющий и оррудиея, и груз на борту.">
+<g id="a_node4"><a xlink:href="../../d0/dc5/classTCargoWarShip.html" target="_top" xlink:title="Корабль, имеющий и орудиея, и груз на борту.">
 <polygon fill="white" stroke="#666666" points="218.5,-239 11.5,-239 11.5,0 218.5,0 218.5,-239"/>
 <text text-anchor="middle" x="115" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">{TCargoWarShip</text>
 <text text-anchor="start" x="19.5" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">||+ &#160;TCargoWarShip(int</text>
@@ -159,7 +159,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title="Базовый класс для всех объектов на карте">
 <polygon fill="white" stroke="#666666" points="200,-1603 30,-1603 30,-1364 200,-1364 200,-1603"/>
 <text text-anchor="middle" x="115" y="-1591" font-family="Helvetica,sans-Serif" font-size="10.00">{TObjectOnMap</text>
 <text text-anchor="start" x="38" y="-1580" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int X_</text>

@@ -2,6 +2,11 @@
 \label{classTSpawnDescriptor}\index{TSpawnDescriptor@{TSpawnDescriptor}}
 
 
+Класс, описываюший спавн пиратов.  
+
+
+
+
 {\ttfamily \#include $<$TSpawn\+Descriptor.\+h$>$}
 
 
@@ -41,6 +46,9 @@ int \mbox{\hyperlink{classTSpawnDescriptor_a613f79b7cb959989e2f69eec862fb28a}{Lo
 int \mbox{\hyperlink{classTSpawnDescriptor_a8a6f865d07fc0f3a054c017990ad41e5}{Last\+Spam\+\_\+}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Класс, описываюший спавн пиратов. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classTSpawnDescriptor_a2819fa3e489c466b145b37cb0b144c18}\label{classTSpawnDescriptor_a2819fa3e489c466b145b37cb0b144c18}} 
@@ -90,6 +98,13 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{SetXY()}{SetXY()}}
 {\footnotesize\ttfamily void TSpawn\+Descriptor\+::\+Set\+XY (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
 
+Функция, выставляющая XY появления кораблей для этого спавнера 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -110,6 +125,14 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{Spawn()}{Spawn()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ TSpawn\+Descriptor\+::\+Spawn (\begin{DoxyParamCaption}\item[{int}]{time }\end{DoxyParamCaption})}
 
+Доспавнит пиратов с момента предыдущего спавна до time. Вернет список появившихся кораблей. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -155,5 +178,5 @@ Here is the caller graph for this function\+:\nopagebreak
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-base/code/\mbox{\hyperlink{TSpawnDescriptor_8h}{TSpawn\+Descriptor.\+h}}\item 
-base/code/\mbox{\hyperlink{TSpawnDescriptor_8cpp}{TSpawn\+Descriptor.\+cpp}}\end{DoxyCompactItemize}
+code/base/code/\mbox{\hyperlink{TSpawnDescriptor_8h}{TSpawn\+Descriptor.\+h}}\item 
+code/base/code/\mbox{\hyperlink{TSpawnDescriptor_8cpp}{TSpawn\+Descriptor.\+cpp}}\end{DoxyCompactItemize}

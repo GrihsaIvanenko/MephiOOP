@@ -77,11 +77,15 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Класс, отвечающий за выбор уровня пользователем  
+ <a href="../../d2/dc1/classTLevelSelector.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d1/d77/TLevelSelector_8h_source.html">TLevelSelector.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for TLevelSelector:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d56/classTLevelSelector__coll__graph.svg" width="278" height="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d56/classTLevelSelector__coll__graph.svg" width="278" height="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -100,7 +104,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a1ce3be0dec7c17d6674837ff8742d5ee"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="../../d2/d9a/classTMission.html">TMission</a> &gt;, std::pair&lt; <a class="el" href="../../d8/d51/classMyList.html">MyList</a>&lt; <a class="el" href="../../d1/d3d/classTWeapon.html">TWeapon</a> &gt;, <a class="el" href="../../d8/d51/classMyList.html">MyList</a>&lt; std::unique_ptr&lt; <a class="el" href="../../d1/d07/classTShip.html">TShip</a> &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc1/classTLevelSelector.html#a1ce3be0dec7c17d6674837ff8742d5ee">readMissionInfoFromStream</a> (std::istream &amp;file)</td></tr>
 <tr class="separator:a1ce3be0dec7c17d6674837ff8742d5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Класс, отвечающий за выбор уровня пользователем </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a06fea104968332d1f13ef69d0cd403ea" name="a06fea104968332d1f13ef69d0cd403ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a06fea104968332d1f13ef69d0cd403ea">&#9670;&#160;</a></span>CheckExists()</h2>
 
@@ -124,6 +130,7 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Проверит, что в /resources/levels/ существует файл с именем level + номер уровня + .txt </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -146,6 +153,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >вызывает ReadLevelName. открывает файл с этим именем. после чего запускает readMissionInfoFromStream для считывания уровня. Вернет Миссию, список орудий и кораблей для покупки в магазине </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -176,6 +184,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Организовывает ввод имени файла Вводит номер уровня. Конструирует путь до него. Проверяет, что он существует. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -211,6 +220,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Считает строку. Если ввести не число, произойдет ошибка </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -242,6 +252,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Вызывает вспомогательный класс, который считает из потока уровень. Вернет Миссию, список орудий и кораблей для покупки в магазине </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -256,8 +267,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>game/code/<a class="el" href="../../d1/d77/TLevelSelector_8h_source.html">TLevelSelector.h</a></li>
-<li>game/code/<a class="el" href="../../d6/d62/TLevelSelector_8cpp.html">TLevelSelector.cpp</a></li>
+<li>code/game/code/<a class="el" href="../../d1/d77/TLevelSelector_8h_source.html">TLevelSelector.h</a></li>
+<li>code/game/code/<a class="el" href="../../d6/d62/TLevelSelector_8cpp.html">TLevelSelector.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

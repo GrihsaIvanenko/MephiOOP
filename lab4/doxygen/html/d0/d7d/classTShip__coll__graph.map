@@ -1,6 +1,6 @@
 <map id="TShip" name="TShip">
 <area shape="rect" id="node1" title="Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей" alt="" coords="161,784,399,1557"/>
-<area shape="rect" id="node2" href="$d5/d55/classTObjectOnMap.html" title=" " alt="" coords="5,329,232,648"/>
+<area shape="rect" id="node2" href="$d5/d55/classTObjectOnMap.html" title="Базовый класс для всех объектов на карте" alt="" coords="5,329,232,648"/>
 <area shape="rect" id="node3" title=" " alt="" coords="254,109,349,149"/>
 <area shape="rect" id="node5" href="$dd/dec/classTCapitanInfo.html" title="Класс для хранения информации о капитане." alt="" coords="393,256,617,721"/>
 <area shape="rect" id="node4" title=" " alt="" coords="228,5,375,60"/>

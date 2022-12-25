@@ -1,6 +1,6 @@
 <map id="TWarShip" name="TWarShip">
 <area shape="rect" id="node1" title="Корабль, имеющий вооружение. Добавляются поле &#45; Holder орудий" alt="" coords="24,1223,263,1629"/>
-<area shape="rect" id="node4" href="$d0/dc5/classTCargoWarShip.html" title="Корабль, имеющий и оррудиея, и груз на борту." alt="" coords="5,1677,281,1996"/>
+<area shape="rect" id="node4" href="$d0/dc5/classTCargoWarShip.html" title="Корабль, имеющий и орудиея, и груз на борту." alt="" coords="5,1677,281,1996"/>
 <area shape="rect" id="node2" href="$d1/d07/classTShip.html" title="Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей" alt="" coords="24,372,263,1175"/>
-<area shape="rect" id="node3" href="$d5/d55/classTObjectOnMap.html" title=" " alt="" coords="30,5,257,324"/>
+<area shape="rect" id="node3" href="$d5/d55/classTObjectOnMap.html" title="Базовый класс для всех объектов на карте" alt="" coords="30,5,257,324"/>
 </map>

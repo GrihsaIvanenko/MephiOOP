@@ -1,5 +1,5 @@
-<map id="ships/code/TCargoShip.h" name="ships/code/TCargoShip.h">
-<area shape="rect" id="node1" title=" " alt="" coords="32,5,212,31"/>
+<map id="code/ships/code/TCargoShip.h" name="code/ships/code/TCargoShip.h">
+<area shape="rect" id="node1" title=" " alt="" coords="15,5,230,31"/>
 <area shape="rect" id="node2" href="$d0/d93/TShip_8h.html" title=" " alt="" coords="87,79,158,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="56,240,114,265"/>
 <area shape="rect" id="node4" title=" " alt="" coords="24,159,101,185"/>

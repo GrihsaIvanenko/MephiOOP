@@ -1,5 +1,5 @@
 <map id="TPirateBase" name="TPirateBase">
-<area shape="rect" id="node1" title=" " alt="" coords="9,636,229,911"/>
-<area shape="rect" id="node2" href="$d9/d38/classTBase.html" title=" " alt="" coords="18,372,219,588"/>
-<area shape="rect" id="node3" href="$d5/d55/classTObjectOnMap.html" title=" " alt="" coords="5,5,232,324"/>
+<area shape="rect" id="node1" title="Класс, описывающий базу пиратов. Есть поле &#45; спавнер" alt="" coords="9,636,229,911"/>
+<area shape="rect" id="node2" href="$d9/d38/classTBase.html" title="База на карте. Есть поле BaseType &#45; код базы: начальная точка маршрута(1), конечная(2) или же это баз..." alt="" coords="18,372,219,588"/>
+<area shape="rect" id="node3" href="$d5/d55/classTObjectOnMap.html" title="Базовый класс для всех объектов на карте" alt="" coords="5,5,232,324"/>
 </map>

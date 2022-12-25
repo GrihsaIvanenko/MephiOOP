@@ -76,11 +76,15 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Класс, отвечающий за загрузку уровня из файла  
+ <a href="../../d5/d99/classTLevelReader.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d3/d32/TLevelReader_8h_source.html">TLevelReader.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for TLevelReader:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d3e/classTLevelReader__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d3e/classTLevelReader__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -118,7 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e3953bd0caf6e6c60d6750ff732150a"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="../../d2/d9a/classTMission.html">TMission</a> &gt;, std::pair&lt; <a class="el" href="../../d8/d51/classMyList.html">MyList</a>&lt; <a class="el" href="../../d1/d3d/classTWeapon.html">TWeapon</a> &gt;, <a class="el" href="../../d8/d51/classMyList.html">MyList</a>&lt; std::unique_ptr&lt; <a class="el" href="../../d1/d07/classTShip.html">TShip</a> &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d99/classTLevelReader.html#a5e3953bd0caf6e6c60d6750ff732150a">ReadMissionInfoFromStream</a> (std::istream &amp;file)</td></tr>
 <tr class="separator:a5e3953bd0caf6e6c60d6750ff732150a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Класс, отвечающий за загрузку уровня из файла </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac28bf996f8431c89710180136c30c180" name="ac28bf996f8431c89710180136c30c180"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac28bf996f8431c89710180136c30c180">&#9670;&#160;</a></span>ReadBase()</h2>
 
@@ -144,6 +150,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая базу пиратов Формат: X координата - (Base_X) Y координата - (Base_Y) Тип базы - (Base_Type) 1 - начало миссии, 2 - конец миссии </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -172,6 +179,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Считывает информацию о капитане - 4 строки Имя капитана - (CapitanName) Фамилия капитана - (CapitanSurname) Отчество капитана - (CapitanPatronymic) Ранг капитана - (CapitanRank) </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -200,6 +208,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая список капитанов Вначале количество. Пустая строка. Затем капитан + Пустая строка. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -228,6 +237,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая пустую строку </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -261,6 +271,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая одно число. Вначале идет описание(what), затем двоеточие, пробел, оставшийся суффикс будет переводиться в число Если префикс не подходит под заданный формат, вылетит ошибка-строка Если суффикс не является числом, вылетит ошибка-строка </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -294,6 +305,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая список чисел Вначале количество. Пустая строка. Затем число(what) + Пустая строка. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -322,6 +334,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Общая функция для считывания уровня из файла Принимает поток для считывания Возвращает описание миссии, список орудий и кораблей, доступных для покупки.</p>
+<p >Формат файла с уровнем: Ввод капитанов Ввод орудий Ввод кораблей всего денег - (moneyTotal) вес для транспортировки - (weightTotal) вес, необходимый для прохождения уровня - (weightNeedToPass) Ширина карты в клетках - (width) Высота карты в клетках - (height) Пустая строка База А Пустая строка База B Пустая строка Ввод спавнеров Ввод пиратских баз </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -360,6 +374,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая базу пиратов Формат: X координата - (Base_X) Y координата - (Base_Y) Тип базы - (Base_Type) обязано быть тройкой, т.к. именно такой тип у базы пиратов Номер дескриптора, отвечающего за спавн пиратов - (DescriptorNumber) </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -398,6 +413,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая список баз пиратов Вначале количество. Пробел. Затем база + пробел. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -442,6 +458,10 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Считывает информацию об корабле - числа Тип корабля - число 1 2 или 3. Все строки идут подряд. 1 - грузовой. 2 - с орудиями. 3 - и с грузом и с орудиями.</p>
+<p >Если тип корабля 1 Тип корабля - (ShipType) - 1 Номер введенного ранее капитана - (CapitanInfoId) Максимальная скорость - (MaxSpeed) Количество здоровья - (HPTotal) Цена - (Cost) Максимальный вес - (WeightTotal) Коэфф замедления, во столько раз уменьшится скорость при полной загрузке, ЦЕЛОЕ ЧИСЛО - (SlowK)</p>
+<p >Если тип корабля 2 Тип корабля - (ShipType) - 2 Номер введенного ранее капитана - (CapitanInfoId) Максимальная скорость - (MaxSpeed) Количество здоровья - (HPTotal) Цена - (Cost) Номер орудия спереди корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. - (Weapon1) Номер орудия сзади корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. - (Weapon2) Номер орудия слева корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. - (Weapon3) Номер орудия спрпва корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. - (Weapon4)</p>
+<p >Если тип корабля 3 Тип корабля - (ShipType) - 3 Номер введенного ранее капитана - (CapitanInfoId) Максимальная скорость - (MaxSpeed) Количество здоровья - (HPTotal) Цена - (Cost) Максимальный вес - (WeightTotal) Коэфф замедления, во столько раз уменьшится скорость при полной загрузке, ЦЕЛОЕ ЧИСЛО - (SlowK) Номер орудия спереди корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. - (Weapon1) Номер орудия сзади корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. - (Weapon2) Номер орудия слева корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. - (Weapon3) Номер орудия спрпва корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. - (Weapon4) </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -486,6 +506,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая список баз кораблей Вначале количество. Пустая строка. Затем корабль + Пустая строка. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -524,6 +545,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая спавнер пиратов на пиратской базе Формат: Номер корабля, который будет спавнится. Обязано быть <a class="el" href="../../db/df3/classTWarShip.html" title="Корабль, имеющий вооружение. Добавляются поле - Holder орудий">TWarShip</a> или его наследником - (ShipSpawnType) Сколько всего кораблей заспавнит дескриптор - (SpamCount) Раз в сколько кадров будет появляться новый корабль (LoopTime)</p>
+<p >Спавн зависит от числа кадров, а не секунд, для удобства тестирования и наблюдения за происходящим </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -562,6 +585,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая список баз дескрипторов спавна Вначале количество. Пустая строка. Затем спавнер + Пустая строка. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -600,6 +624,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая одну строку. Вначале идет описание(what), затем двоеточие, пробел, оставшийся суффикс будет результатом ввода Если префикс не подходит под заданный формат, вылетит ошибка-строка </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -623,6 +648,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Считывает информацию об орудии - числа Тип орудия - (WeaponType) Урон орудия - (Damage) Перезарядку орудия - (CallDown) Дальность стрельбы - (Range) Количество выстрелов - (ShotsTotal) Цена - (Cost) </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -651,6 +677,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Функция, считывающая список орудий Вначале количество. Пустая строка. Затем орудие + Пустая строка. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -665,8 +692,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>game/code/<a class="el" href="../../d3/d32/TLevelReader_8h_source.html">TLevelReader.h</a></li>
-<li>game/code/<a class="el" href="../../d3/dc5/TLevelReader_8cpp.html">TLevelReader.cpp</a></li>
+<li>code/game/code/<a class="el" href="../../d3/d32/TLevelReader_8h_source.html">TLevelReader.h</a></li>
+<li>code/game/code/<a class="el" href="../../d3/dc5/TLevelReader_8cpp.html">TLevelReader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

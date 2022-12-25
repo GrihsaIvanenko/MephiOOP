@@ -142,6 +142,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Разместить груз на корабль. Он должен уметь держать груз на борту. Вес не должен превосходить кол-во свободного места на корабле. При некорректном вводе ничего не изменится, и будет выведено сообщение об ошибке </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+    <tr><td class="paramname">file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -180,6 +187,14 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Защита от мисклика. Еще раз выведет информацию о текущих покупках. Чтобы приступить к игре надо будет ввести Yes </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+    <tr><td class="paramname">file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -208,6 +223,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Автоматически расположить вес на грузовых кораблях. Если вес больше суммарной вместимости грузовых кораблей - будет выведено сообщение об ошибке. Если данные верны, вес будет расположен так, чтобы скорость каравана была максимально возможной. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -252,11 +273,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Купить орудие. Выведут корабли, нужно указать тот, который может нести на борту оружие. Выведут варианты орудий, нужно выбрать Если денег хватит - орудие будет установлено на выбранное место. Если там уже было орудие - оно будет продано, а деньги вернутся на счет </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+    <tr><td class="paramname">guns</td><td></td></tr>
+    <tr><td class="paramname">file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dc/de8/classTShop_ac463d2ee0ef76283f4dac87a51353c36_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dc/de8/classTShop_ac463d2ee0ef76283f4dac87a51353c36_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -297,6 +325,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Купить корабль. Выведут список возможных, после чего надо будет выбрать Если денег хватает, корабль будет куплен. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -335,6 +369,14 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Вспомогательная для AutoWeight функция. Которая проверяет, уместится ли груз, если каждый корабль нагружать так, чтобы после загрузки он все еще мог двигаться со скоростью &gt;= speedToCheck Если есть корабль, чья максимальная скорость &lt; speedToCheck, вернется false </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+    <tr><td class="paramname">speedToCheck</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -385,11 +427,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >диалог с пользователем, вызывающий функции, для купли/продажи чего-либо. Принимает миссию после загрузки из файла, список доступных для покуки орудий и кораблей Возврашает миссию после всех покупок </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dc/de8/classTShop_a1dcf7617180c288121288af2ed21909b_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dc/de8/classTShop_a1dcf7617180c288121288af2ed21909b_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -414,6 +456,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Выведет информацию о купленных кораблях и оставшихся деньгах Выводится информация о каждом корабле(и об орудиях на них) Затем выводится текущее количество денег </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -437,6 +485,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Выведет опции на экран, по одной в строке </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">options</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -476,6 +530,15 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Считает число из заданного диапазона [from, to) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td></td></tr>
+    <tr><td class="paramname">from</td><td></td></tr>
+    <tr><td class="paramname">to</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -509,6 +572,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Снять груз с корабля. Он должен уметь держать груз на борту. Вес не должен превосходить кол-во груза места на корабле. При некорректном вводе ничего не изменится, и будет выведено сообщение об ошибке </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+    <tr><td class="paramname">file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -542,6 +612,13 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Продать орудие. Надо выбрать корабль, затем орудие. При некорректном вводе выведется сообщение об ошибке, ничего не будет изменено При корректном вводе - деньги вернутся на счет </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+    <tr><td class="paramname">file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -580,6 +657,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Продаль корабль. Если на корабле есть орудия, они будут проданы, деньги от их продажи вернутся на счет </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+    <tr><td class="paramname">file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -618,6 +702,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Вспомогательная для AutoWeight функция. Которая выставляет на каждом корабле такой вес,ъ чтобы после его установи скорость была &gt;= speed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mission</td><td></td></tr>
+    <tr><td class="paramname">speed</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -656,18 +747,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Промежуточная функция. Запускает MainMenu Принимает миссию после загрузки из файла, список доступных для покуки орудий и кораблей Возврашает миссию после всех покупок </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dc/de8/classTShop_a789d5e786476555b588aece81642f6f9_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dc/de8/classTShop_a789d5e786476555b588aece81642f6f9_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>game/code/<a class="el" href="../../d2/d58/TShop_8h_source.html">TShop.h</a></li>
-<li>game/code/<a class="el" href="../../de/de9/TShop_8cpp.html">TShop.cpp</a></li>
+<li>code/game/code/<a class="el" href="../../d2/d58/TShop_8h_source.html">TShop.h</a></li>
+<li>code/game/code/<a class="el" href="../../de/de9/TShop_8cpp.html">TShop.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

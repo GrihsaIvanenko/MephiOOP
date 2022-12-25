@@ -1,5 +1,5 @@
 \hypertarget{TShop_8h_source}{}\doxysection{TShop.\+h}
-\label{TShop_8h_source}\index{game/code/TShop.h@{game/code/TShop.h}}
+\label{TShop_8h_source}\index{code/game/code/TShop.h@{code/game/code/TShop.h}}
 \mbox{\hyperlink{TShop_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//}}
@@ -13,31 +13,42 @@
 \DoxyCodeLine{9 }
 \DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{classTShop}{TShop}} \{}
 \DoxyCodeLine{11 \textcolor{keyword}{public}:}
-\DoxyCodeLine{12     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShop_aa10e5887f689e5928cce716aa1bf9ea6}{ReadInt}}(std::istream\& file, \textcolor{keywordtype}{int} from, \textcolor{keywordtype}{int} to);}
-\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_a50adc3df9d34e65a112b243e1da598d4}{PrintOptions}}(\textcolor{keyword}{const} std::vector<std::string>\& options);}
-\DoxyCodeLine{14     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_a46d86376a3b839bf3299639a9bb844a7}{PrintInfo}}(\textcolor{keyword}{const} std::unique\_ptr<TMission>\& mission);}
-\DoxyCodeLine{15 }
-\DoxyCodeLine{16     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTShop_a5e84a0c01c9d507bda6ce4a0de43eaa7}{AskPlay}}(\textcolor{keyword}{const} std::unique\_ptr<TMission>\& mission, std::istream\& file);}
-\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_aecceb42ffe39e9e0e9f1e152fa0c258d}{BuyShip}}(std::unique\_ptr<TMission>\& mission, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\& ships, std::istream\& file);}
-\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_ae39747c12e22b3bd4641affc0be979e3}{SellShip}}(std::unique\_ptr<TMission>\& mission, std::istream\& file);}
-\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_ac463d2ee0ef76283f4dac87a51353c36}{BuyGun}}(std::unique\_ptr<TMission>\& mission, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList<TWeapon>}}\& guns, std::istream\& file);}
-\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_a7c75fe3801c08795282fefc2baae29b8}{SellGun}}(std::unique\_ptr<TMission>\& mission, std::istream\& file);}
-\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_aef476da75c7312f1d68373c4883b20b0}{AddWeight}}(std::unique\_ptr<TMission>\& mission, std::istream\& file);}
-\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_af5388fd8d61bac1887a93d9d52ebe482}{RemoveWeight}}(std::unique\_ptr<TMission>\& mission, std::istream\& file);}
-\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_aa31244972d1d22e92673e8446ef50f2d}{AutoWeight}}(std::unique\_ptr<TMission>\& mission);}
-\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_ae77eb41b055433f33b63810b32dfb88c}{SetWeightBySpeed}}(std::unique\_ptr<TMission>\& mission, \textcolor{keywordtype}{int} speed);}
-\DoxyCodeLine{25     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTShop_abe63a0587be037f14a2e04e62fd1fc60}{IsSpeedPossible}}(std::unique\_ptr<TMission>\& mission, \textcolor{keywordtype}{int} speedToCheck);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTShop_aa10e5887f689e5928cce716aa1bf9ea6}{ReadInt}}(std::istream\& file, \textcolor{keywordtype}{int} from, \textcolor{keywordtype}{int} to);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_a50adc3df9d34e65a112b243e1da598d4}{PrintOptions}}(\textcolor{keyword}{const} std::vector<std::string>\& options);}
 \DoxyCodeLine{26 }
-\DoxyCodeLine{27     std::unique\_ptr<TMission> \mbox{\hyperlink{classTShop_a1dcf7617180c288121288af2ed21909b}{MainMenu}}(}
-\DoxyCodeLine{28         std::unique\_ptr<TMission> mission,}
-\DoxyCodeLine{29         \mbox{\hyperlink{classMyList}{MyList<TWeapon>}}\&\& weapons\_,}
-\DoxyCodeLine{30         \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\&\& ships\_,}
-\DoxyCodeLine{31         std::istream\& file);}
-\DoxyCodeLine{32 \textcolor{keyword}{public}:}
-\DoxyCodeLine{33     std::unique\_ptr<TMission> \mbox{\hyperlink{classTShop_a789d5e786476555b588aece81642f6f9}{Shop}}(}
-\DoxyCodeLine{34         std::pair<std::unique\_ptr<TMission>, std::pair<\mbox{\hyperlink{classMyList}{MyList<TWeapon>}}, \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>>>\&\& data,}
-\DoxyCodeLine{35         std::istream\& file);}
-\DoxyCodeLine{36 \};}
-\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TSHOP\_H}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_a46d86376a3b839bf3299639a9bb844a7}{PrintInfo}}(\textcolor{keyword}{const} std::unique\_ptr<TMission>\& mission);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTShop_a5e84a0c01c9d507bda6ce4a0de43eaa7}{AskPlay}}(\textcolor{keyword}{const} std::unique\_ptr<TMission>\& mission, std::istream\& file);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_aecceb42ffe39e9e0e9f1e152fa0c258d}{BuyShip}}(std::unique\_ptr<TMission>\& mission, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\& ships, std::istream\& file);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_ae39747c12e22b3bd4641affc0be979e3}{SellShip}}(std::unique\_ptr<TMission>\& mission, std::istream\& file);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_ac463d2ee0ef76283f4dac87a51353c36}{BuyGun}}(std::unique\_ptr<TMission>\& mission, \textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList<TWeapon>}}\& guns, std::istream\& file);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_a7c75fe3801c08795282fefc2baae29b8}{SellGun}}(std::unique\_ptr<TMission>\& mission, std::istream\& file);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_aef476da75c7312f1d68373c4883b20b0}{AddWeight}}(std::unique\_ptr<TMission>\& mission, std::istream\& file);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_af5388fd8d61bac1887a93d9d52ebe482}{RemoveWeight}}(std::unique\_ptr<TMission>\& mission, std::istream\& file);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_aa31244972d1d22e92673e8446ef50f2d}{AutoWeight}}(std::unique\_ptr<TMission>\& mission);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTShop_ae77eb41b055433f33b63810b32dfb88c}{SetWeightBySpeed}}(std::unique\_ptr<TMission>\& mission, \textcolor{keywordtype}{int} speed);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{122     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTShop_abe63a0587be037f14a2e04e62fd1fc60}{IsSpeedPossible}}(std::unique\_ptr<TMission>\& mission, \textcolor{keywordtype}{int} speedToCheck);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{130     std::unique\_ptr<TMission> \mbox{\hyperlink{classTShop_a1dcf7617180c288121288af2ed21909b}{MainMenu}}(}
+\DoxyCodeLine{131         std::unique\_ptr<TMission> mission,}
+\DoxyCodeLine{132         \mbox{\hyperlink{classMyList}{MyList<TWeapon>}}\&\& weapons\_,}
+\DoxyCodeLine{133         \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>\&\& ships\_,}
+\DoxyCodeLine{134         std::istream\& file);}
+\DoxyCodeLine{135 \textcolor{keyword}{public}:}
+\DoxyCodeLine{142     std::unique\_ptr<TMission> \mbox{\hyperlink{classTShop_a789d5e786476555b588aece81642f6f9}{Shop}}(}
+\DoxyCodeLine{143         std::pair<std::unique\_ptr<TMission>, std::pair<\mbox{\hyperlink{classMyList}{MyList<TWeapon>}}, \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>>>\&\& data,}
+\DoxyCodeLine{144         std::istream\& file);}
+\DoxyCodeLine{145 \};}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_TSHOP\_H}}
 
 \end{DoxyCode}

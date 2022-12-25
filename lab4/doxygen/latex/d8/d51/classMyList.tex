@@ -2,11 +2,17 @@
 \label{classMyList}\index{MyList$<$ T $>$@{MyList$<$ T $>$}}
 
 
+Односвазный список  
+
+
+
+
 {\ttfamily \#include $<$My\+List.\+h$>$}
 
 
 
-Inheritance diagram for My\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+Inheritance diagram for My\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +21,8 @@ Inheritance diagram for My\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>
 \end{figure}
 
 
-Collaboration diagram for My\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+Collaboration diagram for My\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -71,6 +78,11 @@ int \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\+\_\+}}
 \mbox{\hyperlink{classMyList_1_1Node}{Node}} $\ast$ \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\+\_\+}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class My\+List$<$ T $>$}
+Односвазный список 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classMyList_aaa11039853c7adb2fbcb770eab8b7305}\label{classMyList_aaa11039853c7adb2fbcb770eab8b7305}} 
@@ -153,6 +165,11 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$class T $>$ \\
 void \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList_1_1iterator}{iterator}}}]{who }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Erases element under iterator Complexity -\/ O(1) 
+\begin{DoxyParams}{Parameters}
+{\em who} & \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -167,6 +184,14 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$class T $>$ \\
 T \& \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Gives link to Element with number you give Numbers 0, 1 ... Complexity -\/ O(size) 
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{classMyList_a80edb252c7e71107fac78c29647be513}\label{classMyList_a80edb252c7e71107fac78c29647be513}} 
 \index{MyList$<$ T $>$@{MyList$<$ T $>$}!getById@{getById}}
 \index{getById@{getById}!MyList$<$ T $>$@{MyList$<$ T $>$}}
@@ -174,6 +199,14 @@ T \& \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::get\+By\+Id (\begin{Do
 {\footnotesize\ttfamily template$<$class T $>$ \\
 const T \& \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+Gives const link to Element with number you give Numbers 0, 1 ... Complexity -\/ O(size) 
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -188,6 +221,13 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$class T $>$ \\
 void \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{T \&\&}]{what,  }\item[{\mbox{\hyperlink{classMyList_1_1iterator}{iterator}}}]{before\+Who }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Inserts element Complexity -\/ O(1) 
+\begin{DoxyParams}{Parameters}
+{\em what} & \\
+\hline
+{\em before\+Who} & iterator, which element will be next after insterted \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -265,4 +305,4 @@ int \mbox{\hyperlink{classMyList}{My\+List}}$<$ T $>$\+::\+Size\+\_\+\hspace{0.3
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-container/code/\mbox{\hyperlink{MyList_8h}{My\+List.\+h}}\end{DoxyCompactItemize}
+code/container/code/\mbox{\hyperlink{MyList_8h}{My\+List.\+h}}\end{DoxyCompactItemize}

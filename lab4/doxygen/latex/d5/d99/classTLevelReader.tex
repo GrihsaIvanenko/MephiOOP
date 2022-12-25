@@ -2,11 +2,17 @@
 \label{classTLevelReader}\index{TLevelReader@{TLevelReader}}
 
 
+Класс, отвечающий за загрузку уровня из файла  
+
+
+
+
 {\ttfamily \#include $<$TLevel\+Reader.\+h$>$}
 
 
 
-Collaboration diagram for TLevel\+Reader\+:\nopagebreak
+Collaboration diagram for TLevel\+Reader\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -50,6 +56,9 @@ std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMissio
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Класс, отвечающий за загрузку уровня из файла 
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classTLevelReader_ac28bf996f8431c89710180136c30c180}\label{classTLevelReader_ac28bf996f8431c89710180136c30c180}} 
 \index{TLevelReader@{TLevelReader}!ReadBase@{ReadBase}}
@@ -57,7 +66,7 @@ std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMissio
 \doxysubsubsection{\texorpdfstring{ReadBase()}{ReadBase()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTBase}{TBase}} TLevel\+Reader\+::\+Read\+Base (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const std\+::string \&}]{what }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Функция, считывающая базу пиратов Формат\+: X координата -\/ (Base\+\_\+X) Y координата -\/ (Base\+\_\+Y) Тип базы -\/ (Base\+\_\+\+Type) 1 -\/ начало миссии, 2 -\/ конец миссии Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -77,7 +86,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadCapitanInfo()}{ReadCapitanInfo()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} TLevel\+Reader\+::\+Read\+Capitan\+Info (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Считывает информацию о капитане -\/ 4 строки Имя капитана -\/ (Capitan\+Name) Фамилия капитана -\/ (Capitan\+Surname) Отчество капитана -\/ (Capitan\+Patronymic) Ранг капитана -\/ (Capitan\+Rank) Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -97,7 +106,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadCapitanInfos()}{ReadCapitanInfos()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ TLevel\+Reader\+::\+Read\+Capitan\+Infos (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Функция, считывающая список капитанов Вначале количество. Пустая строка. Затем капитан + Пустая строка. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -117,7 +126,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadEmpty()}{ReadEmpty()}}
 {\footnotesize\ttfamily void TLevel\+Reader\+::\+Read\+Empty (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Функция, считывающая пустую строку Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -130,7 +139,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadInt()}{ReadInt()}}
 {\footnotesize\ttfamily int TLevel\+Reader\+::\+Read\+Int (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const std\+::string \&}]{what }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Функция, считывающая одно число. Вначале идет описание(what), затем двоеточие, пробел, оставшийся суффикс будет переводиться в число Если префикс не подходит под заданный формат, вылетит ошибка-\/строка Если суффикс не является числом, вылетит ошибка-\/строка Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -143,7 +152,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadInts()}{ReadInts()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ int $>$ TLevel\+Reader\+::\+Read\+Ints (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const std\+::string \&}]{what }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Функция, считывающая список чисел Вначале количество. Пустая строка. Затем число(what) + Пустая строка. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -163,7 +172,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadMissionInfoFromStream()}{ReadMissionInfoFromStream()}}
 {\footnotesize\ttfamily std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$, std\+::pair$<$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ $>$ $>$ TLevel\+Reader\+::\+Read\+Mission\+Info\+From\+Stream (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Общая функция для считывания уровня из файла Принимает поток для считывания Возвращает описание миссии, список орудий и кораблей, доступных для покупки.
+
+Формат файла с уровнем\+: Ввод капитанов Ввод орудий Ввод кораблей всего денег -\/ (money\+Total) вес для транспортировки -\/ (weight\+Total) вес, необходимый для прохождения уровня -\/ (weight\+Need\+To\+Pass) Ширина карты в клетках -\/ (width) Высота карты в клетках -\/ (height) Пустая строка База А Пустая строка База B Пустая строка Ввод спавнеров Ввод пиратских баз Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,7 +194,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadPirateBase()}{ReadPirateBase()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTPirateBase}{TPirate\+Base}} TLevel\+Reader\+::\+Read\+Pirate\+Base (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ \&}]{desctiptors }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Функция, считывающая базу пиратов Формат\+: X координата -\/ (Base\+\_\+X) Y координата -\/ (Base\+\_\+Y) Тип базы -\/ (Base\+\_\+\+Type) обязано быть тройкой, т.\+к. именно такой тип у базы пиратов Номер дескриптора, отвечающего за спавн пиратов -\/ (Descriptor\+Number) Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -203,7 +214,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadPirateBases()}{ReadPirateBases()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTPirateBase}{TPirate\+Base}} $>$ TLevel\+Reader\+::\+Read\+Pirate\+Bases (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ \&}]{descriptots }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Функция, считывающая список баз пиратов Вначале количество. Пробел. Затем база + пробел. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -223,7 +234,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadShip()}{ReadShip()}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ TLevel\+Reader\+::\+Read\+Ship (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&}]{weapons,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ \&}]{capitans }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Считывает информацию об корабле -\/ числа Тип корабля -\/ число 1 2 или 3. Все строки идут подряд. 1 -\/ грузовой. 2 -\/ с орудиями. 3 -\/ и с грузом и с орудиями.
+
+Если тип корабля 1 Тип корабля -\/ (Ship\+Type) -\/ 1 Номер введенного ранее капитана -\/ (Capitan\+Info\+Id) Максимальная скорость -\/ (Max\+Speed) Количество здоровья -\/ (HPTotal) Цена -\/ (Cost) Максимальный вес -\/ (Weight\+Total) Коэфф замедления, во столько раз уменьшится скорость при полной загрузке, ЦЕЛОЕ ЧИСЛО -\/ (SlowK)
+
+Если тип корабля 2 Тип корабля -\/ (Ship\+Type) -\/ 2 Номер введенного ранее капитана -\/ (Capitan\+Info\+Id) Максимальная скорость -\/ (Max\+Speed) Количество здоровья -\/ (HPTotal) Цена -\/ (Cost) Номер орудия спереди корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. -\/ (Weapon1) Номер орудия сзади корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. -\/ (Weapon2) Номер орудия слева корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. -\/ (Weapon3) Номер орудия спрпва корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. -\/ (Weapon4)
+
+Если тип корабля 3 Тип корабля -\/ (Ship\+Type) -\/ 3 Номер введенного ранее капитана -\/ (Capitan\+Info\+Id) Максимальная скорость -\/ (Max\+Speed) Количество здоровья -\/ (HPTotal) Цена -\/ (Cost) Максимальный вес -\/ (Weight\+Total) Коэфф замедления, во столько раз уменьшится скорость при полной загрузке, ЦЕЛОЕ ЧИСЛО -\/ (SlowK) Номер орудия спереди корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. -\/ (Weapon1) Номер орудия сзади корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. -\/ (Weapon2) Номер орудия слева корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. -\/ (Weapon3) Номер орудия спрпва корабля. Нумерация с ЕДИНИЦЫ. 0 если нет орудия. -\/ (Weapon4) Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -243,7 +260,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadShips()}{ReadShips()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ TLevel\+Reader\+::\+Read\+Ships (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&}]{weapons,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTCapitanInfo}{TCapitan\+Info}} $>$ \&}]{capitans }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Функция, считывающая список баз кораблей Вначале количество. Пустая строка. Затем корабль + Пустая строка. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -263,7 +280,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadSpawnDescriptor()}{ReadSpawnDescriptor()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} TLevel\+Reader\+::\+Read\+Spawn\+Descriptor (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Функция, считывающая спавнер пиратов на пиратской базе Формат\+: Номер корабля, который будет спавнится. Обязано быть \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} или его наследником -\/ (Ship\+Spawn\+Type) Сколько всего кораблей заспавнит дескриптор -\/ (Spam\+Count) Раз в сколько кадров будет появляться новый корабль (Loop\+Time)
+
+Спавн зависит от числа кадров, а не секунд, для удобства тестирования и наблюдения за происходящим Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -283,7 +302,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadSpawnDescriptors()}{ReadSpawnDescriptors()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTSpawnDescriptor}{TSpawn\+Descriptor}} $>$ TLevel\+Reader\+::\+Read\+Spawn\+Descriptors (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Функция, считывающая список баз дескрипторов спавна Вначале количество. Пустая строка. Затем спавнер + Пустая строка. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -303,7 +322,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadString()}{ReadString()}}
 {\footnotesize\ttfamily std\+::string TLevel\+Reader\+::\+Read\+String (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{const std\+::string \&}]{what }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Функция, считывающая одну строку. Вначале идет описание(what), затем двоеточие, пробел, оставшийся суффикс будет результатом ввода Если префикс не подходит под заданный формат, вылетит ошибка-\/строка Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -316,7 +335,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadWeapon()}{ReadWeapon()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTWeapon}{TWeapon}} TLevel\+Reader\+::\+Read\+Weapon (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Считывает информацию об орудии -\/ числа Тип орудия -\/ (Weapon\+Type) Урон орудия -\/ (Damage) Перезарядку орудия -\/ (Call\+Down) Дальность стрельбы -\/ (Range) Количество выстрелов -\/ (Shots\+Total) Цена -\/ (Cost) Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -336,7 +355,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadWeapons()}{ReadWeapons()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ TLevel\+Reader\+::\+Read\+Weapons (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Функция, считывающая список орудий Вначале количество. Пустая строка. Затем орудие + Пустая строка. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -354,5 +373,5 @@ Here is the caller graph for this function\+:\nopagebreak
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/code/\mbox{\hyperlink{TLevelReader_8h}{TLevel\+Reader.\+h}}\item 
-game/code/\mbox{\hyperlink{TLevelReader_8cpp}{TLevel\+Reader.\+cpp}}\end{DoxyCompactItemize}
+code/game/code/\mbox{\hyperlink{TLevelReader_8h}{TLevel\+Reader.\+h}}\item 
+code/game/code/\mbox{\hyperlink{TLevelReader_8cpp}{TLevel\+Reader.\+cpp}}\end{DoxyCompactItemize}

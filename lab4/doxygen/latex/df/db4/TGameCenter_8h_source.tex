@@ -1,5 +1,5 @@
 \hypertarget{TGameCenter_8h_source}{}\doxysection{TGame\+Center.\+h}
-\label{TGameCenter_8h_source}\index{game/code/TGameCenter.h@{game/code/TGameCenter.h}}
+\label{TGameCenter_8h_source}\index{code/game/code/TGameCenter.h@{code/game/code/TGameCenter.h}}
 \mbox{\hyperlink{TGameCenter_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//}}
@@ -12,16 +12,28 @@
 \DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{TMission_8h}{TMission.h}}"{}}}
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include <memory>}}
 \DoxyCodeLine{10 }
-\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classTGameCenter}{TGameCenter}} \{}
-\DoxyCodeLine{12 \textcolor{keyword}{private}:}
-\DoxyCodeLine{13     std::pair<std::unique\_ptr<TMission>, std::pair<MyList<TWeapon>, \mbox{\hyperlink{classMyList}{MyList<std::unique\_ptr<TShip>}}>>> \mbox{\hyperlink{classTGameCenter_a70e0f4db06ab6b317c7aafcc8ce94c7b}{ChooseLevel}}();}
-\DoxyCodeLine{14     std::unique\_ptr<TMission> \mbox{\hyperlink{classTGameCenter_a86ca139bcacad0fc4c04be44e1d399ad}{Shop}}(}
-\DoxyCodeLine{15             std::pair<std::unique\_ptr<TMission>, std::pair<\mbox{\hyperlink{classMyList}{MyList<TWeapon>}}, \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>>>\&\& data);}
-\DoxyCodeLine{16     std::unique\_ptr<TMission> \mbox{\hyperlink{classTGameCenter_ae3e3bca9701c76d5e73e2a95ab809c5f}{Play}}(std::unique\_ptr<TMission> missionPtr);}
-\DoxyCodeLine{17 \textcolor{keyword}{public}:}
-\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTGameCenter_a0344cdc2b9027be9b5f56376f7c74ea5}{Start}}();}
-\DoxyCodeLine{19 \};}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_GAMECENTER\_H}}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classTGameCenter}{TGameCenter}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     std::pair<std::unique\_ptr<TMission>, std::pair<MyList<TWeapon>, \mbox{\hyperlink{classMyList}{MyList<std::unique\_ptr<TShip>}}>>> \mbox{\hyperlink{classTGameCenter_a70e0f4db06ab6b317c7aafcc8ce94c7b}{ChooseLevel}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{comment}{/*}}
+\DoxyCodeLine{23 \textcolor{comment}{     * вызвает класс, реализовывающий покупку орудий и кораблей}}
+\DoxyCodeLine{24 \textcolor{comment}{     * Принимает Миссию, Список орудий и коралей, которые можно купить}}
+\DoxyCodeLine{25 \textcolor{comment}{     * Возвращает миссию, в которой добавлены купленные игроком корабли и орудия}}
+\DoxyCodeLine{26 \textcolor{comment}{     */}}
+\DoxyCodeLine{27     std::unique\_ptr<TMission> \mbox{\hyperlink{classTGameCenter_a86ca139bcacad0fc4c04be44e1d399ad}{Shop}}(}
+\DoxyCodeLine{28             std::pair<std::unique\_ptr<TMission>, std::pair<\mbox{\hyperlink{classMyList}{MyList<TWeapon>}}, \mbox{\hyperlink{classMyList}{MyList}}<std::unique\_ptr<TShip>>>>\&\& data);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{/*}}
+\DoxyCodeLine{31 \textcolor{comment}{     * вызвает класс, реализовывающий логику и происходящее в игре}}
+\DoxyCodeLine{32 \textcolor{comment}{     * Принимает дескриптор миссии после загрузки и покупуки}}
+\DoxyCodeLine{33 \textcolor{comment}{     * Возвращает указатель на миссию после игры}}
+\DoxyCodeLine{34 \textcolor{comment}{     */}}
+\DoxyCodeLine{35     std::unique\_ptr<TMission> \mbox{\hyperlink{classTGameCenter_ae3e3bca9701c76d5e73e2a95ab809c5f}{Play}}(std::unique\_ptr<TMission> missionPtr);}
+\DoxyCodeLine{36 \textcolor{keyword}{public}:}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTGameCenter_a0344cdc2b9027be9b5f56376f7c74ea5}{Start}}();}
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_GAMECENTER\_H}}
 
 \end{DoxyCode}

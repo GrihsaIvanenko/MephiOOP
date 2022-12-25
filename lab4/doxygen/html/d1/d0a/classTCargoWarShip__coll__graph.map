@@ -1,9 +1,9 @@
 <map id="TCargoWarShip" name="TCargoWarShip">
-<area shape="rect" id="node1" title="Корабль, имеющий и оррудиея, и груз на борту." alt="" coords="217,2236,493,2555"/>
+<area shape="rect" id="node1" title="Корабль, имеющий и орудиея, и груз на борту." alt="" coords="217,2236,493,2555"/>
 <area shape="rect" id="node2" href="$d3/d81/classTCargoShip.html" title="Корабль, несущий груз. Добавляются поля &#45; коеф замедления, максимальный груз, текущий груз." alt="" coords="351,1633,658,2187"/>
 <area shape="rect" id="node3" href="$d1/d07/classTShip.html" title="Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей" alt="" coords="385,797,624,1571"/>
 <area shape="rect" id="node8" href="$db/df3/classTWarShip.html" title="Корабль, имеющий вооружение. Добавляются поле &#45; Holder орудий" alt="" coords="88,1714,327,2106"/>
-<area shape="rect" id="node4" href="$d5/d55/classTObjectOnMap.html" title=" " alt="" coords="237,343,463,661"/>
+<area shape="rect" id="node4" href="$d5/d55/classTObjectOnMap.html" title="Базовый класс для всех объектов на карте" alt="" coords="237,343,463,661"/>
 <area shape="rect" id="node5" title=" " alt="" coords="531,123,625,163"/>
 <area shape="rect" id="node7" href="$dd/dec/classTCapitanInfo.html" title="Класс для хранения информации о капитане." alt="" coords="625,269,849,735"/>
 <area shape="rect" id="node6" title=" " alt="" coords="505,5,651,60"/>

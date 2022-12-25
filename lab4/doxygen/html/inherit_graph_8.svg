@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d1/d9d/classTimeHolder.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="d1/d9d/classTimeHolder.html" target="_top" xlink:title="Класс, отвечающий за время в нашей программе.">
 <polygon fill="white" stroke="#666666" points="74,-19 0,-19 0,0 74,0 74,-19"/>
 <text text-anchor="middle" x="37" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">TimeHolder</text>
 </a>

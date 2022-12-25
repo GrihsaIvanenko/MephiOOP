@@ -2,11 +2,17 @@
 \label{classTGameCenter}\index{TGameCenter@{TGameCenter}}
 
 
+Класс, запускающий различные стадии игры  
+
+
+
+
 {\ttfamily \#include $<$TGame\+Center.\+h$>$}
 
 
 
-Collaboration diagram for TGame\+Center\+:\nopagebreak
+Collaboration diagram for TGame\+Center\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,6 +35,9 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \mbox{\
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Класс, запускающий различные стадии игры 
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classTGameCenter_a70e0f4db06ab6b317c7aafcc8ce94c7b}\label{classTGameCenter_a70e0f4db06ab6b317c7aafcc8ce94c7b}} 
 \index{TGameCenter@{TGameCenter}!ChooseLevel@{ChooseLevel}}
@@ -36,7 +45,7 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \mbox{\
 \doxysubsubsection{\texorpdfstring{ChooseLevel()}{ChooseLevel()}}
 {\footnotesize\ttfamily std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$, std\+::pair$<$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ $>$ $>$ TGame\+Center\+::\+Choose\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+вызвает класс, реализовывающий выбор уровня и его загрузку из файла Возвращает Миссию, Список орудий и коралей, которые можно купить Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -114,5 +123,5 @@ Here is the caller graph for this function\+:\nopagebreak
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/code/\mbox{\hyperlink{TGameCenter_8h}{TGame\+Center.\+h}}\item 
-game/code/\mbox{\hyperlink{TGameCenter_8cpp}{TGame\+Center.\+cpp}}\end{DoxyCompactItemize}
+code/game/code/\mbox{\hyperlink{TGameCenter_8h}{TGame\+Center.\+h}}\item 
+code/game/code/\mbox{\hyperlink{TGameCenter_8cpp}{TGame\+Center.\+cpp}}\end{DoxyCompactItemize}

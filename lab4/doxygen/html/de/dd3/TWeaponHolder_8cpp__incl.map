@@ -1,10 +1,10 @@
-<map id="weapons/code/TWeaponHolder.cpp" name="weapons/code/TWeaponHolder.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="15,5,263,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,75,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="99,79,179,104"/>
-<area shape="rect" id="node4" href="$dc/d2c/TWeaponHolder_8h.html" title=" " alt="" coords="203,79,339,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="65,159,143,185"/>
-<area shape="rect" id="node6" title=" " alt="" coords="167,159,230,185"/>
-<area shape="rect" id="node7" href="$d8/d66/enum__place__on__ship_8h.html" title=" " alt="" coords="255,152,428,192"/>
-<area shape="rect" id="node8" href="$d0/df8/TWeapon_8h.html" title=" " alt="" coords="453,159,547,185"/>
+<map id="code/weapons/code/TWeaponHolder.cpp" name="code/weapons/code/TWeaponHolder.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="31,5,246,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,75,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,93,179,119"/>
+<area shape="rect" id="node4" href="$dc/d2c/TWeaponHolder_8h.html" title=" " alt="" coords="203,93,339,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="65,174,143,199"/>
+<area shape="rect" id="node6" title=" " alt="" coords="167,174,230,199"/>
+<area shape="rect" id="node7" href="$d8/d66/enum__place__on__ship_8h.html" title=" " alt="" coords="255,167,428,207"/>
+<area shape="rect" id="node8" href="$d0/df8/TWeapon_8h.html" title=" " alt="" coords="453,174,547,199"/>
 </map>

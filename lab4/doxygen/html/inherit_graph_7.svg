@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="de/d6e/classTGameCenter.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="de/d6e/classTGameCenter.html" target="_top" xlink:title="Класс, запускающий различные стадии игры">
 <polygon fill="white" stroke="#666666" points="84,-19 0,-19 0,0 84,0 84,-19"/>
 <text text-anchor="middle" x="42" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">TGameCenter</text>
 </a>

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Класс, описывающий базу пиратов. Есть поле &#45; спавнер">
 <polygon fill="#999999" stroke="#666666" points="229,-195 71,-195 71,0 229,0 229,-195"/>
 <text text-anchor="middle" x="150" y="-183" font-family="Helvetica,sans-Serif" font-size="10.00">{TPirateBase</text>
 <text text-anchor="start" x="79" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00">||+ &#160;TPirateBase(int x,</text>
@@ -36,7 +36,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d9/d38/classTBase.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d9/d38/classTBase.html" target="_top" xlink:title="База на карте. Есть поле BaseType &#45; код базы: начальная точка маршрута(1), конечная(2) или же это баз...">
 <polygon fill="white" stroke="#666666" points="178.5,-991 27.5,-991 27.5,-829 178.5,-829 178.5,-991"/>
 <text text-anchor="middle" x="103" y="-979" font-family="Helvetica,sans-Serif" font-size="10.00">{TBase</text>
 <text text-anchor="start" x="35.5" y="-968" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int BaseType_</text>
@@ -64,7 +64,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title="Базовый класс для всех объектов на карте">
 <polygon fill="white" stroke="#666666" points="170,-1930 0,-1930 0,-1691 170,-1691 170,-1930"/>
 <text text-anchor="middle" x="85" y="-1918" font-family="Helvetica,sans-Serif" font-size="10.00">{TObjectOnMap</text>
 <text text-anchor="start" x="8" y="-1907" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int X_</text>
@@ -165,7 +165,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d2/da3/classTSpawnDescriptor.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="../../d2/da3/classTSpawnDescriptor.html" target="_top" xlink:title="Класс, описываюший спавн пиратов.">
 <polygon fill="white" stroke="#666666" points="357.5,-470 166.5,-470 166.5,-242 357.5,-242 357.5,-470"/>
 <text text-anchor="middle" x="262" y="-458" font-family="Helvetica,sans-Serif" font-size="10.00">{TSpawnDescriptor</text>
 <text text-anchor="start" x="174.5" y="-447" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int SpamCount_</text>

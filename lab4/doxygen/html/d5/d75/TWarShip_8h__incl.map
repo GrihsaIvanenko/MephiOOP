@@ -1,5 +1,5 @@
-<map id="ships/code/TWarShip.h" name="ships/code/TWarShip.h">
-<area shape="rect" id="node1" title=" " alt="" coords="347,5,515,31"/>
+<map id="code/ships/code/TWarShip.h" name="code/ships/code/TWarShip.h">
+<area shape="rect" id="node1" title=" " alt="" coords="330,5,533,31"/>
 <area shape="rect" id="node2" href="$dc/d2c/TWeaponHolder_8h.html" title=" " alt="" coords="268,79,408,119"/>
 <area shape="rect" id="node7" href="$d0/d93/TShip_8h.html" title=" " alt="" coords="489,86,560,111"/>
 <area shape="rect" id="node3" title=" " alt="" coords="410,174,487,199"/>

@@ -1,5 +1,5 @@
 \hypertarget{MyList_8h_source}{}\doxysection{My\+List.\+h}
-\label{MyList_8h_source}\index{container/code/MyList.h@{container/code/MyList.h}}
+\label{MyList_8h_source}\index{code/container/code/MyList.h@{code/container/code/MyList.h}}
 \mbox{\hyperlink{MyList_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//}}
@@ -12,129 +12,138 @@
 \DoxyCodeLine{8 \textcolor{preprocessor}{\#include <memory>}}
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../../ships/code/TShip.h"{}}}
 \DoxyCodeLine{10 }
-\DoxyCodeLine{11 \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
-\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{classMyList}{MyList}} \{}
-\DoxyCodeLine{13 \textcolor{keyword}{private}:}
-\DoxyCodeLine{14     \textcolor{keyword}{class }\mbox{\hyperlink{classMyList_1_1Node}{Node}} \{}
-\DoxyCodeLine{15         \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classMyList}{MyList}};}
-\DoxyCodeLine{16     \textcolor{keyword}{private}:}
-\DoxyCodeLine{17         std::unique\_ptr<T> \mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}};}
-\DoxyCodeLine{18         \mbox{\hyperlink{classMyList_1_1Node}{Node}}* \mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
-\DoxyCodeLine{19     \textcolor{keyword}{public}:}
-\DoxyCodeLine{20         \mbox{\hyperlink{classMyList_1_1Node_a1307c21a91a0e43a097ca324223acd16}{Node}}() : \mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}(), \mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}}(nullptr) \{ \}}
-\DoxyCodeLine{21         \mbox{\hyperlink{classMyList_1_1Node_a07699275b804b41169d9525f85b11623}{Node}}(T\&\& data): \mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}(std::make\_unique<T>(std::move(data))), \mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}}(nullptr) \{ \}}
-\DoxyCodeLine{22         \mbox{\hyperlink{classMyList_1_1Node_aeedd4d3ae92144b63e4dd100dfbd0818}{Node}}(T\&\& data, \mbox{\hyperlink{classMyList_1_1Node}{Node}}* next) : \mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}(std::make\_unique<T>(std::move(data))) , \mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}}(next) \{ \}}
-\DoxyCodeLine{23         T\& \mbox{\hyperlink{classMyList_1_1Node_ab2d58c2f766dbae8992ca9898f95e8c2}{operator *}}()\textcolor{keyword}{ const}\{ \textcolor{keywordflow}{return} *\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}; \}}
-\DoxyCodeLine{24     \};}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26 \textcolor{keyword}{public}:}
-\DoxyCodeLine{27     \textcolor{keyword}{class }\mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \{}
-\DoxyCodeLine{28         \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classMyList}{MyList}};}
-\DoxyCodeLine{29     \textcolor{keyword}{private}:}
-\DoxyCodeLine{30         \mbox{\hyperlink{classMyList_1_1Node}{Node}}* \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}};}
-\DoxyCodeLine{31     \textcolor{keyword}{public}:}
-\DoxyCodeLine{32         \mbox{\hyperlink{classMyList_1_1iterator_ad0ae71e81ace5cafa679c51de32f82e4}{iterator}}(\mbox{\hyperlink{classMyList_1_1Node}{Node}}* data) : \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}(data) \{ \}}
-\DoxyCodeLine{33         \mbox{\hyperlink{classMyList_1_1iterator}{iterator}}\& \mbox{\hyperlink{classMyList_1_1iterator_af05d2f4e8c18b0a9a8007ea42956937a}{operator ++}}() \{}
-\DoxyCodeLine{34             \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}} = \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
-\DoxyCodeLine{35             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{36     \}}
-\DoxyCodeLine{37         T\& \mbox{\hyperlink{classMyList_1_1iterator_a278b169fb26aafd83571dabcbf188ce4}{operator *}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} *(\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}); \}}
-\DoxyCodeLine{38         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMyList_1_1iterator_a4dbcc094658737cc05ac7c5d33bd2193}{operator != }}(\textcolor{keyword}{const} \mbox{\hyperlink{classMyList_1_1iterator}{iterator}}\& other) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}} != other.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}; \}}
-\DoxyCodeLine{39         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMyList_1_1iterator_ae47989d46269ba3d7814df0f18f4912d}{operator == }}(\textcolor{keyword}{const} \mbox{\hyperlink{classMyList_1_1iterator}{iterator}}\& other) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}} == other.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}; \}}
-\DoxyCodeLine{40     \};}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{42 \textcolor{keyword}{private}:}
-\DoxyCodeLine{43     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}};}
-\DoxyCodeLine{44     \mbox{\hyperlink{classMyList_1_1Node}{Node}}* \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}};}
-\DoxyCodeLine{45     \mbox{\hyperlink{classMyList_1_1Node}{Node}}* \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}};}
-\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMyList_ad938b99ab951ca843516bfee51e30c84}{Clear}}()\{}
-\DoxyCodeLine{47         \textcolor{keywordflow}{while} (\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}) \{}
-\DoxyCodeLine{48             \mbox{\hyperlink{classMyList_1_1Node}{Node}}* next = \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
-\DoxyCodeLine{49             \textcolor{keyword}{delete} \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}};}
-\DoxyCodeLine{50             \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}} = next;}
-\DoxyCodeLine{51         \}}
-\DoxyCodeLine{52         \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}} = 0;}
-\DoxyCodeLine{53     \}}
-\DoxyCodeLine{54 }
-\DoxyCodeLine{55 \textcolor{keyword}{public}:}
-\DoxyCodeLine{56     \mbox{\hyperlink{classMyList_aaa11039853c7adb2fbcb770eab8b7305}{MyList}}() : \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}(0), \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}(new \mbox{\hyperlink{classMyList_1_1Node}{Node}}()), \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}}(\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}) \{ \}}
-\DoxyCodeLine{57     \mbox{\hyperlink{classMyList_aa622b9fb3e108b8b8c298ef1996dd256}{\string~MyList}}()\{}
-\DoxyCodeLine{58         \mbox{\hyperlink{classMyList_ad938b99ab951ca843516bfee51e30c84}{Clear}}();}
-\DoxyCodeLine{59     \}}
-\DoxyCodeLine{60     \mbox{\hyperlink{classMyList_a8d26a9aeff9bba7f61e0898056501f86}{MyList}}(\mbox{\hyperlink{classMyList}{MyList}}\&\& other) : \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}(other.\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}), \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}(other.\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}), \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}}(other.\mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}}) \{}
-\DoxyCodeLine{61         other.Size\_ = 0;}
-\DoxyCodeLine{62         other.Head\_ = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{63         other.Tail\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{15 \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{classMyList}{MyList}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     \textcolor{comment}{/*}}
+\DoxyCodeLine{19 \textcolor{comment}{     * Класс для хранения одного элемента контейнера и указателя на следующий}}
+\DoxyCodeLine{20 \textcolor{comment}{     */}}
+\DoxyCodeLine{21     \textcolor{keyword}{class }\mbox{\hyperlink{classMyList_1_1Node}{Node}} \{}
+\DoxyCodeLine{22         \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classMyList}{MyList}};}
+\DoxyCodeLine{23     \textcolor{keyword}{private}:}
+\DoxyCodeLine{24         std::unique\_ptr<T> \mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}};}
+\DoxyCodeLine{25         \mbox{\hyperlink{classMyList_1_1Node}{Node}}* \mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
+\DoxyCodeLine{26     \textcolor{keyword}{public}:}
+\DoxyCodeLine{27         \mbox{\hyperlink{classMyList_1_1Node_a1307c21a91a0e43a097ca324223acd16}{Node}}() : \mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}(), \mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}}(nullptr) \{ \}}
+\DoxyCodeLine{28         \mbox{\hyperlink{classMyList_1_1Node_a07699275b804b41169d9525f85b11623}{Node}}(T\&\& data): \mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}(std::make\_unique<T>(std::move(data))), \mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}}(nullptr) \{ \}}
+\DoxyCodeLine{29         \mbox{\hyperlink{classMyList_1_1Node_aeedd4d3ae92144b63e4dd100dfbd0818}{Node}}(T\&\& data, \mbox{\hyperlink{classMyList_1_1Node}{Node}}* next) : \mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}(std::make\_unique<T>(std::move(data))) , \mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}}(next) \{ \}}
+\DoxyCodeLine{30         T\& \mbox{\hyperlink{classMyList_1_1Node_ab2d58c2f766dbae8992ca9898f95e8c2}{operator *}}()\textcolor{keyword}{ const}\{ \textcolor{keywordflow}{return} *\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}; \}}
+\DoxyCodeLine{31     \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{public}:}
+\DoxyCodeLine{34     \textcolor{comment}{/*}}
+\DoxyCodeLine{35 \textcolor{comment}{     * Класс для итерации по нашему контейнеру.}}
+\DoxyCodeLine{36 \textcolor{comment}{     * Тип итератора -\/ ForwardIterator}}
+\DoxyCodeLine{37 \textcolor{comment}{     */}}
+\DoxyCodeLine{38     \textcolor{keyword}{class }\mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \{}
+\DoxyCodeLine{39         \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classMyList}{MyList}};}
+\DoxyCodeLine{40     \textcolor{keyword}{private}:}
+\DoxyCodeLine{41         \mbox{\hyperlink{classMyList_1_1Node}{Node}}* \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}};}
+\DoxyCodeLine{42     \textcolor{keyword}{public}:}
+\DoxyCodeLine{43         \mbox{\hyperlink{classMyList_1_1iterator_ad0ae71e81ace5cafa679c51de32f82e4}{iterator}}(\mbox{\hyperlink{classMyList_1_1Node}{Node}}* data) : \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}(data) \{ \}}
+\DoxyCodeLine{44         \mbox{\hyperlink{classMyList_1_1iterator}{iterator}}\& \mbox{\hyperlink{classMyList_1_1iterator_af05d2f4e8c18b0a9a8007ea42956937a}{operator ++}}() \{}
+\DoxyCodeLine{45             \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}} = \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
+\DoxyCodeLine{46             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48         T\& \mbox{\hyperlink{classMyList_1_1iterator_a278b169fb26aafd83571dabcbf188ce4}{operator *}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} *(\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}); \}}
+\DoxyCodeLine{49         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMyList_1_1iterator_a4dbcc094658737cc05ac7c5d33bd2193}{operator != }}(\textcolor{keyword}{const} \mbox{\hyperlink{classMyList_1_1iterator}{iterator}}\& other) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}} != other.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}; \}}
+\DoxyCodeLine{50         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMyList_1_1iterator_ae47989d46269ba3d7814df0f18f4912d}{operator == }}(\textcolor{keyword}{const} \mbox{\hyperlink{classMyList_1_1iterator}{iterator}}\& other) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}} == other.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}; \}}
+\DoxyCodeLine{51     \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keyword}{private}:}
+\DoxyCodeLine{54     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}};}
+\DoxyCodeLine{55     \mbox{\hyperlink{classMyList_1_1Node}{Node}}* \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}};}
+\DoxyCodeLine{56     \mbox{\hyperlink{classMyList_1_1Node}{Node}}* \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}};}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMyList_ad938b99ab951ca843516bfee51e30c84}{Clear}}()\{}
+\DoxyCodeLine{58         \textcolor{keywordflow}{while} (\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}) \{}
+\DoxyCodeLine{59             \mbox{\hyperlink{classMyList_1_1Node}{Node}}* next = \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
+\DoxyCodeLine{60             \textcolor{keyword}{delete} \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}};}
+\DoxyCodeLine{61             \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}} = next;}
+\DoxyCodeLine{62         \}}
+\DoxyCodeLine{63         \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}} = 0;}
 \DoxyCodeLine{64     \}}
-\DoxyCodeLine{65     \mbox{\hyperlink{classMyList}{MyList}}\& \mbox{\hyperlink{classMyList_a73539ac9c4e822931c1e74b228867099}{operator =}}(\mbox{\hyperlink{classMyList}{MyList}}\&\& other)\{}
-\DoxyCodeLine{66         \mbox{\hyperlink{classMyList_ad938b99ab951ca843516bfee51e30c84}{Clear}}();}
-\DoxyCodeLine{67         std::swap(\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}, other.Head\_);}
-\DoxyCodeLine{68         std::swap(\mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}}, other.Tail\_);}
-\DoxyCodeLine{69         std::swap(\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}, other.Size\_);}
-\DoxyCodeLine{70         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{71     \}}
-\DoxyCodeLine{72     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMyList_aca073a4bc1535a2a831f062f6c082e50}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList}}\& other)\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{73         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}} != other.\mbox{\hyperlink{classMyList_a37366fbfd16acad1dfa69a141b339095}{size}}())}
-\DoxyCodeLine{74             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{75         \textcolor{keyword}{auto} it\_o = other.\mbox{\hyperlink{classMyList_a281f359e28eb5d6014ba3405cf0e6895}{begin}}();}
-\DoxyCodeLine{76         \textcolor{keyword}{auto} it\_me = \mbox{\hyperlink{classMyList_a281f359e28eb5d6014ba3405cf0e6895}{begin}}();}
-\DoxyCodeLine{77         \textcolor{keywordflow}{while} (it\_me != \mbox{\hyperlink{classMyList_a723c00a8380b8fd0705cb286cdd179d2}{end}}()) \{}
-\DoxyCodeLine{78             \textcolor{keywordflow}{if} (!(*it\_o == *it\_me))}
-\DoxyCodeLine{79                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{80             ++it\_o;}
-\DoxyCodeLine{81             ++it\_me;}
-\DoxyCodeLine{82         \}}
-\DoxyCodeLine{83         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{84     \}}
-\DoxyCodeLine{85     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMyList_a37366fbfd16acad1dfa69a141b339095}{size}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{86         \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}};}
-\DoxyCodeLine{87     \}}
-\DoxyCodeLine{88     \mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \mbox{\hyperlink{classMyList_a281f359e28eb5d6014ba3405cf0e6895}{begin}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{89         \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_1_1iterator}{MyList<T>::iterator}}(\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}});}
-\DoxyCodeLine{90     \}}
-\DoxyCodeLine{91     \mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \mbox{\hyperlink{classMyList_a723c00a8380b8fd0705cb286cdd179d2}{end}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{92         \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_1_1iterator}{MyList<T>::iterator}}(\mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}});}
-\DoxyCodeLine{93     \}}
-\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMyList_ab5e189776aca91f01ee5fe930318c289}{insert}}(T\&\& what, \mbox{\hyperlink{classMyList_1_1iterator}{iterator}} beforeWho) \{}
-\DoxyCodeLine{95         ++\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}};}
-\DoxyCodeLine{96         \mbox{\hyperlink{classMyList_1_1Node}{Node}}* nw = \textcolor{keyword}{new} \mbox{\hyperlink{classMyList_1_1Node}{Node}}(std::move(what), beforeWho.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}});}
-\DoxyCodeLine{97         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}} == beforeWho.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}})}
-\DoxyCodeLine{98             \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}} = nw;}
-\DoxyCodeLine{99         beforeWho.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}} = nw;}
-\DoxyCodeLine{100         std::swap(nw-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}, beforeWho.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}});}
-\DoxyCodeLine{101     \}\textcolor{comment}{//iterator will look at new Node}}
-\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMyList_a0bf752e12a79f715ac37ed5e03255833}{erase}}(\mbox{\hyperlink{classMyList_1_1iterator}{iterator}} who)\{}
-\DoxyCodeLine{103         -\/-\/\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}};}
-\DoxyCodeLine{104         \mbox{\hyperlink{classMyList_1_1Node}{Node}}* toDelete = who.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
-\DoxyCodeLine{105         \textcolor{keywordflow}{if} (toDelete == \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}})}
-\DoxyCodeLine{106             \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}} = who.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}};}
-\DoxyCodeLine{107         who.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}} = toDelete-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
-\DoxyCodeLine{108         std::swap(who.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}, toDelete-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}});}
-\DoxyCodeLine{109         \textcolor{keyword}{delete} toDelete;}
-\DoxyCodeLine{110     \} \textcolor{comment}{//iterator will look at next Node}}
-\DoxyCodeLine{111     \textcolor{keyword}{const} T\& \mbox{\hyperlink{classMyList_a80edb252c7e71107fac78c29647be513}{getById}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{112         \textcolor{keywordflow}{if} (id < 0 || id >= \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}) \{}
-\DoxyCodeLine{113             std::string ex = \textcolor{stringliteral}{"{}Bad id = "{}} + std::to\_string(\textcolor{keywordtype}{id}) + \textcolor{stringliteral}{"{} in range [0, "{}} + std::to\_string(\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}) + \textcolor{stringliteral}{"{})"{}};}
-\DoxyCodeLine{114             \textcolor{keywordflow}{throw} ex;}
-\DoxyCodeLine{115         \}}
-\DoxyCodeLine{116         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& item : *\textcolor{keyword}{this})}
-\DoxyCodeLine{117             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id}-\/-\/ == 0)}
-\DoxyCodeLine{118                 \textcolor{keywordflow}{return} item;}
-\DoxyCodeLine{119         \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"{}228"{}};}
-\DoxyCodeLine{120     \}}
-\DoxyCodeLine{121 }
-\DoxyCodeLine{122     T\& \mbox{\hyperlink{classMyList_af0f64167348972fa5212fb1b63bbed10}{getById}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}) \{}
-\DoxyCodeLine{123         \textcolor{keywordflow}{if} (id < 0 || id >= \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}) \{}
-\DoxyCodeLine{124             std::string ex = \textcolor{stringliteral}{"{}Bad id = "{}} + std::to\_string(\textcolor{keywordtype}{id}) + \textcolor{stringliteral}{"{} in range [0, "{}} + std::to\_string(\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}) + \textcolor{stringliteral}{"{})"{}};}
-\DoxyCodeLine{125             \textcolor{keywordflow}{throw} ex;}
-\DoxyCodeLine{126         \}}
-\DoxyCodeLine{127         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& item : *\textcolor{keyword}{this})}
-\DoxyCodeLine{128             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id}-\/-\/ == 0)}
-\DoxyCodeLine{129                 \textcolor{keywordflow}{return} item;}
-\DoxyCodeLine{130         \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"{}228"{}};}
-\DoxyCodeLine{131     \}}
-\DoxyCodeLine{132 \};}
-\DoxyCodeLine{133 }
-\DoxyCodeLine{134 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_MYLIST\_H}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{keyword}{public}:}
+\DoxyCodeLine{67     \mbox{\hyperlink{classMyList_aaa11039853c7adb2fbcb770eab8b7305}{MyList}}() : \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}(0), \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}(new \mbox{\hyperlink{classMyList_1_1Node}{Node}}()), \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}}(\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}) \{ \}}
+\DoxyCodeLine{68     \mbox{\hyperlink{classMyList_aa622b9fb3e108b8b8c298ef1996dd256}{\string~MyList}}()\{}
+\DoxyCodeLine{69         \mbox{\hyperlink{classMyList_ad938b99ab951ca843516bfee51e30c84}{Clear}}();}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71     \mbox{\hyperlink{classMyList_a8d26a9aeff9bba7f61e0898056501f86}{MyList}}(\mbox{\hyperlink{classMyList}{MyList}}\&\& other) : \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}(other.\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}), \mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}(other.\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}), \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}}(other.\mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}}) \{}
+\DoxyCodeLine{72         other.Size\_ = 0;}
+\DoxyCodeLine{73         other.Head\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{74         other.Tail\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{75     \}}
+\DoxyCodeLine{76     \mbox{\hyperlink{classMyList}{MyList}}\& \mbox{\hyperlink{classMyList_a73539ac9c4e822931c1e74b228867099}{operator =}}(\mbox{\hyperlink{classMyList}{MyList}}\&\& other)\{}
+\DoxyCodeLine{77         \mbox{\hyperlink{classMyList_ad938b99ab951ca843516bfee51e30c84}{Clear}}();}
+\DoxyCodeLine{78         std::swap(\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}}, other.Head\_);}
+\DoxyCodeLine{79         std::swap(\mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}}, other.Tail\_);}
+\DoxyCodeLine{80         std::swap(\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}, other.Size\_);}
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMyList_aca073a4bc1535a2a831f062f6c082e50}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMyList}{MyList}}\& other)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}} != other.\mbox{\hyperlink{classMyList_a37366fbfd16acad1dfa69a141b339095}{size}}())}
+\DoxyCodeLine{85             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{86         \textcolor{keyword}{auto} it\_o = other.\mbox{\hyperlink{classMyList_a281f359e28eb5d6014ba3405cf0e6895}{begin}}();}
+\DoxyCodeLine{87         \textcolor{keyword}{auto} it\_me = \mbox{\hyperlink{classMyList_a281f359e28eb5d6014ba3405cf0e6895}{begin}}();}
+\DoxyCodeLine{88         \textcolor{keywordflow}{while} (it\_me != \mbox{\hyperlink{classMyList_a723c00a8380b8fd0705cb286cdd179d2}{end}}()) \{}
+\DoxyCodeLine{89             \textcolor{keywordflow}{if} (!(*it\_o == *it\_me))}
+\DoxyCodeLine{90                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{91             ++it\_o;}
+\DoxyCodeLine{92             ++it\_me;}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{95     \}}
+\DoxyCodeLine{96     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMyList_a37366fbfd16acad1dfa69a141b339095}{size}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}};}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99     \mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \mbox{\hyperlink{classMyList_a281f359e28eb5d6014ba3405cf0e6895}{begin}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{100         \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_1_1iterator}{MyList<T>::iterator}}(\mbox{\hyperlink{classMyList_adae23b7986d8ae1f07e15c5024f40209}{Head\_}});}
+\DoxyCodeLine{101     \}}
+\DoxyCodeLine{102     \mbox{\hyperlink{classMyList_1_1iterator}{iterator}} \mbox{\hyperlink{classMyList_a723c00a8380b8fd0705cb286cdd179d2}{end}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{103         \textcolor{keywordflow}{return} \mbox{\hyperlink{classMyList_1_1iterator}{MyList<T>::iterator}}(\mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}});}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{111     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMyList_ab5e189776aca91f01ee5fe930318c289}{insert}}(T\&\& what, \mbox{\hyperlink{classMyList_1_1iterator}{iterator}} beforeWho) \{}
+\DoxyCodeLine{112         ++\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}};}
+\DoxyCodeLine{113         \mbox{\hyperlink{classMyList_1_1Node}{Node}}* nw = \textcolor{keyword}{new} \mbox{\hyperlink{classMyList_1_1Node}{Node}}(std::move(what), beforeWho.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}});}
+\DoxyCodeLine{114         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}} == beforeWho.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}})}
+\DoxyCodeLine{115             \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}} = nw;}
+\DoxyCodeLine{116         beforeWho.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}} = nw;}
+\DoxyCodeLine{117         std::swap(nw-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}, beforeWho.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}});}
+\DoxyCodeLine{118     \}\textcolor{comment}{//iterator will look at new Node}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{125     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMyList_a0bf752e12a79f715ac37ed5e03255833}{erase}}(\mbox{\hyperlink{classMyList_1_1iterator}{iterator}} who)\{}
+\DoxyCodeLine{126         -\/-\/\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}};}
+\DoxyCodeLine{127         \mbox{\hyperlink{classMyList_1_1Node}{Node}}* toDelete = who.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
+\DoxyCodeLine{128         \textcolor{keywordflow}{if} (toDelete == \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}})}
+\DoxyCodeLine{129             \mbox{\hyperlink{classMyList_a2235256cb6fd28cc633b49354330a7fe}{Tail\_}} = who.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}};}
+\DoxyCodeLine{130         who.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}} = toDelete-\/>\mbox{\hyperlink{classMyList_1_1Node_a33d6b8e023f86cdcf0af181d32e39126}{Next\_}};}
+\DoxyCodeLine{131         std::swap(who.\mbox{\hyperlink{classMyList_1_1iterator_ac490dc1eb31ed3635c9b7b659c1962d5}{Data\_}}-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}}, toDelete-\/>\mbox{\hyperlink{classMyList_1_1Node_a121f7d6b828fc5eb720707c4752c1334}{Data\_}});}
+\DoxyCodeLine{132         \textcolor{keyword}{delete} toDelete;}
+\DoxyCodeLine{133     \} \textcolor{comment}{//iterator will look at next Node}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{142     \textcolor{keyword}{const} T\& \mbox{\hyperlink{classMyList_a80edb252c7e71107fac78c29647be513}{getById}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{143         \textcolor{keywordflow}{if} (id < 0 || id >= \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}) \{}
+\DoxyCodeLine{144             std::string ex = \textcolor{stringliteral}{"{}Bad id = "{}} + std::to\_string(\textcolor{keywordtype}{id}) + \textcolor{stringliteral}{"{} in range [0, "{}} + std::to\_string(\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}) + \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{145             \textcolor{keywordflow}{throw} ex;}
+\DoxyCodeLine{146         \}}
+\DoxyCodeLine{147         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& item : *\textcolor{keyword}{this})}
+\DoxyCodeLine{148             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id}-\/-\/ == 0)}
+\DoxyCodeLine{149                 \textcolor{keywordflow}{return} item;}
+\DoxyCodeLine{150         \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"{}228"{}};}
+\DoxyCodeLine{151     \}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{160     T\& \mbox{\hyperlink{classMyList_af0f64167348972fa5212fb1b63bbed10}{getById}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{161         \textcolor{keywordflow}{if} (id < 0 || id >= \mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}) \{}
+\DoxyCodeLine{162             std::string ex = \textcolor{stringliteral}{"{}Bad id = "{}} + std::to\_string(\textcolor{keywordtype}{id}) + \textcolor{stringliteral}{"{} in range [0, "{}} + std::to\_string(\mbox{\hyperlink{classMyList_a7244f911873525e0efe2ee11535f6dff}{Size\_}}) + \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{163             \textcolor{keywordflow}{throw} ex;}
+\DoxyCodeLine{164         \}}
+\DoxyCodeLine{165         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& item : *\textcolor{keyword}{this})}
+\DoxyCodeLine{166             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id}-\/-\/ == 0)}
+\DoxyCodeLine{167                 \textcolor{keywordflow}{return} item;}
+\DoxyCodeLine{168         \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"{}228"{}};}
+\DoxyCodeLine{169     \}}
+\DoxyCodeLine{170 \};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//LAB4\_MYLIST\_H}}
 
 \end{DoxyCode}

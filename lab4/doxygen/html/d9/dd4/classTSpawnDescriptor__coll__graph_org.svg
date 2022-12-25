@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Класс, описываюший спавн пиратов.">
 <polygon fill="#999999" stroke="#666666" points="449.5,-228 258.5,-228 258.5,0 449.5,0 449.5,-228"/>
 <text text-anchor="middle" x="354" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">{TSpawnDescriptor</text>
 <text text-anchor="start" x="266.5" y="-205" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int SpamCount_</text>
@@ -146,7 +146,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title="Базовый класс для всех объектов на карте">
 <polygon fill="white" stroke="#666666" points="170,-1537 0,-1537 0,-1298 170,-1298 170,-1537"/>
 <text text-anchor="middle" x="85" y="-1525" font-family="Helvetica,sans-Serif" font-size="10.00">{TObjectOnMap</text>
 <text text-anchor="start" x="8" y="-1514" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int X_</text>

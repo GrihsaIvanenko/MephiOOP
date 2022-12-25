@@ -1,5 +1,5 @@
-<map id="base/code/TPirateBase.cpp" name="base/code/TPirateBase.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="117,5,315,31"/>
+<map id="code/base/code/TPirateBase.cpp" name="code/base/code/TPirateBase.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="100,5,332,31"/>
 <area shape="rect" id="node2" href="$d1/d8a/TPirateBase_8h.html" title=" " alt="" coords="160,79,272,104"/>
 <area shape="rect" id="node3" href="$d1/d0c/TBase_8h.html" title=" " alt="" coords="111,152,185,177"/>
 <area shape="rect" id="node5" href="$dc/d2f/TSpawnDescriptor_8h.html" title=" " alt="" coords="235,152,386,177"/>

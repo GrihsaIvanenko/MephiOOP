@@ -211,7 +211,7 @@ var sectionId = 'dynsection-0';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title="Базовый класс для всех объектов на карте">
 <polygon fill="white" stroke="#666666" points="311,-1603 141,-1603 141,-1364 311,-1364 311,-1603"/>
 <text text-anchor="middle" x="226" y="-1591" font-family="Helvetica,sans-Serif" font-size="10.00">{TObjectOnMap</text>
 <text text-anchor="start" x="149" y="-1580" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int X_</text>
@@ -246,7 +246,7 @@ var sectionId = 'dynsection-0';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d0/dc5/classTCargoWarShip.html" target="_top" xlink:title="Корабль, имеющий и оррудиея, и груз на борту.">
+<g id="a_node4"><a xlink:href="../../d0/dc5/classTCargoWarShip.html" target="_top" xlink:title="Корабль, имеющий и орудиея, и груз на борту.">
 <polygon fill="white" stroke="#666666" points="329.5,-239 122.5,-239 122.5,0 329.5,0 329.5,-239"/>
 <text text-anchor="middle" x="226" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">{TCargoWarShip</text>
 <text text-anchor="start" x="130.5" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">||+ &#160;TCargoWarShip(int</text>

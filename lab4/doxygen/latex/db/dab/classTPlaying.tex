@@ -2,11 +2,17 @@
 \label{classTPlaying}\index{TPlaying@{TPlaying}}
 
 
+Класс, реализовывающий логику происходящего в игре  
+
+
+
+
 {\ttfamily \#include $<$TPlaying.\+h$>$}
 
 
 
-Collaboration diagram for TPlaying\+:\nopagebreak
+Collaboration diagram for TPlaying\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -65,6 +71,9 @@ void \mbox{\hyperlink{classTPlaying_a4cb98dff7d9a323fd893863f26b9c87d}{Fill\+Poi
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Класс, реализовывающий логику происходящего в игре 
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classTPlaying_a2e156f71550516644fab0862e2599284}\label{classTPlaying_a2e156f71550516644fab0862e2599284}} 
 \index{TPlaying@{TPlaying}!DrawBase@{DrawBase}}
@@ -72,6 +81,17 @@ void \mbox{\hyperlink{classTPlaying_a4cb98dff7d9a323fd893863f26b9c87d}{Fill\+Poi
 \doxysubsubsection{\texorpdfstring{DrawBase()}{DrawBase()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Draw\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTBase}{TBase}} $\ast$}]{base,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Рисует базу base на поле to\+Print в клетке (x, y) 
+\begin{DoxyParams}{Parameters}
+{\em base} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em to\+Print} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -92,6 +112,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{DrawCargoShip()}{DrawCargoShip()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Draw\+Cargo\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCargoShip}{TCargo\+Ship}} $\ast$}]{ship,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Рисует грузовой корабль ship на поле to\+Print в клетке (x, y) 
+\begin{DoxyParams}{Parameters}
+{\em ship} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em to\+Print} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -112,6 +143,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{DrawCargoWarShip()}{DrawCargoWarShip()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Draw\+Cargo\+War\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCargoWarShip}{TCargo\+War\+Ship}} $\ast$}]{ship,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Рисует корабль с вооружением ship на поле to\+Print в клетке (x, y) 
+\begin{DoxyParams}{Parameters}
+{\em ship} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em to\+Print} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -132,6 +174,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{DrawPirateBase()}{DrawPirateBase()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Draw\+Pirate\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTPirateBase}{TPirate\+Base}} $\ast$}]{pirate\+Base,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Рисует базу pirate\+Base пиратов на поле to\+Print в клетке (x, y) 
+\begin{DoxyParams}{Parameters}
+{\em pirate\+Base} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em to\+Print} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -152,6 +205,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{DrawWarShip()}{DrawWarShip()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Draw\+War\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $\ast$}]{ship,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Рисует грузовой корабль с вооружением ship на поле to\+Print в клетке (x, y) 
+\begin{DoxyParams}{Parameters}
+{\em ship} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em to\+Print} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -172,6 +236,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{FillIn()}{FillIn()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Fill\+In (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{image,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Заполнит игровое поле to\+Print клеткой с корординатами (x, y), на которой изображено image Закрасится прямоугольник в to\+Print с координатами (x,y) (x + image.\+size(), y + image\mbox{[}0\mbox{]}.size()) 
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em to\+Print} & \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -185,6 +260,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{FillPoint()}{FillPoint()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Fill\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$}]{object,  }\item[{int}]{line,  }\item[{int}]{pos,  }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \&}]{to\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Отрисует объект на конкретной клетке. Поймет, какой именно тип этого объекта и вызовет соответствующий ему отрисовщик 
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em line} & \\
+\hline
+{\em pos} & \\
+\hline
+{\em to\+Print} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -205,6 +291,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{FillPole()}{FillPole()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Fill\+Pole (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Расположит все объекты на карте в соответствии их координатам. Если на одной клетке есть корабли и базы, рисуются базы. Если есть обычные корабли и пираты, рисуются пираты. Среди пиратов и среди мирных кораблей нарисуется случайный(первый рассмотренный для этой клетки) 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em pole} & \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -218,6 +311,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{FindBest()}{FindBest()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} TPlaying\+::\+Find\+Best (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$}]{from,  }\item[{\mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$}]{to,  }\item[{int}]{speed,  }\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{new\+Pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Ищет ближайшую незанятую клетку для объекта from, если он направляется в клетку to Выбор клеток происходит из круга с центром в from и радиусом speed 
+\begin{DoxyParams}{Parameters}
+{\em from} & \\
+\hline
+{\em to} & \\
+\hline
+{\em speed} & \\
+\hline
+{\em new\+Pole} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -238,6 +345,14 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
 {\footnotesize\ttfamily int TPlaying\+::\+Get\+Speed (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ \&}]{ship }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Вычислит скорость конвоя -\/ минимальная из скоростей каждого корабля 
+\begin{DoxyParams}{Parameters}
+{\em ship} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -258,6 +373,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{Init()}{Init()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Проставит всем купленным кораблям координату базы А. Всем пиратским базам -\/ выставит из создаваемых ими кораблях координаты базы, которая их порождает 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -271,7 +391,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{MakeMoves()}{MakeMoves()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Make\+Moves (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{int}]{now\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Отвечает за все перемещения в рамках одного хода Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -291,7 +411,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{MakeShot()}{MakeShot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void TPlaying\+::\+Make\+Shot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{attack,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&}]{defend,  }\item[{int}]{now\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Мирные корабли сделают залп по пиратам. Каждый мирный корабль стреляет в ближайшего к нему пирата Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -311,12 +431,19 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{MakeShot()}{MakeShot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void TPlaying\+::\+Make\+Shot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&}]{attack,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{defend,  }\item[{int}]{now\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac}\label{classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac}} 
+Пираты сделают залп по мирным кораблям. Каждый Пират стреляет в ближайший к нему мирный корабль \mbox{\Hypertarget{classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac}\label{classTPlaying_ab30b266040a5de9cebdebc0e6130e2ac}} 
 \index{TPlaying@{TPlaying}!MakeSpawn@{MakeSpawn}}
 \index{MakeSpawn@{MakeSpawn}!TPlaying@{TPlaying}}
 \doxysubsubsection{\texorpdfstring{MakeSpawn()}{MakeSpawn()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Make\+Spawn (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{int}]{now\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Спавнит всех пиратов, которые должны появиться к моменту now\+Time. 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em now\+Time} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -337,7 +464,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{MoveShips()}{MoveShips()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void TPlaying\+::\+Move\+Ships (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships,  }\item[{\mbox{\hyperlink{classTBase}{TBase}} \&}]{b,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{new\+Pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Сдвинет все мирные корабли на 1 ход Для каждого найдет ближайщую к цели незанятую клетку, до которой он может обраться за 1 такт Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -357,7 +484,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{MoveShips()}{MoveShips()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void TPlaying\+::\+Move\+Ships (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&}]{pirates,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{goals,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{new\+Pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Сдвинет все пиратские корабли на 1 ход Для каждого найдет ближайщую к цели незанятую клетку, до которой он может обраться за 1 такт Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -370,6 +497,14 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{Play()}{Play()}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ TPlaying\+::\+Play (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$}]{mission\+Ptr }\end{DoxyParamCaption})}
 
+Запускает игровой процесс Инит Цикл игры, пересчитывающий и перерисовывающий происходящее при смене кадра(time\+Holder) 
+\begin{DoxyParams}{Parameters}
+{\em mission\+Ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -383,6 +518,13 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{RefillBases()}{RefillBases()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Refill\+Bases (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTObjectOnMap}{TObject\+On\+Map}} $\ast$ $>$ $>$ \&}]{new\+Pole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Отрисует все базы в новом кадре. Займет для них места, чтобы на них не сдвинулся корабль 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em now\+Time} & \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -396,7 +538,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{RemoveRipped()}{RemoveRipped()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void TPlaying\+::\+Remove\+Ripped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the caller graph for this function\+:\nopagebreak
+удалит убитые мирные корабли из общего списка Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -409,7 +551,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{RemoveRipped()}{RemoveRipped()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void TPlaying\+::\+Remove\+Ripped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWarShip}{TWar\+Ship}} $>$ \&}]{ships }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+удалит убитые пиратские корабли из обшего списка Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -422,7 +564,7 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ShowOnScreen()}{ShowOnScreen()}}
 {\footnotesize\ttfamily void TPlaying\+::\+Show\+On\+Screen (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:\nopagebreak
+Отвечает за отрисовку актуального состояния игры Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -440,5 +582,5 @@ Here is the caller graph for this function\+:\nopagebreak
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/code/\mbox{\hyperlink{TPlaying_8h}{TPlaying.\+h}}\item 
-game/code/\mbox{\hyperlink{TPlaying_8cpp}{TPlaying.\+cpp}}\end{DoxyCompactItemize}
+code/game/code/\mbox{\hyperlink{TPlaying_8h}{TPlaying.\+h}}\item 
+code/game/code/\mbox{\hyperlink{TPlaying_8cpp}{TPlaying.\+cpp}}\end{DoxyCompactItemize}

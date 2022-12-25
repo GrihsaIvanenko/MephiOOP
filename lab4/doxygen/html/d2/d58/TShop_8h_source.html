@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: game/code/TShop.h Source File</title>
+<title>My Project: code/game/code/TShop.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_37c6514aeece95293041e34c0f2e0784.html">game</a></li><li class="navelem"><a class="el" href="../../dir_5549ae4d90e701cfb8dfd694c37e87e5.html">code</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="../../dir_4efd5163d1ee3f9a7512f9af70643701.html">game</a></li><li class="navelem"><a class="el" href="../../dir_987d3ca7f0262b9b02bc7cc509eeed88.html">code</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -87,34 +87,45 @@ $(function() {
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../dc/de8/classTShop.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="../../dc/de8/classTShop.html">TShop</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#aa10e5887f689e5928cce716aa1bf9ea6">ReadInt</a>(std::istream&amp; file, <span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#a50adc3df9d34e65a112b243e1da598d4">PrintOptions</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; options);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#a46d86376a3b839bf3299639a9bb844a7">PrintInfo</a>(<span class="keyword">const</span> std::unique_ptr&lt;TMission&gt;&amp; mission);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#a5e84a0c01c9d507bda6ce4a0de43eaa7">AskPlay</a>(<span class="keyword">const</span> std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#aecceb42ffe39e9e0e9f1e152fa0c258d">BuyShip</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, <span class="keyword">const</span> <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList</a>&lt;std::unique_ptr&lt;TShip&gt;&gt;&amp; ships, std::istream&amp; file);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#ae39747c12e22b3bd4641affc0be979e3">SellShip</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#ac463d2ee0ef76283f4dac87a51353c36">BuyGun</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, <span class="keyword">const</span> <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList&lt;TWeapon&gt;</a>&amp; guns, std::istream&amp; file);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#a7c75fe3801c08795282fefc2baae29b8">SellGun</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#aef476da75c7312f1d68373c4883b20b0">AddWeight</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#af5388fd8d61bac1887a93d9d52ebe482">RemoveWeight</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#aa31244972d1d22e92673e8446ef50f2d">AutoWeight</a>(std::unique_ptr&lt;TMission&gt;&amp; mission);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#ae77eb41b055433f33b63810b32dfb88c">SetWeightBySpeed</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, <span class="keywordtype">int</span> speed);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#abe63a0587be037f14a2e04e62fd1fc60">IsSpeedPossible</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, <span class="keywordtype">int</span> speedToCheck);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#aa10e5887f689e5928cce716aa1bf9ea6">ReadInt</a>(std::istream&amp; file, <span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#a50adc3df9d34e65a112b243e1da598d4">PrintOptions</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; options);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::unique_ptr&lt;TMission&gt; <a class="code hl_function" href="../../dc/de8/classTShop.html#a1dcf7617180c288121288af2ed21909b">MainMenu</a>(</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        std::unique_ptr&lt;TMission&gt; mission,</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList&lt;TWeapon&gt;</a>&amp;&amp; weapons_,</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList</a>&lt;std::unique_ptr&lt;TShip&gt;&gt;&amp;&amp; ships_,</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        std::istream&amp; file);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::unique_ptr&lt;TMission&gt; <a class="code hl_function" href="../../dc/de8/classTShop.html#a789d5e786476555b588aece81642f6f9">Shop</a>(</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        std::pair&lt;std::unique_ptr&lt;TMission&gt;, std::pair&lt;<a class="code hl_class" href="../../d8/d51/classMyList.html">MyList&lt;TWeapon&gt;</a>, <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList</a>&lt;std::unique_ptr&lt;TShip&gt;&gt;&gt;&gt;&amp;&amp; data,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        std::istream&amp; file);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">//LAB4_TSHOP_H</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#a46d86376a3b839bf3299639a9bb844a7">PrintInfo</a>(<span class="keyword">const</span> std::unique_ptr&lt;TMission&gt;&amp; mission);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#a5e84a0c01c9d507bda6ce4a0de43eaa7">AskPlay</a>(<span class="keyword">const</span> std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#aecceb42ffe39e9e0e9f1e152fa0c258d">BuyShip</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, <span class="keyword">const</span> <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList</a>&lt;std::unique_ptr&lt;TShip&gt;&gt;&amp; ships, std::istream&amp; file);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#ae39747c12e22b3bd4641affc0be979e3">SellShip</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#ac463d2ee0ef76283f4dac87a51353c36">BuyGun</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, <span class="keyword">const</span> <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList&lt;TWeapon&gt;</a>&amp; guns, std::istream&amp; file);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#a7c75fe3801c08795282fefc2baae29b8">SellGun</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#aef476da75c7312f1d68373c4883b20b0">AddWeight</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#af5388fd8d61bac1887a93d9d52ebe482">RemoveWeight</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, std::istream&amp; file);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#aa31244972d1d22e92673e8446ef50f2d">AutoWeight</a>(std::unique_ptr&lt;TMission&gt;&amp; mission);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#ae77eb41b055433f33b63810b32dfb88c">SetWeightBySpeed</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, <span class="keywordtype">int</span> speed);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/de8/classTShop.html#abe63a0587be037f14a2e04e62fd1fc60">IsSpeedPossible</a>(std::unique_ptr&lt;TMission&gt;&amp; mission, <span class="keywordtype">int</span> speedToCheck);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    std::unique_ptr&lt;TMission&gt; <a class="code hl_function" href="../../dc/de8/classTShop.html#a1dcf7617180c288121288af2ed21909b">MainMenu</a>(</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        std::unique_ptr&lt;TMission&gt; mission,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList&lt;TWeapon&gt;</a>&amp;&amp; weapons_,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList</a>&lt;std::unique_ptr&lt;TShip&gt;&gt;&amp;&amp; ships_,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        std::istream&amp; file);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    std::unique_ptr&lt;TMission&gt; <a class="code hl_function" href="../../dc/de8/classTShop.html#a789d5e786476555b588aece81642f6f9">Shop</a>(</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        std::pair&lt;std::unique_ptr&lt;TMission&gt;, std::pair&lt;<a class="code hl_class" href="../../d8/d51/classMyList.html">MyList&lt;TWeapon&gt;</a>, <a class="code hl_class" href="../../d8/d51/classMyList.html">MyList</a>&lt;std::unique_ptr&lt;TShip&gt;&gt;&gt;&gt;&amp;&amp; data,</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        std::istream&amp; file);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>};</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#endif </span><span class="comment">//LAB4_TSHOP_H</span></div>
 <div class="ttc" id="aTMission_8h_html"><div class="ttname"><a href="../../d3/dd9/TMission_8h.html">TMission.h</a></div></div>
-<div class="ttc" id="aclassMyList_html"><div class="ttname"><a href="../../d8/d51/classMyList.html">MyList</a></div><div class="ttdef"><b>Definition:</b> MyList.h:12</div></div>
+<div class="ttc" id="aclassMyList_html"><div class="ttname"><a href="../../d8/d51/classMyList.html">MyList</a></div><div class="ttdoc">Односвазный список</div><div class="ttdef"><b>Definition:</b> MyList.h:16</div></div>
 <div class="ttc" id="aclassTShop_html"><div class="ttname"><a href="../../dc/de8/classTShop.html">TShop</a></div><div class="ttdef"><b>Definition:</b> TShop.h:10</div></div>
 <div class="ttc" id="aclassTShop_html_a1dcf7617180c288121288af2ed21909b"><div class="ttname"><a href="../../dc/de8/classTShop.html#a1dcf7617180c288121288af2ed21909b">TShop::MainMenu</a></div><div class="ttdeci">std::unique_ptr&lt; TMission &gt; MainMenu(std::unique_ptr&lt; TMission &gt; mission, MyList&lt; TWeapon &gt; &amp;&amp;weapons_, MyList&lt; std::unique_ptr&lt; TShip &gt; &gt; &amp;&amp;ships_, std::istream &amp;file)</div><div class="ttdef"><b>Definition:</b> TShop.cpp:18</div></div>
 <div class="ttc" id="aclassTShop_html_a46d86376a3b839bf3299639a9bb844a7"><div class="ttname"><a href="../../dc/de8/classTShop.html#a46d86376a3b839bf3299639a9bb844a7">TShop::PrintInfo</a></div><div class="ttdeci">void PrintInfo(const std::unique_ptr&lt; TMission &gt; &amp;mission)</div><div class="ttdef"><b>Definition:</b> TShop.cpp:89</div></div>

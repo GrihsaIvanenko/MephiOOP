@@ -55,6 +55,13 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \mbox{\
 \doxysubsubsection{\texorpdfstring{AddWeight()}{AddWeight()}}
 {\footnotesize\ttfamily void TShop\+::\+Add\+Weight (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
+Разместить груз на корабль. Он должен уметь держать груз на борту. Вес не должен превосходить кол-\/во свободного места на корабле. При некорректном вводе ничего не изменится, и будет выведено сообщение об ошибке 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em file} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -75,6 +82,16 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{AskPlay()}{AskPlay()}}
 {\footnotesize\ttfamily bool TShop\+::\+Ask\+Play (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
+Защита от мисклика. Еще раз выведет информацию о текущих покупках. Чтобы приступить к игре надо будет ввести Yes 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -95,6 +112,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{AutoWeight()}{AutoWeight()}}
 {\footnotesize\ttfamily void TShop\+::\+Auto\+Weight (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission }\end{DoxyParamCaption})}
 
+Автоматически расположить вес на грузовых кораблях. Если вес больше суммарной вместимости грузовых кораблей -\/ будет выведено сообщение об ошибке. Если данные верны, вес будет расположен так, чтобы скорость каравана была максимально возможной. 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -115,8 +137,16 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{BuyGun()}{BuyGun()}}
 {\footnotesize\ttfamily void TShop\+::\+Buy\+Gun (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&}]{guns,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Купить орудие. Выведут корабли, нужно указать тот, который может нести на борту оружие. Выведут варианты орудий, нужно выбрать Если денег хватит -\/ орудие будет установлено на выбранное место. Если там уже было орудие -\/ оно будет продано, а деньги вернутся на счет 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em guns} & \\
+\hline
+{\em file} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -136,6 +166,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{BuyShip()}{BuyShip()}}
 {\footnotesize\ttfamily void TShop\+::\+Buy\+Ship (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{const \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&}]{ships,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
+Купить корабль. Выведут список возможных, после чего надо будет выбрать Если денег хватает, корабль будет куплен. 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -156,6 +191,16 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{IsSpeedPossible()}{IsSpeedPossible()}}
 {\footnotesize\ttfamily bool TShop\+::\+Is\+Speed\+Possible (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{int}]{speed\+To\+Check }\end{DoxyParamCaption})}
 
+Вспомогательная для Auto\+Weight функция. Которая проверяет, уместится ли груз, если каждый корабль нагружать так, чтобы после загрузки он все еще мог двигаться со скоростью \texorpdfstring{$>$}{>}= speed\+To\+Check Если есть корабль, чья максимальная скорость \texorpdfstring{$<$}{<} speed\+To\+Check, вернется false 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em speed\+To\+Check} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -176,8 +221,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{MainMenu()}{MainMenu()}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ TShop\+::\+Main\+Menu (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$}]{mission,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$ \&\&}]{weapons\+\_\+,  }\item[{\mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ \&\&}]{ships\+\_\+,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+диалог с пользователем, вызывающий функции, для купли/продажи чего-\/либо. Принимает миссию после загрузки из файла, список доступных для покуки орудий и кораблей Возврашает миссию после всех покупок \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -197,6 +244,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{PrintInfo()}{PrintInfo()}}
 {\footnotesize\ttfamily void TShop\+::\+Print\+Info (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission }\end{DoxyParamCaption})}
 
+Выведет информацию о купленных кораблях и оставшихся деньгах Выводится информация о каждом корабле(и об орудиях на них) Затем выводится текущее количество денег 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -210,6 +262,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{PrintOptions()}{PrintOptions()}}
 {\footnotesize\ttfamily void TShop\+::\+Print\+Options (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{options }\end{DoxyParamCaption})}
 
+Выведет опции на экран, по одной в строке 
+\begin{DoxyParams}{Parameters}
+{\em options} & \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -223,6 +280,18 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ReadInt()}{ReadInt()}}
 {\footnotesize\ttfamily int TShop\+::\+Read\+Int (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{file,  }\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})}
 
+Считает число из заданного диапазона \mbox{[}from, to) 
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+{\em from} & \\
+\hline
+{\em to} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -236,6 +305,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{RemoveWeight()}{RemoveWeight()}}
 {\footnotesize\ttfamily void TShop\+::\+Remove\+Weight (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
+Снять груз с корабля. Он должен уметь держать груз на борту. Вес не должен превосходить кол-\/во груза места на корабле. При некорректном вводе ничего не изменится, и будет выведено сообщение об ошибке 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em file} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -249,6 +325,13 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{SellGun()}{SellGun()}}
 {\footnotesize\ttfamily void TShop\+::\+Sell\+Gun (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
+Продать орудие. Надо выбрать корабль, затем орудие. При некорректном вводе выведется сообщение об ошибке, ничего не будет изменено При корректном вводе -\/ деньги вернутся на счет 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em file} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -269,6 +352,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{SellShip()}{SellShip()}}
 {\footnotesize\ttfamily void TShop\+::\+Sell\+Ship (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
+Продаль корабль. Если на корабле есть орудия, они будут проданы, деньги от их продажи вернутся на счет 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em file} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -289,6 +379,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{SetWeightBySpeed()}{SetWeightBySpeed()}}
 {\footnotesize\ttfamily void TShop\+::\+Set\+Weight\+By\+Speed (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ \&}]{mission,  }\item[{int}]{speed }\end{DoxyParamCaption})}
 
+Вспомогательная для Auto\+Weight функция. Которая выставляет на каждом корабле такой вес,ъ чтобы после его установи скорость была \texorpdfstring{$>$}{>}= speed 
+\begin{DoxyParams}{Parameters}
+{\em mission} & \\
+\hline
+{\em speed} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -309,8 +406,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{Shop()}{Shop()}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$ TShop\+::\+Shop (\begin{DoxyParamCaption}\item[{std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTMission}{TMission}} $>$, std\+::pair$<$ \mbox{\hyperlink{classMyList}{My\+List}}$<$ \mbox{\hyperlink{classTWeapon}{TWeapon}} $>$, \mbox{\hyperlink{classMyList}{My\+List}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTShip}{TShip}} $>$ $>$ $>$ $>$ \&\&}]{data,  }\item[{std\+::istream \&}]{file }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Промежуточная функция. Запускает Main\+Menu Принимает миссию после загрузки из файла, список доступных для покуки орудий и кораблей Возврашает миссию после всех покупок \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -321,5 +420,5 @@ Here is the call graph for this function\+:
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/code/\mbox{\hyperlink{TShop_8h}{TShop.\+h}}\item 
-game/code/\mbox{\hyperlink{TShop_8cpp}{TShop.\+cpp}}\end{DoxyCompactItemize}
+code/game/code/\mbox{\hyperlink{TShop_8h}{TShop.\+h}}\item 
+code/game/code/\mbox{\hyperlink{TShop_8cpp}{TShop.\+cpp}}\end{DoxyCompactItemize}

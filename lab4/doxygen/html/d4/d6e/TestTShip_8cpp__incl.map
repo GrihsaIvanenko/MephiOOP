@@ -1,5 +1,5 @@
-<map id="ships/tests/TestTShip.cpp" name="ships/tests/TestTShip.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="31,5,217,31"/>
+<map id="code/ships/tests/TestTShip.cpp" name="code/ships/tests/TestTShip.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="14,5,234,31"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,79,109,104"/>
 <area shape="rect" id="node3" href="$d0/d93/TShip_8h.html" title=" " alt="" coords="133,79,251,104"/>
 <area shape="rect" id="node4" title=" " alt="" coords="125,240,184,265"/>

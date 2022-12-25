@@ -117,7 +117,7 @@ var sectionId = 'dynsection-1';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d5/d55/classTObjectOnMap.html" target="_top" xlink:title="Базовый класс для всех объектов на карте">
 <polygon fill="white" stroke="#666666" points="170,-921 0,-921 0,-682 170,-682 170,-921"/>
 <text text-anchor="middle" x="85" y="-909" font-family="Helvetica,sans-Serif" font-size="10.00">{TObjectOnMap</text>
 <text text-anchor="start" x="8" y="-898" font-family="Helvetica,sans-Serif" font-size="10.00">|&#45; int X_</text>

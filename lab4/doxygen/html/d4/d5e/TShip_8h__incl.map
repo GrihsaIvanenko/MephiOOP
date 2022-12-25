@@ -1,5 +1,5 @@
-<map id="ships/code/TShip.h" name="ships/code/TShip.h">
-<area shape="rect" id="node1" title=" " alt="" coords="51,5,194,31"/>
+<map id="code/ships/code/TShip.h" name="code/ships/code/TShip.h">
+<area shape="rect" id="node1" title=" " alt="" coords="33,5,212,31"/>
 <area shape="rect" id="node2" title=" " alt="" coords="56,167,114,192"/>
 <area shape="rect" id="node3" title=" " alt="" coords="24,86,101,111"/>
 <area shape="rect" id="node4" href="$de/da2/TCapitanInfo_8h.html" title=" " alt="" coords="126,86,242,111"/>

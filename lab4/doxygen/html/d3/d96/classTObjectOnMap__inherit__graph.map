@@ -1,9 +1,9 @@
 <map id="TObjectOnMap" name="TObjectOnMap">
-<area shape="rect" id="node1" title=" " alt="" coords="146,5,373,324"/>
-<area shape="rect" id="node2" href="$d9/d38/classTBase.html" title=" " alt="" coords="37,665,239,881"/>
+<area shape="rect" id="node1" title="Базовый класс для всех объектов на карте" alt="" coords="146,5,373,324"/>
+<area shape="rect" id="node2" href="$d9/d38/classTBase.html" title="База на карте. Есть поле BaseType &#45; код базы: начальная точка маршрута(1), конечная(2) или же это баз..." alt="" coords="37,665,239,881"/>
 <area shape="rect" id="node4" href="$d1/d07/classTShip.html" title="Базовый класс кораблей, содержащий и реализовывающий основную логику кораблей" alt="" coords="284,372,523,1175"/>
-<area shape="rect" id="node3" href="$de/d4e/classTPirateBase.html" title=" " alt="" coords="5,1362,225,1637"/>
+<area shape="rect" id="node3" href="$de/d4e/classTPirateBase.html" title="Класс, описывающий базу пиратов. Есть поле &#45; спавнер" alt="" coords="5,1362,225,1637"/>
 <area shape="rect" id="node5" href="$d3/d81/classTCargoShip.html" title="Корабль, несущий груз. Добавляются поля &#45; коеф замедления, максимальный груз, текущий груз." alt="" coords="250,1223,557,1776"/>
 <area shape="rect" id="node7" href="$db/df3/classTWarShip.html" title="Корабль, имеющий вооружение. Добавляются поле &#45; Holder орудий" alt="" coords="581,1296,820,1703"/>
-<area shape="rect" id="node6" href="$d0/dc5/classTCargoWarShip.html" title="Корабль, имеющий и оррудиея, и груз на борту." alt="" coords="413,1824,689,2143"/>
+<area shape="rect" id="node6" href="$d0/dc5/classTCargoWarShip.html" title="Корабль, имеющий и орудиея, и груз на борту." alt="" coords="413,1824,689,2143"/>
 </map>
